@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 
 from src.scenarios import LongevityScenario
-import src.survival as survival
+import src.survival as surviva
 import src.causes as causes  # Import causes to access logic if needed
 
 # Initialize app with a bootstrap theme

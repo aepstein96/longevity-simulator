@@ -1,25 +1,6 @@
 
 # Data
-data/
 raw_data/
-*.csv
-*.parquet
-*.txt
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.env
-.venv
-env/
-venv/
 
 # Notebooks
 notebooks/
-.ipynb_checkpoints/
-*.ipynb
-
-# IDE
-.vscode/
-.idea/
