@@ -4,3 +4,6 @@ raw_data/
 
 # Notebooks
 notebooks/
+
+# Other
+src/__pycache__/
