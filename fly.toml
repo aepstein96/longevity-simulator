@@ -4,7 +4,7 @@
 #
 
 app = 'longevity-simulator'
-primary_region = 'ewr'
+primary_region = 'sjc'
 
 [build]
 
