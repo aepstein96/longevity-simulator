@@ -326,4 +326,5 @@ def update_dashboard(sex, removed_causes, aging_rate_percent, slow_aging_age, go
     return fig_surv, fig_mort, kpi_base_text, kpi_int_text, kpi_gained_text, base_eq_text, int_eq_text
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=False)
+
