@@ -1,0 +1,187 @@
+chapter,icpc2_code,description,grouped_codes,gbd_level2
+General and unspecified,A04,Weakness/tiredness general,A04,Other non-communicable diseases
+General and unspecified,A70,Tuberculosis,A70,"Communicable, maternal, neonatal, and nutritional diseases"
+General and unspecified,A79,Malignancy NOS,A79,Neoplasms
+General and unspecified,A90,Congenital anomaly OS/multiple,A90,"Communicable, maternal, neonatal, and nutritional diseases"
+"Blood, Blood Forming Organs and Immune Mechanism",B75,Benign/unspecified neoplasm blood,B75,Neoplasms
+"Blood, Blood Forming Organs and Immune Mechanism",B83,Purpura/coagulation defect,B83,Other non-communicable diseases
+"Blood, Blood Forming Organs and Immune Mechanism",B90,HIV-infection/aids,B90,"Communicable, maternal, neonatal, and nutritional diseases"
+"Blood, Blood Forming Organs and Immune Mechanism",B72,Hodgkin's disease/lymphoma,,Neoplasms
+"Blood, Blood Forming Organs and Immune Mechanism",B73,Leukaemia,,Neoplasms
+"Blood, Blood Forming Organs and Immune Mechanism",B74,Malignant neoplasm blood other,,Neoplasms
+"Blood, Blood Forming Organs and Immune Mechanism",,Blood cancer / lymphoma,"B72, B73, B74",Neoplasms
+"Blood, Blood Forming Organs and Immune Mechanism",B78,Hereditary haemolytic anaemia,B78,Other non-communicable diseases
+"Blood, Blood Forming Organs and Immune Mechanism",B81,"Anaemia, Vitamin B12/folate def.",,Other non-communicable diseases
+"Blood, Blood Forming Organs and Immune Mechanism",B82,Anaemia other/unspecified,,Other non-communicable diseases
+"Blood, Blood Forming Organs and Immune Mechanism",,Anaemia,"B81, B82",Other non-communicable diseases
+Digestive,D72,Viral hepatitis,D72,Digestive diseases
+Digestive,D81,Congen. anomaly digestive system,D81,Digestive diseases
+Digestive,D84,Oesophagus disease,D84,Digestive diseases
+Digestive,D92,Diverticular disease,D92,Digestive diseases
+Digestive,D93,Irritable bowel syndrome,D93,Digestive diseases
+Digestive,D94,Chronic enteritis/ulcerative colitis,D94,Digestive diseases
+Digestive,D97,Liver disease NOS,D97,Digestive diseases
+Digestive,D98,Cholecystitis/cholelithiasis,D98,Digestive diseases
+Digestive,D99,"Disease digestive system, other",D99,Digestive diseases
+Digestive,D74,Malignant neoplasm stomach,,Neoplasms
+Digestive,D75,Malignant neoplasm colon/rectum,D75,Neoplasms
+Digestive,D76,Malignant neoplasm pancreas,,Neoplasms
+Digestive,D77,Malig. neoplasm digest other/NOS,,Neoplasms
+Digestive,,"Digestive cancer, other","D74, D76, D77",Neoplasms
+Digestive,D85,Duodenal ulcer,,Digestive diseases
+Digestive,D86,Peptic ulcer other,,Digestive diseases
+Digestive,,Peptic ulcer,"D85, D86",Digestive diseases
+Eye,F74,Neoplasm of eye/adnexa,F74,Neoplasms
+Eye,F92,Cataract,F92,Sense organ diseases
+Eye,F93,Glaucoma,F93,Sense organ diseases
+Eye,F94,Blindness,F94,Sense organ diseases
+Eye,F82,Detached retina,,Sense organ diseases
+Eye,F83,Retinopathy,,Sense organ diseases
+Eye,F84,Macular degeneration,,Sense organ diseases
+Eye,,Retinopathy,"F82, F83, F84",Sense organ diseases
+Ear,H75,Neoplasm of ear,H75,Neoplasms
+Ear,H82,Vertiginous syndrome,H82,Sense organ diseases
+Ear,H84,Presbyacusis,H84,Sense organ diseases
+Ear,H86,Deafness,H86,Sense organ diseases
+Cardiovascular,K72,Neoplasm cardiovascular,K72,Neoplasms
+Cardiovascular,K77,Heart failure,K77,Cardiovascular diseases
+Cardiovascular,K88,Postural hypotension,K88,Cardiovascular diseases
+Cardiovascular,K92,Atherosclerosis/Peripheral vascular disease,K92,Cardiovascular diseases
+Cardiovascular,K93,Pulmonary embolism,K93,Cardiovascular diseases
+Cardiovascular,K73,Congenital anomaly cardiovascular,K73,Cardiovascular diseases
+Cardiovascular,K71,Rheumatic fever/heart disease,,Cardiovascular diseases
+Cardiovascular,K81,Heart/arterial murmur NOS,K81,Cardiovascular diseases
+Cardiovascular,K82,Pulmonary heart disease,K82,Cardiovascular diseases
+Cardiovascular,K83,Heart valve disease NOS,,Cardiovascular diseases
+Cardiovascular,K84,"Heart disease, other",K84,Cardiovascular diseases
+Cardiovascular,,Rheumatic/heart valve disease,"K71, K83",Cardiovascular diseases
+Cardiovascular,K74,Ischaemic heart disease w. angina,,Cardiovascular diseases
+Cardiovascular,K75,Acute myocardial infarction,,Cardiovascular diseases
+Cardiovascular,K76,Ischaemic heart disease without angina,,Cardiovascular diseases
+Cardiovascular,,Ischemic heart disease,"K74, K75, K76",Cardiovascular diseases
+Cardiovascular,K78,Atrial fibrillation/flutter,,Cardiovascular diseases
+Cardiovascular,K79,Paroxysmal tachycardia,,Cardiovascular diseases
+Cardiovascular,K80,Cardiac arrhythmia NOS,,Cardiovascular diseases
+Cardiovascular,,Cardiac arrhythmia,"K78, K79, K80",Cardiovascular diseases
+Cardiovascular,K86,Hypertension uncomplicated,,Cardiovascular diseases
+Cardiovascular,K87,Hypertension complicated,,Cardiovascular diseases
+Cardiovascular,,Hypertension,"K86, K87",Cardiovascular diseases
+Cardiovascular,K89,Transient cerebral ischaemia,,Cardiovascular diseases
+Cardiovascular,K90,Stroke/cerebrovascular accident,,Cardiovascular diseases
+Cardiovascular,K91,Cerebrovascular disease,,Cardiovascular diseases
+Cardiovascular,,Cerebrovascular disease,"K89, K90, K91",Cardiovascular diseases
+Cardiovascular,K94,Phlebitis/thrombophlebitis,,Cardiovascular diseases
+Cardiovascular,K95,Varicose veins of leg,,Cardiovascular diseases
+Cardiovascular,,Phebitis/varicose veins,"K94, K95",Cardiovascular diseases
+Musculoskeletal,L71,Malignant neoplasm musculoskeletal,L71,Neoplasms
+Musculoskeletal,L85,Acquired deformity of spine,L85,Musculoskeletal disorders
+Musculoskeletal,L88,Rheumatoid/seropositive arthritis,L88,Musculoskeletal disorders
+Musculoskeletal,L92,Shoulder syndrome,L92,Musculoskeletal disorders
+Musculoskeletal,L93,Tennis elbow,L93,Musculoskeletal disorders
+Musculoskeletal,L95,Osteoporosis,L95,Musculoskeletal disorders
+Musculoskeletal,L82,Congenital anomaly musculoskeletal,L82,Musculoskeletal disorders
+Musculoskeletal,L99,Musculoskeletal disease other,L99,Musculoskeletal disorders
+Musculoskeletal,L83,Neck syndrome,,Musculoskeletal disorders
+Musculoskeletal,L84,Back syndrome without radiating pain,,Musculoskeletal disorders
+Musculoskeletal,L86,Back syndrome with radiating pain,,Musculoskeletal disorders
+Musculoskeletal,,Neck/back syndrome,"L83, L84, L86",Musculoskeletal disorders
+Musculoskeletal,L89,Osteoarthrosis of hip,,Musculoskeletal disorders
+Musculoskeletal,L90,Osteoarthrosis of knee,,Musculoskeletal disorders
+Musculoskeletal,L91,Osteoarthrosis other,,Musculoskeletal disorders
+Musculoskeletal,,Osteoarthrosis,"L89, L90, L91",Musculoskeletal disorders
+Neurological,N73,"Neurological infection, other",N73,Neurological disorders
+Neurological,N74,Malignant neoplasm nervous system,N74,Neoplasms
+Neurological,N86,Multiple sclerosis,N86,Neurological disorders
+Neurological,N87,Parkinsonism,N87,Neurological disorders
+Neurological,N88,Epilepsy,N88,Neurological disorders
+Neurological,N92,Trigeminal neuralgia,N92,Neurological disorders
+Neurological,N75,Benign neoplasm nervous system,,Neoplasms
+Neurological,N76,Neoplasm nervous system unspec.,,Neoplasms
+Neurological,,Benign/unspecified nervous system neoplasm,"N75, N76",Neoplasms
+Neurological,N85,Congenital anomaly neurological,N85,Neurological disorders
+Neurological,N89,Migraine,,Neurological disorders
+Neurological,N90,Cluster headache,,Neurological disorders
+Neurological,,Migraine/headache,"N89, N90",Neurological disorders
+Neurological,N93,Carpal tunnel syndrome,N93,Neurological disorders
+Neurological,N94,Peripheral neuritis/neuropathy,N94,Neurological disorders
+Neurological,N99,"Neurological disease, other",N99,Neurological disorders
+Psychological,P15,Chronic alcohol abuse,P15,Substance use disorders
+Psychological,P17,Tobacco abuse,P17,Substance use disorders
+Psychological,P19,Drug abuse,P19,Substance use disorders
+Psychological,P70,Dementia,P70,Mental disorders
+Psychological,P78,Neuraesthenia/surmenage,P78,Mental disorders
+Psychological,P79,Phobia/compulsive disorder,P79,Mental disorders
+Psychological,P81,Hyperkinetic disorder,P81,Mental disorders
+Psychological,P85,Mental retardation,P85,Mental disorders
+Psychological,P86,Anorexia nervosa/bulimia,P86,Mental disorders
+Psychological,P71,Organic psychosis other,,Mental disorders
+Psychological,P73,Affective psychosis,,Mental disorders
+Psychological,P98,Psychosis NOS/other,,Mental disorders
+Psychological,,Psychosis,"P71, P73, P98",Mental disorders
+Psychological,P72,Schizophrenia,P72,Mental disorders
+Psychological,P80,Personality disorder,P80,Mental disorders
+Psychological,P74,Anxiety disorder/anxiety state,,Mental disorders
+Psychological,P75,Somatization disorder,,Mental disorders
+Psychological,P82,Post-traumatic stress disorder,,Mental disorders
+Psychological,,Anxiety/somatization/post-traumatic stress,"P74, P75, P82",Mental disorders
+Psychological,P76,Depressive disorder,P76,Mental disorders
+Respiratory,R90,Hypertrophy tonsils/adenoids,R90,Chronic respiratory diseases
+Respiratory,R96,Asthma,R96,Chronic respiratory diseases
+Respiratory,R95,Chronic obstructive pulmonary disease,R95,Chronic respiratory diseases
+Respiratory,R84,Malignant neoplasm bronchus/lung,R84,Neoplasms
+Respiratory,R85,"Malignant neoplasm respiratory, other",R85,Neoplasms
+Respiratory,R99,"Respiratory disease, other",R99,Chronic respiratory diseases
+Skin,S77,Malignant neoplasm of skin,S77,Neoplasms
+Skin,S91,Psoriasis,S91,Skin and subcutaneous diseases
+Skin,S96,Acne,S96,Skin and subcutaneous diseases
+Skin,S86,Dermatitis seborrhoeic,,Skin and subcutaneous diseases
+Skin,S87,Dermatitis/atopic eczema,,Skin and subcutaneous diseases
+Skin,,Dermatitis/atopic eczema,"S86, S87",Skin and subcutaneous diseases
+Skin,S99,"Skin disease, other",S99,Skin and subcutaneous diseases
+Endocrine/Metabolic and Nutritional,T71,Malignant neoplasm thyroid,T71,Neoplasms
+Endocrine/Metabolic and Nutritional,T73,Neoplasm endocrine oth/unspecified,T73,Neoplasms
+Endocrine/Metabolic and Nutritional,T80,Congenital anom endocrine/metab.,T80,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T81,Goitre,T81,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T85,Hyperthyroidism/thyrotoxicosis,T85,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T86,Hypothyroidism/myxoedema,T86,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T92,Gout,T92,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T93,Lipid disorder,T93,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T80,Congenital anom endocrine/metab.,T80,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T99,Endocrine/metabolic/nutritional disease other,T99,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T82,Obesity,,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T83,Overweight,,Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,,Overweight/obesity,"T82, T83",Other non-communicable diseases
+Endocrine/Metabolic and Nutritional,T89,Diabetes insulin dependent,,Diabetes and kidney diseases
+Endocrine/Metabolic and Nutritional,T90,Diabetes non-insulin dependent,,Diabetes and kidney diseases
+Endocrine/Metabolic and Nutritional,,Diabetes,"T89, T90",Other non-communicable diseases
+Urological,U88,Glomerulonephritis/nephrosis,U88,Diabetes and kidney diseases
+Urological,U99,"Urinary disease, other",U99,Diabetes and kidney diseases
+Urological,U99.01,Chronic renal failure,U99.01,Diabetes and kidney diseases
+Urological,U75,Malignant neoplasm of kidney,,Neoplasms
+Urological,U76,Malignant neoplasm of bladder,,Neoplasms
+Urological,U77,Malignant neoplasm urinary other,,Neoplasms
+Urological,,Urinary cancer,"U75, U76, U77",Neoplasms
+"Pregnancy, Childbearing, Family Planning",W15,Infertility/subfertility,W15,"Communicable, maternal, neonatal, and nutritional diseases"
+"Pregnancy, Childbearing, Family Planning",W72,Malignant neoplasm related to pregnancy,W72,Neoplasms
+Female Genital,X74,Pelvic inflammatory disease,X74,Other non-communicable diseases
+Female Genital,X75,Malignant neoplasm cervix,,Neoplasms
+Female Genital,X76,Malignant neoplasm breast female,X76,Neoplasms
+Female Genital,X77,Malignant neoplasm genital other,,Neoplasms
+Female Genital,,Genital female cancer,"X75, X77",Neoplasms
+Female Genital,X99,"Genital disease, other",X99,Other non-communicable diseases
+Male Genital,Y85,Benign prostatic hypertrophy,Y85,Other non-communicable diseases
+Male Genital,Y77,Malignant neoplasm prostate,,Neoplasms
+Male Genital,Y78,Malign neoplasm male genital other,,Neoplasms
+Male Genital,,Male genital cancer,"Y77, Y78",Neoplasms
+(from edges file),N18,Paralysis/weakness,,Neurological disorders
+(from edges file),D99.01,Coeliac disease,,Digestive diseases
+(from edges file),K94.01,Phlebitis/thrombophlebitis low limb superficial,,Cardiovascular diseases
+(from edges file),K94.02,Phlebitis/thrombophlebitis low limb deep,,Cardiovascular diseases
+(from edges file),L82.01,Congenital anomaly musculoskeletal,,Musculoskeletal disorders
+(from edges file),L86/84/83,Neck/Back syndrome,,Musculoskeletal disorders
+(from edges file),L88.01,Ankylosing spondylitis,,Musculoskeletal disorders
+(from edges file),P79.01,obsesive compulsive disorder,,Mental disorders
+(from edges file),P79.02,Phobia,,Mental disorders
+(from edges file),T83/82,Overweight/Obesity,,Other non-communicable diseases
+(from edges file),YX15,Infertility,,Other non-communicable diseases
+(from edges file),YX99,"Genital disease, other",,Other non-communicable diseases

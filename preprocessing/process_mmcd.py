@@ -139,19 +139,19 @@ if __name__ == '__main__':
     print("="*60)
     print("PROCESSING TOTAL (BOTH SEXES)")
     print("="*60)
-    process_mmcd(input_file, '../data/cause_fractions_total.csv', sex=None)
-    
+    process_mmcd(input_file, '../data/CDC/cause_fractions_total.csv', sex=None)
+
     # Process male
     print("\n" + "="*60)
     print("PROCESSING MALE")
     print("="*60)
-    process_mmcd(input_file, '../data/cause_fractions_male.csv', sex='M')
-    
+    process_mmcd(input_file, '../data/CDC/cause_fractions_male.csv', sex='M')
+
     # Process female
     print("\n" + "="*60)
     print("PROCESSING FEMALE")
     print("="*60)
-    process_mmcd(input_file, '../data/cause_fractions_female.csv', sex='F')
+    process_mmcd(input_file, '../data/CDC/cause_fractions_female.csv', sex='F')
     
     print("\n✓ All processing complete!")
 

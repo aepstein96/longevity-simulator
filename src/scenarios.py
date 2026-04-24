@@ -43,8 +43,8 @@ class LongevityScenario:
         sex_key = self.sex_map.get(self.sex, 'Total')
         
         # Construct file paths
-        mort_path = f'data/mortality_rates_{sex_key.lower()}.csv'
-        cause_path = f'data/cause_fractions_{sex_key.lower()}.csv'
+        mort_path = f'data/CDC/mortality_rates_{sex_key.lower()}.csv'
+        cause_path = f'data/CDC/cause_fractions_{sex_key.lower()}.csv'
         
         self.baseline_mortality = mortality.load_mortality_rates(mort_path)
         self.cause_fractions = causes.load_cause_fractions(cause_path)

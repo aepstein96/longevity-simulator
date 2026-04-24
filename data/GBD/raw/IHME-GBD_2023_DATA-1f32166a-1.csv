@@ -1,0 +1,617 @@
+population_group,measure,location,sex,age,cause,metric,year,val,upper,lower
+All Population,Incidence,United States of America,Male,<5 years,Neoplasms,Rate,2023,675.69113864721,859.00520122019,528.46014359861
+All Population,Incidence,United States of America,Female,<5 years,Neoplasms,Rate,2023,939.2387950008199,1198.58445809403,736.82849848048
+All Population,Incidence,United States of America,Male,0-6 days,Neoplasms,Rate,2023,130.1467264616,180.55924798146,92.61481425327
+All Population,Incidence,United States of America,Female,0-6 days,Neoplasms,Rate,2023,168.9276497914,232.49773061762,126.96095677805
+All Population,Incidence,United States of America,Male,5-9 years,Neoplasms,Rate,2023,477.55768009153,667.26897434286,334.85617651503
+All Population,Incidence,United States of America,Female,5-9 years,Neoplasms,Rate,2023,609.17176304723,856.56065753593,426.91605456248
+All Population,Incidence,United States of America,Male,10-14 years,Neoplasms,Rate,2023,415.49009231827995,597.64880269145,276.68067559842
+All Population,Incidence,United States of America,Female,10-14 years,Neoplasms,Rate,2023,602.7261637100199,839.065199095,409.40009745330997
+All Population,Incidence,United States of America,Male,15-19 years,Neoplasms,Rate,2023,482.31597629275,677.87563654414,325.54068229775004
+All Population,Incidence,United States of America,Female,15-19 years,Neoplasms,Rate,2023,916.30239792168,1296.97029514615,611.41734183315
+All Population,Incidence,United States of America,Male,25-29 years,Neoplasms,Rate,2023,720.59123056545,1085.13366032329,476.19025058331005
+All Population,Incidence,United States of America,Female,25-29 years,Neoplasms,Rate,2023,2081.9461328396496,3052.20513953962,1422.28279642391
+All Population,Incidence,United States of America,Male,30-34 years,Neoplasms,Rate,2023,1002.53053501078,1402.5218898277399,713.82302640397
+All Population,Incidence,United States of America,Female,30-34 years,Neoplasms,Rate,2023,2870.94445491892,3872.71470632517,2130.37656673415
+All Population,Incidence,United States of America,Male,35-39 years,Neoplasms,Rate,2023,1413.01437418519,1977.96972670033,955.47318216799
+All Population,Incidence,United States of America,Female,35-39 years,Neoplasms,Rate,2023,3740.5864352484305,5059.83516160191,2585.10780716299
+All Population,Incidence,United States of America,Male,40-44 years,Neoplasms,Rate,2023,1982.4567160154902,2488.60210545525,1496.96138478709
+All Population,Incidence,United States of America,Female,40-44 years,Neoplasms,Rate,2023,4627.9106666770795,5880.729226773889,3474.71840917917
+All Population,Incidence,United States of America,Male,45-49 years,Neoplasms,Rate,2023,2727.05543844677,3599.70233377102,1985.7964522537
+All Population,Incidence,United States of America,Female,45-49 years,Neoplasms,Rate,2023,5522.44156995542,7479.37361352042,3925.0079176018403
+All Population,Incidence,United States of America,Male,50-54 years,Neoplasms,Rate,2023,4170.323934397669,5048.94900305104,3392.18771732114
+All Population,Incidence,United States of America,Female,50-54 years,Neoplasms,Rate,2023,6574.53535207594,8286.38936805992,5081.7852417063295
+All Population,Incidence,United States of America,Male,55-59 years,Neoplasms,Rate,2023,6306.1142416085695,7882.72939726145,4929.49284021929
+All Population,Incidence,United States of America,Female,55-59 years,Neoplasms,Rate,2023,7785.68112392155,10021.95067251388,5978.90143615887
+All Population,Incidence,United States of America,Male,60-64 years,Neoplasms,Rate,2023,9250.76528330769,10864.08235504335,7729.31451488513
+All Population,Incidence,United States of America,Female,60-64 years,Neoplasms,Rate,2023,9169.1514299227,11330.36184448572,7359.28126106719
+All Population,Incidence,United States of America,Male,65-69 years,Neoplasms,Rate,2023,12776.45120225106,15804.94200439756,10555.12744170692
+All Population,Incidence,United States of America,Female,65-69 years,Neoplasms,Rate,2023,10621.90981919526,13747.849240494108,8413.847072009161
+All Population,Incidence,United States of America,Male,70-74 years,Neoplasms,Rate,2023,16160.52194785801,19197.72149032714,13415.789326227889
+All Population,Incidence,United States of America,Female,70-74 years,Neoplasms,Rate,2023,11700.63316261111,14934.89820209016,9311.29183743434
+All Population,Incidence,United States of America,Male,75-79 years,Neoplasms,Rate,2023,19530.32136315688,23058.18547775246,16125.53154908796
+All Population,Incidence,United States of America,Female,75-79 years,Neoplasms,Rate,2023,12570.97261952673,15059.469210070669,10251.765980139919
+All Population,Incidence,United States of America,Male,<1 year,Neoplasms,Rate,2023,702.2510723184699,911.1050031273,531.1946097428
+All Population,Incidence,United States of America,Female,<1 year,Neoplasms,Rate,2023,1006.9009513959201,1311.37416381708,769.54047436453
+All Population,Incidence,United States of America,Male,80-84 years,Neoplasms,Rate,2023,22490.584868196,26073.31450572243,19245.77705286576
+All Population,Incidence,United States of America,Female,80-84 years,Neoplasms,Rate,2023,13061.41371131819,15658.73758042391,11005.40392577817
+All Population,Incidence,United States of America,Male,85-89 years,Neoplasms,Rate,2023,25274.629246714198,28822.56217036136,21988.16541995282
+All Population,Incidence,United States of America,Female,85-89 years,Neoplasms,Rate,2023,13461.7948121881,15429.23117043081,11420.58293560346
+All Population,Incidence,United States of America,Male,90-94 years,Neoplasms,Rate,2023,27329.436564136213,31648.549294375873,23016.229611526822
+All Population,Incidence,United States of America,Female,90-94 years,Neoplasms,Rate,2023,13391.63888984376,15543.650683300239,11067.0698061006
+All Population,Incidence,United States of America,Male,2-4 years,Neoplasms,Rate,2023,651.74516627023,823.25976498912,512.47013976335
+All Population,Incidence,United States of America,Female,2-4 years,Neoplasms,Rate,2023,890.3542081847,1123.10963899635,697.47313858111
+All Population,Incidence,United States of America,Male,95+ years,Neoplasms,Rate,2023,28465.070917603258,34007.16639512046,23206.06054405982
+All Population,Incidence,United States of America,Female,95+ years,Neoplasms,Rate,2023,13309.54048191419,16264.751887609049,10829.64433326706
+All Population,Incidence,United States of America,Male,<5 years,Digestive diseases,Rate,2023,373.60925674714997,420.36467914997996,337.80575294522
+All Population,Incidence,United States of America,Female,<5 years,Digestive diseases,Rate,2023,303.27258266586,340.64624556789,270.00603739887
+All Population,Incidence,United States of America,Male,0-6 days,Digestive diseases,Rate,2023,162.9081843773,215.14161188912001,126.22053695236
+All Population,Incidence,United States of America,Female,0-6 days,Digestive diseases,Rate,2023,67.7914278264,80.01039978957,56.61986340825
+All Population,Incidence,United States of America,Male,5-9 years,Digestive diseases,Rate,2023,531.08677021766,605.81203562862,470.63528517139
+All Population,Incidence,United States of America,Female,5-9 years,Digestive diseases,Rate,2023,557.6598633972001,665.54195706603,471.39608124669996
+All Population,Incidence,United States of America,Male,10-14 years,Digestive diseases,Rate,2023,1036.4557466553201,1251.54085316416,866.06084587288
+All Population,Incidence,United States of America,Female,10-14 years,Digestive diseases,Rate,2023,1235.55014226719,1488.95841080835,1012.15526568887
+All Population,Incidence,United States of America,Male,15-19 years,Digestive diseases,Rate,2023,3456.85047206443,4181.25080783922,2815.23749248974
+All Population,Incidence,United States of America,Female,15-19 years,Digestive diseases,Rate,2023,3724.30324179005,4498.07816918738,3019.6614368607597
+All Population,Incidence,United States of America,Male,25-29 years,Digestive diseases,Rate,2023,6559.997892455601,8263.675001311669,5245.97142258388
+All Population,Incidence,United States of America,Female,25-29 years,Digestive diseases,Rate,2023,7885.97268528904,9547.53568741205,6459.598072825789
+All Population,Incidence,United States of America,Male,30-34 years,Digestive diseases,Rate,2023,7771.08135522067,9677.76631147294,6119.70492412338
+All Population,Incidence,United States of America,Female,30-34 years,Digestive diseases,Rate,2023,9313.15050594897,11529.11947721699,7441.27113777302
+All Population,Incidence,United States of America,Male,35-39 years,Digestive diseases,Rate,2023,8853.1404338113,11250.26869547229,7113.51404738311
+All Population,Incidence,United States of America,Female,35-39 years,Digestive diseases,Rate,2023,10466.82689872968,12992.52188253474,8353.32178699903
+All Population,Incidence,United States of America,Male,40-44 years,Digestive diseases,Rate,2023,9951.8046518068,12447.49749760386,7912.69038636786
+All Population,Incidence,United States of America,Female,40-44 years,Digestive diseases,Rate,2023,11491.01777386898,14171.49716496414,9153.234733808691
+All Population,Incidence,United States of America,Male,45-49 years,Digestive diseases,Rate,2023,11252.16720049165,13704.665994317262,9154.1411149629
+All Population,Incidence,United States of America,Female,45-49 years,Digestive diseases,Rate,2023,12604.243983152941,15315.035671860549,10342.36986635825
+All Population,Incidence,United States of America,Male,50-54 years,Digestive diseases,Rate,2023,13435.4665108462,15937.32964609705,11046.6265449681
+All Population,Incidence,United States of America,Female,50-54 years,Digestive diseases,Rate,2023,14621.71977295749,17493.66645545093,12155.451614543621
+All Population,Incidence,United States of America,Male,55-59 years,Digestive diseases,Rate,2023,15707.74833185781,18719.21729813465,13197.483326646961
+All Population,Incidence,United States of America,Female,55-59 years,Digestive diseases,Rate,2023,16754.24334344273,19854.38022527433,13827.664741795179
+All Population,Incidence,United States of America,Male,60-64 years,Digestive diseases,Rate,2023,17660.749765707802,20780.86089419664,14777.80855296216
+All Population,Incidence,United States of America,Female,60-64 years,Digestive diseases,Rate,2023,18439.28165611814,21694.481795962132,15288.81478341558
+All Population,Incidence,United States of America,Male,65-69 years,Digestive diseases,Rate,2023,19233.359138952717,22293.96140955345,16363.53919017469
+All Population,Incidence,United States of America,Female,65-69 years,Digestive diseases,Rate,2023,19707.24914220469,22698.07110591906,16993.30360961112
+All Population,Incidence,United States of America,Male,70-74 years,Digestive diseases,Rate,2023,20566.16973644006,23591.25242317161,17829.95569975227
+All Population,Incidence,United States of America,Female,70-74 years,Digestive diseases,Rate,2023,20809.49859107679,23793.093235493303,17954.96050021505
+All Population,Incidence,United States of America,Male,75-79 years,Digestive diseases,Rate,2023,20876.99235340508,23746.50054964965,18136.2453014604
+All Population,Incidence,United States of America,Female,75-79 years,Digestive diseases,Rate,2023,20818.73356956937,23881.245410430573,17909.01497656503
+All Population,Incidence,United States of America,Male,<1 year,Digestive diseases,Rate,2023,304.57716396061,347.9886309513,268.25352074001
+All Population,Incidence,United States of America,Female,<1 year,Digestive diseases,Rate,2023,188.30828261884,203.42294845127003,174.74260765665
+All Population,Incidence,United States of America,Male,80-84 years,Digestive diseases,Rate,2023,21111.46992273811,23829.87650018228,18423.20578948873
+All Population,Incidence,United States of America,Female,80-84 years,Digestive diseases,Rate,2023,20325.037168234052,23121.53370458472,17612.40989398313
+All Population,Incidence,United States of America,Male,85-89 years,Digestive diseases,Rate,2023,22071.233700775032,24684.47895538307,19347.59124060144
+All Population,Incidence,United States of America,Female,85-89 years,Digestive diseases,Rate,2023,20138.5767307513,22729.707137970483,17699.70853050063
+All Population,Incidence,United States of America,Male,90-94 years,Digestive diseases,Rate,2023,22786.3880076329,25771.002648102392,19916.13801467087
+All Population,Incidence,United States of America,Female,90-94 years,Digestive diseases,Rate,2023,20215.44768177105,23006.5889989697,17670.31650201572
+All Population,Incidence,United States of America,Male,2-4 years,Digestive diseases,Rate,2023,409.89599768261,468.26056809105,364.58318582144
+All Population,Incidence,United States of America,Female,2-4 years,Digestive diseases,Rate,2023,370.93147131978,426.42886814764,320.09551331562
+All Population,Incidence,United States of America,Male,95+ years,Digestive diseases,Rate,2023,23826.86875478693,28053.79573782697,19998.37371709825
+All Population,Incidence,United States of America,Female,95+ years,Digestive diseases,Rate,2023,21108.94563353205,25048.630558481338,17731.23839746586
+All Population,Incidence,United States of America,Male,<5 years,Skin and subcutaneous diseases,Rate,2023,23356.86887341704,26433.236511970932,20552.75646210972
+All Population,Incidence,United States of America,Female,<5 years,Skin and subcutaneous diseases,Rate,2023,21989.693531241388,25051.95289775935,19451.73980058868
+All Population,Incidence,United States of America,Male,0-6 days,Skin and subcutaneous diseases,Rate,2023,26628.40471668652,29075.834748373807,24137.501933150703
+All Population,Incidence,United States of America,Female,0-6 days,Skin and subcutaneous diseases,Rate,2023,22862.92603744314,25135.18652783212,20606.56658868199
+All Population,Incidence,United States of America,Male,5-9 years,Skin and subcutaneous diseases,Rate,2023,24301.48609772724,29348.226981302676,20577.3227129565
+All Population,Incidence,United States of America,Female,5-9 years,Skin and subcutaneous diseases,Rate,2023,25452.273538296024,30355.58547937487,21838.68285307298
+All Population,Incidence,United States of America,Male,10-14 years,Skin and subcutaneous diseases,Rate,2023,28563.331512361823,33480.26349695785,25101.18570104304
+All Population,Incidence,United States of America,Female,10-14 years,Skin and subcutaneous diseases,Rate,2023,31737.84008361806,36388.480671581194,28135.4908844137
+All Population,Incidence,United States of America,Male,15-19 years,Skin and subcutaneous diseases,Rate,2023,27272.50067459725,29886.32398974942,25172.04704844302
+All Population,Incidence,United States of America,Female,15-19 years,Skin and subcutaneous diseases,Rate,2023,31778.90014913834,34214.36130803681,29451.11475766734
+All Population,Incidence,United States of America,Male,25-29 years,Skin and subcutaneous diseases,Rate,2023,25316.82871957604,27873.81370838957,23242.74049990546
+All Population,Incidence,United States of America,Female,25-29 years,Skin and subcutaneous diseases,Rate,2023,35358.78655595919,38817.11756313214,32496.48851092762
+All Population,Incidence,United States of America,Male,30-34 years,Skin and subcutaneous diseases,Rate,2023,26961.97883632145,29767.66876057686,24505.2924724233
+All Population,Incidence,United States of America,Female,30-34 years,Skin and subcutaneous diseases,Rate,2023,39594.62113995384,43669.10266571399,36154.90841848385
+All Population,Incidence,United States of America,Male,35-39 years,Skin and subcutaneous diseases,Rate,2023,29073.38456946212,31885.35287468983,26737.106545232196
+All Population,Incidence,United States of America,Female,35-39 years,Skin and subcutaneous diseases,Rate,2023,41072.25870621755,45074.57012873835,37795.53149704604
+All Population,Incidence,United States of America,Male,40-44 years,Skin and subcutaneous diseases,Rate,2023,31654.999009179206,34523.662235277094,29356.746756857112
+All Population,Incidence,United States of America,Female,40-44 years,Skin and subcutaneous diseases,Rate,2023,41942.35561730407,46400.66629818903,38761.78847489913
+All Population,Incidence,United States of America,Male,45-49 years,Skin and subcutaneous diseases,Rate,2023,35422.31460301567,38754.44696422807,32833.310402959745
+All Population,Incidence,United States of America,Female,45-49 years,Skin and subcutaneous diseases,Rate,2023,45072.786927444555,49639.64672247816,41651.7819603833
+All Population,Incidence,United States of America,Male,50-54 years,Skin and subcutaneous diseases,Rate,2023,42210.17717581823,45698.98584028339,39261.7683744705
+All Population,Incidence,United States of America,Female,50-54 years,Skin and subcutaneous diseases,Rate,2023,52424.307340711995,57126.137233991845,48731.88449866312
+All Population,Incidence,United States of America,Male,55-59 years,Skin and subcutaneous diseases,Rate,2023,47993.86754305119,52545.28786895363,43910.78773812811
+All Population,Incidence,United States of America,Female,55-59 years,Skin and subcutaneous diseases,Rate,2023,58398.41631536851,64903.158563128534,52632.08549999947
+All Population,Incidence,United States of America,Male,60-64 years,Skin and subcutaneous diseases,Rate,2023,54598.624948472905,60106.88641326529,50724.65760009384
+All Population,Incidence,United States of America,Female,60-64 years,Skin and subcutaneous diseases,Rate,2023,61168.579612304886,68049.61327499864,56314.09324890584
+All Population,Incidence,United States of America,Male,65-69 years,Skin and subcutaneous diseases,Rate,2023,76069.47331425184,82016.60840479344,70813.33715631977
+All Population,Incidence,United States of America,Female,65-69 years,Skin and subcutaneous diseases,Rate,2023,72300.61018628642,79038.0007652538,66899.14679154746
+All Population,Incidence,United States of America,Male,70-74 years,Skin and subcutaneous diseases,Rate,2023,101307.68924704936,107767.81537126063,94675.10761433416
+All Population,Incidence,United States of America,Female,70-74 years,Skin and subcutaneous diseases,Rate,2023,86287.12523296842,92983.43756547217,79987.78534747128
+All Population,Incidence,United States of America,Male,75-79 years,Skin and subcutaneous diseases,Rate,2023,109211.9316039597,117384.4621927722,101936.56546771237
+All Population,Incidence,United States of America,Female,75-79 years,Skin and subcutaneous diseases,Rate,2023,88224.39454677838,95173.72956935006,81999.34255685436
+All Population,Incidence,United States of America,Male,<1 year,Skin and subcutaneous diseases,Rate,2023,24278.34034006026,26313.397172591307,22421.3683455758
+All Population,Incidence,United States of America,Female,<1 year,Skin and subcutaneous diseases,Rate,2023,21660.40766656221,23568.98656391762,20082.70703480337
+All Population,Incidence,United States of America,Male,80-84 years,Skin and subcutaneous diseases,Rate,2023,126431.5202784623,134563.00738932277,118464.38485388045
+All Population,Incidence,United States of America,Female,80-84 years,Skin and subcutaneous diseases,Rate,2023,93972.46206904309,100260.13410631818,87344.85342797774
+All Population,Incidence,United States of America,Male,85-89 years,Skin and subcutaneous diseases,Rate,2023,142939.94865567394,151196.20577367043,135474.5907434896
+All Population,Incidence,United States of America,Female,85-89 years,Skin and subcutaneous diseases,Rate,2023,105133.42545311549,111873.98184411712,99000.35817594371
+All Population,Incidence,United States of America,Male,90-94 years,Skin and subcutaneous diseases,Rate,2023,139511.51358239734,148792.1510764885,131006.7364440299
+All Population,Incidence,United States of America,Female,90-94 years,Skin and subcutaneous diseases,Rate,2023,108127.23598128882,116290.79416972019,100837.8729364136
+All Population,Incidence,United States of America,Male,2-4 years,Skin and subcutaneous diseases,Rate,2023,23236.036149273838,28441.14041109494,19467.28354736842
+All Population,Incidence,United States of America,Female,2-4 years,Skin and subcutaneous diseases,Rate,2023,22295.46013942578,27032.17160600384,18744.51603647036
+All Population,Incidence,United States of America,Male,95+ years,Skin and subcutaneous diseases,Rate,2023,135788.02034314696,147453.1651219971,124898.58576617627
+All Population,Incidence,United States of America,Female,95+ years,Skin and subcutaneous diseases,Rate,2023,109731.82323255728,119251.94287858272,101109.61154661744
+All Population,Incidence,United States of America,Male,<5 years,Sense organ diseases,Rate,2023,122.06060168271999,172.84161339177,76.92360871524
+All Population,Incidence,United States of America,Female,<5 years,Sense organ diseases,Rate,2023,103.87599699053999,145.83257328595,67.09514914273001
+All Population,Incidence,United States of America,Male,0-6 days,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,0-6 days,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,5-9 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,5-9 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,10-14 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,10-14 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,15-19 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,15-19 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,25-29 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,25-29 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,30-34 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,30-34 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,35-39 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,35-39 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,40-44 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,40-44 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,45-49 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,45-49 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,50-54 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,50-54 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,55-59 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,55-59 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,60-64 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,60-64 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,65-69 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,65-69 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,70-74 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,70-74 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,75-79 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,75-79 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,<1 year,Sense organ diseases,Rate,2023,623.96096676196,883.54816133837,393.22540278427
+All Population,Incidence,United States of America,Female,<1 year,Sense organ diseases,Rate,2023,530.7204966834499,745.08392669381,342.80076157849
+All Population,Incidence,United States of America,Male,80-84 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,80-84 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,85-89 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,85-89 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,90-94 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,90-94 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,2-4 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,2-4 years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,95+ years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,95+ years,Sense organ diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,<5 years,Neurological disorders,Rate,2023,48.60134433749,77.95240098098,28.75205387385
+All Population,Incidence,United States of America,Female,<5 years,Neurological disorders,Rate,2023,47.48205382341,75.60820318855001,27.854413069270002
+All Population,Incidence,United States of America,Male,0-6 days,Neurological disorders,Rate,2023,53.17807048554,80.39050637337,32.54724148151
+All Population,Incidence,United States of America,Female,0-6 days,Neurological disorders,Rate,2023,53.70556156306,79.64385712757,33.21075420893
+All Population,Incidence,United States of America,Male,5-9 years,Neurological disorders,Rate,2023,8711.4073857108,12388.57634359438,5690.66096672241
+All Population,Incidence,United States of America,Female,5-9 years,Neurological disorders,Rate,2023,10912.74429427764,15100.74405280118,7525.39561558185
+All Population,Incidence,United States of America,Male,10-14 years,Neurological disorders,Rate,2023,15534.54968225398,21092.3767871432,11340.48639044005
+All Population,Incidence,United States of America,Female,10-14 years,Neurological disorders,Rate,2023,18960.40448050429,24769.90045075816,14139.91799424344
+All Population,Incidence,United States of America,Male,15-19 years,Neurological disorders,Rate,2023,14310.211138478771,20484.547324535048,9794.9679711055
+All Population,Incidence,United States of America,Female,15-19 years,Neurological disorders,Rate,2023,17097.73971807822,23007.20738755608,12213.68668971417
+All Population,Incidence,United States of America,Male,25-29 years,Neurological disorders,Rate,2023,15935.41651614459,21695.3374157239,9383.93810446088
+All Population,Incidence,United States of America,Female,25-29 years,Neurological disorders,Rate,2023,17676.23019316836,23291.04760155248,11829.25838506884
+All Population,Incidence,United States of America,Male,30-34 years,Neurological disorders,Rate,2023,16411.120012061532,21924.63847828617,10347.376876395501
+All Population,Incidence,United States of America,Female,30-34 years,Neurological disorders,Rate,2023,17965.73760525832,24629.73673583494,11568.48253304801
+All Population,Incidence,United States of America,Male,35-39 years,Neurological disorders,Rate,2023,15241.53029732086,20298.1104784265,9891.63666885243
+All Population,Incidence,United States of America,Female,35-39 years,Neurological disorders,Rate,2023,16916.28720490522,22892.70846137669,11159.232326697
+All Population,Incidence,United States of America,Male,40-44 years,Neurological disorders,Rate,2023,13735.54948443282,19062.29021988043,9766.593452430001
+All Population,Incidence,United States of America,Female,40-44 years,Neurological disorders,Rate,2023,15330.4655603375,20812.008913555997,10952.02420729572
+All Population,Incidence,United States of America,Male,45-49 years,Neurological disorders,Rate,2023,13347.27118600601,19226.145597251932,8144.808644526131
+All Population,Incidence,United States of America,Female,45-49 years,Neurological disorders,Rate,2023,14592.209642356649,20491.35963613436,8852.690536917129
+All Population,Incidence,United States of America,Male,50-54 years,Neurological disorders,Rate,2023,14163.054071457931,19636.13612218249,10026.59084369152
+All Population,Incidence,United States of America,Female,50-54 years,Neurological disorders,Rate,2023,15186.5333656524,21457.92084495751,10673.44761027469
+All Population,Incidence,United States of America,Male,55-59 years,Neurological disorders,Rate,2023,13544.754166453322,18330.39005582499,9167.253988370281
+All Population,Incidence,United States of America,Female,55-59 years,Neurological disorders,Rate,2023,14309.52980393857,19299.0561906272,9892.60540875224
+All Population,Incidence,United States of America,Male,60-64 years,Neurological disorders,Rate,2023,11928.97291057886,17019.53033505267,7790.7012780022405
+All Population,Incidence,United States of America,Female,60-64 years,Neurological disorders,Rate,2023,12767.08766547312,17772.64970155258,8481.373286705619
+All Population,Incidence,United States of America,Male,65-69 years,Neurological disorders,Rate,2023,10383.97600139212,14809.291417322489,7072.12999622637
+All Population,Incidence,United States of America,Female,65-69 years,Neurological disorders,Rate,2023,11571.12817744438,16242.387172389741,8155.94525673123
+All Population,Incidence,United States of America,Male,70-74 years,Neurological disorders,Rate,2023,10980.371531602521,14719.55080980377,7495.587963392019
+All Population,Incidence,United States of America,Female,70-74 years,Neurological disorders,Rate,2023,12203.824913034668,16384.442878185422,8278.3256935108
+All Population,Incidence,United States of America,Male,75-79 years,Neurological disorders,Rate,2023,11369.7764312349,15291.193809344588,7964.72722621235
+All Population,Incidence,United States of America,Female,75-79 years,Neurological disorders,Rate,2023,12511.21038346124,16713.82187009946,8776.17674816938
+All Population,Incidence,United States of America,Male,<1 year,Neurological disorders,Rate,2023,50.94854296981,80.70974885105,30.762245783079997
+All Population,Incidence,United States of America,Female,<1 year,Neurological disorders,Rate,2023,50.878306543019995,80.03934403356,29.969384892620003
+All Population,Incidence,United States of America,Male,80-84 years,Neurological disorders,Rate,2023,11588.35971024991,15098.189671789189,8328.36437070113
+All Population,Incidence,United States of America,Female,80-84 years,Neurological disorders,Rate,2023,12796.072565113838,16760.6561055553,9192.95968390724
+All Population,Incidence,United States of America,Male,85-89 years,Neurological disorders,Rate,2023,12737.440669078582,16409.35729182306,9674.84426349417
+All Population,Incidence,United States of America,Female,85-89 years,Neurological disorders,Rate,2023,13728.34978219105,17349.76109971268,10496.83843869329
+All Population,Incidence,United States of America,Male,90-94 years,Neurological disorders,Rate,2023,15455.48301666069,19994.93067096293,12067.905501404979
+All Population,Incidence,United States of America,Female,90-94 years,Neurological disorders,Rate,2023,15741.063132158939,20505.78386016113,11874.90259379183
+All Population,Incidence,United States of America,Male,2-4 years,Neurological disorders,Rate,2023,47.77609144148,82.49974024559,26.596001323390002
+All Population,Incidence,United States of America,Female,2-4 years,Neurological disorders,Rate,2023,46.2165137692,79.06204659131,25.40638221208
+All Population,Incidence,United States of America,Male,95+ years,Neurological disorders,Rate,2023,18786.09006347839,24521.86997665204,13535.2854240742
+All Population,Incidence,United States of America,Female,95+ years,Neurological disorders,Rate,2023,18451.15432931453,24173.321535054758,13193.5118927899
+All Population,Incidence,United States of America,Male,<5 years,Mental disorders,Rate,2023,982.06835296264,1582.14053376855,583.1753183938699
+All Population,Incidence,United States of America,Female,<5 years,Mental disorders,Rate,2023,439.98943258700996,761.48695071347,247.58477050886
+All Population,Incidence,United States of America,Male,0-6 days,Mental disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,0-6 days,Mental disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,5-9 years,Mental disorders,Rate,2023,3460.63936914117,4415.33845945204,2667.58016971164
+All Population,Incidence,United States of America,Female,5-9 years,Mental disorders,Rate,2023,4375.93474013322,5948.76548583287,3053.85987103007
+All Population,Incidence,United States of America,Male,10-14 years,Mental disorders,Rate,2023,5925.392566870781,7403.8373151187,4686.3141576061
+All Population,Incidence,United States of America,Female,10-14 years,Mental disorders,Rate,2023,10148.28747321768,12235.87711252015,7832.907639862339
+All Population,Incidence,United States of America,Male,15-19 years,Mental disorders,Rate,2023,6981.81498792607,8484.4076993349,5566.94233000595
+All Population,Incidence,United States of America,Female,15-19 years,Mental disorders,Rate,2023,12001.10071303278,14572.95776816899,9717.796258206
+All Population,Incidence,United States of America,Male,25-29 years,Mental disorders,Rate,2023,5342.07164205217,6443.40324954789,4415.23391722268
+All Population,Incidence,United States of America,Female,25-29 years,Mental disorders,Rate,2023,9467.4349016172,11443.74720835749,7748.41431595672
+All Population,Incidence,United States of America,Male,30-34 years,Mental disorders,Rate,2023,4899.03738342392,5891.95076767216,4093.0288503276797
+All Population,Incidence,United States of America,Female,30-34 years,Mental disorders,Rate,2023,8931.972583332381,10712.285208369989,7419.201332008681
+All Population,Incidence,United States of America,Male,35-39 years,Mental disorders,Rate,2023,4713.36652507773,5750.78111913708,3981.37946973818
+All Population,Incidence,United States of America,Female,35-39 years,Mental disorders,Rate,2023,8915.70379613783,10847.01907632018,7532.348575882911
+All Population,Incidence,United States of America,Male,40-44 years,Mental disorders,Rate,2023,4504.05476378361,5426.40574488351,3784.13920485464
+All Population,Incidence,United States of America,Female,40-44 years,Mental disorders,Rate,2023,8550.848436625889,10254.75745298386,7175.79423999072
+All Population,Incidence,United States of America,Male,45-49 years,Mental disorders,Rate,2023,4310.58669767013,5049.81728704902,3475.2528420750896
+All Population,Incidence,United States of America,Female,45-49 years,Mental disorders,Rate,2023,8137.22217018617,9499.68356369549,6597.15570677432
+All Population,Incidence,United States of America,Male,50-54 years,Mental disorders,Rate,2023,4205.55880679749,4929.06351560468,3445.06827592287
+All Population,Incidence,United States of America,Female,50-54 years,Mental disorders,Rate,2023,7985.93130673133,9294.93533437119,6552.0294461759595
+All Population,Incidence,United States of America,Male,55-59 years,Mental disorders,Rate,2023,4001.4775991572,4820.746021380451,3307.93271979925
+All Population,Incidence,United States of America,Female,55-59 years,Mental disorders,Rate,2023,7171.29143578277,8589.351741581611,5920.12345210099
+All Population,Incidence,United States of America,Male,60-64 years,Mental disorders,Rate,2023,3895.31147301395,4654.67923210199,3221.0550690644304
+All Population,Incidence,United States of America,Female,60-64 years,Mental disorders,Rate,2023,6988.084446336181,8367.07259212781,5801.83948172379
+All Population,Incidence,United States of America,Male,65-69 years,Mental disorders,Rate,2023,3837.3664370574897,4634.61698813797,3173.7815712298298
+All Population,Incidence,United States of America,Female,65-69 years,Mental disorders,Rate,2023,6605.56089399624,7914.705669106729,5463.86176531373
+All Population,Incidence,United States of America,Male,70-74 years,Mental disorders,Rate,2023,3704.70423438472,4454.6029222186,2997.21152107346
+All Population,Incidence,United States of America,Female,70-74 years,Mental disorders,Rate,2023,6088.67812679295,7286.38365189869,4924.74823120114
+All Population,Incidence,United States of America,Male,75-79 years,Mental disorders,Rate,2023,3672.58229388306,4426.67428912408,2900.24343119464
+All Population,Incidence,United States of America,Female,75-79 years,Mental disorders,Rate,2023,5924.82396230579,7081.219884805099,4671.521728613609
+All Population,Incidence,United States of America,Male,<1 year,Mental disorders,Rate,2023,2267.49418456345,5754.70878039374,672.55864110361
+All Population,Incidence,United States of America,Female,<1 year,Mental disorders,Rate,2023,939.28504895253,2409.5826381151796,273.01382968157003
+All Population,Incidence,United States of America,Male,80-84 years,Mental disorders,Rate,2023,3638.33658185502,4449.101750973789,2969.04457602947
+All Population,Incidence,United States of America,Female,80-84 years,Mental disorders,Rate,2023,5606.91171073329,6745.14465006269,4567.452914560819
+All Population,Incidence,United States of America,Male,85-89 years,Mental disorders,Rate,2023,3597.59666729976,4222.02298218164,2970.63701482305
+All Population,Incidence,United States of America,Female,85-89 years,Mental disorders,Rate,2023,5500.33353068358,6417.152730085681,4583.68204624319
+All Population,Incidence,United States of America,Male,90-94 years,Mental disorders,Rate,2023,3590.90446909473,4391.37451236944,2999.11895335828
+All Population,Incidence,United States of America,Female,90-94 years,Mental disorders,Rate,2023,5465.91307229532,6681.3574922425405,4587.31933875697
+All Population,Incidence,United States of America,Male,2-4 years,Mental disorders,Rate,2023,888.21309026817,1310.79343007598,538.82653877756
+All Population,Incidence,United States of America,Female,2-4 years,Mental disorders,Rate,2023,422.67444989536995,912.7750230229799,235.48232470607
+All Population,Incidence,United States of America,Male,95+ years,Mental disorders,Rate,2023,3606.93211168812,4637.5400206648,2890.75811897749
+All Population,Incidence,United States of America,Female,95+ years,Mental disorders,Rate,2023,5489.07169423505,7020.845523381231,4378.55894366211
+All Population,Incidence,United States of America,Male,<5 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,734976.4930446353,847331.647969442,629798.0626261253
+All Population,Incidence,United States of America,Female,<5 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,730509.9641183474,845107.1590147178,624634.5537452649
+All Population,Incidence,United States of America,Male,0-6 days,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,879461.9302239238,979051.1987695196,720883.5946386931
+All Population,Incidence,United States of America,Female,0-6 days,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,873687.4771776677,977353.0806465793,712493.4457686774
+All Population,Incidence,United States of America,Male,5-9 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,544031.3055097886,680903.0339187229,432256.86687473883
+All Population,Incidence,United States of America,Female,5-9 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,546785.3468385818,687114.6232372641,432626.19499103574
+All Population,Incidence,United States of America,Male,10-14 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,468622.9312303327,583409.0840139049,368194.8827181259
+All Population,Incidence,United States of America,Female,10-14 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,479312.3812893769,593537.8176844651,375653.29398222535
+All Population,Incidence,United States of America,Male,15-19 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,448520.99926550186,566247.7059777416,359032.3262609608
+All Population,Incidence,United States of America,Female,15-19 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,477128.57126941683,598602.6743867025,377788.9192386297
+All Population,Incidence,United States of America,Male,25-29 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,416822.2315429348,522025.6291133574,336805.6592597521
+All Population,Incidence,United States of America,Female,25-29 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,460411.90976222703,577679.7774716549,375252.66915234405
+All Population,Incidence,United States of America,Male,30-34 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,372447.90276123193,468910.9426783495,289656.7822485065
+All Population,Incidence,United States of America,Female,30-34 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,445050.45180382143,555039.0175473125,345275.1777965902
+All Population,Incidence,United States of America,Male,35-39 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,369094.9293068939,465949.242929598,291454.31403408945
+All Population,Incidence,United States of America,Female,35-39 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,439689.39548698644,545788.1594708593,345114.1905195282
+All Population,Incidence,United States of America,Male,40-44 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,363151.626171696,473481.2336378812,282653.823688297
+All Population,Incidence,United States of America,Female,40-44 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,408030.5481571646,531086.9153276954,313593.86400671845
+All Population,Incidence,United States of America,Male,45-49 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,350014.9636798564,446231.83887498116,272089.0780325473
+All Population,Incidence,United States of America,Female,45-49 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,399061.71618606924,511798.3393625213,310556.8056400412
+All Population,Incidence,United States of America,Male,50-54 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,332777.6543978754,415944.2290993063,255999.05086011635
+All Population,Incidence,United States of America,Female,50-54 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,379184.1910881399,477161.62001871376,289225.8742021724
+All Population,Incidence,United States of America,Male,55-59 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,349273.5342520286,422832.7225474949,276848.7371205734
+All Population,Incidence,United States of America,Female,55-59 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,363551.5266156021,440875.5845297537,288103.52518103505
+All Population,Incidence,United States of America,Male,60-64 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,333212.6477433761,414378.94668176514,259936.74653426107
+All Population,Incidence,United States of America,Female,60-64 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,328512.7844699454,412771.21763969917,256121.18561942966
+All Population,Incidence,United States of America,Male,65-69 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,308183.56478279195,381215.3106061679,242695.7102543999
+All Population,Incidence,United States of America,Female,65-69 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,312191.6498258939,383544.3653441304,247359.95833151697
+All Population,Incidence,United States of America,Male,70-74 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,306959.0695702845,389725.90264345147,244344.55201141204
+All Population,Incidence,United States of America,Female,70-74 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,296668.8914902994,374051.6354317215,238491.88762517556
+All Population,Incidence,United States of America,Male,75-79 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,297053.2698041462,373640.30495003064,238345.28497902912
+All Population,Incidence,United States of America,Female,75-79 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,262256.3835346132,326801.791114319,213302.47699924075
+All Population,Incidence,United States of America,Male,<1 year,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,805335.3692950562,897753.9335329462,687622.1274144115
+All Population,Incidence,United States of America,Female,<1 year,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,797312.1709316908,893664.5528252908,683476.5993193323
+All Population,Incidence,United States of America,Male,80-84 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,284675.3233358345,361612.9225293072,223416.5009726148
+All Population,Incidence,United States of America,Female,80-84 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,255053.0381273252,320583.8856887076,202766.59704280327
+All Population,Incidence,United States of America,Male,85-89 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,277553.8713988817,340041.7458991905,226716.56489716092
+All Population,Incidence,United States of America,Female,85-89 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,269065.9405087107,332116.8961502908,222743.44973228555
+All Population,Incidence,United States of America,Male,90-94 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,291901.0697046583,360395.1284745937,236542.93719020058
+All Population,Incidence,United States of America,Female,90-94 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,285128.5927914218,345205.95683893724,233064.25810304386
+All Population,Incidence,United States of America,Male,2-4 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,707143.7280829208,859716.3728574734,565808.3986063875
+All Population,Incidence,United States of America,Female,2-4 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,705376.7276264336,856588.8125270673,564417.2890105894
+All Population,Incidence,United States of America,Male,<5 years,Injuries,Rate,2023,15003.10891862173,17979.807569314802,12682.635214201751
+All Population,Incidence,United States of America,Female,<5 years,Injuries,Rate,2023,14591.86380928775,17691.62557965525,12089.67104293871
+All Population,Incidence,United States of America,Male,0-6 days,Injuries,Rate,2023,15680.44026405147,18212.72254790746,13648.2521139696
+All Population,Incidence,United States of America,Female,0-6 days,Injuries,Rate,2023,16202.05934100661,18915.40081149804,13966.52107518552
+All Population,Incidence,United States of America,Male,5-9 years,Injuries,Rate,2023,19927.71969224677,26005.80046334799,15423.53049814513
+All Population,Incidence,United States of America,Female,5-9 years,Injuries,Rate,2023,18010.11830357044,23809.54152046422,13885.98753230117
+All Population,Incidence,United States of America,Male,10-14 years,Injuries,Rate,2023,22553.66880267537,30006.18920397861,17231.451227094778
+All Population,Incidence,United States of America,Female,10-14 years,Injuries,Rate,2023,19260.73650800724,25520.344665501172,14736.411454116711
+All Population,Incidence,United States of America,Male,15-19 years,Injuries,Rate,2023,25557.38151779179,32749.99878558609,20552.448000998542
+All Population,Incidence,United States of America,Female,15-19 years,Injuries,Rate,2023,19770.63832437849,26125.71131543575,15291.494207603931
+All Population,Incidence,United States of America,Male,25-29 years,Injuries,Rate,2023,25766.590257806933,31616.552314479264,21371.450373725052
+All Population,Incidence,United States of America,Female,25-29 years,Injuries,Rate,2023,18502.79946723219,23272.13205716856,15098.8700183458
+All Population,Incidence,United States of America,Male,30-34 years,Injuries,Rate,2023,23158.546711453608,28025.26496767806,19122.59329421365
+All Population,Incidence,United States of America,Female,30-34 years,Injuries,Rate,2023,17025.47205076392,21266.66657074891,13252.49355008093
+All Population,Incidence,United States of America,Male,35-39 years,Injuries,Rate,2023,21775.37852465306,26337.543569654248,17989.83234849627
+All Population,Incidence,United States of America,Female,35-39 years,Injuries,Rate,2023,16213.091132846579,20240.8848086303,13016.0108372687
+All Population,Incidence,United States of America,Male,40-44 years,Injuries,Rate,2023,22460.25945751822,28001.468743053592,18197.72083990038
+All Population,Incidence,United States of America,Female,40-44 years,Injuries,Rate,2023,16886.69490457049,21267.82445158693,13420.690411133952
+All Population,Incidence,United States of America,Male,45-49 years,Injuries,Rate,2023,28359.495599447797,35190.31843751838,21486.05345282382
+All Population,Incidence,United States of America,Female,45-49 years,Injuries,Rate,2023,24837.13163537977,31586.21022467515,18397.50257046277
+All Population,Incidence,United States of America,Male,50-54 years,Injuries,Rate,2023,31306.91462897996,38691.678896935635,24094.46648025237
+All Population,Incidence,United States of America,Female,50-54 years,Injuries,Rate,2023,31844.46386303358,39699.76858074058,24324.484192315558
+All Population,Incidence,United States of America,Male,55-59 years,Injuries,Rate,2023,29806.03124223224,35965.3996050381,23693.74419726005
+All Population,Incidence,United States of America,Female,55-59 years,Injuries,Rate,2023,35037.8203011327,44049.368814329435,26751.92221316054
+All Population,Incidence,United States of America,Male,60-64 years,Injuries,Rate,2023,27529.38918652776,34331.924420275514,21889.63529756436
+All Population,Incidence,United States of America,Female,60-64 years,Injuries,Rate,2023,35032.53913698048,45031.12475606474,26807.68172185692
+All Population,Incidence,United States of America,Male,65-69 years,Injuries,Rate,2023,24608.93130328913,31114.30321220779,19644.17166597886
+All Population,Incidence,United States of America,Female,65-69 years,Injuries,Rate,2023,32447.28832921654,42783.93936216704,25046.641990285512
+All Population,Incidence,United States of America,Male,70-74 years,Injuries,Rate,2023,24649.7458306033,30662.36381558138,19613.36206502428
+All Population,Incidence,United States of America,Female,70-74 years,Injuries,Rate,2023,33074.374364678435,41844.30145556522,25216.81362302864
+All Population,Incidence,United States of America,Male,75-79 years,Injuries,Rate,2023,25076.17847070872,30209.607720434928,20354.49229412508
+All Population,Incidence,United States of America,Female,75-79 years,Injuries,Rate,2023,32125.02371615199,39925.97283951084,24855.40892520392
+All Population,Incidence,United States of America,Male,<1 year,Injuries,Rate,2023,14117.20113547947,16212.00188280246,12259.890269417741
+All Population,Incidence,United States of America,Female,<1 year,Injuries,Rate,2023,14345.755855447109,16717.054256809923,12407.10412863717
+All Population,Incidence,United States of America,Male,80-84 years,Injuries,Rate,2023,25135.88974085691,30220.65614922822,20273.92176579706
+All Population,Incidence,United States of America,Female,80-84 years,Injuries,Rate,2023,30806.83602396404,38024.93521009366,24534.84989933645
+All Population,Incidence,United States of America,Male,85-89 years,Injuries,Rate,2023,25848.948866472023,31385.39328174861,20782.63257101175
+All Population,Incidence,United States of America,Female,85-89 years,Injuries,Rate,2023,31705.29868511577,39207.431549859015,24890.50154273103
+All Population,Incidence,United States of America,Male,90-94 years,Injuries,Rate,2023,27503.8612559384,32993.56446520773,22691.08516161438
+All Population,Incidence,United States of America,Female,90-94 years,Injuries,Rate,2023,35094.9413690813,43130.46546728857,28295.11945297706
+All Population,Incidence,United States of America,Male,2-4 years,Injuries,Rate,2023,15846.175474580628,20044.14805056816,12923.39988891066
+All Population,Incidence,United States of America,Female,2-4 years,Injuries,Rate,2023,15159.17496751135,19553.93494636028,12043.573184952449
+All Population,Incidence,United States of America,Male,95+ years,Injuries,Rate,2023,29787.14230550759,40492.48145657559,22361.4918580164
+All Population,Incidence,United States of America,Female,95+ years,Injuries,Rate,2023,40082.6079587313,57606.63442124334,29088.78070996457
+All Population,Incidence,United States of America,Male,<5 years,Substance use disorders,Rate,2023,21.303525340020002,27.35682543371,16.26511207051
+All Population,Incidence,United States of America,Female,<5 years,Substance use disorders,Rate,2023,16.06625534889,20.732196787,12.27987914623
+All Population,Incidence,United States of America,Male,0-6 days,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,0-6 days,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,5-9 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,5-9 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,10-14 years,Substance use disorders,Rate,2023,682.64195848435,1095.05934233721,395.52030515050996
+All Population,Incidence,United States of America,Female,10-14 years,Substance use disorders,Rate,2023,489.71772837380996,735.20356947348,302.56737048723
+All Population,Incidence,United States of America,Male,15-19 years,Substance use disorders,Rate,2023,3085.47014923927,3781.5144839020204,2556.42383098672
+All Population,Incidence,United States of America,Female,15-19 years,Substance use disorders,Rate,2023,2241.62564919213,2754.4314705238203,1792.96936558168
+All Population,Incidence,United States of America,Male,25-29 years,Substance use disorders,Rate,2023,4709.90079814809,5750.943872958101,3658.57385376009
+All Population,Incidence,United States of America,Female,25-29 years,Substance use disorders,Rate,2023,2940.0149540246002,3597.9837885010697,2303.52965248713
+All Population,Incidence,United States of America,Male,30-34 years,Substance use disorders,Rate,2023,4705.84964130806,5829.46457439779,3600.6300760363797
+All Population,Incidence,United States of America,Female,30-34 years,Substance use disorders,Rate,2023,2819.6901679869097,3505.1751332493304,2215.94576186762
+All Population,Incidence,United States of America,Male,35-39 years,Substance use disorders,Rate,2023,3940.4413674622197,4931.98978629422,3129.2797694168603
+All Population,Incidence,United States of America,Female,35-39 years,Substance use disorders,Rate,2023,2449.7289858526497,3052.4379112913402,2009.67199736947
+All Population,Incidence,United States of America,Male,40-44 years,Substance use disorders,Rate,2023,3302.5127924401,4248.264228961731,2495.11220592857
+All Population,Incidence,United States of America,Female,40-44 years,Substance use disorders,Rate,2023,2055.70498359238,2604.56747682531,1618.65972175331
+All Population,Incidence,United States of America,Male,45-49 years,Substance use disorders,Rate,2023,2781.35962816837,3586.7801182166504,2148.2413863226
+All Population,Incidence,United States of America,Female,45-49 years,Substance use disorders,Rate,2023,1631.9250928642198,2043.9315176377802,1308.37894021967
+All Population,Incidence,United States of America,Male,50-54 years,Substance use disorders,Rate,2023,2369.18965314199,3118.60218106393,1745.0141681517698
+All Population,Incidence,United States of America,Female,50-54 years,Substance use disorders,Rate,2023,1253.81524857056,1604.9597514630702,950.79105561233
+All Population,Incidence,United States of America,Male,55-59 years,Substance use disorders,Rate,2023,2058.70005589553,2671.35425133283,1517.9255973504
+All Population,Incidence,United States of America,Female,55-59 years,Substance use disorders,Rate,2023,911.5268921276399,1164.57834057323,697.90733221012
+All Population,Incidence,United States of America,Male,60-64 years,Substance use disorders,Rate,2023,1641.1063673105498,2233.33257146284,1108.5486782544
+All Population,Incidence,United States of America,Female,60-64 years,Substance use disorders,Rate,2023,654.09619643308,878.7669776527699,446.49731911941
+All Population,Incidence,United States of America,Male,65-69 years,Substance use disorders,Rate,2023,1118.1379811992401,1491.62703022895,817.7748327415999
+All Population,Incidence,United States of America,Female,65-69 years,Substance use disorders,Rate,2023,481.96910035585995,641.03342721898,359.90422291499
+All Population,Incidence,United States of America,Male,70-74 years,Substance use disorders,Rate,2023,770.2092237083,1093.93598408966,527.10667343797
+All Population,Incidence,United States of America,Female,70-74 years,Substance use disorders,Rate,2023,371.71492199635,502.15089870842,254.5963202051
+All Population,Incidence,United States of America,Male,75-79 years,Substance use disorders,Rate,2023,601.1029254842,822.182099179,427.15732047701
+All Population,Incidence,United States of America,Female,75-79 years,Substance use disorders,Rate,2023,324.00245783664,440.49552419336004,234.06547317607
+All Population,Incidence,United States of America,Male,<1 year,Substance use disorders,Rate,2023,108.90138245552,139.84521630925,83.14554337844001
+All Population,Incidence,United States of America,Female,<1 year,Substance use disorders,Rate,2023,82.08528693479,105.92439153331999,62.74003377598
+All Population,Incidence,United States of America,Male,80-84 years,Substance use disorders,Rate,2023,517.96000773818,705.28168606984,355.30427716595
+All Population,Incidence,United States of America,Female,80-84 years,Substance use disorders,Rate,2023,309.33288037643996,414.43930306145,223.29529370090998
+All Population,Incidence,United States of America,Male,85-89 years,Substance use disorders,Rate,2023,522.83268354346,735.8460952725001,347.84601531984003
+All Population,Incidence,United States of America,Female,85-89 years,Substance use disorders,Rate,2023,327.83003984365,467.64832577330003,226.24522039515
+All Population,Incidence,United States of America,Male,90-94 years,Substance use disorders,Rate,2023,571.31213503899,805.7021318958799,352.76129201752
+All Population,Incidence,United States of America,Female,90-94 years,Substance use disorders,Rate,2023,359.58661943221,507.29578068494,229.10825633045002
+All Population,Incidence,United States of America,Male,2-4 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,2-4 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,95+ years,Substance use disorders,Rate,2023,660.66826345776,1101.23658795537,327.47225702594
+All Population,Incidence,United States of America,Female,95+ years,Substance use disorders,Rate,2023,403.24833764723,659.2786283855601,208.16797154164001
+All Population,Incidence,United States of America,Male,<5 years,Diabetes and kidney diseases,Rate,2023,41.8542538036,83.73708442089999,20.081237619179998
+All Population,Incidence,United States of America,Female,<5 years,Diabetes and kidney diseases,Rate,2023,38.35175852564,74.03666780545001,19.18648471058
+All Population,Incidence,United States of America,Male,0-6 days,Diabetes and kidney diseases,Rate,2023,71.5145970698,81.79698755014999,62.32898004099
+All Population,Incidence,United States of America,Female,0-6 days,Diabetes and kidney diseases,Rate,2023,73.11806820217,84.54840645989,63.45303842383
+All Population,Incidence,United States of America,Male,5-9 years,Diabetes and kidney diseases,Rate,2023,79.03150253943001,138.02358891487,47.697996069889996
+All Population,Incidence,United States of America,Female,5-9 years,Diabetes and kidney diseases,Rate,2023,67.81516253366999,127.05663278872,39.405594956979996
+All Population,Incidence,United States of America,Male,10-14 years,Diabetes and kidney diseases,Rate,2023,72.86300372503,120.90410815359002,54.169500183980006
+All Population,Incidence,United States of America,Female,10-14 years,Diabetes and kidney diseases,Rate,2023,58.20117591473,110.70036843768001,40.78965662197
+All Population,Incidence,United States of America,Male,15-19 years,Diabetes and kidney diseases,Rate,2023,119.98509535628,144.58086742768,95.05506568382
+All Population,Incidence,United States of America,Female,15-19 years,Diabetes and kidney diseases,Rate,2023,125.93102234470001,150.63663698112998,99.24157690684001
+All Population,Incidence,United States of America,Male,25-29 years,Diabetes and kidney diseases,Rate,2023,159.25989164461,209.62987997445998,107.7054856582
+All Population,Incidence,United States of America,Female,25-29 years,Diabetes and kidney diseases,Rate,2023,161.12660311434,206.82599359816,109.51441783637
+All Population,Incidence,United States of America,Male,30-34 years,Diabetes and kidney diseases,Rate,2023,383.50328007101,447.4879470028,323.32304513036996
+All Population,Incidence,United States of America,Female,30-34 years,Diabetes and kidney diseases,Rate,2023,298.1961177627,358.85493572431,243.86624428382
+All Population,Incidence,United States of America,Male,35-39 years,Diabetes and kidney diseases,Rate,2023,668.3784703446601,803.1514170061499,534.6823614369699
+All Population,Incidence,United States of America,Female,35-39 years,Diabetes and kidney diseases,Rate,2023,463.69493579503995,581.2332641381,361.75588975201
+All Population,Incidence,United States of America,Male,40-44 years,Diabetes and kidney diseases,Rate,2023,926.07491599342,1038.16063467892,819.61125800132
+All Population,Incidence,United States of America,Female,40-44 years,Diabetes and kidney diseases,Rate,2023,665.60139827525,764.9726858954,579.5844803213199
+All Population,Incidence,United States of America,Male,45-49 years,Diabetes and kidney diseases,Rate,2023,1160.37077997746,1447.89038142697,902.6969653499599
+All Population,Incidence,United States of America,Female,45-49 years,Diabetes and kidney diseases,Rate,2023,916.36816649541,1132.5181116170002,723.55649704161
+All Population,Incidence,United States of America,Male,50-54 years,Diabetes and kidney diseases,Rate,2023,1430.56581762731,1644.68013307554,1197.82372451982
+All Population,Incidence,United States of America,Female,50-54 years,Diabetes and kidney diseases,Rate,2023,1230.18823754795,1440.30277580441,1030.22228574139
+All Population,Incidence,United States of America,Male,55-59 years,Diabetes and kidney diseases,Rate,2023,1787.4192702511098,2117.79259725951,1496.46887543761
+All Population,Incidence,United States of America,Female,55-59 years,Diabetes and kidney diseases,Rate,2023,1631.13179503807,1893.1449961718702,1384.7498581216
+All Population,Incidence,United States of America,Male,60-64 years,Diabetes and kidney diseases,Rate,2023,2174.07410835994,2572.16579870099,1831.5683888618098
+All Population,Incidence,United States of America,Female,60-64 years,Diabetes and kidney diseases,Rate,2023,2081.52488955166,2469.45279444039,1743.52942583738
+All Population,Incidence,United States of America,Male,65-69 years,Diabetes and kidney diseases,Rate,2023,2492.10556268889,2916.66631030397,2011.2933575028
+All Population,Incidence,United States of America,Female,65-69 years,Diabetes and kidney diseases,Rate,2023,2427.1092976621,2891.03731117296,1942.2964942900098
+All Population,Incidence,United States of America,Male,70-74 years,Diabetes and kidney diseases,Rate,2023,2631.6332981405803,3308.72997760689,2058.09905809132
+All Population,Incidence,United States of America,Female,70-74 years,Diabetes and kidney diseases,Rate,2023,2581.3582663779403,3218.8338966140104,1995.8646769307202
+All Population,Incidence,United States of America,Male,75-79 years,Diabetes and kidney diseases,Rate,2023,2522.39667634007,3167.80009028935,1918.10104728516
+All Population,Incidence,United States of America,Female,75-79 years,Diabetes and kidney diseases,Rate,2023,2506.94330591473,3190.13564155504,1896.0332223526398
+All Population,Incidence,United States of America,Male,<1 year,Diabetes and kidney diseases,Rate,2023,43.77115804564,53.67944353047999,36.88579578442
+All Population,Incidence,United States of America,Female,<1 year,Diabetes and kidney diseases,Rate,2023,44.072488795139996,52.90652387848,37.141387389360005
+All Population,Incidence,United States of America,Male,80-84 years,Diabetes and kidney diseases,Rate,2023,2100.0351172401397,2650.99569661746,1572.3536758731602
+All Population,Incidence,United States of America,Female,80-84 years,Diabetes and kidney diseases,Rate,2023,2088.52189089312,2631.66705933137,1561.74032954302
+All Population,Incidence,United States of America,Male,85-89 years,Diabetes and kidney diseases,Rate,2023,1639.2678376948002,2119.13557022635,1215.51061147539
+All Population,Incidence,United States of America,Female,85-89 years,Diabetes and kidney diseases,Rate,2023,1608.87000915612,2072.38802363379,1177.63334759287
+All Population,Incidence,United States of America,Male,90-94 years,Diabetes and kidney diseases,Rate,2023,1344.1591020680698,1735.33690597984,969.78119506621
+All Population,Incidence,United States of America,Female,90-94 years,Diabetes and kidney diseases,Rate,2023,1295.72213710406,1671.2064775207002,923.65504136259
+All Population,Incidence,United States of America,Male,2-4 years,Diabetes and kidney diseases,Rate,2023,47.73038246356,106.90694288852,17.62159749135
+All Population,Incidence,United States of America,Female,2-4 years,Diabetes and kidney diseases,Rate,2023,42.47167142658,92.71313933599,15.81635757448
+All Population,Incidence,United States of America,Male,95+ years,Diabetes and kidney diseases,Rate,2023,1180.64360629895,1699.07656549575,791.0513626511799
+All Population,Incidence,United States of America,Female,95+ years,Diabetes and kidney diseases,Rate,2023,1113.49816937395,1605.3628244904999,750.0734968906901
+All Population,Incidence,United States of America,Male,95+ years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,310844.3765361212,399286.86654014135,236041.42740636723
+All Population,Incidence,United States of America,Female,95+ years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,301275.6328140347,384897.5566413885,231303.92695587018
+All Population,Incidence,United States of America,Male,<5 years,Cardiovascular diseases,Rate,2023,34.83428833724,44.50947169404,27.8792985267
+All Population,Incidence,United States of America,Female,<5 years,Cardiovascular diseases,Rate,2023,26.62140100744,33.93896954584,21.40430320397
+All Population,Incidence,United States of America,Male,0-6 days,Cardiovascular diseases,Rate,2023,39.54297164512,50.36726918164,30.942966396939998
+All Population,Incidence,United States of America,Female,0-6 days,Cardiovascular diseases,Rate,2023,29.409737971850003,38.56883262788,22.88852508608
+All Population,Incidence,United States of America,Male,5-9 years,Cardiovascular diseases,Rate,2023,22.395314478259998,31.33052554333,15.99759405395
+All Population,Incidence,United States of America,Female,5-9 years,Cardiovascular diseases,Rate,2023,18.04523284986,25.58160615479,12.77309559845
+All Population,Incidence,United States of America,Male,10-14 years,Cardiovascular diseases,Rate,2023,24.4040575791,34.01829555993,17.54504678023
+All Population,Incidence,United States of America,Female,10-14 years,Cardiovascular diseases,Rate,2023,17.44959725456,23.93359294355,12.40351799246
+All Population,Incidence,United States of America,Male,15-19 years,Cardiovascular diseases,Rate,2023,40.95577178205,55.15529173686,29.56388158248
+All Population,Incidence,United States of America,Female,15-19 years,Cardiovascular diseases,Rate,2023,24.8579087086,33.03393669507,17.64299699648
+All Population,Incidence,United States of America,Male,25-29 years,Cardiovascular diseases,Rate,2023,71.07796722976,87.23369297716,57.715001629709995
+All Population,Incidence,United States of America,Female,25-29 years,Cardiovascular diseases,Rate,2023,47.66148924137,59.58452452095,37.464078145319995
+All Population,Incidence,United States of America,Male,30-34 years,Cardiovascular diseases,Rate,2023,117.82353038637,139.15929204677,100.46888757750999
+All Population,Incidence,United States of America,Female,30-34 years,Cardiovascular diseases,Rate,2023,75.33781988049999,89.48802786847,63.381066223169995
+All Population,Incidence,United States of America,Male,35-39 years,Cardiovascular diseases,Rate,2023,197.89327940737002,239.36331458003,166.51615770539
+All Population,Incidence,United States of America,Female,35-39 years,Cardiovascular diseases,Rate,2023,119.11693455589,142.97673208824,98.96012012916
+All Population,Incidence,United States of America,Male,40-44 years,Cardiovascular diseases,Rate,2023,391.70265663218,438.12342362955,347.61729243524
+All Population,Incidence,United States of America,Female,40-44 years,Cardiovascular diseases,Rate,2023,249.16605241938,282.44592700694,220.04915003403002
+All Population,Incidence,United States of America,Male,45-49 years,Cardiovascular diseases,Rate,2023,633.69104422078,734.8814221651201,533.304602362
+All Population,Incidence,United States of America,Female,45-49 years,Cardiovascular diseases,Rate,2023,371.97244470380997,448.64246977601,303.15873108808
+All Population,Incidence,United States of America,Male,50-54 years,Cardiovascular diseases,Rate,2023,1064.19591215456,1183.0462033328702,925.92168690667
+All Population,Incidence,United States of America,Female,50-54 years,Cardiovascular diseases,Rate,2023,592.5636533243801,680.6123160831,510.00731793398995
+All Population,Incidence,United States of America,Male,55-59 years,Cardiovascular diseases,Rate,2023,1668.96636831424,2023.8918306898402,1382.43386984984
+All Population,Incidence,United States of America,Female,55-59 years,Cardiovascular diseases,Rate,2023,906.9348182857999,1116.43137781215,748.8093070830199
+All Population,Incidence,United States of America,Male,60-64 years,Cardiovascular diseases,Rate,2023,2706.73540329238,3045.16115700469,2425.9831143604497
+All Population,Incidence,United States of America,Female,60-64 years,Cardiovascular diseases,Rate,2023,1636.31579353755,1913.1545542734,1408.02844090481
+All Population,Incidence,United States of America,Male,65-69 years,Cardiovascular diseases,Rate,2023,4134.351568142431,4751.17846547152,3650.6563990081004
+All Population,Incidence,United States of America,Female,65-69 years,Cardiovascular diseases,Rate,2023,2751.65216910973,3246.61468788877,2324.93533698799
+All Population,Incidence,United States of America,Male,70-74 years,Cardiovascular diseases,Rate,2023,5163.5475486928,5820.99488817485,4617.33874903796
+All Population,Incidence,United States of America,Female,70-74 years,Cardiovascular diseases,Rate,2023,3823.7121089751495,4382.2400317639695,3346.1908567453
+All Population,Incidence,United States of America,Male,75-79 years,Cardiovascular diseases,Rate,2023,5875.24609502693,6978.058858711669,4908.39435124068
+All Population,Incidence,United States of America,Female,75-79 years,Cardiovascular diseases,Rate,2023,4841.61867994471,5957.71218303968,3951.23867866837
+All Population,Incidence,United States of America,Male,<1 year,Cardiovascular diseases,Rate,2023,38.22560634371,47.83810823101,30.601668626579997
+All Population,Incidence,United States of America,Female,<1 year,Cardiovascular diseases,Rate,2023,28.540605287880002,36.62886877209,22.56132879389
+All Population,Incidence,United States of America,Male,80-84 years,Cardiovascular diseases,Rate,2023,6945.144737591249,8097.497067649189,5948.172750858001
+All Population,Incidence,United States of America,Female,80-84 years,Cardiovascular diseases,Rate,2023,6048.0381696924305,7169.67022132473,5151.0484810136095
+All Population,Incidence,United States of America,Male,85-89 years,Cardiovascular diseases,Rate,2023,8327.52522575195,10541.49294077641,6756.38141700196
+All Population,Incidence,United States of America,Female,85-89 years,Cardiovascular diseases,Rate,2023,7255.20268652563,9477.48938476262,5687.14408811034
+All Population,Incidence,United States of America,Male,90-94 years,Cardiovascular diseases,Rate,2023,9843.243587509689,11716.37426182292,8104.1186533932705
+All Population,Incidence,United States of America,Female,90-94 years,Cardiovascular diseases,Rate,2023,8148.86484624059,9640.6172050978,6779.012553612
+All Population,Incidence,United States of America,Male,2-4 years,Cardiovascular diseases,Rate,2023,32.22315579304,41.98453141032,24.54235050757
+All Population,Incidence,United States of America,Female,2-4 years,Cardiovascular diseases,Rate,2023,24.85748995428,32.97096550014,19.60951275608
+All Population,Incidence,United States of America,Male,95+ years,Cardiovascular diseases,Rate,2023,11551.72360295427,14523.594048382018,8986.560603025071
+All Population,Incidence,United States of America,Female,95+ years,Cardiovascular diseases,Rate,2023,8961.76369023554,11202.99284067949,6971.070864843031
+All Population,Incidence,United States of America,Male,<5 years,Chronic respiratory diseases,Rate,2023,3569.53011555267,5088.65632108673,2351.46396890818
+All Population,Incidence,United States of America,Female,<5 years,Chronic respiratory diseases,Rate,2023,2505.2766939786,3641.96477688825,1624.4266994545098
+All Population,Incidence,United States of America,Male,0-6 days,Chronic respiratory diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,0-6 days,Chronic respiratory diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,5-9 years,Chronic respiratory diseases,Rate,2023,1344.9360640561601,2340.36112276738,627.19852810938
+All Population,Incidence,United States of America,Female,5-9 years,Chronic respiratory diseases,Rate,2023,1040.2710037343,1846.03450901983,512.1747292567701
+All Population,Incidence,United States of America,Male,10-14 years,Chronic respiratory diseases,Rate,2023,608.3479365614,1160.25808496895,264.57693609275003
+All Population,Incidence,United States of America,Female,10-14 years,Chronic respiratory diseases,Rate,2023,625.46049177353,1195.99965931839,268.06646414676
+All Population,Incidence,United States of America,Male,15-19 years,Chronic respiratory diseases,Rate,2023,385.29022355497,722.72124139946,154.30619963805
+All Population,Incidence,United States of America,Female,15-19 years,Chronic respiratory diseases,Rate,2023,505.11666885489,885.98863796257,226.52469979646997
+All Population,Incidence,United States of America,Male,25-29 years,Chronic respiratory diseases,Rate,2023,330.31815657942,567.52438401267,182.43182834591002
+All Population,Incidence,United States of America,Female,25-29 years,Chronic respiratory diseases,Rate,2023,443.71292523427,740.89386767881,249.92363718973
+All Population,Incidence,United States of America,Male,30-34 years,Chronic respiratory diseases,Rate,2023,351.15929022089,556.55613292564,201.12757581032
+All Population,Incidence,United States of America,Female,30-34 years,Chronic respiratory diseases,Rate,2023,454.19210378644,722.30132883341,256.63914536579
+All Population,Incidence,United States of America,Male,35-39 years,Chronic respiratory diseases,Rate,2023,370.53755699903,610.04230639108,213.40440336721002
+All Population,Incidence,United States of America,Female,35-39 years,Chronic respiratory diseases,Rate,2023,478.47200897358,780.89871115855,272.88778198182
+All Population,Incidence,United States of America,Male,40-44 years,Chronic respiratory diseases,Rate,2023,490.9289640165,758.44918338026,307.38277582151
+All Population,Incidence,United States of America,Female,40-44 years,Chronic respiratory diseases,Rate,2023,627.9512751183299,955.80597593941,395.22033550329
+All Population,Incidence,United States of America,Male,45-49 years,Chronic respiratory diseases,Rate,2023,665.5639894515799,915.1175972209401,491.04130435448
+All Population,Incidence,United States of America,Female,45-49 years,Chronic respiratory diseases,Rate,2023,810.1606825922901,1133.66581993453,575.95579702462
+All Population,Incidence,United States of America,Male,50-54 years,Chronic respiratory diseases,Rate,2023,725.85870167018,968.34073496483,562.086589771
+All Population,Incidence,United States of America,Female,50-54 years,Chronic respiratory diseases,Rate,2023,832.79918226503,1174.44375785545,617.61021000191
+All Population,Incidence,United States of America,Male,55-59 years,Chronic respiratory diseases,Rate,2023,728.61678981788,991.9637971909199,556.1981214853
+All Population,Incidence,United States of America,Female,55-59 years,Chronic respiratory diseases,Rate,2023,805.2840568021901,1128.74141774159,584.47988623511
+All Population,Incidence,United States of America,Male,60-64 years,Chronic respiratory diseases,Rate,2023,1322.68361711793,1625.6701822465197,1078.61131332359
+All Population,Incidence,United States of America,Female,60-64 years,Chronic respiratory diseases,Rate,2023,1345.37233321414,1697.00471270242,1049.36626625395
+All Population,Incidence,United States of America,Male,65-69 years,Chronic respiratory diseases,Rate,2023,1949.5536125803999,2371.62978437356,1657.62449052437
+All Population,Incidence,United States of America,Female,65-69 years,Chronic respiratory diseases,Rate,2023,1938.0802025131702,2365.07375380578,1617.06938357128
+All Population,Incidence,United States of America,Male,70-74 years,Chronic respiratory diseases,Rate,2023,2221.18295761848,2657.50600115305,1791.2313830959401
+All Population,Incidence,United States of America,Female,70-74 years,Chronic respiratory diseases,Rate,2023,2107.83867414944,2609.55786329273,1662.9925415108899
+All Population,Incidence,United States of America,Male,75-79 years,Chronic respiratory diseases,Rate,2023,2260.9700997313803,2655.8702141420104,1825.8540462847798
+All Population,Incidence,United States of America,Female,75-79 years,Chronic respiratory diseases,Rate,2023,1922.9518085776401,2351.58403433527,1482.14266759287
+All Population,Incidence,United States of America,Male,<1 year,Chronic respiratory diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,<1 year,Chronic respiratory diseases,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,80-84 years,Chronic respiratory diseases,Rate,2023,2030.9918418414602,2547.19064804571,1567.1062456595703
+All Population,Incidence,United States of America,Female,80-84 years,Chronic respiratory diseases,Rate,2023,1536.86187411845,2039.2377898797,1110.15648976417
+All Population,Incidence,United States of America,Male,85-89 years,Chronic respiratory diseases,Rate,2023,1832.39820943037,2462.06629593144,1393.0650759697298
+All Population,Incidence,United States of America,Female,85-89 years,Chronic respiratory diseases,Rate,2023,1382.7425302925199,1888.3920518753703,1041.70475286039
+All Population,Incidence,United States of America,Male,90-94 years,Chronic respiratory diseases,Rate,2023,1772.65710293096,2351.61711786559,1301.63793769755
+All Population,Incidence,United States of America,Female,90-94 years,Chronic respiratory diseases,Rate,2023,1417.16676590027,1929.52493611226,1021.29696445595
+All Population,Incidence,United States of America,Male,2-4 years,Chronic respiratory diseases,Rate,2023,3589.2200920120904,5565.2550640462105,1978.37488214532
+All Population,Incidence,United States of America,Female,2-4 years,Chronic respiratory diseases,Rate,2023,2631.3378464829398,4012.6792266285,1423.2961773911102
+All Population,Incidence,United States of America,Male,95+ years,Chronic respiratory diseases,Rate,2023,1839.62997475143,2715.81442313067,1202.04217387081
+All Population,Incidence,United States of America,Female,95+ years,Chronic respiratory diseases,Rate,2023,1529.13194997654,2305.66378979731,964.1306946752601
+All Population,Incidence,United States of America,Male,<5 years,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,<5 years,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,0-6 days,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,0-6 days,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,5-9 years,Musculoskeletal disorders,Rate,2023,684.35488967399,859.9069811675399,537.40111974462
+All Population,Incidence,United States of America,Female,5-9 years,Musculoskeletal disorders,Rate,2023,836.2670230315699,1055.92692479568,648.4345311609
+All Population,Incidence,United States of America,Male,10-14 years,Musculoskeletal disorders,Rate,2023,1862.2438470581399,2369.7927845202803,1434.40260871395
+All Population,Incidence,United States of America,Female,10-14 years,Musculoskeletal disorders,Rate,2023,2629.92852050176,3337.29520363139,2062.25547090081
+All Population,Incidence,United States of America,Male,15-19 years,Musculoskeletal disorders,Rate,2023,2582.3694325175597,3283.14297702054,1951.1016393011
+All Population,Incidence,United States of America,Female,15-19 years,Musculoskeletal disorders,Rate,2023,3768.6695355558,4713.90858525749,2945.62786459701
+All Population,Incidence,United States of America,Male,25-29 years,Musculoskeletal disorders,Rate,2023,4578.21325468788,5792.715571856101,3506.34098584093
+All Population,Incidence,United States of America,Female,25-29 years,Musculoskeletal disorders,Rate,2023,5644.36886893334,7105.934858281319,4264.26834261378
+All Population,Incidence,United States of America,Male,30-34 years,Musculoskeletal disorders,Rate,2023,5880.96502173488,7277.32436096637,4587.57489163103
+All Population,Incidence,United States of America,Female,30-34 years,Musculoskeletal disorders,Rate,2023,6861.56882916732,8475.43245366532,5346.08877857901
+All Population,Incidence,United States of America,Male,35-39 years,Musculoskeletal disorders,Rate,2023,7080.822177907239,8881.20437774305,5645.9487830914595
+All Population,Incidence,United States of America,Female,35-39 years,Musculoskeletal disorders,Rate,2023,8127.94961175025,10168.38638614661,6531.95018590854
+All Population,Incidence,United States of America,Male,40-44 years,Musculoskeletal disorders,Rate,2023,7845.592651858251,9662.27669790456,6432.2996246679795
+All Population,Incidence,United States of America,Female,40-44 years,Musculoskeletal disorders,Rate,2023,9225.91365077322,11283.38175727783,7571.870106430039
+All Population,Incidence,United States of America,Male,45-49 years,Musculoskeletal disorders,Rate,2023,8648.65193883004,10320.887257818109,7090.89039663267
+All Population,Incidence,United States of America,Female,45-49 years,Musculoskeletal disorders,Rate,2023,10326.80484019468,12319.16281357843,8459.93513920171
+All Population,Incidence,United States of America,Male,50-54 years,Musculoskeletal disorders,Rate,2023,9664.263058247929,11884.03677319151,7736.82059287194
+All Population,Incidence,United States of America,Female,50-54 years,Musculoskeletal disorders,Rate,2023,11245.47195134253,13776.484795731381,8907.07080743741
+All Population,Incidence,United States of America,Male,55-59 years,Musculoskeletal disorders,Rate,2023,10489.72217292562,12624.12072705555,8606.2254713283
+All Population,Incidence,United States of America,Female,55-59 years,Musculoskeletal disorders,Rate,2023,11864.97630865828,14262.26205386824,9796.04386416415
+All Population,Incidence,United States of America,Male,60-64 years,Musculoskeletal disorders,Rate,2023,10808.6547818592,12650.329036530411,8813.55719552466
+All Population,Incidence,United States of America,Female,60-64 years,Musculoskeletal disorders,Rate,2023,12419.81430339357,14577.547622519902,10214.070126886709
+All Population,Incidence,United States of America,Male,65-69 years,Musculoskeletal disorders,Rate,2023,11108.67502085999,13223.70312001982,9012.62062668235
+All Population,Incidence,United States of America,Female,65-69 years,Musculoskeletal disorders,Rate,2023,13194.47657811345,15953.910951750919,10672.71679474939
+All Population,Incidence,United States of America,Male,70-74 years,Musculoskeletal disorders,Rate,2023,11808.31679850655,14254.15868543035,9540.005006515501
+All Population,Incidence,United States of America,Female,70-74 years,Musculoskeletal disorders,Rate,2023,14072.343248593319,16958.14565909171,11326.14067150311
+All Population,Incidence,United States of America,Male,75-79 years,Musculoskeletal disorders,Rate,2023,11784.405524543059,14314.81966382862,9534.3737698061
+All Population,Incidence,United States of America,Female,75-79 years,Musculoskeletal disorders,Rate,2023,13912.88716368764,16844.6504249553,11298.826127544738
+All Population,Incidence,United States of America,Male,<1 year,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,<1 year,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,80-84 years,Musculoskeletal disorders,Rate,2023,11265.69730538829,13869.852870479372,8930.70520329383
+All Population,Incidence,United States of America,Female,80-84 years,Musculoskeletal disorders,Rate,2023,13417.863033031399,16231.6835147154,10528.6131013646
+All Population,Incidence,United States of America,Male,85-89 years,Musculoskeletal disorders,Rate,2023,10203.06059127407,12313.36897411862,8039.86893353376
+All Population,Incidence,United States of America,Female,85-89 years,Musculoskeletal disorders,Rate,2023,12325.23156276386,14801.26356741236,10037.520270162931
+All Population,Incidence,United States of America,Male,90-94 years,Musculoskeletal disorders,Rate,2023,9251.77323339034,11130.19794898683,7352.20707377478
+All Population,Incidence,United States of America,Female,90-94 years,Musculoskeletal disorders,Rate,2023,10667.91614714493,12745.640836032451,8684.88599634281
+All Population,Incidence,United States of America,Male,2-4 years,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Female,2-4 years,Musculoskeletal disorders,Rate,2023,0.0,0.0,0.0
+All Population,Incidence,United States of America,Male,95+ years,Musculoskeletal disorders,Rate,2023,9018.74811650893,11446.4024387908,6853.70602644191
+All Population,Incidence,United States of America,Female,95+ years,Musculoskeletal disorders,Rate,2023,9191.09229313055,11736.06588430917,7094.09315585372
+All Population,Incidence,United States of America,Male,<5 years,Other non-communicable diseases,Rate,2023,44529.13871081845,60239.600503881105,30422.33512175969
+All Population,Incidence,United States of America,Female,<5 years,Other non-communicable diseases,Rate,2023,50691.97782712336,66012.55962898076,36610.550317730165
+All Population,Incidence,United States of America,Male,0-6 days,Other non-communicable diseases,Rate,2023,1362.0722631072902,1585.14683188801,1194.88882828472
+All Population,Incidence,United States of America,Female,0-6 days,Other non-communicable diseases,Rate,2023,3003.13373754753,3547.25700287898,2560.89742291285
+All Population,Incidence,United States of America,Male,5-9 years,Other non-communicable diseases,Rate,2023,127221.6905911459,158964.7405000469,91780.30161913505
+All Population,Incidence,United States of America,Female,5-9 years,Other non-communicable diseases,Rate,2023,132049.7247754045,163916.04654148282,95656.23011332708
+All Population,Incidence,United States of America,Male,10-14 years,Other non-communicable diseases,Rate,2023,56152.548193027294,90022.53852218165,31929.530893307663
+All Population,Incidence,United States of America,Female,10-14 years,Other non-communicable diseases,Rate,2023,69896.35530201909,101122.07967657287,45248.86438630365
+All Population,Incidence,United States of America,Male,15-19 years,Other non-communicable diseases,Rate,2023,50852.87816169707,62621.11975264841,38347.2553118768
+All Population,Incidence,United States of America,Female,15-19 years,Other non-communicable diseases,Rate,2023,73594.088141692,86623.5951206752,58944.45581109169
+All Population,Incidence,United States of America,Male,25-29 years,Other non-communicable diseases,Rate,2023,55576.13338786596,64882.606328761925,47082.703277216955
+All Population,Incidence,United States of America,Female,25-29 years,Other non-communicable diseases,Rate,2023,94228.86813568692,106766.0336812853,81362.44100804874
+All Population,Incidence,United States of America,Male,30-34 years,Other non-communicable diseases,Rate,2023,48498.351155411576,57163.843648952505,40377.729755298744
+All Population,Incidence,United States of America,Female,30-34 years,Other non-communicable diseases,Rate,2023,93420.5089951202,106316.02513825032,80838.61927688812
+All Population,Incidence,United States of America,Male,35-39 years,Other non-communicable diseases,Rate,2023,44153.0162434933,53469.00050611758,34987.01702515482
+All Population,Incidence,United States of America,Female,35-39 years,Other non-communicable diseases,Rate,2023,90972.63567274378,104215.03710415777,79785.74133768238
+All Population,Incidence,United States of America,Male,40-44 years,Other non-communicable diseases,Rate,2023,40712.52306594321,49413.70876359963,32268.13780308696
+All Population,Incidence,United States of America,Female,40-44 years,Other non-communicable diseases,Rate,2023,84485.40261647767,96387.38642378933,72729.94553104814
+All Population,Incidence,United States of America,Male,45-49 years,Other non-communicable diseases,Rate,2023,37344.71670781414,45146.14276381946,30127.87407471196
+All Population,Incidence,United States of America,Female,45-49 years,Other non-communicable diseases,Rate,2023,70976.42675330116,82347.52702785794,59152.03784880044
+All Population,Incidence,United States of America,Male,50-54 years,Other non-communicable diseases,Rate,2023,34327.1128930771,41553.900656921774,28214.977990377272
+All Population,Incidence,United States of America,Female,50-54 years,Other non-communicable diseases,Rate,2023,58129.118888081844,68876.06669722256,48592.52135138004
+All Population,Incidence,United States of America,Male,55-59 years,Other non-communicable diseases,Rate,2023,32167.71851417982,38504.26090931405,26764.858949498834
+All Population,Incidence,United States of America,Female,55-59 years,Other non-communicable diseases,Rate,2023,54685.02670788843,63413.906461752915,46288.63788655977
+All Population,Incidence,United States of America,Male,60-64 years,Other non-communicable diseases,Rate,2023,31424.87269169365,37040.3992314989,25542.38531335793
+All Population,Incidence,United States of America,Female,60-64 years,Other non-communicable diseases,Rate,2023,52549.82614904174,60932.6219341786,45449.52936178968
+All Population,Incidence,United States of America,Male,65-69 years,Other non-communicable diseases,Rate,2023,31721.9915577645,37656.12412782007,26715.427193091728
+All Population,Incidence,United States of America,Female,65-69 years,Other non-communicable diseases,Rate,2023,51480.86055784137,58385.82263098816,44721.780743427116
+All Population,Incidence,United States of America,Male,70-74 years,Other non-communicable diseases,Rate,2023,31762.878747528663,36840.885770913104,27278.29415305471
+All Population,Incidence,United States of America,Female,70-74 years,Other non-communicable diseases,Rate,2023,51563.51507897734,58490.74597619743,45249.98900264366
+All Population,Incidence,United States of America,Male,75-79 years,Other non-communicable diseases,Rate,2023,32522.41392170149,37413.4861090049,28149.26994734638
+All Population,Incidence,United States of America,Female,75-79 years,Other non-communicable diseases,Rate,2023,53748.466380478734,60320.45799607211,46541.02323125601
+All Population,Incidence,United States of America,Male,<1 year,Other non-communicable diseases,Rate,2023,16776.93665518882,17587.57531233088,16139.74569596329
+All Population,Incidence,United States of America,Female,<1 year,Other non-communicable diseases,Rate,2023,35495.416932071974,36478.32926733821,34630.57393783469
+All Population,Incidence,United States of America,Male,80-84 years,Other non-communicable diseases,Rate,2023,33369.3749257219,38039.67108126839,29225.541922702443
+All Population,Incidence,United States of America,Female,80-84 years,Other non-communicable diseases,Rate,2023,55347.09227186833,64091.96693820402,47518.324091316
+All Population,Incidence,United States of America,Male,85-89 years,Other non-communicable diseases,Rate,2023,34278.29547652731,39470.0050906361,29691.3934222053
+All Population,Incidence,United States of America,Female,85-89 years,Other non-communicable diseases,Rate,2023,56314.72225061259,66404.11408142767,47529.8369675219
+All Population,Incidence,United States of America,Male,90-94 years,Other non-communicable diseases,Rate,2023,35120.54927053046,40686.65460172472,30933.14123246233
+All Population,Incidence,United States of America,Female,90-94 years,Other non-communicable diseases,Rate,2023,55252.86350188634,65751.4542935289,46495.65638865666
+All Population,Incidence,United States of America,Male,2-4 years,Other non-communicable diseases,Rate,2023,64496.594533990814,89274.36757121472,42049.69167045667
+All Population,Incidence,United States of America,Female,2-4 years,Other non-communicable diseases,Rate,2023,67931.99123923822,94043.28500224388,45336.23098269643
+All Population,Incidence,United States of America,Male,95+ years,Other non-communicable diseases,Rate,2023,35783.21736469685,44701.29912204976,29312.235832345013
+All Population,Incidence,United States of America,Female,95+ years,Other non-communicable diseases,Rate,2023,52031.0934672659,66750.27967489527,42303.83153843779

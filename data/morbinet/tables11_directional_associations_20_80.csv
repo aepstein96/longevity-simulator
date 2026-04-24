@@ -1,0 +1,41 @@
+From (code),From (label),To (code),To (label),OR
+T89,T1DM,F83,Retinopathy,24.68
+T90,T2DM,F83,Retinopathy,22.84
+K75,Acute myocardial infarction,K76,Ischaemic heart disease without angina,12.19
+K86,Hypertension uncomplicated,K87,Hypertension complicated,9.10
+T89,T1DM,U88,Glomerulonephritis/nephrosis,7.38
+T89,T1DM,N94,Peripheral neuritis/neuropathy,5.19
+T89,T1DM,K92,Atherosclerosis/PVD,3.13
+K77,Heart failure,U99.01,Chronic renal failure,2.61
+U99.01,Chronic renal failure,K77,Heart failure,2.61
+T89,T1DM,U99.01,Chronic renal failure,2.23
+F83,Retinopathy,K75,Acute myocardial infarction,2.12
+K92,Atherosclerosis/PVD,D99,"Disease digestive system, other",2.04
+T89,T1DM,F93,Glaucoma,1.93
+F83,Retinopathy,K74,Ischaemic heart disease with angina,1.91
+K74,Ischaemic heart disease with angina,F83,Retinopathy,1.91
+T89,T1DM,K90,Stroke,1.90
+K74,Ischaemic heart disease with angina,T90,T2DM,1.87
+K87,Hypertension complicated,T83/82,Overweight/Obesity,1.86
+T83/82,Overweight/Obesity,K87,Hypertension complicated,1.86
+K86,Hypertension uncomplicated,K74,Ischaemic heart disease with angina,1.81
+F83,Retinopathy,T83/82,Overweight/Obesity,1.77
+T83/82,Overweight/Obesity,F83,Retinopathy,1.77
+K86,Hypertension uncomplicated,K76,Ischaemic heart disease without angina,1.73
+T93,Lipid disorder,K76,Ischaemic heart disease without angina,1.73
+T93,Lipid disorder,K74,Ischaemic heart disease with angina,1.69
+F83,Retinopathy,D99,"Disease digestive system, other",1.62
+T90,T2DM,K87,Hypertension complicated,1.61
+N94,Peripheral neuritis/neuropathy,U99.01,Chronic renal failure,1.53
+K86,Hypertension uncomplicated,K75,Acute myocardial infarction,1.44
+T89,T1DM,B82,Anaemia other/unspecified,1.43
+T89,T1DM,N93,Carpal tunnel syndrome,1.42
+F83,Retinopathy,P71,Organic psychosis other,1.39
+F92,Cataract,K92,Atherosclerosis/PVD,1.36
+P72,Schizophrenia,T90,T2DM,1.33
+F92,Cataract,P71,Organic psychosis other,1.31
+T89,T1DM,K86,Hypertension uncomplicated,1.31
+N93,Carpal tunnel syndrome,T92,Gout,1.27
+T90,T2DM,F84,Macular degeneration,1.27
+T99,"Endocrine/metabolic/nutrition disease, other",K76,Ischaemic heart disease without angina,1.27
+K76,Ischaemic heart disease without angina,P71,Organic psychosis other,1.24

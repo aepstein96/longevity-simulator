@@ -81,7 +81,7 @@ def categorize_cause(icd_list):
         return 'Other'
 
 
-def load_cause_fractions(filepath='data/cause_fractions_total.csv'):
+def load_cause_fractions(filepath='data/CDC/cause_fractions_total.csv'):
     """
     Load preprocessed cause-of-death fractions from CSV file.
     
@@ -89,7 +89,7 @@ def load_cause_fractions(filepath='data/cause_fractions_total.csv'):
     ----------
     filepath : str, optional
         Path to the processed cause fractions file
-        (default: 'data/cause_fractions_total.csv' for both sexes)
+        (default: 'data/CDC/cause_fractions_total.csv' for both sexes)
     
     Returns
     -------
@@ -103,10 +103,10 @@ def load_cause_fractions(filepath='data/cause_fractions_total.csv'):
     >>> cause_fractions = load_cause_fractions()
     
     >>> # Load male-specific cause fractions
-    >>> male_fractions = load_cause_fractions('data/cause_fractions_male.csv')
+    >>> male_fractions = load_cause_fractions('data/CDC/cause_fractions_male.csv')
     
     >>> # Load female-specific cause fractions
-    >>> female_fractions = load_cause_fractions('data/cause_fractions_female.csv')
+    >>> female_fractions = load_cause_fractions('data/CDC/cause_fractions_female.csv')
     
     >>> # Show fractions at age 70
     >>> print(cause_fractions.loc[70])

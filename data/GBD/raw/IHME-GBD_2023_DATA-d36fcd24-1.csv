@@ -1,0 +1,820 @@
+population_group,measure,location,sex,age,cause,metric,year,val,upper,lower
+All Population,Deaths,United States of America,Male,<5 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,68.46746853726938,72.10685694129714,63.95172097500519
+All Population,Deaths,United States of America,Female,<5 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,54.46893737011985,58.77435111847901,48.563690847392444
+All Population,Deaths,United States of America,Both,<5 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,61.62265514212852,64.70486294384261,57.61326417355673
+All Population,Deaths,United States of America,Male,5-9 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,0.9561883910280611,1.045218676913756,0.8693173106315072
+All Population,Deaths,United States of America,Female,5-9 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,0.8344214480051299,0.9264429801501154,0.7454949458381399
+All Population,Deaths,United States of America,Both,5-9 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,0.8967030094308985,0.9661325377734475,0.8379312926566899
+All Population,Deaths,United States of America,Male,10-14 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,0.892124181640663,0.9722921801629153,0.8138475134689598
+All Population,Deaths,United States of America,Female,10-14 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,0.7632484764285868,0.8578992688045736,0.6818715762305957
+All Population,Deaths,United States of America,Both,10-14 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,0.8292780546268896,0.8918523966580617,0.7688414929332766
+All Population,Deaths,United States of America,Male,15-19 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1.297095031191911,1.4401087349272643,1.167876476551182
+All Population,Deaths,United States of America,Female,15-19 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1.3993565527949194,1.5411721529110975,1.2636960721589996
+All Population,Deaths,United States of America,Both,15-19 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1.3469902411440329,1.4449574748477678,1.2408904050575542
+All Population,Deaths,United States of America,Male,20-24 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2.178843864223469,2.423560099264083,1.9327688968563583
+All Population,Deaths,United States of America,Female,20-24 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2.824045170822465,3.1497406409665722,2.492979800605824
+All Population,Deaths,United States of America,Both,20-24 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2.495325920726521,2.6911550693161654,2.2820202414924795
+All Population,Deaths,United States of America,Male,25-29 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,3.9749089055175415,4.447525361174704,3.455383784536286
+All Population,Deaths,United States of America,Female,25-29 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,4.591856573294584,5.131617903444322,3.935851638794142
+All Population,Deaths,United States of America,Both,25-29 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,4.278234061242098,4.673452000626107,3.8624558468647052
+All Population,Deaths,United States of America,Male,30-34 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,6.855168048833088,7.699371849896826,5.9095810691614155
+All Population,Deaths,United States of America,Female,30-34 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,6.560040517666171,7.307753648258615,5.69665320299453
+All Population,Deaths,United States of America,Both,30-34 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,6.70945455159437,7.309236912706062,6.103956894817996
+All Population,Deaths,United States of America,Male,35-39 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,9.02184846542053,9.997166418023212,7.90084371479208
+All Population,Deaths,United States of America,Female,35-39 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,8.200694752460771,8.954488092407269,7.287686651743241
+All Population,Deaths,United States of America,Both,35-39 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,8.61660942679983,9.294939687991352,7.85326913356668
+All Population,Deaths,United States of America,Male,40-44 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,12.520429926299615,13.864367679702308,11.199451532964703
+All Population,Deaths,United States of America,Female,40-44 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,9.350648667797614,10.190572015758272,8.538001119489673
+All Population,Deaths,United States of America,Both,40-44 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,10.946808210304978,11.729145216595018,10.113756171177018
+All Population,Deaths,United States of America,Male,45-49 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,16.21160755138308,17.723289849643034,14.863229486016897
+All Population,Deaths,United States of America,Female,45-49 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,10.450596630688317,11.301182425572614,9.526807528476118
+All Population,Deaths,United States of America,Both,45-49 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,13.333925158307682,14.166867532074493,12.500429389369799
+All Population,Deaths,United States of America,Male,50-54 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,22.53086636186985,24.218556693120807,20.636622223970356
+All Population,Deaths,United States of America,Female,50-54 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,14.173978672082587,15.516925941361874,12.980236684144762
+All Population,Deaths,United States of America,Both,50-54 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,18.347788282473775,19.52038687286524,17.235485199294153
+All Population,Deaths,United States of America,Male,55-59 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,32.826817943312584,35.43026515552849,30.60488061127539
+All Population,Deaths,United States of America,Female,55-59 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,20.09249681954912,21.893174278547075,18.57787075543084
+All Population,Deaths,United States of America,Both,55-59 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,26.393552536550807,28.05746970783705,24.94141911925659
+All Population,Deaths,United States of America,Male,60-64 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,49.13519464450387,53.44760584122877,45.2700831913602
+All Population,Deaths,United States of America,Female,60-64 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,31.550263937647102,34.40703105381819,28.97806090290569
+All Population,Deaths,United States of America,Both,60-64 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,40.1297751538549,42.970920329553,37.61578912776099
+All Population,Deaths,United States of America,Male,65-69 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,76.16197317574083,82.86916511724456,70.35984652777768
+All Population,Deaths,United States of America,Female,65-69 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,50.37433062634856,55.333841479105004,46.02134366884887
+All Population,Deaths,United States of America,Both,65-69 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,62.68018407968065,67.1568075208318,58.33778118302698
+All Population,Deaths,United States of America,Male,70-74 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,113.96009906770914,123.28852031544498,104.90048521876204
+All Population,Deaths,United States of America,Female,70-74 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,79.93853478058683,88.53723915877859,72.1377558845184
+All Population,Deaths,United States of America,Both,70-74 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,95.75776436125858,103.5623704925978,87.99216193199544
+All Population,Deaths,United States of America,Male,75-79 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,201.89231346400598,217.70860517655788,187.01455050239252
+All Population,Deaths,United States of America,Female,75-79 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,151.91379221457748,168.48633260873484,132.572948252693
+All Population,Deaths,United States of America,Both,75-79 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,174.5907076072861,188.78305973189887,159.0972429345645
+All Population,Deaths,United States of America,Male,<1 year,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,335.421929319161,353.4262815004949,312.9210338674391
+All Population,Deaths,United States of America,Female,<1 year,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,267.67999469672264,288.89297225650256,239.2145098471337
+All Population,Deaths,United States of America,Both,<1 year,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,302.28937596454045,317.52998558383143,282.7347195216988
+All Population,Deaths,United States of America,Male,80-84 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,393.4792281947343,431.3156799045719,346.89894190495653
+All Population,Deaths,United States of America,Female,80-84 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,301.61276517547606,347.4731471730434,245.9813467743167
+All Population,Deaths,United States of America,Both,80-84 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,341.07039866870616,375.9584551148892,292.9273311463353
+All Population,Deaths,United States of America,Male,85-89 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,734.5705549860604,817.6722323745362,618.3972110890938
+All Population,Deaths,United States of America,Female,85-89 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,610.6770396685813,715.0861389899254,472.33385138333523
+All Population,Deaths,United States of America,Both,85-89 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,659.6958711620464,743.9404797412725,531.3945823605508
+All Population,Deaths,United States of America,Male,90-94 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1490.698558694025,1683.8740525881894,1205.3060953441725
+All Population,Deaths,United States of America,Female,90-94 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1177.3097931875384,1393.2540015104062,858.379975303952
+All Population,Deaths,United States of America,Both,90-94 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1283.9888517184702,1473.602822486693,970.515348492775
+All Population,Deaths,United States of America,Male,2-4 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2.374542766229426,2.58075260072303,2.1483902644177904
+All Population,Deaths,United States of America,Female,2-4 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,1.8369434490809102,2.0584356513330393,1.552513590363422
+All Population,Deaths,United States of America,Both,2-4 years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2.1117312654805107,2.2682457796637516,1.937530803471796
+All Population,Deaths,United States of America,Male,95+ years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2376.865933084684,2773.324249055808,1768.4768663094767
+All Population,Deaths,United States of America,Female,95+ years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2308.3525235859934,2778.0624704796364,1674.5990451929906
+All Population,Deaths,United States of America,Both,95+ years,"Communicable, maternal, neonatal, and nutritional diseases",Rate,2023,2327.009321552906,2751.7304740004965,1702.5362558925838
+All Population,Deaths,United States of America,Male,<5 years,Cardiovascular diseases,Rate,2023,2.4653219545045286,3.010938359482462,1.9998511105883376
+All Population,Deaths,United States of America,Female,<5 years,Cardiovascular diseases,Rate,2023,1.9771862469829513,2.4671913393007885,1.5657321171584817
+All Population,Deaths,United States of America,Both,<5 years,Cardiovascular diseases,Rate,2023,2.2266399249690965,2.6269355198730566,1.9019950604274423
+All Population,Deaths,United States of America,Male,5-9 years,Cardiovascular diseases,Rate,2023,0.46980103482733593,0.5963992426020688,0.37382554225148346
+All Population,Deaths,United States of America,Female,5-9 years,Cardiovascular diseases,Rate,2023,0.4202387742112508,0.5325169679318674,0.3354747323932836
+All Population,Deaths,United States of America,Both,5-9 years,Cardiovascular diseases,Rate,2023,0.44558896287763894,0.5394452953347878,0.3833610375409416
+All Population,Deaths,United States of America,Male,10-14 years,Cardiovascular diseases,Rate,2023,0.8191425425461032,1.0215795465657778,0.6724756686699083
+All Population,Deaths,United States of America,Female,10-14 years,Cardiovascular diseases,Rate,2023,0.6210691768660238,0.7546108059137147,0.5100397423553232
+All Population,Deaths,United States of America,Both,10-14 years,Cardiovascular diseases,Rate,2023,0.7225522358075945,0.8356753149814061,0.6324638018334382
+All Population,Deaths,United States of America,Male,15-19 years,Cardiovascular diseases,Rate,2023,2.1076044360465667,2.481211079154118,1.7926711632627108
+All Population,Deaths,United States of America,Female,15-19 years,Cardiovascular diseases,Rate,2023,1.1600627272749815,1.400815164099936,0.9522646986236017
+All Population,Deaths,United States of America,Both,15-19 years,Cardiovascular diseases,Rate,2023,1.6452820321116015,1.8586987846021727,1.4352088464952555
+All Population,Deaths,United States of America,Male,20-24 years,Cardiovascular diseases,Rate,2023,3.668760246700934,4.329852710941758,3.030080221073363
+All Population,Deaths,United States of America,Female,20-24 years,Cardiovascular diseases,Rate,2023,2.1338839076198273,2.6075374676509977,1.744326269658349
+All Population,Deaths,United States of America,Both,20-24 years,Cardiovascular diseases,Rate,2023,2.915877672995647,3.3114540608246634,2.5119253457452078
+All Population,Deaths,United States of America,Male,25-29 years,Cardiovascular diseases,Rate,2023,7.813683741313056,9.051675188950806,6.685603096079924
+All Population,Deaths,United States of America,Female,25-29 years,Cardiovascular diseases,Rate,2023,4.090644923651787,4.87004124019567,3.4088223320747977
+All Population,Deaths,United States of America,Both,25-29 years,Cardiovascular diseases,Rate,2023,5.983234599322312,6.701044502189764,5.232174314126792
+All Population,Deaths,United States of America,Male,30-34 years,Cardiovascular diseases,Rate,2023,16.32757708919009,18.84364300385483,13.956075681471566
+All Population,Deaths,United States of America,Female,30-34 years,Cardiovascular diseases,Rate,2023,8.197688922121548,9.676256652402754,6.86830383342676
+All Population,Deaths,United States of America,Both,30-34 years,Cardiovascular diseases,Rate,2023,12.313602410856184,13.812254092823617,10.911111036103815
+All Population,Deaths,United States of America,Male,35-39 years,Cardiovascular diseases,Rate,2023,31.200904224926294,35.60623307846378,27.13341765537888
+All Population,Deaths,United States of America,Female,35-39 years,Cardiovascular diseases,Rate,2023,14.675377655421928,16.80565085084584,12.677042114104545
+All Population,Deaths,United States of America,Both,35-39 years,Cardiovascular diseases,Rate,2023,23.04556327714068,25.56875297190493,20.61998067645929
+All Population,Deaths,United States of America,Male,40-44 years,Cardiovascular diseases,Rate,2023,57.59863119859702,63.874108625584626,51.88372509901141
+All Population,Deaths,United States of America,Female,40-44 years,Cardiovascular diseases,Rate,2023,27.332866738173223,30.541362608404164,24.082153820773687
+All Population,Deaths,United States of America,Both,40-44 years,Cardiovascular diseases,Rate,2023,42.57334701586159,46.36053018309124,39.267092339953116
+All Population,Deaths,United States of America,Male,45-49 years,Cardiovascular diseases,Rate,2023,96.99472690829063,105.27007622294164,88.65282840509704
+All Population,Deaths,United States of America,Female,45-49 years,Cardiovascular diseases,Rate,2023,42.81112867798685,47.159983237768664,38.68444409731029
+All Population,Deaths,United States of America,Both,45-49 years,Cardiovascular diseases,Rate,2023,69.92947937322555,74.71287438712031,65.19118805441425
+All Population,Deaths,United States of America,Male,50-54 years,Cardiovascular diseases,Rate,2023,159.6511542135473,169.5303083924204,149.8873869893614
+All Population,Deaths,United States of America,Female,50-54 years,Cardiovascular diseases,Rate,2023,68.33864026734857,73.7005728872374,62.43358837130948
+All Population,Deaths,United States of America,Both,50-54 years,Cardiovascular diseases,Rate,2023,113.94426073337225,119.54725213505617,107.85647655061653
+All Population,Deaths,United States of America,Male,55-59 years,Cardiovascular diseases,Rate,2023,256.3156033849224,269.6290597009938,243.06631739669723
+All Population,Deaths,United States of America,Female,55-59 years,Cardiovascular diseases,Rate,2023,111.47252148459629,118.6472816262697,103.66425757881629
+All Population,Deaths,United States of America,Both,55-59 years,Cardiovascular diseases,Rate,2023,183.14217080520825,190.84379118453316,175.2430651686201
+All Population,Deaths,United States of America,Male,60-64 years,Cardiovascular diseases,Rate,2023,391.1800317920028,407.89583682020293,374.25650883380337
+All Population,Deaths,United States of America,Female,60-64 years,Cardiovascular diseases,Rate,2023,177.67400492173206,189.41853229334507,165.13026297812317
+All Population,Deaths,United States of America,Both,60-64 years,Cardiovascular diseases,Rate,2023,281.84145276656227,291.3911107634114,269.7284275549624
+All Population,Deaths,United States of America,Male,65-69 years,Cardiovascular diseases,Rate,2023,546.1996034890909,567.6409042694293,520.6923861210228
+All Population,Deaths,United States of America,Female,65-69 years,Cardiovascular diseases,Rate,2023,262.5559923726537,279.7622615609776,241.6403084595998
+All Population,Deaths,United States of America,Both,65-69 years,Cardiovascular diseases,Rate,2023,397.9106183213931,413.4495822743529,377.4990394145978
+All Population,Deaths,United States of America,Male,70-74 years,Cardiovascular diseases,Rate,2023,793.8664698919521,832.4152024463722,749.1274210240725
+All Population,Deaths,United States of America,Female,70-74 years,Cardiovascular diseases,Rate,2023,435.5991217368382,466.08121470388164,388.22925658009916
+All Population,Deaths,United States of America,Both,70-74 years,Cardiovascular diseases,Rate,2023,602.1850371842788,628.4034727674647,562.3617149446098
+All Population,Deaths,United States of America,Male,75-79 years,Cardiovascular diseases,Rate,2023,1222.574879433266,1287.9067569380554,1144.2935699600278
+All Population,Deaths,United States of America,Female,75-79 years,Cardiovascular diseases,Rate,2023,781.138972960868,844.438419244901,676.3435474188894
+All Population,Deaths,United States of America,Both,75-79 years,Cardiovascular diseases,Rate,2023,981.4331083639374,1038.3071469204028,895.9183973289614
+All Population,Deaths,United States of America,Male,<1 year,Cardiovascular diseases,Rate,2023,8.450110372104152,10.389073868356087,6.7960920907552085
+All Population,Deaths,United States of America,Female,<1 year,Cardiovascular diseases,Rate,2023,7.022149277053749,8.840470091516316,5.54991906905748
+All Population,Deaths,United States of America,Both,<1 year,Cardiovascular diseases,Rate,2023,7.751695166902619,9.235879107096993,6.664752000644687
+All Population,Deaths,United States of America,Male,80-84 years,Cardiovascular diseases,Rate,2023,2170.119796358222,2317.953459500079,1906.5043827977513
+All Population,Deaths,United States of America,Female,80-84 years,Cardiovascular diseases,Rate,2023,1543.3193617284644,1724.2193467987593,1236.629531334981
+All Population,Deaths,United States of America,Both,80-84 years,Cardiovascular diseases,Rate,2023,1812.5368869295153,1968.2264217817783,1547.365648148262
+All Population,Deaths,United States of America,Male,85-89 years,Cardiovascular diseases,Rate,2023,4092.8970119478504,4468.575555616334,3402.3151645930798
+All Population,Deaths,United States of America,Female,85-89 years,Cardiovascular diseases,Rate,2023,3208.831130606506,3645.915053211091,2394.0003856613034
+All Population,Deaths,United States of America,Both,85-89 years,Cardiovascular diseases,Rate,2023,3558.6143808076563,3940.319760609679,2785.2005242712357
+All Population,Deaths,United States of America,Male,90-94 years,Cardiovascular diseases,Rate,2023,8036.466307007312,8932.048207140428,6409.262482279547
+All Population,Deaths,United States of America,Female,90-94 years,Cardiovascular diseases,Rate,2023,6707.336624804625,7727.411408367374,4900.174548560681
+All Population,Deaths,United States of America,Both,90-94 years,Cardiovascular diseases,Rate,2023,7159.778826852748,8096.87336590799,5485.9942467689325
+All Population,Deaths,United States of America,Male,2-4 years,Cardiovascular diseases,Rate,2023,0.7476321721164332,0.9091701339730701,0.6237418774923997
+All Population,Deaths,United States of America,Female,2-4 years,Cardiovascular diseases,Rate,2023,0.49020719732754137,0.6001223293760444,0.4013477317255264
+All Population,Deaths,United States of America,Both,2-4 years,Cardiovascular diseases,Rate,2023,0.6217870644377899,0.7208411669381309,0.5470206043400996
+All Population,Deaths,United States of America,Male,95+ years,Cardiovascular diseases,Rate,2023,12559.722018545586,14432.377539108615,9269.377267630629
+All Population,Deaths,United States of America,Female,95+ years,Cardiovascular diseases,Rate,2023,12547.231779802016,14714.037677466402,8894.864212674545
+All Population,Deaths,United States of America,Both,95+ years,Cardiovascular diseases,Rate,2023,12550.632980566983,14532.071233455405,9009.370336012606
+All Population,Deaths,United States of America,Male,<5 years,Skin and subcutaneous diseases,Rate,2023,0.09834743871980303,0.12274484270409114,0.07636080909204036
+All Population,Deaths,United States of America,Female,<5 years,Skin and subcutaneous diseases,Rate,2023,0.07191157162672726,0.08910752388900767,0.056895902184509545
+All Population,Deaths,United States of America,Both,<5 years,Skin and subcutaneous diseases,Rate,2023,0.0854211841699342,0.10212352004249658,0.07326956389622118
+All Population,Deaths,United States of America,Male,5-9 years,Skin and subcutaneous diseases,Rate,2023,0.014455118372173503,0.018350615802698558,0.011304701769982333
+All Population,Deaths,United States of America,Female,5-9 years,Skin and subcutaneous diseases,Rate,2023,0.012611370264244269,0.015540226452683157,0.009952428173340756
+All Population,Deaths,United States of America,Both,5-9 years,Skin and subcutaneous diseases,Rate,2023,0.013554413656702707,0.016104407368915115,0.011543282637841538
+All Population,Deaths,United States of America,Male,10-14 years,Skin and subcutaneous diseases,Rate,2023,0.01610245123279692,0.020621830645331893,0.012495921318736551
+All Population,Deaths,United States of America,Female,10-14 years,Skin and subcutaneous diseases,Rate,2023,0.018077899373351674,0.02262537223788593,0.01387125218881264
+All Population,Deaths,United States of America,Both,10-14 years,Skin and subcutaneous diseases,Rate,2023,0.01706577682272195,0.020291618799397688,0.01453519910382713
+All Population,Deaths,United States of America,Male,15-19 years,Skin and subcutaneous diseases,Rate,2023,0.027898407350227597,0.036578773692637845,0.0209622258253526
+All Population,Deaths,United States of America,Female,15-19 years,Skin and subcutaneous diseases,Rate,2023,0.022733136556047376,0.028128541162703056,0.018086105496983175
+All Population,Deaths,United States of America,Both,15-19 years,Skin and subcutaneous diseases,Rate,2023,0.025378180125996647,0.030535215765127036,0.020928698162394756
+All Population,Deaths,United States of America,Male,20-24 years,Skin and subcutaneous diseases,Rate,2023,0.05047326071453169,0.06341690968897422,0.03846627848658069
+All Population,Deaths,United States of America,Female,20-24 years,Skin and subcutaneous diseases,Rate,2023,0.04097863024252136,0.05126526518611916,0.03151198994141094
+All Population,Deaths,United States of America,Both,20-24 years,Skin and subcutaneous diseases,Rate,2023,0.045815985307949246,0.053590508141088726,0.038491287477966714
+All Population,Deaths,United States of America,Male,25-29 years,Skin and subcutaneous diseases,Rate,2023,0.12783857193257814,0.158913096864326,0.09725363678140374
+All Population,Deaths,United States of America,Female,25-29 years,Skin and subcutaneous diseases,Rate,2023,0.10166233651726271,0.12532292467889644,0.07851719628700796
+All Population,Deaths,United States of America,Both,25-29 years,Skin and subcutaneous diseases,Rate,2023,0.11496890551136951,0.13434551099823921,0.09552079505302699
+All Population,Deaths,United States of America,Male,30-34 years,Skin and subcutaneous diseases,Rate,2023,0.2484905466604825,0.30875905394244857,0.18911734225158952
+All Population,Deaths,United States of America,Female,30-34 years,Skin and subcutaneous diseases,Rate,2023,0.2337115154679982,0.28916556125236154,0.1799832691447607
+All Population,Deaths,United States of America,Both,30-34 years,Skin and subcutaneous diseases,Rate,2023,0.24119368651211828,0.2809021788436379,0.20195795782334028
+All Population,Deaths,United States of America,Male,35-39 years,Skin and subcutaneous diseases,Rate,2023,0.45641488137711683,0.5556895936695083,0.3545340898634084
+All Population,Deaths,United States of America,Female,35-39 years,Skin and subcutaneous diseases,Rate,2023,0.3656983257386076,0.44632672081878316,0.28778212308012785
+All Population,Deaths,United States of America,Both,35-39 years,Skin and subcutaneous diseases,Rate,2023,0.4116462963804939,0.4765503536944118,0.34730823890845924
+All Population,Deaths,United States of America,Male,40-44 years,Skin and subcutaneous diseases,Rate,2023,0.8107380114446749,0.9990653673620087,0.6330874373979091
+All Population,Deaths,United States of America,Female,40-44 years,Skin and subcutaneous diseases,Rate,2023,0.5375971534999302,0.6473513138427026,0.4283714950825197
+All Population,Deaths,United States of America,Both,40-44 years,Skin and subcutaneous diseases,Rate,2023,0.6751386275962192,0.7868200071882172,0.5659698450590234
+All Population,Deaths,United States of America,Male,45-49 years,Skin and subcutaneous diseases,Rate,2023,1.1911931830440978,1.4529107837761288,0.9452386680174595
+All Population,Deaths,United States of America,Female,45-49 years,Skin and subcutaneous diseases,Rate,2023,0.8356825777609568,0.9931045739525772,0.6819556814418986
+All Population,Deaths,United States of America,Both,45-49 years,Skin and subcutaneous diseases,Rate,2023,1.013612091208311,1.1841349123369265,0.8594068672233074
+All Population,Deaths,United States of America,Male,50-54 years,Skin and subcutaneous diseases,Rate,2023,1.7574048613968938,2.0746256637572285,1.4498610587102378
+All Population,Deaths,United States of America,Female,50-54 years,Skin and subcutaneous diseases,Rate,2023,1.3116215693092144,1.5326648452814142,1.1033379561073144
+All Population,Deaths,United States of America,Both,50-54 years,Skin and subcutaneous diseases,Rate,2023,1.534266010366042,1.7460794894556524,1.3348507298718866
+All Population,Deaths,United States of America,Male,55-59 years,Skin and subcutaneous diseases,Rate,2023,2.595679057381627,2.96836573791739,2.2203184307693298
+All Population,Deaths,United States of America,Female,55-59 years,Skin and subcutaneous diseases,Rate,2023,2.184550767658581,2.5479818090099013,1.818439140248999
+All Population,Deaths,United States of America,Both,55-59 years,Skin and subcutaneous diseases,Rate,2023,2.3879807138020244,2.6848091513315273,2.1162925161931057
+All Population,Deaths,United States of America,Male,60-64 years,Skin and subcutaneous diseases,Rate,2023,3.8643285462267425,4.357261888285774,3.4206308391764937
+All Population,Deaths,United States of America,Female,60-64 years,Skin and subcutaneous diseases,Rate,2023,3.25612412348617,3.763342853475196,2.728368762842802
+All Population,Deaths,United States of America,Both,60-64 years,Skin and subcutaneous diseases,Rate,2023,3.552860957633333,3.939804156138381,3.1792589172132737
+All Population,Deaths,United States of America,Male,65-69 years,Skin and subcutaneous diseases,Rate,2023,5.2921494213625735,6.036397016721017,4.649383094184916
+All Population,Deaths,United States of America,Female,65-69 years,Skin and subcutaneous diseases,Rate,2023,4.428579099705855,5.093112788386317,3.764202496552187
+All Population,Deaths,United States of America,Both,65-69 years,Skin and subcutaneous diseases,Rate,2023,4.840674536681149,5.3628700624254915,4.3818537554136014
+All Population,Deaths,United States of America,Male,70-74 years,Skin and subcutaneous diseases,Rate,2023,7.731809632547831,8.955400271093218,6.712725268232722
+All Population,Deaths,United States of America,Female,70-74 years,Skin and subcutaneous diseases,Rate,2023,6.756601962961643,7.909680191641443,5.709276049096642
+All Population,Deaths,United States of America,Both,70-74 years,Skin and subcutaneous diseases,Rate,2023,7.2100506604942005,8.101406129779033,6.444306058527709
+All Population,Deaths,United States of America,Male,75-79 years,Skin and subcutaneous diseases,Rate,2023,11.888205925279726,13.785909340213024,10.385073343929779
+All Population,Deaths,United States of America,Female,75-79 years,Skin and subcutaneous diseases,Rate,2023,10.528790631616165,12.331771862539124,8.63611652923556
+All Population,Deaths,United States of America,Both,75-79 years,Skin and subcutaneous diseases,Rate,2023,11.145602510545364,12.616729956632344,9.794457694964663
+All Population,Deaths,United States of America,Male,<1 year,Skin and subcutaneous diseases,Rate,2023,0.3648051593622987,0.4552418588827149,0.28184171751345494
+All Population,Deaths,United States of America,Female,<1 year,Skin and subcutaneous diseases,Rate,2023,0.282227741380158,0.35004135522317364,0.22459258627745404
+All Population,Deaths,United States of America,Both,<1 year,Skin and subcutaneous diseases,Rate,2023,0.3244165769808058,0.3897086833840075,0.27880089066317437
+All Population,Deaths,United States of America,Male,80-84 years,Skin and subcutaneous diseases,Rate,2023,19.534391999086033,22.92766799792229,16.11993553643437
+All Population,Deaths,United States of America,Female,80-84 years,Skin and subcutaneous diseases,Rate,2023,16.830230048710927,20.16805045591949,13.121446934420154
+All Population,Deaths,United States of America,Both,80-84 years,Skin and subcutaneous diseases,Rate,2023,17.991696677962484,20.565680947235684,14.838999798443776
+All Population,Deaths,United States of America,Male,85-89 years,Skin and subcutaneous diseases,Rate,2023,30.498887601570758,36.1140068445964,23.89905099697532
+All Population,Deaths,United States of America,Female,85-89 years,Skin and subcutaneous diseases,Rate,2023,26.619324016891877,32.346462459272026,19.75354782274689
+All Population,Deaths,United States of America,Both,85-89 years,Skin and subcutaneous diseases,Rate,2023,28.154284689678025,32.753818868460925,22.02558434193672
+All Population,Deaths,United States of America,Male,90-94 years,Skin and subcutaneous diseases,Rate,2023,49.71596162654865,59.60303653189636,38.015488429662646
+All Population,Deaths,United States of America,Female,90-94 years,Skin and subcutaneous diseases,Rate,2023,45.154249600576506,55.136567300293166,32.393369281217375
+All Population,Deaths,United States of America,Both,90-94 years,Skin and subcutaneous diseases,Rate,2023,46.70707853952534,55.395296866354165,34.86229321164095
+All Population,Deaths,United States of America,Male,2-4 years,Skin and subcutaneous diseases,Rate,2023,0.023375482031238525,0.029499665592323296,0.018457722149236286
+All Population,Deaths,United States of America,Female,2-4 years,Skin and subcutaneous diseases,Rate,2023,0.016795381895502132,0.020329408581581502,0.013648619927950901
+All Population,Deaths,United States of America,Both,2-4 years,Skin and subcutaneous diseases,Rate,2023,0.02015872572856399,0.023826097501017798,0.017561880542135127
+All Population,Deaths,United States of America,Male,95+ years,Skin and subcutaneous diseases,Rate,2023,65.59864171782733,81.55035289704239,46.18414829289751
+All Population,Deaths,United States of America,Female,95+ years,Skin and subcutaneous diseases,Rate,2023,71.61634227698305,89.08241254850263,48.836356924331874
+All Population,Deaths,United States of America,Both,95+ years,Skin and subcutaneous diseases,Rate,2023,69.97767001736217,84.9160116543826,49.257827477056864
+All Population,Deaths,United States of America,Male,<5 years,Injuries,Rate,2023,23.974914585610158,25.587336096134283,22.249406431290264
+All Population,Deaths,United States of America,Female,<5 years,Injuries,Rate,2023,16.690671092962866,18.244741633355908,14.086695837446474
+All Population,Deaths,United States of America,Both,<5 years,Injuries,Rate,2023,20.413163224942753,21.713214679908994,18.958479797759836
+All Population,Deaths,United States of America,Male,5-9 years,Injuries,Rate,2023,6.21683647742164,6.635908632280021,5.793936075731814
+All Population,Deaths,United States of America,Female,5-9 years,Injuries,Rate,2023,4.371913604616176,4.719770248267666,4.008152967146118
+All Population,Deaths,United States of America,Both,5-9 years,Injuries,Rate,2023,5.315557867795219,5.597392303372818,5.022683472624222
+All Population,Deaths,United States of America,Male,10-14 years,Injuries,Rate,2023,11.290500806072343,11.747247234227927,10.882818859787095
+All Population,Deaths,United States of America,Female,10-14 years,Injuries,Rate,2023,6.277259792823971,6.658726165382373,5.885723465825492
+All Population,Deaths,United States of America,Both,10-14 years,Injuries,Rate,2023,8.845798129560855,9.183198681293934,8.565907052955001
+All Population,Deaths,United States of America,Male,15-19 years,Injuries,Rate,2023,59.85299698658608,62.27249374080507,56.40985805594594
+All Population,Deaths,United States of America,Female,15-19 years,Injuries,Rate,2023,18.464121356281648,19.447046709567736,17.283569947347637
+All Population,Deaths,United States of America,Both,15-19 years,Injuries,Rate,2023,39.658630553498256,40.96666770570934,37.785868947344376
+All Population,Deaths,United States of America,Male,20-24 years,Injuries,Rate,2023,87.22926299370631,94.43705645637375,78.8889052214252
+All Population,Deaths,United States of America,Female,20-24 years,Injuries,Rate,2023,23.57044992871253,25.615615929265832,21.201128052273983
+All Population,Deaths,United States of America,Both,20-24 years,Injuries,Rate,2023,56.0035480621117,59.92354580842584,51.9745898167388
+All Population,Deaths,United States of America,Male,25-29 years,Injuries,Rate,2023,88.12751300862271,97.01160527531357,78.19720719883809
+All Population,Deaths,United States of America,Female,25-29 years,Injuries,Rate,2023,23.32262338349708,25.525333040360795,20.81496239054945
+All Population,Deaths,United States of America,Both,25-29 years,Injuries,Rate,2023,56.26589124728098,61.191096682886894,51.45464985795716
+All Population,Deaths,United States of America,Male,30-34 years,Injuries,Rate,2023,91.26983328807155,100.87901682922217,79.84650531119863
+All Population,Deaths,United States of America,Female,30-34 years,Injuries,Rate,2023,25.45437851022056,28.202063318391883,22.884056105869618
+All Population,Deaths,United States of America,Both,30-34 years,Injuries,Rate,2023,58.77472837489017,63.860685500209634,53.57992119904945
+All Population,Deaths,United States of America,Male,35-39 years,Injuries,Rate,2023,88.10397338375563,96.65360736543502,78.21070301792632
+All Population,Deaths,United States of America,Female,35-39 years,Injuries,Rate,2023,25.554526803976874,27.810610774388604,23.25865815851444
+All Population,Deaths,United States of America,Both,35-39 years,Injuries,Rate,2023,57.235845774754516,62.106872613908756,52.247472845001994
+All Population,Deaths,United States of America,Male,40-44 years,Injuries,Rate,2023,87.63107766185041,95.50355261546532,78.56410380480555
+All Population,Deaths,United States of America,Female,40-44 years,Injuries,Rate,2023,27.13680900392988,29.427893444720702,24.871280552139122
+All Population,Deaths,United States of America,Both,40-44 years,Injuries,Rate,2023,57.5990069636013,62.100822805607805,52.99023701148764
+All Population,Deaths,United States of America,Male,45-49 years,Injuries,Rate,2023,81.24918237473169,87.2101995659679,73.84181257058545
+All Population,Deaths,United States of America,Female,45-49 years,Injuries,Rate,2023,26.83131020274556,28.95872828448931,24.755085084642893
+All Population,Deaths,United States of America,Both,45-49 years,Injuries,Rate,2023,54.06691267004808,57.41405147346462,50.14977810883554
+All Population,Deaths,United States of America,Male,50-54 years,Injuries,Rate,2023,81.897619452812,86.99720064215929,76.43162909632761
+All Population,Deaths,United States of America,Female,50-54 years,Injuries,Rate,2023,28.425636759205535,30.27609842475061,26.56601948248906
+All Population,Deaths,United States of America,Both,50-54 years,Injuries,Rate,2023,55.13197571431565,57.91024670880789,52.14542954525549
+All Population,Deaths,United States of America,Male,55-59 years,Injuries,Rate,2023,87.83054239812358,92.5272308410276,82.56961540163118
+All Population,Deaths,United States of America,Female,55-59 years,Injuries,Rate,2023,30.161769098962996,31.88514615671519,28.298523916150664
+All Population,Deaths,United States of America,Both,55-59 years,Injuries,Rate,2023,58.69679269052743,61.23788250235281,55.9888250908298
+All Population,Deaths,United States of America,Male,60-64 years,Injuries,Rate,2023,94.70664098228323,98.98563996698269,89.56230388862537
+All Population,Deaths,United States of America,Female,60-64 years,Injuries,Rate,2023,33.652940440113234,35.35961625321655,31.39050288566228
+All Population,Deaths,United States of America,Both,60-64 years,Injuries,Rate,2023,63.44042822295074,65.94101936852448,60.27107525153551
+All Population,Deaths,United States of America,Male,65-69 years,Injuries,Rate,2023,102.09765799839819,107.52912030151597,96.15081561577108
+All Population,Deaths,United States of America,Female,65-69 years,Injuries,Rate,2023,39.97919140831795,42.70429885074961,36.992459469432696
+All Population,Deaths,United States of America,Both,65-69 years,Injuries,Rate,2023,69.62210060946343,72.87425075401727,65.90919753856126
+All Population,Deaths,United States of America,Male,70-74 years,Injuries,Rate,2023,123.3103166118582,131.5407857072529,113.97080998973463
+All Population,Deaths,United States of America,Female,70-74 years,Injuries,Rate,2023,55.22265826534485,60.007973577792384,49.98640302672453
+All Population,Deaths,United States of America,Both,70-74 years,Injuries,Rate,2023,86.88182272656081,92.29209354302301,80.4197205902983
+All Population,Deaths,United States of America,Male,75-79 years,Injuries,Rate,2023,178.77863713454417,193.96683662131372,160.36328503019448
+All Population,Deaths,United States of America,Female,75-79 years,Injuries,Rate,2023,91.65643467987421,102.25933733739126,79.50307287889738
+All Population,Deaths,United States of America,Both,75-79 years,Injuries,Rate,2023,131.18667215991127,141.24650649661234,119.0576066572581
+All Population,Deaths,United States of America,Male,<1 year,Injuries,Rate,2023,59.704622051110555,65.27849551162407,54.26369435457717
+All Population,Deaths,United States of America,Female,<1 year,Injuries,Rate,2023,44.08495522153515,49.605001319993036,36.34255231492758
+All Population,Deaths,United States of America,Both,<1 year,Injuries,Rate,2023,52.06504920016214,56.272771373895985,47.47276369807633
+All Population,Deaths,United States of America,Male,80-84 years,Injuries,Rate,2023,293.1832077131989,323.285353134402,253.65625231358078
+All Population,Deaths,United States of America,Female,80-84 years,Injuries,Rate,2023,165.6769388697947,191.18650766214625,130.62155975979186
+All Population,Deaths,United States of America,Both,80-84 years,Injuries,Rate,2023,220.44225211645423,245.01337244562865,186.6514074627197
+All Population,Deaths,United States of America,Male,85-89 years,Injuries,Rate,2023,501.34896718107166,575.5931989977454,406.50520059981505
+All Population,Deaths,United States of America,Female,85-89 years,Injuries,Rate,2023,316.0631663958286,371.81577848174305,235.65343353679208
+All Population,Deaths,United States of America,Both,85-89 years,Injuries,Rate,2023,389.3720350928676,447.28729125021323,314.15938209732803
+All Population,Deaths,United States of America,Male,90-94 years,Injuries,Rate,2023,866.4035246820903,1010.1857459597131,689.6938545477793
+All Population,Deaths,United States of America,Female,90-94 years,Injuries,Rate,2023,588.5633371066576,701.9774522907218,422.95861360744453
+All Population,Deaths,United States of America,Both,90-94 years,Injuries,Rate,2023,683.1414869797146,796.6715936037681,517.5002022707482
+All Population,Deaths,United States of America,Male,2-4 years,Injuries,Rate,2023,13.43804450571205,14.227231313090142,12.614921665926937
+All Population,Deaths,United States of America,Female,2-4 years,Injuries,Rate,2023,8.368141716415874,9.050211569013364,7.458688738447979
+All Population,Deaths,United States of America,Both,2-4 years,Injuries,Rate,2023,10.959565240199979,11.495506439062925,10.286220888204763
+All Population,Deaths,United States of America,Male,95+ years,Injuries,Rate,2023,1166.5189396941282,1404.757103831451,839.7133820337388
+All Population,Deaths,United States of America,Female,95+ years,Injuries,Rate,2023,946.516886598311,1151.78466950087,671.6250907411719
+All Population,Deaths,United States of America,Both,95+ years,Injuries,Rate,2023,1006.4253612596576,1201.6571748766396,727.0607210289096
+All Population,Deaths,United States of America,Male,<5 years,Neurological disorders,Rate,2023,2.214595094056929,2.542361863616298,1.8758393629924914
+All Population,Deaths,United States of America,Female,<5 years,Neurological disorders,Rate,2023,2.2101599830622862,2.6388343860339196,1.8108530356979382
+All Population,Deaths,United States of America,Both,<5 years,Neurological disorders,Rate,2023,2.2124264731650247,2.5290702036942423,1.9513668046680506
+All Population,Deaths,United States of America,Male,5-9 years,Neurological disorders,Rate,2023,0.6728253398783117,0.780171623576969,0.5684081866428065
+All Population,Deaths,United States of America,Female,5-9 years,Neurological disorders,Rate,2023,0.7349707905121923,0.8861114021705584,0.6114044170598429
+All Population,Deaths,United States of America,Both,5-9 years,Neurological disorders,Rate,2023,0.7031845305889448,0.7984283087674858,0.6279942037528701
+All Population,Deaths,United States of America,Male,10-14 years,Neurological disorders,Rate,2023,0.9448978669641512,1.0980617726797606,0.7942810011024573
+All Population,Deaths,United States of America,Female,10-14 years,Neurological disorders,Rate,2023,0.8255829571199395,0.9969657247998229,0.6777471024065556
+All Population,Deaths,United States of America,Both,10-14 years,Neurological disorders,Rate,2023,0.8867140536040846,1.012945759470239,0.7879021437338882
+All Population,Deaths,United States of America,Male,15-19 years,Neurological disorders,Rate,2023,1.7845937593392651,2.0693042364392915,1.531694281834402
+All Population,Deaths,United States of America,Female,15-19 years,Neurological disorders,Rate,2023,0.9556980107746205,1.1373012822963884,0.8036837878828414
+All Population,Deaths,United States of America,Both,15-19 years,Neurological disorders,Rate,2023,1.380160823521918,1.5452239085123505,1.228589768193563
+All Population,Deaths,United States of America,Male,20-24 years,Neurological disorders,Rate,2023,2.260432266166863,2.606348037041992,1.936765805549575
+All Population,Deaths,United States of America,Female,20-24 years,Neurological disorders,Rate,2023,1.2026969992620093,1.4490266891894226,0.9998890122314439
+All Population,Deaths,United States of America,Both,20-24 years,Neurological disorders,Rate,2023,1.7415953867587597,1.937158654632141,1.5414340089727836
+All Population,Deaths,United States of America,Male,25-29 years,Neurological disorders,Rate,2023,2.4543458035508494,2.8701791596934076,2.0959308682127555
+All Population,Deaths,United States of America,Female,25-29 years,Neurological disorders,Rate,2023,1.351744479207773,1.6161160650846589,1.1096964211524292
+All Population,Deaths,United States of America,Both,25-29 years,Neurological disorders,Rate,2023,1.9122467960069336,2.1682272953873043,1.690748816525259
+All Population,Deaths,United States of America,Male,30-34 years,Neurological disorders,Rate,2023,2.6800112383640697,3.1185923303238017,2.2789440633672213
+All Population,Deaths,United States of America,Female,30-34 years,Neurological disorders,Rate,2023,1.8924062470602172,2.2203496679441592,1.5587328416650035
+All Population,Deaths,United States of America,Both,30-34 years,Neurological disorders,Rate,2023,2.2911465422383643,2.5840323458956163,2.026479977815256
+All Population,Deaths,United States of America,Male,35-39 years,Neurological disorders,Rate,2023,3.1552999019926515,3.6678298491487196,2.7256626582230226
+All Population,Deaths,United States of America,Female,35-39 years,Neurological disorders,Rate,2023,2.5340768924038244,2.926319721692256,2.162036790084873
+All Population,Deaths,United States of America,Both,35-39 years,Neurological disorders,Rate,2023,2.8487265878838266,3.1891658380466663,2.5531824568298984
+All Population,Deaths,United States of America,Male,40-44 years,Neurological disorders,Rate,2023,4.282192309394143,4.855125269529523,3.7346893928045
+All Population,Deaths,United States of America,Female,40-44 years,Neurological disorders,Rate,2023,3.7910004373487296,4.306729624367962,3.3408310365118115
+All Population,Deaths,United States of America,Both,40-44 years,Neurological disorders,Rate,2023,4.0383426132999665,4.4826347987290225,3.68416478037428
+All Population,Deaths,United States of America,Male,45-49 years,Neurological disorders,Rate,2023,6.2178015226722225,7.214683540036575,5.496288646835123
+All Population,Deaths,United States of America,Female,45-49 years,Neurological disorders,Rate,2023,5.672824302365011,6.451332488117528,4.99983422741109
+All Population,Deaths,United States of America,Both,45-49 years,Neurological disorders,Rate,2023,5.945579967619847,6.841958692206256,5.400431712781673
+All Population,Deaths,United States of America,Male,50-54 years,Neurological disorders,Rate,2023,10.512600191841734,13.916718677177249,8.896125629435806
+All Population,Deaths,United States of America,Female,50-54 years,Neurological disorders,Rate,2023,9.291906057911534,12.932303950265233,7.664972766060975
+All Population,Deaths,United States of America,Both,50-54 years,Neurological disorders,Rate,2023,9.901576200274755,13.39367398700623,8.399807017813812
+All Population,Deaths,United States of America,Male,55-59 years,Neurological disorders,Rate,2023,18.888741313259192,27.938867184383984,14.818839311236392
+All Population,Deaths,United States of America,Female,55-59 years,Neurological disorders,Rate,2023,17.204263204774325,27.97183943404406,12.504512929164227
+All Population,Deaths,United States of America,Both,55-59 years,Neurological disorders,Rate,2023,18.037758003003177,27.815769437481286,13.95080205149016
+All Population,Deaths,United States of America,Male,60-64 years,Neurological disorders,Rate,2023,37.03570893346914,60.66275906477228,26.612686997490115
+All Population,Deaths,United States of America,Female,60-64 years,Neurological disorders,Rate,2023,35.74635310990832,64.85883682327804,23.18944226801325
+All Population,Deaths,United States of America,Both,60-64 years,Neurological disorders,Rate,2023,36.375416876739656,62.423874278211755,25.027733726261445
+All Population,Deaths,United States of America,Male,65-69 years,Neurological disorders,Rate,2023,71.31676192452396,129.35238119387103,47.69506584917521
+All Population,Deaths,United States of America,Female,65-69 years,Neurological disorders,Rate,2023,70.38274669364498,144.21116345489966,39.939964103803
+All Population,Deaths,United States of America,Both,65-69 years,Neurological disorders,Rate,2023,70.8284584151551,137.1205580748628,43.62025377779677
+All Population,Deaths,United States of America,Male,70-74 years,Neurological disorders,Rate,2023,138.90768914972938,243.09962426631742,92.03436458677481
+All Population,Deaths,United States of America,Female,70-74 years,Neurological disorders,Rate,2023,135.41848753263054,275.26317843094546,70.22399149921688
+All Population,Deaths,United States of America,Both,70-74 years,Neurological disorders,Rate,2023,137.04088446206944,262.00997542318424,80.36459479213492
+All Population,Deaths,United States of America,Male,75-79 years,Neurological disorders,Rate,2023,292.95466240746407,511.48958630544615,188.55555742637492
+All Population,Deaths,United States of America,Female,75-79 years,Neurological disorders,Rate,2023,287.0467504904675,579.4664915527087,139.8547680383305
+All Population,Deaths,United States of America,Both,75-79 years,Neurological disorders,Rate,2023,289.7273663898591,546.3087728948315,162.35906147427548
+All Population,Deaths,United States of America,Male,<1 year,Neurological disorders,Rate,2023,5.643000051941533,6.6057944659024015,4.659264218509029
+All Population,Deaths,United States of America,Female,<1 year,Neurological disorders,Rate,2023,5.7005099768117615,6.932913174390504,4.538694869401872
+All Population,Deaths,United States of America,Both,<1 year,Neurological disorders,Rate,2023,5.671128133384779,6.458514897791137,4.902932337539117
+All Population,Deaths,United States of America,Male,80-84 years,Neurological disorders,Rate,2023,728.8458093655908,1375.227599960596,407.6403819853421
+All Population,Deaths,United States of America,Female,80-84 years,Neurological disorders,Rate,2023,767.060742033086,1582.2871582328771,325.5985786868001
+All Population,Deaths,United States of America,Both,80-84 years,Neurological disorders,Rate,2023,750.6470176160873,1489.962100919181,361.2854578174787
+All Population,Deaths,United States of America,Male,85-89 years,Neurological disorders,Rate,2023,1498.817331083601,3134.1207779629026,732.0613423497455
+All Population,Deaths,United States of America,Female,85-89 years,Neurological disorders,Rate,2023,1571.1217408825344,3434.7160408855048,604.1001583175351
+All Population,Deaths,United States of America,Both,85-89 years,Neurological disorders,Rate,2023,1542.5142897896653,3310.5917973767405,654.5465711688246
+All Population,Deaths,United States of America,Male,90-94 years,Neurological disorders,Rate,2023,2898.433926916353,6424.484674176997,1177.0318309422084
+All Population,Deaths,United States of America,Female,90-94 years,Neurological disorders,Rate,2023,3012.342485312848,6695.119223997662,1050.6439113077527
+All Population,Deaths,United States of America,Both,90-94 years,Neurological disorders,Rate,2023,2973.5674585542633,6589.783982671497,1110.4186165628457
+All Population,Deaths,United States of America,Male,2-4 years,Neurological disorders,Rate,2023,1.0715959504502308,1.224703068288476,0.9263796337293518
+All Population,Deaths,United States of America,Female,2-4 years,Neurological disorders,Rate,2023,1.065323267783986,1.264319216865393,0.9024360507873166
+All Population,Deaths,United States of America,Both,2-4 years,Neurological disorders,Rate,2023,1.0685294786511568,1.1993226568018147,0.9584281259860665
+All Population,Deaths,United States of America,Male,95+ years,Neurological disorders,Rate,2023,5226.710282059776,11609.459126748243,1790.744164878506
+All Population,Deaths,United States of America,Female,95+ years,Neurological disorders,Rate,2023,5428.829882800205,12155.751776833826,1656.8583218337856
+All Population,Deaths,United States of America,Both,95+ years,Neurological disorders,Rate,2023,5373.790955621441,12027.273150197147,1668.2230790906979
+All Population,Deaths,United States of America,Male,5-9 years,Mental disorders,Rate,2023,2.381256844020205e-06,3.171075455934684e-05,8.294982096298932e-08
+All Population,Deaths,United States of America,Female,5-9 years,Mental disorders,Rate,2023,2.574521368598237e-06,2.4719906900452977e-05,8.276032648365466e-08
+All Population,Deaths,United States of America,Both,5-9 years,Mental disorders,Rate,2023,2.4756701035495464e-06,3.0444216136734133e-05,1.0039514113366544e-07
+All Population,Deaths,United States of America,Male,10-14 years,Mental disorders,Rate,2023,0.00011411890506082062,0.0002908881373065088,1.9165098088223992e-05
+All Population,Deaths,United States of America,Female,10-14 years,Mental disorders,Rate,2023,0.0006775224579710411,0.002408052847168643,0.0001872777233832363
+All Population,Deaths,United States of America,Both,10-14 years,Mental disorders,Rate,2023,0.00038886216398569527,0.0012643816025937964,0.00013285684077291973
+All Population,Deaths,United States of America,Male,15-19 years,Mental disorders,Rate,2023,0.0009435451939693925,0.0016307837158782603,0.0001339765665655834
+All Population,Deaths,United States of America,Female,15-19 years,Mental disorders,Rate,2023,0.013932569747270081,0.036150173947591416,0.005927757550175458
+All Population,Deaths,United States of America,Both,15-19 years,Mental disorders,Rate,2023,0.007281120628023283,0.01816747348231756,0.0033912088769809654
+All Population,Deaths,United States of America,Male,20-24 years,Mental disorders,Rate,2023,0.0027001052301255223,0.004942457367429339,0.0002552625109947086
+All Population,Deaths,United States of America,Female,20-24 years,Mental disorders,Rate,2023,0.033467771981385244,0.06790659510884718,0.015518848108522875
+All Population,Deaths,United States of America,Both,20-24 years,Mental disorders,Rate,2023,0.01779216153510637,0.03366803078039953,0.008819524961686013
+All Population,Deaths,United States of America,Male,25-29 years,Mental disorders,Rate,2023,0.003162955649860983,0.0054871835314721906,0.00023160701174384032
+All Population,Deaths,United States of America,Female,25-29 years,Mental disorders,Rate,2023,0.05137006866666536,0.0953661925520537,0.021576906332889525
+All Population,Deaths,United States of America,Both,25-29 years,Mental disorders,Rate,2023,0.02686420427527587,0.04822614018011999,0.011462834452332885
+All Population,Deaths,United States of America,Male,30-34 years,Mental disorders,Rate,2023,0.0039532570162904585,0.007306498565553331,0.00025061669247534844
+All Population,Deaths,United States of America,Female,30-34 years,Mental disorders,Rate,2023,0.06393156624974468,0.12326122989724152,0.025186544531461803
+All Population,Deaths,United States of America,Both,30-34 years,Mental disorders,Rate,2023,0.033566384474496974,0.06140274433420218,0.013413514562412254
+All Population,Deaths,United States of America,Male,35-39 years,Mental disorders,Rate,2023,0.002945568865784629,0.005095453407886818,0.00021209684486303082
+All Population,Deaths,United States of America,Female,35-39 years,Mental disorders,Rate,2023,0.06579138348730186,0.12014096415263383,0.027823695379193134
+All Population,Deaths,United States of America,Both,35-39 years,Mental disorders,Rate,2023,0.03395995398835057,0.06046195648060521,0.016001690793626653
+All Population,Deaths,United States of America,Male,40-44 years,Mental disorders,Rate,2023,0.002324326339093432,0.003984377144026244,0.00020663181816839464
+All Population,Deaths,United States of America,Female,40-44 years,Mental disorders,Rate,2023,0.07446074290258048,0.14878114526533223,0.03432854135323493
+All Population,Deaths,United States of America,Both,40-44 years,Mental disorders,Rate,2023,0.03813608190230986,0.07391502685200646,0.017592642864711995
+All Population,Deaths,United States of America,Male,45-49 years,Mental disorders,Rate,2023,0.003290461370095279,0.00587364708506929,0.0002458995101980979
+All Population,Deaths,United States of America,Female,45-49 years,Mental disorders,Rate,2023,0.05897066844356481,0.12006955520841517,0.02720405499074376
+All Population,Deaths,United States of America,Both,45-49 years,Mental disorders,Rate,2023,0.03110327994374803,0.06016319535886648,0.015365749005911524
+All Population,Deaths,United States of America,Male,<5 years,Chronic respiratory diseases,Rate,2023,0.5840463590697778,0.7653908813552041,0.45369817149568825
+All Population,Deaths,United States of America,Female,<5 years,Chronic respiratory diseases,Rate,2023,0.5431798880948605,0.6911613834843569,0.3975797377798016
+All Population,Deaths,United States of America,Both,<5 years,Chronic respiratory diseases,Rate,2023,0.5640640220230403,0.6805664589261656,0.46678972541057656
+All Population,Deaths,United States of America,Male,5-9 years,Chronic respiratory diseases,Rate,2023,0.36730402222197345,0.4635182256285451,0.29268074387325665
+All Population,Deaths,United States of America,Female,5-9 years,Chronic respiratory diseases,Rate,2023,0.3376702848854203,0.4014917142533403,0.26754981853598425
+All Population,Deaths,United States of America,Both,5-9 years,Chronic respiratory diseases,Rate,2023,0.35282739884740977,0.4188053089580198,0.2975511745712946
+All Population,Deaths,United States of America,Male,10-14 years,Chronic respiratory diseases,Rate,2023,0.5119102467687445,0.6341406644174833,0.41683560111723733
+All Population,Deaths,United States of America,Female,10-14 years,Chronic respiratory diseases,Rate,2023,0.4022184659055252,0.4942684625417876,0.31337795032121024
+All Population,Deaths,United States of America,Both,10-14 years,Chronic respiratory diseases,Rate,2023,0.45841914399531863,0.5373865006248244,0.3871610327772838
+All Population,Deaths,United States of America,Male,15-19 years,Chronic respiratory diseases,Rate,2023,0.5589562725929417,0.6932610936758145,0.4571161142189694
+All Population,Deaths,United States of America,Female,15-19 years,Chronic respiratory diseases,Rate,2023,0.500369827067163,0.6083718293279562,0.4017599572116388
+All Population,Deaths,United States of America,Both,15-19 years,Chronic respiratory diseases,Rate,2023,0.5303709068166974,0.6112496626329209,0.4540033868560061
+All Population,Deaths,United States of America,Male,20-24 years,Chronic respiratory diseases,Rate,2023,0.7718665753140254,0.9516382270002204,0.6264201143674601
+All Population,Deaths,United States of America,Female,20-24 years,Chronic respiratory diseases,Rate,2023,0.6538998883735182,0.7946816259549438,0.5205345086608694
+All Population,Deaths,United States of America,Both,20-24 years,Chronic respiratory diseases,Rate,2023,0.7140019378746169,0.8136148445731647,0.6150663399000668
+All Population,Deaths,United States of America,Male,25-29 years,Chronic respiratory diseases,Rate,2023,1.0572370101310675,1.3065406799531196,0.8481512132011252
+All Population,Deaths,United States of America,Female,25-29 years,Chronic respiratory diseases,Rate,2023,0.9128690613585034,1.095168681585084,0.7278329812385064
+All Population,Deaths,United States of America,Both,25-29 years,Chronic respiratory diseases,Rate,2023,0.9862578447492505,1.143119730279636,0.8443108526199048
+All Population,Deaths,United States of America,Male,30-34 years,Chronic respiratory diseases,Rate,2023,1.531882911185223,1.8940256970967346,1.2424025761464763
+All Population,Deaths,United States of America,Female,30-34 years,Chronic respiratory diseases,Rate,2023,1.3108165458104495,1.5826136916610083,1.0711066327648073
+All Population,Deaths,United States of America,Both,30-34 years,Chronic respiratory diseases,Rate,2023,1.4227356788235246,1.6164044079468634,1.2192462464078504
+All Population,Deaths,United States of America,Male,35-39 years,Chronic respiratory diseases,Rate,2023,2.1483223636360576,2.6474052156013745,1.771216125788411
+All Population,Deaths,United States of America,Female,35-39 years,Chronic respiratory diseases,Rate,2023,2.0040141389105157,2.3610497150972556,1.6823336876007426
+All Population,Deaths,United States of America,Both,35-39 years,Chronic respiratory diseases,Rate,2023,2.077106310746207,2.3430236943166167,1.8073324060176552
+All Population,Deaths,United States of America,Male,40-44 years,Chronic respiratory diseases,Rate,2023,3.532178183979903,4.225778697212868,3.0303590027305902
+All Population,Deaths,United States of America,Female,40-44 years,Chronic respiratory diseases,Rate,2023,3.7370007168569357,4.298980429294779,3.20871219847723
+All Population,Deaths,United States of America,Both,40-44 years,Chronic respiratory diseases,Rate,2023,3.63386128428716,4.0375592438721615,3.2269775546971187
+All Population,Deaths,United States of America,Male,45-49 years,Chronic respiratory diseases,Rate,2023,6.32903162552825,7.319271123881326,5.488072811219323
+All Population,Deaths,United States of America,Female,45-49 years,Chronic respiratory diseases,Rate,2023,7.10511224768921,8.028166824420257,6.102368902142658
+All Population,Deaths,United States of America,Both,45-49 years,Chronic respiratory diseases,Rate,2023,6.716691633943971,7.413525549710618,6.096520910380951
+All Population,Deaths,United States of America,Male,50-54 years,Chronic respiratory diseases,Rate,2023,14.266463371261608,16.08798569340045,12.514804703570999
+All Population,Deaths,United States of America,Female,50-54 years,Chronic respiratory diseases,Rate,2023,16.04184872636398,17.82932003900064,13.99523228856767
+All Population,Deaths,United States of America,Both,50-54 years,Chronic respiratory diseases,Rate,2023,15.155140572282894,16.568176997914097,13.96225388503065
+All Population,Deaths,United States of America,Male,55-59 years,Chronic respiratory diseases,Rate,2023,32.048280314099195,35.13502160329345,28.790325718269784
+All Population,Deaths,United States of America,Female,55-59 years,Chronic respiratory diseases,Rate,2023,33.156895539722626,36.6225694868287,29.692606267517547
+All Population,Deaths,United States of America,Both,55-59 years,Chronic respiratory diseases,Rate,2023,32.608342834205104,34.917062397977226,30.20448785659337
+All Population,Deaths,United States of America,Male,60-64 years,Chronic respiratory diseases,Rate,2023,71.51773866458264,79.10181057537262,64.93499652190187
+All Population,Deaths,United States of America,Female,60-64 years,Chronic respiratory diseases,Rate,2023,66.95612726483468,74.03119569459653,60.261434762428465
+All Population,Deaths,United States of America,Both,60-64 years,Chronic respiratory diseases,Rate,2023,69.18169168817684,74.2648095209685,63.867712144903024
+All Population,Deaths,United States of America,Male,65-69 years,Chronic respiratory diseases,Rate,2023,128.53249553912812,141.1124368278902,116.34325164392365
+All Population,Deaths,United States of America,Female,65-69 years,Chronic respiratory diseases,Rate,2023,108.42482726303791,120.70691810895315,97.10146428236177
+All Population,Deaths,United States of America,Both,65-69 years,Chronic respiratory diseases,Rate,2023,118.02019910130669,127.06722964705749,109.09532871935755
+All Population,Deaths,United States of America,Male,70-74 years,Chronic respiratory diseases,Rate,2023,219.459668547265,242.2478778004124,198.4171407785332
+All Population,Deaths,United States of America,Female,70-74 years,Chronic respiratory diseases,Rate,2023,180.60390097355986,203.6715026458304,159.3281872237375
+All Population,Deaths,United States of America,Both,70-74 years,Chronic respiratory diseases,Rate,2023,198.67092171940848,213.1056227689528,181.8211221098261
+All Population,Deaths,United States of America,Male,75-79 years,Chronic respiratory diseases,Rate,2023,376.8650323561167,415.52408612536703,341.5214392383333
+All Population,Deaths,United States of America,Female,75-79 years,Chronic respiratory diseases,Rate,2023,321.59303006105296,364.4114868233065,276.0693070853149
+All Population,Deaths,United States of America,Both,75-79 years,Chronic respiratory diseases,Rate,2023,346.6717736552342,376.82249053153686,314.5531516028506
+All Population,Deaths,United States of America,Male,<1 year,Chronic respiratory diseases,Rate,2023,0.9416738511673769,1.2191039735001385,0.7133036303540325
+All Population,Deaths,United States of America,Female,<1 year,Chronic respiratory diseases,Rate,2023,0.9763818067206266,1.3215153652576885,0.6704612688594987
+All Population,Deaths,United States of America,Both,<1 year,Chronic respiratory diseases,Rate,2023,0.9586494984618805,1.1823081351001183,0.7685814702354408
+All Population,Deaths,United States of America,Male,80-84 years,Chronic respiratory diseases,Rate,2023,605.8002679741014,679.7941634835081,524.2146776410937
+All Population,Deaths,United States of America,Female,80-84 years,Chronic respiratory diseases,Rate,2023,500.471408219147,579.576294633343,388.47499079597156
+All Population,Deaths,United States of America,Both,80-84 years,Chronic respiratory diseases,Rate,2023,545.711285840207,607.8428982558047,467.04320247809795
+All Population,Deaths,United States of America,Male,85-89 years,Chronic respiratory diseases,Rate,2023,932.7860200123982,1072.0882907219843,781.0173302160863
+All Population,Deaths,United States of America,Female,85-89 years,Chronic respiratory diseases,Rate,2023,744.865194120906,889.7395596991455,551.7538662475386
+All Population,Deaths,United States of America,Both,85-89 years,Chronic respiratory diseases,Rate,2023,819.2166182037801,941.6065500296116,645.61457710764
+All Population,Deaths,United States of America,Male,90-94 years,Chronic respiratory diseases,Rate,2023,1379.9398875478205,1617.2282353911935,1089.5088387979451
+All Population,Deaths,United States of America,Female,90-94 years,Chronic respiratory diseases,Rate,2023,1105.0824479841124,1346.4039512350766,770.945237787471
+All Population,Deaths,United States of America,Both,90-94 years,Chronic respiratory diseases,Rate,2023,1198.6452559408383,1410.371322733914,893.1862247347171
+All Population,Deaths,United States of America,Male,2-4 years,Chronic respiratory diseases,Rate,2023,0.3545603706932123,0.4607481890311298,0.2762567615950311
+All Population,Deaths,United States of America,Female,2-4 years,Chronic respiratory diseases,Rate,2023,0.3231886858560191,0.3948835467331099,0.24612595606148585
+All Population,Deaths,United States of America,Both,2-4 years,Chronic respiratory diseases,Rate,2023,0.3392239680786845,0.4043306450627822,0.28303892603623504
+All Population,Deaths,United States of America,Male,95+ years,Chronic respiratory diseases,Rate,2023,1698.504263304448,2049.509807618753,1236.0541334291238
+All Population,Deaths,United States of America,Female,95+ years,Chronic respiratory diseases,Rate,2023,1552.5411578145474,1945.1582040477026,1083.9925051626983
+All Population,Deaths,United States of America,Both,95+ years,Chronic respiratory diseases,Rate,2023,1592.288182370383,1939.8970648548127,1150.0516304918322
+All Population,Deaths,United States of America,Male,<5 years,Digestive diseases,Rate,2023,1.204724498201996,1.4596868634737723,1.0030433785816437
+All Population,Deaths,United States of America,Female,<5 years,Digestive diseases,Rate,2023,0.9199922612608158,1.1541742565654298,0.6978725695872324
+All Population,Deaths,United States of America,Both,<5 years,Digestive diseases,Rate,2023,1.065499960557861,1.2399829774238427,0.9145746068260965
+All Population,Deaths,United States of America,Male,5-9 years,Digestive diseases,Rate,2023,0.313352092794931,0.3933969926233008,0.25453951544443776
+All Population,Deaths,United States of America,Female,5-9 years,Digestive diseases,Rate,2023,0.23960601464209172,0.29868293070359064,0.1838915810715516
+All Population,Deaths,United States of America,Both,5-9 years,Digestive diseases,Rate,2023,0.2773257830978095,0.3292962167916664,0.23786133456663452
+All Population,Deaths,United States of America,Male,10-14 years,Digestive diseases,Rate,2023,0.376614880052266,0.47766636156720216,0.30438371240927076
+All Population,Deaths,United States of America,Female,10-14 years,Digestive diseases,Rate,2023,0.27822276139440666,0.35350867976840483,0.21517000264852135
+All Population,Deaths,United States of America,Both,10-14 years,Digestive diseases,Rate,2023,0.3286340478531283,0.3900244189549519,0.2838169192416441
+All Population,Deaths,United States of America,Male,15-19 years,Digestive diseases,Rate,2023,0.5957328991970783,0.7414132944670176,0.47953302369366163
+All Population,Deaths,United States of America,Female,15-19 years,Digestive diseases,Rate,2023,0.40256844728306235,0.48967272705832415,0.32983164417589556
+All Population,Deaths,United States of America,Both,15-19 years,Digestive diseases,Rate,2023,0.5014845374237018,0.5851554273745466,0.43086743714050835
+All Population,Deaths,United States of America,Male,20-24 years,Digestive diseases,Rate,2023,1.2106388106217054,1.4677342056170346,0.9825358681374045
+All Population,Deaths,United States of America,Female,20-24 years,Digestive diseases,Rate,2023,0.7272110538976311,0.8940893276188083,0.6004211217420591
+All Population,Deaths,United States of America,Both,20-24 years,Digestive diseases,Rate,2023,0.973509392169082,1.1243540151460722,0.8425222954666555
+All Population,Deaths,United States of America,Male,25-29 years,Digestive diseases,Rate,2023,3.4453551589710543,4.025655142096922,2.8452587563597223
+All Population,Deaths,United States of America,Female,25-29 years,Digestive diseases,Rate,2023,1.8933857747528717,2.2618499000166556,1.616453682082888
+All Population,Deaths,United States of America,Both,25-29 years,Digestive diseases,Rate,2023,2.682322279952457,3.0269599136864347,2.368145886419052
+All Population,Deaths,United States of America,Male,30-34 years,Digestive diseases,Rate,2023,8.336555467603162,9.615534851717056,7.119342406106858
+All Population,Deaths,United States of America,Female,30-34 years,Digestive diseases,Rate,2023,5.146536124917928,5.927542463041711,4.483993272046327
+All Population,Deaths,United States of America,Both,30-34 years,Digestive diseases,Rate,2023,6.76154525813911,7.507920736011758,6.068962867477046
+All Population,Deaths,United States of America,Male,35-39 years,Digestive diseases,Rate,2023,15.06104249883369,17.038594886313646,13.131987929509977
+All Population,Deaths,United States of America,Female,35-39 years,Digestive diseases,Rate,2023,8.89794980828389,10.175014777272258,7.880776317445029
+All Population,Deaths,United States of America,Both,35-39 years,Digestive diseases,Rate,2023,12.019558648207648,13.197348939391203,10.866239420049482
+All Population,Deaths,United States of America,Male,40-44 years,Digestive diseases,Rate,2023,21.405605097342765,23.692367024784378,18.884774396922758
+All Population,Deaths,United States of America,Female,40-44 years,Digestive diseases,Rate,2023,12.797475463108574,14.335627574772506,11.443494784629864
+All Population,Deaths,United States of America,Both,40-44 years,Digestive diseases,Rate,2023,17.132143106804822,18.488764716194474,15.650186494161833
+All Population,Deaths,United States of America,Male,45-49 years,Digestive diseases,Rate,2023,32.10276249280339,35.025706695166996,28.758148405071744
+All Population,Deaths,United States of America,Female,45-49 years,Digestive diseases,Rate,2023,18.324503496695325,20.37288130890392,16.7708635729197
+All Population,Deaths,United States of America,Both,45-49 years,Digestive diseases,Rate,2023,25.220384752830057,26.99584422900023,23.401452767542303
+All Population,Deaths,United States of America,Male,50-54 years,Digestive diseases,Rate,2023,45.03198789646417,48.551971861854696,41.395532796247345
+All Population,Deaths,United States of America,Female,50-54 years,Digestive diseases,Rate,2023,27.760572131332715,30.250460593371823,25.531307654128433
+All Population,Deaths,United States of America,Both,50-54 years,Digestive diseases,Rate,2023,36.386702310593584,38.50918125672777,34.216657986400556
+All Population,Deaths,United States of America,Male,55-59 years,Digestive diseases,Rate,2023,74.94927691513273,81.45270696997785,68.37246210252277
+All Population,Deaths,United States of America,Female,55-59 years,Digestive diseases,Rate,2023,44.29597138910799,49.04239718881275,40.358503492045216
+All Population,Deaths,United States of America,Both,55-59 years,Digestive diseases,Rate,2023,59.46350047468477,63.19320595194796,55.66005309940192
+All Population,Deaths,United States of America,Male,60-64 years,Digestive diseases,Rate,2023,94.26329760366663,102.18383334070172,86.10872258246962
+All Population,Deaths,United States of America,Female,60-64 years,Digestive diseases,Rate,2023,57.97411469672193,63.98827940434673,52.68916572515128
+All Population,Deaths,United States of America,Both,60-64 years,Digestive diseases,Rate,2023,75.67924285260081,80.37349137301395,70.7766885830137
+All Population,Deaths,United States of America,Male,65-69 years,Digestive diseases,Rate,2023,108.92649590225449,118.06779892493833,99.03809437473103
+All Population,Deaths,United States of America,Female,65-69 years,Digestive diseases,Rate,2023,70.33450361940369,78.85711336448479,62.29908952170988
+All Population,Deaths,United States of America,Both,65-69 years,Digestive diseases,Rate,2023,88.75058801313112,95.20556497022969,82.4717374187737
+All Population,Deaths,United States of America,Male,70-74 years,Digestive diseases,Rate,2023,120.9264783606701,131.16123020378552,109.83964442567232
+All Population,Deaths,United States of America,Female,70-74 years,Digestive diseases,Rate,2023,92.38065376039316,103.47265558223557,81.26063661004612
+All Population,Deaths,United States of America,Both,70-74 years,Digestive diseases,Rate,2023,105.65379279392948,113.23867453283506,96.1883877890436
+All Population,Deaths,United States of America,Male,75-79 years,Digestive diseases,Rate,2023,147.48937527659547,160.88424501438246,132.13270607247094
+All Population,Deaths,United States of America,Female,75-79 years,Digestive diseases,Rate,2023,127.72839077182499,145.38695841181985,109.85492169674342
+All Population,Deaths,United States of America,Both,75-79 years,Digestive diseases,Rate,2023,136.69460590762054,148.74927353864473,122.30078217506761
+All Population,Deaths,United States of America,Male,<1 year,Digestive diseases,Rate,2023,3.08772717572371,3.7880558190551636,2.5388541362483807
+All Population,Deaths,United States of America,Female,<1 year,Digestive diseases,Rate,2023,2.3275777893243137,2.9659329863264814,1.7394922353922737
+All Population,Deaths,United States of America,Both,<1 year,Digestive diseases,Rate,2023,2.7159384123420147,3.196224764188094,2.3107750012354815
+All Population,Deaths,United States of America,Male,80-84 years,Digestive diseases,Rate,2023,206.16185815040166,228.9696778226634,178.68054926235104
+All Population,Deaths,United States of America,Female,80-84 years,Digestive diseases,Rate,2023,189.51609103676304,222.9353857217256,150.8203615593619
+All Population,Deaths,United States of America,Both,80-84 years,Digestive diseases,Rate,2023,196.66562696529797,221.70662540921407,161.76914617746135
+All Population,Deaths,United States of America,Male,85-89 years,Digestive diseases,Rate,2023,318.7600422206443,362.8680130965921,265.4367577795885
+All Population,Deaths,United States of America,Female,85-89 years,Digestive diseases,Rate,2023,305.3452373765227,368.5606068184247,223.02756992624356
+All Population,Deaths,United States of America,Both,85-89 years,Digestive diseases,Rate,2023,310.65284412645354,362.2083737378402,238.97886275457716
+All Population,Deaths,United States of America,Male,90-94 years,Digestive diseases,Rate,2023,516.3258827791784,596.2605131579604,409.2481419414291
+All Population,Deaths,United States of America,Female,90-94 years,Digestive diseases,Rate,2023,505.6172007987535,622.2115388693186,362.07442909348975
+All Population,Deaths,United States of America,Both,90-94 years,Digestive diseases,Rate,2023,509.26248817825604,606.5292531013623,380.6804446403519
+All Population,Deaths,United States of America,Male,2-4 years,Digestive diseases,Rate,2023,0.5575523543895177,0.6807711128172496,0.46474131207334307
+All Population,Deaths,United States of America,Female,2-4 years,Digestive diseases,Rate,2023,0.43197696847769584,0.5418726036498397,0.3327594767140543
+All Population,Deaths,United States of America,Both,2-4 years,Digestive diseases,Rate,2023,0.4961634080574065,0.574667352907543,0.4307257764205795
+All Population,Deaths,United States of America,Male,95+ years,Digestive diseases,Rate,2023,673.9470545507606,802.136177366374,492.3141422815118
+All Population,Deaths,United States of America,Female,95+ years,Digestive diseases,Rate,2023,746.7945251653422,926.4733244479671,530.4945570246349
+All Population,Deaths,United States of America,Both,95+ years,Digestive diseases,Rate,2023,726.9575246190053,877.4743165681357,525.9594361973056
+All Population,Deaths,United States of America,Male,<5 years,Neoplasms,Rate,2023,2.6708859969393686,2.9205149199172036,2.4027747006509257
+All Population,Deaths,United States of America,Female,<5 years,Neoplasms,Rate,2023,2.4884340139788983,2.788953297382637,2.150240381471205
+All Population,Deaths,United States of America,Both,<5 years,Neoplasms,Rate,2023,2.5816730815251767,2.776048461876542,2.360368023817675
+All Population,Deaths,United States of America,Male,5-9 years,Neoplasms,Rate,2023,2.4444117935288805,2.6664415616009878,2.211956263404129
+All Population,Deaths,United States of America,Female,5-9 years,Neoplasms,Rate,2023,2.2208104835374645,2.457725686209285,1.989389503321307
+All Population,Deaths,United States of America,Both,5-9 years,Neoplasms,Rate,2023,2.3351784587644535,2.509738058668866,2.172628995374371
+All Population,Deaths,United States of America,Male,10-14 years,Neoplasms,Rate,2023,2.643393429146419,2.868779821563253,2.4120685904548402
+All Population,Deaths,United States of America,Female,10-14 years,Neoplasms,Rate,2023,2.2946094183271235,2.5024474622537896,2.0802541458605504
+All Population,Deaths,United States of America,Both,10-14 years,Neoplasms,Rate,2023,2.473309205682793,2.6362460497881166,2.328691465420791
+All Population,Deaths,United States of America,Male,15-19 years,Neoplasms,Rate,2023,3.797173034350119,4.156695215372789,3.4912211493629575
+All Population,Deaths,United States of America,Female,15-19 years,Neoplasms,Rate,2023,2.8329426308264813,3.1091160680994405,2.5726241093717963
+All Population,Deaths,United States of America,Both,15-19 years,Neoplasms,Rate,2023,3.326707920279146,3.5464541787613304,3.1087745144697467
+All Population,Deaths,United States of America,Male,20-24 years,Neoplasms,Rate,2023,4.783783511294315,5.3102503124164855,4.2929096766635455
+All Population,Deaths,United States of America,Female,20-24 years,Neoplasms,Rate,2023,3.4443038102555996,3.804583050971827,3.098311373890955
+All Population,Deaths,United States of America,Both,20-24 years,Neoplasms,Rate,2023,4.126746264014994,4.412594281449342,3.8234699112438797
+All Population,Deaths,United States of America,Male,25-29 years,Neoplasms,Rate,2023,6.93723044820533,7.775270716509173,6.151445545445791
+All Population,Deaths,United States of America,Female,25-29 years,Neoplasms,Rate,2023,5.9676402437051435,6.64959102798371,5.303708295575845
+All Population,Deaths,United States of America,Both,25-29 years,Neoplasms,Rate,2023,6.460526968915564,6.976787064549004,5.922133778055771
+All Population,Deaths,United States of America,Male,30-34 years,Neoplasms,Rate,2023,11.445761565432493,12.807525524629142,10.06417675851733
+All Population,Deaths,United States of America,Female,30-34 years,Neoplasms,Rate,2023,12.725847611736471,13.962897311971771,11.284288838606903
+All Population,Deaths,United States of America,Both,30-34 years,Neoplasms,Rate,2023,12.077779235339195,13.147034588405914,11.109210560812299
+All Population,Deaths,United States of America,Male,35-39 years,Neoplasms,Rate,2023,18.944356015948216,20.994311253170636,16.77654411154849
+All Population,Deaths,United States of America,Female,35-39 years,Neoplasms,Rate,2023,24.00722886053756,25.894229332231298,21.7705077476729
+All Population,Deaths,United States of America,Both,35-39 years,Neoplasms,Rate,2023,21.442881799635213,22.88711872768936,20.05143499901785
+All Population,Deaths,United States of America,Male,40-44 years,Neoplasms,Rate,2023,34.1154552891442,37.08638758576696,30.83487199968176
+All Population,Deaths,United States of America,Female,40-44 years,Neoplasms,Rate,2023,43.31591285563496,46.31410614804425,40.010094092228755
+All Population,Deaths,United States of America,Both,40-44 years,Neoplasms,Rate,2023,38.682975456311546,40.99896114327887,36.59490573920753
+All Population,Deaths,United States of America,Male,45-49 years,Neoplasms,Rate,2023,60.618364267801965,64.96305399485256,55.969842748066
+All Population,Deaths,United States of America,Female,45-49 years,Neoplasms,Rate,2023,69.7779824663592,73.4257723965597,65.85515314688057
+All Population,Deaths,United States of America,Both,45-49 years,Neoplasms,Rate,2023,65.19368488082081,68.01256482305733,62.2481219019991
+All Population,Deaths,United States of America,Male,50-54 years,Neoplasms,Rate,2023,115.5932145812045,121.70666368906507,108.40607331753301
+All Population,Deaths,United States of America,Female,50-54 years,Neoplasms,Rate,2023,118.41603051083469,123.56889929129447,113.1912122101897
+All Population,Deaths,United States of America,Both,50-54 years,Neoplasms,Rate,2023,117.00618791239289,120.44031298620857,112.7485366324136
+All Population,Deaths,United States of America,Male,55-59 years,Neoplasms,Rate,2023,213.40786661517703,222.50609767423398,205.21010588188813
+All Population,Deaths,United States of America,Female,55-59 years,Neoplasms,Rate,2023,191.19154908568885,198.5622414397558,184.0357318765497
+All Population,Deaths,United States of America,Both,55-59 years,Neoplasms,Rate,2023,202.1843812295774,207.40342558271973,196.51747974448628
+All Population,Deaths,United States of America,Male,60-64 years,Neoplasms,Rate,2023,375.9068063836893,389.47463665583024,363.61529172220105
+All Population,Deaths,United States of America,Female,60-64 years,Neoplasms,Rate,2023,302.62343734399144,314.1638374271033,288.7273275945743
+All Population,Deaths,United States of America,Both,60-64 years,Neoplasms,Rate,2023,338.3776576544772,346.7436290649034,327.93409451537724
+All Population,Deaths,United States of America,Male,65-69 years,Neoplasms,Rate,2023,575.0507328678892,593.914520701757,554.3123162448759
+All Population,Deaths,United States of America,Female,65-69 years,Neoplasms,Rate,2023,425.1232998311417,443.23614547328975,398.0367645521024
+All Population,Deaths,United States of America,Both,65-69 years,Neoplasms,Rate,2023,496.66861522981384,511.6633888508054,473.3187358388752
+All Population,Deaths,United States of America,Male,70-74 years,Neoplasms,Rate,2023,812.9100943029009,846.2079014439694,775.1612526356347
+All Population,Deaths,United States of America,Female,70-74 years,Neoplasms,Rate,2023,581.7739727184864,612.4321940497869,534.1843971246307
+All Population,Deaths,United States of America,Both,70-74 years,Neoplasms,Rate,2023,689.2468490645603,715.0964378567568,649.1876061544573
+All Population,Deaths,United States of America,Male,75-79 years,Neoplasms,Rate,2023,1153.7150074343874,1212.684029810872,1078.9871303176742
+All Population,Deaths,United States of America,Female,75-79 years,Neoplasms,Rate,2023,828.8482008011317,887.9927401670227,743.531203605888
+All Population,Deaths,United States of America,Both,75-79 years,Neoplasms,Rate,2023,976.2510631458441,1026.1342653537,900.1817069641746
+All Population,Deaths,United States of America,Male,<1 year,Neoplasms,Rate,2023,2.849357910390549,3.151030482218602,2.5822948891332174
+All Population,Deaths,United States of America,Female,<1 year,Neoplasms,Rate,2023,2.9975862688825488,3.4374186127039645,2.484828521593079
+All Population,Deaths,United States of America,Both,<1 year,Neoplasms,Rate,2023,2.9218563417355745,3.1470078170337583,2.645400854607292
+All Population,Deaths,United States of America,Male,80-84 years,Neoplasms,Rate,2023,1684.8242591829696,1808.463677710209,1493.0392999076282
+All Population,Deaths,United States of America,Female,80-84 years,Neoplasms,Rate,2023,1138.5342874054916,1270.476427490838,928.4816553775266
+All Population,Deaths,United States of America,Both,80-84 years,Neoplasms,Rate,2023,1373.1717032696927,1491.0225861651386,1172.073472603173
+All Population,Deaths,United States of America,Male,85-89 years,Neoplasms,Rate,2023,2352.629203156293,2576.168650338363,1934.7802074200479
+All Population,Deaths,United States of America,Female,85-89 years,Neoplasms,Rate,2023,1507.0381819692286,1717.9793848500044,1148.1564063867197
+All Population,Deaths,United States of America,Both,85-89 years,Neoplasms,Rate,2023,1841.5987412829272,2044.0671554175594,1460.5159306634541
+All Population,Deaths,United States of America,Male,90-94 years,Neoplasms,Rate,2023,3241.026477890446,3595.948131961129,2537.4077976092312
+All Population,Deaths,United States of America,Female,90-94 years,Neoplasms,Rate,2023,1926.4555000019477,2231.370438389424,1423.8842399001398
+All Population,Deaths,United States of America,Both,90-94 years,Neoplasms,Rate,2023,2373.941848360942,2683.0922654364645,1822.2533852884712
+All Population,Deaths,United States of America,Male,2-4 years,Neoplasms,Rate,2023,2.6056222496257995,2.8794518107485554,2.3356112493982963
+All Population,Deaths,United States of America,Female,2-4 years,Neoplasms,Rate,2023,2.322949560581776,2.5976838274345146,2.041641081664752
+All Population,Deaths,United States of America,Both,2-4 years,Neoplasms,Rate,2023,2.467434511548989,2.666189438512993,2.265414773165667
+All Population,Deaths,United States of America,Male,95+ years,Neoplasms,Rate,2023,3512.1579701444134,4052.7104705404013,2580.453134583377
+All Population,Deaths,United States of America,Female,95+ years,Neoplasms,Rate,2023,2159.77809264178,2537.5598252585132,1548.6200793142254
+All Population,Deaths,United States of America,Both,95+ years,Neoplasms,Rate,2023,2528.0429087369066,2933.880962585573,1829.5972046477302
+All Population,Deaths,United States of America,Male,<5 years,Musculoskeletal disorders,Rate,2023,0.037925100977872904,0.045822214765678784,0.0315464972892348
+All Population,Deaths,United States of America,Female,<5 years,Musculoskeletal disorders,Rate,2023,0.02122557512958765,0.026163593262037245,0.016688720249581512
+All Population,Deaths,United States of America,Both,<5 years,Musculoskeletal disorders,Rate,2023,0.02975959155020636,0.03441490201878017,0.02592942886075474
+All Population,Deaths,United States of America,Male,5-9 years,Musculoskeletal disorders,Rate,2023,0.025289107507106424,0.030473407361074942,0.020765729785921686
+All Population,Deaths,United States of America,Female,5-9 years,Musculoskeletal disorders,Rate,2023,0.03505085954942339,0.04344622676971142,0.028595580408178382
+All Population,Deaths,United States of America,Both,5-9 years,Musculoskeletal disorders,Rate,2023,0.030057902147740147,0.03473746759292832,0.025945287301237744
+All Population,Deaths,United States of America,Male,10-14 years,Musculoskeletal disorders,Rate,2023,0.04509660341155138,0.05593291385777192,0.036134590183703984
+All Population,Deaths,United States of America,Female,10-14 years,Musculoskeletal disorders,Rate,2023,0.08592350588320927,0.10835503784358966,0.06760936023462549
+All Population,Deaths,United States of America,Both,10-14 years,Musculoskeletal disorders,Rate,2023,0.06500580735414482,0.0778564901024148,0.05483284000109529
+All Population,Deaths,United States of America,Male,15-19 years,Musculoskeletal disorders,Rate,2023,0.07807523538505451,0.09701176694098719,0.06172997102475475
+All Population,Deaths,United States of America,Female,15-19 years,Musculoskeletal disorders,Rate,2023,0.19273333421160013,0.24185235284342946,0.15720969138928856
+All Population,Deaths,United States of America,Both,15-19 years,Musculoskeletal disorders,Rate,2023,0.13401895521225177,0.16121399261973027,0.11266471615906715
+All Population,Deaths,United States of America,Male,20-24 years,Musculoskeletal disorders,Rate,2023,0.1416821801583287,0.17911903273992671,0.1115687250602736
+All Population,Deaths,United States of America,Female,20-24 years,Musculoskeletal disorders,Rate,2023,0.434417508699704,0.5293505830262233,0.35676448776584924
+All Population,Deaths,United States of America,Both,20-24 years,Musculoskeletal disorders,Rate,2023,0.28527376597861587,0.34406873496725654,0.24267390400424602
+All Population,Deaths,United States of America,Male,25-29 years,Musculoskeletal disorders,Rate,2023,0.18346822545567212,0.22980727083738547,0.14716498610218878
+All Population,Deaths,United States of America,Female,25-29 years,Musculoskeletal disorders,Rate,2023,0.5452256645484708,0.6818895189717257,0.45243438028358324
+All Population,Deaths,United States of America,Both,25-29 years,Musculoskeletal disorders,Rate,2023,0.3613279326537154,0.4308196130561403,0.3083405168217105
+All Population,Deaths,United States of America,Male,30-34 years,Musculoskeletal disorders,Rate,2023,0.27560028570237727,0.34509403161437435,0.21765549942704454
+All Population,Deaths,United States of America,Female,30-34 years,Musculoskeletal disorders,Rate,2023,0.8061627827623361,1.011800500027331,0.6693756820764984
+All Population,Deaths,United States of America,Both,30-34 years,Musculoskeletal disorders,Rate,2023,0.5375552332622756,0.6370294127438315,0.4608862183992104
+All Population,Deaths,United States of America,Male,35-39 years,Musculoskeletal disorders,Rate,2023,0.3750184945760041,0.47519981906050024,0.2934885619496327
+All Population,Deaths,United States of America,Female,35-39 years,Musculoskeletal disorders,Rate,2023,1.0535770269515115,1.2680780978108634,0.9005488015468478
+All Population,Deaths,United States of America,Both,35-39 years,Musculoskeletal disorders,Rate,2023,0.7098868669256835,0.8211359304364737,0.617123091596698
+All Population,Deaths,United States of America,Male,40-44 years,Musculoskeletal disorders,Rate,2023,0.4895282763073885,0.6070215512201179,0.3961145038480672
+All Population,Deaths,United States of America,Female,40-44 years,Musculoskeletal disorders,Rate,2023,1.4398348104373104,1.705974853963929,1.2508029650467456
+All Population,Deaths,United States of America,Both,40-44 years,Musculoskeletal disorders,Rate,2023,0.9613031014463187,1.0983859940587666,0.8416140794537862
+All Population,Deaths,United States of America,Male,45-49 years,Musculoskeletal disorders,Rate,2023,0.6066655046527288,0.7456535705188259,0.49056981619541257
+All Population,Deaths,United States of America,Female,45-49 years,Musculoskeletal disorders,Rate,2023,1.8354010443178457,2.150748462271425,1.6224897841115369
+All Population,Deaths,United States of America,Both,45-49 years,Musculoskeletal disorders,Rate,2023,1.2204311574027649,1.388387928134933,1.0823586596988295
+All Population,Deaths,United States of America,Male,50-54 years,Musculoskeletal disorders,Rate,2023,0.8581189452884941,1.0236372959636446,0.7092513752275829
+All Population,Deaths,United States of America,Female,50-54 years,Musculoskeletal disorders,Rate,2023,2.220194277727947,2.597159880638168,1.9672650998222638
+All Population,Deaths,United States of America,Both,50-54 years,Musculoskeletal disorders,Rate,2023,1.5399119377414816,1.7353769345640913,1.383081531021158
+All Population,Deaths,United States of America,Male,55-59 years,Musculoskeletal disorders,Rate,2023,1.292903195585715,1.5317012149421765,1.1018381335923817
+All Population,Deaths,United States of America,Female,55-59 years,Musculoskeletal disorders,Rate,2023,2.98180276422481,3.4489241721113726,2.682522985338379
+All Population,Deaths,United States of America,Both,55-59 years,Musculoskeletal disorders,Rate,2023,2.1461201880601255,2.39257803421683,1.9496609677383108
+All Population,Deaths,United States of America,Male,60-64 years,Musculoskeletal disorders,Rate,2023,1.9773919586799742,2.3306799943168817,1.6601794257859601
+All Population,Deaths,United States of America,Female,60-64 years,Musculoskeletal disorders,Rate,2023,4.1621651616105035,4.775207109278634,3.710936052432054
+All Population,Deaths,United States of America,Both,60-64 years,Musculoskeletal disorders,Rate,2023,3.0962362414525235,3.429733945153341,2.8034748320451626
+All Population,Deaths,United States of America,Male,65-69 years,Musculoskeletal disorders,Rate,2023,2.8459889355092454,3.2580126599273926,2.424100604569934
+All Population,Deaths,United States of America,Female,65-69 years,Musculoskeletal disorders,Rate,2023,6.040235784506784,6.900431738149362,5.404769631321254
+All Population,Deaths,United States of America,Both,65-69 years,Musculoskeletal disorders,Rate,2023,4.515942373729003,5.002192550799111,4.10400749539437
+All Population,Deaths,United States of America,Male,70-74 years,Musculoskeletal disorders,Rate,2023,4.263738876233367,4.8624249049896555,3.6851116052578203
+All Population,Deaths,United States of America,Female,70-74 years,Musculoskeletal disorders,Rate,2023,9.050997399508532,10.158572234872016,8.070326733530438
+All Population,Deaths,United States of America,Both,70-74 years,Musculoskeletal disorders,Rate,2023,6.825034448405117,7.469043863479082,6.170838722479538
+All Population,Deaths,United States of America,Male,75-79 years,Musculoskeletal disorders,Rate,2023,6.25281893651143,7.257717044026202,5.416662091723709
+All Population,Deaths,United States of America,Female,75-79 years,Musculoskeletal disorders,Rate,2023,13.560958311673,14.989027494216538,11.980163825613905
+All Population,Deaths,United States of America,Both,75-79 years,Musculoskeletal disorders,Rate,2023,10.245012698525091,11.198805859259956,9.240594564326614
+All Population,Deaths,United States of America,Male,<1 year,Musculoskeletal disorders,Rate,2023,0.09303403015899203,0.11028162802466819,0.07874587121514742
+All Population,Deaths,United States of America,Female,<1 year,Musculoskeletal disorders,Rate,2023,0.035793575377157064,0.042530150618824085,0.027884513232932662
+All Population,Deaths,United States of America,Both,<1 year,Musculoskeletal disorders,Rate,2023,0.06503774642909564,0.07468848567293972,0.05692128942562945
+All Population,Deaths,United States of America,Male,80-84 years,Musculoskeletal disorders,Rate,2023,9.381063343821737,10.782665374063777,8.001706877098691
+All Population,Deaths,United States of America,Female,80-84 years,Musculoskeletal disorders,Rate,2023,20.414286305542703,23.987780697444165,15.652479562051441
+All Population,Deaths,United States of America,Both,80-84 years,Musculoskeletal disorders,Rate,2023,15.675398428892679,17.97496347734346,12.519650013305016
+All Population,Deaths,United States of America,Male,85-89 years,Musculoskeletal disorders,Rate,2023,14.282655195587388,16.878722684347117,11.584542374265087
+All Population,Deaths,United States of America,Female,85-89 years,Musculoskeletal disorders,Rate,2023,29.1930009378563,35.356408681267276,21.182293169393272
+All Population,Deaths,United States of America,Both,85-89 years,Musculoskeletal disorders,Rate,2023,23.29367905989781,27.385498016215468,17.389857685851158
+All Population,Deaths,United States of America,Male,90-94 years,Musculoskeletal disorders,Rate,2023,21.802321422972575,26.75804627020824,17.13277345571956
+All Population,Deaths,United States of America,Female,90-94 years,Musculoskeletal disorders,Rate,2023,43.80181056590869,52.56268712278403,30.48337663752691
+All Population,Deaths,United States of America,Both,90-94 years,Musculoskeletal disorders,Rate,2023,36.313077566380336,42.7328611768748,26.1967222441715
+All Population,Deaths,United States of America,Male,2-4 years,Musculoskeletal disorders,Rate,2023,0.016768469790123787,0.02054276169686881,0.013408899608507201
+All Population,Deaths,United States of America,Female,2-4 years,Musculoskeletal disorders,Rate,2023,0.016555656040119323,0.02065053129468889,0.012960496926375652
+All Population,Deaths,United States of America,Both,2-4 years,Musculoskeletal disorders,Rate,2023,0.016664433383762015,0.019670851414702175,0.014269339238955245
+All Population,Deaths,United States of America,Male,95+ years,Musculoskeletal disorders,Rate,2023,30.102130057861306,37.396524638917256,22.45390351508421
+All Population,Deaths,United States of America,Female,95+ years,Musculoskeletal disorders,Rate,2023,66.09394810995052,82.07653086218204,45.93886944829229
+All Population,Deaths,United States of America,Both,95+ years,Musculoskeletal disorders,Rate,2023,56.29306266616655,69.09925289592043,40.04223722641917
+All Population,Deaths,United States of America,Male,<5 years,Other non-communicable diseases,Rate,2023,39.992050853968514,46.810863191014334,35.35643458578503
+All Population,Deaths,United States of America,Female,<5 years,Other non-communicable diseases,Rate,2023,39.21966832479862,48.596473866060094,33.01739650108911
+All Population,Deaths,United States of America,Both,<5 years,Other non-communicable diseases,Rate,2023,39.61438163862675,45.17570412705857,35.695262445265534
+All Population,Deaths,United States of America,Male,5-9 years,Other non-communicable diseases,Rate,2023,1.924173592534867,2.2981663290122274,1.6140709486072256
+All Population,Deaths,United States of America,Female,5-9 years,Other non-communicable diseases,Rate,2023,1.923058212524307,2.4442957149977524,1.574062292399802
+All Population,Deaths,United States of America,Both,5-9 years,Other non-communicable diseases,Rate,2023,1.9236287089736408,2.2337708255280804,1.6838422117877005
+All Population,Deaths,United States of America,Male,10-14 years,Other non-communicable diseases,Rate,2023,2.0226373661151973,2.3590460175075547,1.741757912044232
+All Population,Deaths,United States of America,Female,10-14 years,Other non-communicable diseases,Rate,2023,1.8077863256640925,2.148425074533787,1.51953573290212
+All Population,Deaths,United States of America,Both,10-14 years,Other non-communicable diseases,Rate,2023,1.9178654406773354,2.154432242585006,1.70347814682137
+All Population,Deaths,United States of America,Male,15-19 years,Other non-communicable diseases,Rate,2023,2.086079068764515,2.50193174909874,1.7291351067790863
+All Population,Deaths,United States of America,Female,15-19 years,Other non-communicable diseases,Rate,2023,1.7597767365052965,2.0496400106545183,1.510907824390669
+All Population,Deaths,United States of America,Both,15-19 years,Other non-communicable diseases,Rate,2023,1.9268703740303907,2.145989875758444,1.7081345440029134
+All Population,Deaths,United States of America,Male,20-24 years,Other non-communicable diseases,Rate,2023,2.4897970219080303,2.9477303944077544,2.1219679057171246
+All Population,Deaths,United States of America,Female,20-24 years,Other non-communicable diseases,Rate,2023,2.138190693984339,2.457251958294361,1.8381756162376968
+All Population,Deaths,United States of America,Both,20-24 years,Other non-communicable diseases,Rate,2023,2.317328224026414,2.576239381323506,2.056590083170073
+All Population,Deaths,United States of America,Male,25-29 years,Other non-communicable diseases,Rate,2023,3.346745109419102,3.8950893684342613,2.8476493131810714
+All Population,Deaths,United States of America,Female,25-29 years,Other non-communicable diseases,Rate,2023,2.5739568913329824,2.9789799384829307,2.2162233835816036
+All Population,Deaths,United States of America,Both,25-29 years,Other non-communicable diseases,Rate,2023,2.9668002310509305,3.3050470931815643,2.6423397972696647
+All Population,Deaths,United States of America,Male,30-34 years,Other non-communicable diseases,Rate,2023,4.449758739548815,5.148679562256332,3.7946461763476713
+All Population,Deaths,United States of America,Female,30-34 years,Other non-communicable diseases,Rate,2023,3.4733777541477826,3.9988471711462084,3.0012730334504827
+All Population,Deaths,United States of America,Both,30-34 years,Other non-communicable diseases,Rate,2023,3.9676895559059595,4.40367927759106,3.558519108105646
+All Population,Deaths,United States of America,Male,35-39 years,Other non-communicable diseases,Rate,2023,6.019156692389481,6.844065588005362,5.26489986305701
+All Population,Deaths,United States of America,Female,35-39 years,Other non-communicable diseases,Rate,2023,4.734832688146348,5.3510431050600795,4.246896989723985
+All Population,Deaths,United States of America,Both,35-39 years,Other non-communicable diseases,Rate,2023,5.385343294796661,5.87120429497833,4.87892342329559
+All Population,Deaths,United States of America,Male,40-44 years,Other non-communicable diseases,Rate,2023,8.062159960832885,8.986031851028942,7.203925098520864
+All Population,Deaths,United States of America,Female,40-44 years,Other non-communicable diseases,Rate,2023,6.899965757280445,7.608147527311648,6.224489484506775
+All Population,Deaths,United States of America,Both,40-44 years,Other non-communicable diseases,Rate,2023,7.485194584434172,8.03015443389064,6.924702467223437
+All Population,Deaths,United States of America,Male,45-49 years,Other non-communicable diseases,Rate,2023,10.592145632148918,11.46115027714605,9.645227334901872
+All Population,Deaths,United States of America,Female,45-49 years,Other non-communicable diseases,Rate,2023,8.946000411884501,9.759957329703639,8.23168490141394
+All Population,Deaths,United States of America,Both,45-49 years,Other non-communicable diseases,Rate,2023,9.76987968229912,10.350782483649313,9.109371982998635
+All Population,Deaths,United States of America,Male,50-54 years,Other non-communicable diseases,Rate,2023,15.109330325146026,16.106564163325608,14.086934747672652
+All Population,Deaths,United States of America,Female,50-54 years,Other non-communicable diseases,Rate,2023,11.717795561922015,12.590700522382278,10.867696722836657
+All Population,Deaths,United States of America,Both,50-54 years,Other non-communicable diseases,Rate,2023,13.411682199410201,14.028240636369233,12.735108019422455
+All Population,Deaths,United States of America,Male,55-59 years,Other non-communicable diseases,Rate,2023,23.350720877812055,24.56928456272219,22.14526450809426
+All Population,Deaths,United States of America,Female,55-59 years,Other non-communicable diseases,Rate,2023,17.610266292620928,18.600747755634565,16.492138761481833
+All Population,Deaths,United States of America,Both,55-59 years,Other non-communicable diseases,Rate,2023,20.450694441924337,21.18354871438385,19.52562086577951
+All Population,Deaths,United States of America,Male,60-64 years,Other non-communicable diseases,Rate,2023,33.447440149136824,34.98538749665162,32.0538237751164
+All Population,Deaths,United States of America,Female,60-64 years,Other non-communicable diseases,Rate,2023,25.537124637811463,27.055234590003334,23.805155475001463
+All Population,Deaths,United States of America,Both,60-64 years,Other non-communicable diseases,Rate,2023,29.396488190873182,30.504809989874623,28.2146717037742
+All Population,Deaths,United States of America,Male,65-69 years,Other non-communicable diseases,Rate,2023,45.058689584331766,47.301883671764195,42.79450691125426
+All Population,Deaths,United States of America,Female,65-69 years,Other non-communicable diseases,Rate,2023,35.61366749810805,37.75329829768209,32.83034960920873
+All Population,Deaths,United States of America,Both,65-69 years,Other non-communicable diseases,Rate,2023,40.12082853207754,41.782017644240355,37.964742244429715
+All Population,Deaths,United States of America,Male,70-74 years,Other non-communicable diseases,Rate,2023,61.46363978873913,64.61167170113902,58.21028347595203
+All Population,Deaths,United States of America,Female,70-74 years,Other non-communicable diseases,Rate,2023,52.11347939732929,55.77017870467976,47.26870541007056
+All Population,Deaths,United States of America,Both,70-74 years,Other non-communicable diseases,Rate,2023,56.46108471610658,59.08258963420198,52.98031643960857
+All Population,Deaths,United States of America,Male,75-79 years,Other non-communicable diseases,Rate,2023,96.65581549464557,103.08409487701395,89.5029750880824
+All Population,Deaths,United States of America,Female,75-79 years,Other non-communicable diseases,Rate,2023,88.31843814494161,97.45655070896278,77.75430304205483
+All Population,Deaths,United States of America,Both,75-79 years,Other non-communicable diseases,Rate,2023,92.10138321874136,98.26815480965102,84.55111636530546
+All Population,Deaths,United States of America,Male,<1 year,Other non-communicable diseases,Rate,2023,182.7643013355835,211.05850358693195,161.08541857760085
+All Population,Deaths,United States of America,Female,<1 year,Other non-communicable diseases,Rate,2023,177.81673077504047,216.33094835970746,149.70654050910156
+All Population,Deaths,United States of America,Both,<1 year,Other non-communicable diseases,Rate,2023,180.34444653683025,203.94509862947584,163.52931153702792
+All Population,Deaths,United States of America,Male,80-84 years,Other non-communicable diseases,Rate,2023,164.08098573282274,179.60163816898242,144.5600425903503
+All Population,Deaths,United States of America,Female,80-84 years,Other non-communicable diseases,Rate,2023,147.69944704420558,167.5775591752143,120.88487515720405
+All Population,Deaths,United States of America,Both,80-84 years,Other non-communicable diseases,Rate,2023,154.73549402356002,169.67706911675566,133.3028432063299
+All Population,Deaths,United States of America,Male,85-89 years,Other non-communicable diseases,Rate,2023,290.5030559158394,321.5029303761427,239.08098207030804
+All Population,Deaths,United States of America,Female,85-89 years,Other non-communicable diseases,Rate,2023,258.81092209140934,298.01048066347465,194.0309034252328
+All Population,Deaths,United States of America,Both,85-89 years,Other non-communicable diseases,Rate,2023,271.35000747959316,301.97308111172697,212.7933150361084
+All Population,Deaths,United States of America,Male,90-94 years,Other non-communicable diseases,Rate,2023,508.29448443865607,570.482826628774,409.1552616766141
+All Population,Deaths,United States of America,Female,90-94 years,Other non-communicable diseases,Rate,2023,467.3123815016354,552.6005127665869,349.22749385492926
+All Population,Deaths,United States of America,Both,90-94 years,Other non-communicable diseases,Rate,2023,481.2628884729794,547.8061641192397,368.0011106168151
+All Population,Deaths,United States of America,Male,2-4 years,Other non-communicable diseases,Rate,2023,3.735689206187702,4.783479454900963,3.1179822252819918
+All Population,Deaths,United States of America,Female,2-4 years,Other non-communicable diseases,Rate,2023,3.862566237830645,5.343484477380701,3.0591751991999208
+All Population,Deaths,United States of America,Both,2-4 years,Other non-communicable diseases,Rate,2023,3.7977144767433155,4.653065359971488,3.255554753292343
+All Population,Deaths,United States of America,Male,95+ years,Other non-communicable diseases,Rate,2023,730.9807586404776,867.070906939707,542.0027852208364
+All Population,Deaths,United States of America,Female,95+ years,Other non-communicable diseases,Rate,2023,784.7300136156513,942.3908564954751,540.4172272366302
+All Population,Deaths,United States of America,Both,95+ years,Other non-communicable diseases,Rate,2023,770.0936234800371,898.1807949202754,546.8795822616399
+All Population,Deaths,United States of America,Male,<5 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Female,<5 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Both,<5 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Male,5-9 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Female,5-9 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Both,5-9 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Male,10-14 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Female,10-14 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Both,10-14 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Male,15-19 years,Substance use disorders,Rate,2023,9.381362374491168,12.839213344763111,6.581649687649513
+All Population,Deaths,United States of America,Female,15-19 years,Substance use disorders,Rate,2023,4.325246816580893,5.757795182476961,3.209290180282002
+All Population,Deaths,United States of America,Both,15-19 years,Substance use disorders,Rate,2023,6.914393925855268,8.666380762252762,5.228644675690583
+All Population,Deaths,United States of America,Male,20-24 years,Substance use disorders,Rate,2023,33.04953225513579,42.29450169973634,24.898911256005434
+All Population,Deaths,United States of America,Female,20-24 years,Substance use disorders,Rate,2023,13.721366108246592,17.27098815563014,10.820942756044545
+All Population,Deaths,United States of America,Both,20-24 years,Substance use disorders,Rate,2023,23.568742758839875,28.414743369782265,18.825102634285717
+All Population,Deaths,United States of America,Male,25-29 years,Substance use disorders,Rate,2023,60.17616348701444,73.5454250698583,48.20426096788435
+All Population,Deaths,United States of America,Female,25-29 years,Substance use disorders,Rate,2023,23.373681419456958,28.267586689033223,19.02946465028515
+All Population,Deaths,United States of America,Both,25-29 years,Substance use disorders,Rate,2023,42.08205407184386,49.02394737465606,35.94450520487322
+All Population,Deaths,United States of America,Male,30-34 years,Substance use disorders,Rate,2023,83.0537279398509,99.72080909653965,67.71358765438575
+All Population,Deaths,United States of America,Female,30-34 years,Substance use disorders,Rate,2023,33.725018024479645,40.89393473041661,27.64098486885014
+All Population,Deaths,United States of America,Both,30-34 years,Substance use disorders,Rate,2023,58.69863369424637,67.35676454855958,50.33569154654132
+All Population,Deaths,United States of America,Male,35-39 years,Substance use disorders,Rate,2023,94.75508002407386,113.57263828511844,77.97871580992361
+All Population,Deaths,United States of America,Female,35-39 years,Substance use disorders,Rate,2023,38.45753693028199,46.864370910784835,31.695832276323827
+All Population,Deaths,United States of America,Both,35-39 years,Substance use disorders,Rate,2023,66.97226435877575,76.33625256761965,57.786286226366904
+All Population,Deaths,United States of America,Male,40-44 years,Substance use disorders,Rate,2023,98.45575201741167,119.94449181662965,80.4666089474049
+All Population,Deaths,United States of America,Female,40-44 years,Substance use disorders,Rate,2023,41.32260326830608,50.71529735695408,33.72341167947185
+All Population,Deaths,United States of America,Both,40-44 years,Substance use disorders,Rate,2023,70.092292130835,80.72312865774678,60.197230513792725
+All Population,Deaths,United States of America,Male,45-49 years,Substance use disorders,Rate,2023,92.13407780420754,113.43482775459637,75.11578503492629
+All Population,Deaths,United States of America,Female,45-49 years,Substance use disorders,Rate,2023,39.20889432150987,48.727235855846025,31.910196429533702
+All Population,Deaths,United States of America,Both,45-49 years,Substance use disorders,Rate,2023,65.69742098216545,76.47658017700209,55.045847740467
+All Population,Deaths,United States of America,Male,50-54 years,Substance use disorders,Rate,2023,87.76719010064348,109.42931786810094,69.73644202127525
+All Population,Deaths,United States of America,Female,50-54 years,Substance use disorders,Rate,2023,37.52919453902808,47.37877798207622,30.1012195604588
+All Population,Deaths,United States of America,Both,50-54 years,Substance use disorders,Rate,2023,62.62033330568994,74.7641367602429,51.71560797125382
+All Population,Deaths,United States of America,Male,55-59 years,Substance use disorders,Rate,2023,85.61876333720421,105.81365008031852,69.02625768557783
+All Population,Deaths,United States of America,Female,55-59 years,Substance use disorders,Rate,2023,34.84340885996136,43.38773944140789,28.33776667957679
+All Population,Deaths,United States of America,Both,55-59 years,Substance use disorders,Rate,2023,59.9675073102966,71.3235273321079,50.48839387280038
+All Population,Deaths,United States of America,Male,60-64 years,Substance use disorders,Rate,2023,68.926117601431,84.78068659651491,56.4333938712723
+All Population,Deaths,United States of America,Female,60-64 years,Substance use disorders,Rate,2023,25.060158185450153,30.449798210632643,20.846404464530465
+All Population,Deaths,United States of America,Both,60-64 years,Substance use disorders,Rate,2023,46.46191956244418,54.69765388014188,39.47107415707798
+All Population,Deaths,United States of America,Male,65-69 years,Substance use disorders,Rate,2023,48.657097890907494,59.01183656412175,40.480586796576425
+All Population,Deaths,United States of America,Female,65-69 years,Substance use disorders,Rate,2023,15.86652799791733,19.052720141953962,13.265391588943238
+All Population,Deaths,United States of America,Both,65-69 years,Substance use disorders,Rate,2023,31.514175780435927,36.583731105844834,27.069197414126027
+All Population,Deaths,United States of America,Male,70-74 years,Substance use disorders,Rate,2023,27.65855218651651,32.25643577579649,23.83237824451053
+All Population,Deaths,United States of America,Female,70-74 years,Substance use disorders,Rate,2023,9.136823323798504,10.365989261133072,7.820447488603997
+All Population,Deaths,United States of America,Both,70-74 years,Substance use disorders,Rate,2023,17.748992906523867,20.08552011321817,15.648789555895947
+All Population,Deaths,United States of America,Male,75-79 years,Substance use disorders,Rate,2023,18.054522501998946,20.781270152401632,15.419980463634552
+All Population,Deaths,United States of America,Female,75-79 years,Substance use disorders,Rate,2023,6.470871360039195,7.589053839609239,5.334561488057008
+All Population,Deaths,United States of America,Both,75-79 years,Substance use disorders,Rate,2023,11.72675869559893,13.261122979388697,10.324970173682239
+All Population,Deaths,United States of America,Male,<1 year,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Female,<1 year,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Both,<1 year,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Male,80-84 years,Substance use disorders,Rate,2023,14.395596449710903,17.2162313963016,11.723509999475269
+All Population,Deaths,United States of America,Female,80-84 years,Substance use disorders,Rate,2023,5.851613231987659,7.101395349073228,4.457028186105632
+All Population,Deaths,United States of America,Both,80-84 years,Substance use disorders,Rate,2023,9.521345877583938,11.04796453275224,7.8308572568148405
+All Population,Deaths,United States of America,Male,85-89 years,Substance use disorders,Rate,2023,14.237259967269592,17.231537508378562,10.996946463544424
+All Population,Deaths,United States of America,Female,85-89 years,Substance use disorders,Rate,2023,6.711466125350396,8.386130812599074,4.729514640790113
+All Population,Deaths,United States of America,Both,85-89 years,Substance use disorders,Rate,2023,9.689068457855628,11.543314142850837,7.356402157977414
+All Population,Deaths,United States of America,Male,90-94 years,Substance use disorders,Rate,2023,18.41845297042619,22.239907404408832,13.468201193747229
+All Population,Deaths,United States of America,Female,90-94 years,Substance use disorders,Rate,2023,8.287286587263418,10.442882163117197,5.660302627877113
+All Population,Deaths,United States of America,Both,90-94 years,Substance use disorders,Rate,2023,11.73598485131671,14.082292869874657,8.546078659772897
+All Population,Deaths,United States of America,Male,2-4 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Female,2-4 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Both,2-4 years,Substance use disorders,Rate,2023,0.0,0.0,0.0
+All Population,Deaths,United States of America,Male,95+ years,Substance use disorders,Rate,2023,23.52211039013493,29.714065049171182,15.772957365508113
+All Population,Deaths,United States of America,Female,95+ years,Substance use disorders,Rate,2023,9.829143392228797,12.554993452029313,6.272397464689469
+All Population,Deaths,United States of America,Both,95+ years,Substance use disorders,Rate,2023,13.557857533252934,16.69779113333133,9.0754632447669
+All Population,Deaths,United States of America,Male,<5 years,Diabetes and kidney diseases,Rate,2023,0.32241615747554486,0.37900619049087436,0.2696021959455191
+All Population,Deaths,United States of America,Female,<5 years,Diabetes and kidney diseases,Rate,2023,0.25741847930805234,0.3035673118533926,0.20871262423984396
+All Population,Deaths,United States of America,Both,<5 years,Diabetes and kidney diseases,Rate,2023,0.2906344674638135,0.32703735900527003,0.2565841634583408
+All Population,Deaths,United States of America,Male,5-9 years,Diabetes and kidney diseases,Rate,2023,0.11832693341242362,0.1397249158440128,0.10183148104866133
+All Population,Deaths,United States of America,Female,5-9 years,Diabetes and kidney diseases,Rate,2023,0.10531327936077614,0.12194959039567232,0.0919674212514563
+All Population,Deaths,United States of America,Both,5-9 years,Diabetes and kidney diseases,Rate,2023,0.1119695250878184,0.12472224553220675,0.10075870698377214
+All Population,Deaths,United States of America,Male,10-14 years,Diabetes and kidney diseases,Rate,2023,0.20022585507317608,0.2325238664297949,0.17158096256816605
+All Population,Deaths,United States of America,Female,10-14 years,Diabetes and kidney diseases,Rate,2023,0.1913055404963262,0.22279345687376995,0.1636294593410331
+All Population,Deaths,United States of America,Both,10-14 years,Diabetes and kidney diseases,Rate,2023,0.1958758713273878,0.22033824459451715,0.17537243190605925
+All Population,Deaths,United States of America,Male,15-19 years,Diabetes and kidney diseases,Rate,2023,0.5700041596954698,0.6463835886507218,0.5006393727344328
+All Population,Deaths,United States of America,Female,15-19 years,Diabetes and kidney diseases,Rate,2023,0.5051148287687043,0.580109711506954,0.4297883891367327
+All Population,Deaths,United States of America,Both,15-19 years,Diabetes and kidney diseases,Rate,2023,0.5383435043532518,0.5897244738502083,0.4865270885625172
+All Population,Deaths,United States of America,Male,20-24 years,Diabetes and kidney diseases,Rate,2023,1.4955921146241635,1.72952904975124,1.2692126637037466
+All Population,Deaths,United States of America,Female,20-24 years,Diabetes and kidney diseases,Rate,2023,1.0814499078919728,1.2552206372758545,0.9174504395442308
+All Population,Deaths,United States of America,Both,20-24 years,Diabetes and kidney diseases,Rate,2023,1.2924484198876962,1.4205210033411013,1.1619927510279973
+All Population,Deaths,United States of America,Male,25-29 years,Diabetes and kidney diseases,Rate,2023,3.000426170212351,3.5024593911026662,2.5479031823023006
+All Population,Deaths,United States of America,Female,25-29 years,Diabetes and kidney diseases,Rate,2023,1.8781929495664942,2.1686943903583393,1.5809706116570825
+All Population,Deaths,United States of America,Both,25-29 years,Diabetes and kidney diseases,Rate,2023,2.448675050643011,2.7451548508232304,2.179749893908209
+All Population,Deaths,United States of America,Male,30-34 years,Diabetes and kidney diseases,Rate,2023,5.267243403854308,6.137756149012607,4.423212526484954
+All Population,Deaths,United States of America,Female,30-34 years,Diabetes and kidney diseases,Rate,2023,3.414092811881397,3.931920142677616,2.9066515111195095
+All Population,Deaths,United States of America,Both,30-34 years,Diabetes and kidney diseases,Rate,2023,4.3522862238220315,4.86057210419012,3.8723421684254364
+All Population,Deaths,United States of America,Male,35-39 years,Diabetes and kidney diseases,Rate,2023,9.186173853082227,10.591121378200965,7.832135021869001
+All Population,Deaths,United States of America,Female,35-39 years,Diabetes and kidney diseases,Rate,2023,5.866354104061381,6.643834314863691,5.107525012990861
+All Population,Deaths,United States of America,Both,35-39 years,Diabetes and kidney diseases,Rate,2023,7.547844095504695,8.353047939798149,6.724068080263138
+All Population,Deaths,United States of America,Male,40-44 years,Diabetes and kidney diseases,Rate,2023,15.673658840928157,18.071170800306813,13.495271744154996
+All Population,Deaths,United States of America,Female,40-44 years,Diabetes and kidney diseases,Rate,2023,9.339397561051793,10.467290507407624,8.135027407937537
+All Population,Deaths,United States of America,Both,40-44 years,Diabetes and kidney diseases,Rate,2023,12.52904718103462,13.821405400705721,11.260651100115217
+All Population,Deaths,United States of America,Male,45-49 years,Diabetes and kidney diseases,Rate,2023,26.880162766775815,30.43335015395268,23.63458457973814
+All Population,Deaths,United States of America,Female,45-49 years,Diabetes and kidney diseases,Rate,2023,15.195553604869518,16.79784038806924,13.507831571194773
+All Population,Deaths,United States of America,Both,45-49 years,Diabetes and kidney diseases,Rate,2023,21.043583993005633,22.95406249416894,19.146310366078172
+All Population,Deaths,United States of America,Male,50-54 years,Diabetes and kidney diseases,Rate,2023,43.97103720375035,48.96452673708992,39.252782702150235
+All Population,Deaths,United States of America,Female,50-54 years,Diabetes and kidney diseases,Rate,2023,24.883192588106844,27.38756009568304,22.36387371203723
+All Population,Deaths,United States of America,Both,50-54 years,Diabetes and kidney diseases,Rate,2023,34.41652990886417,37.26027740637269,31.726380911067046
+All Population,Deaths,United States of America,Male,55-59 years,Diabetes and kidney diseases,Rate,2023,68.48328924295406,75.57896710187511,61.50183333453045
+All Population,Deaths,United States of America,Female,55-59 years,Diabetes and kidney diseases,Rate,2023,38.165268834476436,41.87659517094932,34.65587255296006
+All Population,Deaths,United States of America,Both,55-59 years,Diabetes and kidney diseases,Rate,2023,53.16689585223084,57.047993659234265,49.05361144324562
+All Population,Deaths,United States of America,Male,60-64 years,Diabetes and kidney diseases,Rate,2023,103.89957132436192,114.21893485921775,94.0943029966283
+All Population,Deaths,United States of America,Female,60-64 years,Diabetes and kidney diseases,Rate,2023,61.64166671476352,67.43699234074927,55.8776656955912
+All Population,Deaths,United States of America,Both,60-64 years,Diabetes and kidney diseases,Rate,2023,82.25887428954911,88.06870951515161,76.53411385536572
+All Population,Deaths,United States of America,Male,65-69 years,Diabetes and kidney diseases,Rate,2023,149.2414513321215,163.99526143716403,135.41510200691943
+All Population,Deaths,United States of America,Female,65-69 years,Diabetes and kidney diseases,Rate,2023,91.39726218053136,99.90203795198721,82.88926217545465
+All Population,Deaths,United States of America,Both,65-69 years,Diabetes and kidney diseases,Rate,2023,119.00048777445306,127.1305590155779,110.09328460335713
+All Population,Deaths,United States of America,Male,70-74 years,Diabetes and kidney diseases,Rate,2023,221.84698060220745,243.540415714695,200.31874129479246
+All Population,Deaths,United States of America,Female,70-74 years,Diabetes and kidney diseases,Rate,2023,143.06884430661134,156.87763091246308,126.48082021921954
+All Population,Deaths,United States of America,Both,70-74 years,Diabetes and kidney diseases,Rate,2023,179.69883032019376,193.07554374939926,164.69410061035776
+All Population,Deaths,United States of America,Male,75-79 years,Diabetes and kidney diseases,Rate,2023,331.6011072972321,367.507719772089,296.6785496321131
+All Population,Deaths,United States of America,Female,75-79 years,Diabetes and kidney diseases,Rate,2023,227.0512300688742,252.94181077128104,195.70628783842628
+All Population,Deaths,United States of America,Both,75-79 years,Diabetes and kidney diseases,Rate,2023,274.48898254644774,296.20216385659273,246.06330538664974
+All Population,Deaths,United States of America,Male,<1 year,Diabetes and kidney diseases,Rate,2023,0.9400940419660618,1.131743651847703,0.7573860768436081
+All Population,Deaths,United States of America,Female,<1 year,Diabetes and kidney diseases,Rate,2023,0.7343490055603678,0.8719928339717178,0.5761535207792586
+All Population,Deaths,United States of America,Both,<1 year,Diabetes and kidney diseases,Rate,2023,0.8394642262669104,0.9618843244751982,0.7275044808379874
+All Population,Deaths,United States of America,Male,80-84 years,Diabetes and kidney diseases,Rate,2023,547.5546664929489,616.4717362366387,473.9842486451225
+All Population,Deaths,United States of America,Female,80-84 years,Diabetes and kidney diseases,Rate,2023,369.5101242744174,421.43269480760733,297.28690238396234
+All Population,Deaths,United States of America,Both,80-84 years,Diabetes and kidney diseases,Rate,2023,445.98216925623086,495.4835495707138,369.98544209525784
+All Population,Deaths,United States of America,Male,85-89 years,Diabetes and kidney diseases,Rate,2023,941.2375600707538,1085.6801750249945,763.769477419805
+All Population,Deaths,United States of America,Female,85-89 years,Diabetes and kidney diseases,Rate,2023,661.9253957067846,772.1361402028338,489.126741733493
+All Population,Deaths,United States of America,Both,85-89 years,Diabetes and kidney diseases,Rate,2023,772.4360700059814,875.8503335924431,601.5708518700792
+All Population,Deaths,United States of America,Male,90-94 years,Diabetes and kidney diseases,Rate,2023,1671.905950533613,1964.3943345006392,1297.000804668419
+All Population,Deaths,United States of America,Female,90-94 years,Diabetes and kidney diseases,Rate,2023,1218.403132119429,1447.5438732266157,870.2280931957905
+All Population,Deaths,United States of America,Both,90-94 years,Diabetes and kidney diseases,Rate,2023,1372.777695072764,1581.4304406424565,1009.0634169175476
+All Population,Deaths,United States of America,Male,2-4 years,Diabetes and kidney diseases,Rate,2023,0.13768784264276573,0.1607319042368559,0.1191324581005979
+All Population,Deaths,United States of America,Female,2-4 years,Diabetes and kidney diseases,Rate,2023,0.11362644680509427,0.13140506629366375,0.0963842747203395
+All Population,Deaths,United States of America,Both,2-4 years,Diabetes and kidney diseases,Rate,2023,0.12592515740768528,0.140972497869842,0.11211487056703674
+All Population,Deaths,United States of America,Male,95+ years,Diabetes and kidney diseases,Rate,2023,2383.6148594476813,2856.241385369988,1741.4958793505377
+All Population,Deaths,United States of America,Female,95+ years,Diabetes and kidney diseases,Rate,2023,2008.811364008652,2412.6835089523497,1425.095594567077
+All Population,Deaths,United States of America,Both,95+ years,Diabetes and kidney diseases,Rate,2023,2110.8736193082136,2506.554098694574,1531.7600532573422
