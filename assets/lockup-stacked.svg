@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="currentColor" stroke-width="8" d="M 80 66 A 34 34 0 1 1 80 34"/>
+  <g stroke="#c05621" stroke-width="8">
+    <line x1="42.5" y1="31" x2="42.5" y2="69"/>
+    <line x1="57.5" y1="31" x2="57.5" y2="69"/>
+  </g>
+  <g fill="currentColor" stroke="none" font-family="'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif" font-weight="500" letter-spacing="4">
+    <text x="120" y="46" font-size="22">SECOND CENTURY</text>
+    <text x="120" y="78" font-size="22">FOUNDATION</text>
+  </g>
+</svg>

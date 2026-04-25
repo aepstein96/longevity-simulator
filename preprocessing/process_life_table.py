@@ -54,25 +54,25 @@ if __name__ == '__main__':
     print("Processing total life table...\n")
     process_life_table(
         '../raw_data/life_table_total.txt',
-        '../data/mortality_rates_total.csv'
+        '../data/CDC/mortality_rates_total.csv'
     )
-    
+
     print("\n" + "="*60 + "\n")
-    
+
     # Process male
     print("Processing male life table...\n")
     process_life_table(
         '../raw_data/life_table_male.txt',
-        '../data/mortality_rates_male.csv'
+        '../data/CDC/mortality_rates_male.csv'
     )
-    
+
     print("\n" + "="*60 + "\n")
-    
+
     # Process female
     print("Processing female life table...\n")
     process_life_table(
         '../raw_data/life_table_female.txt',
-        '../data/mortality_rates_female.csv'
+        '../data/CDC/mortality_rates_female.csv'
     )
     
     print("\n✓ All life tables processed!")

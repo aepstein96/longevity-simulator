@@ -5,6 +5,7 @@ import src.causes as causes
 import src.interventions as interventions
 import src.survival as survival
 import src.fitting as fitting
+import src.healthspan as healthspan
 
 class LongevityScenario:
     def __init__(self, sex='All', aging_rate=1.0, slow_aging_age=25, removed_causes=None):
@@ -43,8 +44,8 @@ class LongevityScenario:
         sex_key = self.sex_map.get(self.sex, 'Total')
         
         # Construct file paths
-        mort_path = f'data/mortality_rates_{sex_key.lower()}.csv'
-        cause_path = f'data/cause_fractions_{sex_key.lower()}.csv'
+        mort_path = f'data/CDC/mortality_rates_{sex_key.lower()}.csv'
+        cause_path = f'data/CDC/cause_fractions_{sex_key.lower()}.csv'
         
         self.baseline_mortality = mortality.load_mortality_rates(mort_path)
         self.cause_fractions = causes.load_cause_fractions(cause_path)
@@ -105,12 +106,47 @@ class LongevityScenario:
             adj_mort = self._pad_series(adj_mort, pad_to)
             
         intervention_survival = survival.calculate_survival_curve(adj_mort)
-        
+
+        # Healthspan: expected number of chronic conditions by single-year age,
+        # = sum of per-bucket prevalences. By linearity of expectation this is
+        # exact regardless of how the conditions co-occur — no independence
+        # assumption needed.
+        default_buckets = list(healthspan.DEFAULT_HEALTHSPAN_BUCKETS)
+        baseline_condition_count = healthspan.compute_expected_condition_count(
+            sex=self.sex, buckets=default_buckets, pad_to=pad_to)
+
+        # If the user "cured" any chronic-condition bucket, drop it from the
+        # sum — that bucket's prevalence becomes 0 by definition.
+        intervention_buckets = [b for b in default_buckets
+                                if b not in self.removed_causes]
+        if intervention_buckets == default_buckets:
+            intervention_condition_count = baseline_condition_count.copy()
+        elif intervention_buckets:
+            intervention_condition_count = healthspan.compute_expected_condition_count(
+                sex=self.sex, buckets=intervention_buckets, pad_to=pad_to)
+        else:
+            # All chronic buckets removed → E[#] = 0 at every age.
+            intervention_condition_count = pd.Series(
+                0.0, index=baseline_condition_count.index,
+                name='E[# chronic conditions]')
+
+        # Aging rescale (slow / freeze / accelerate) — same biological-age
+        # remap that drives the mortality intervention, applied to the
+        # condition-count curve so the scenario's x-axis is consistent.
+        if self.aging_rate != 1.0:
+            intervention_condition_count = healthspan.apply_aging_remap(
+                intervention_condition_count,
+                aging_rate=self.aging_rate,
+                start_age=self.slow_aging_age,
+            )
+
         return {
             'baseline_mortality': base_mort,
             'baseline_survival': base_survival,
             'intervention_mortality': adj_mort,
-            'intervention_survival': intervention_survival
+            'intervention_survival': intervention_survival,
+            'baseline_condition_count': baseline_condition_count,
+            'intervention_condition_count': intervention_condition_count,
         }
 
     def fit_curve(self, target='intervention', remove_accidents=True, use_makeham=False, fit_region=[25, 100]):

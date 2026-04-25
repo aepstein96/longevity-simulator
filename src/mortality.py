@@ -3,31 +3,31 @@
 import pandas as pd
 
 
-def load_mortality_rates(filepath='data/mortality_rates_total.csv'):
+def load_mortality_rates(filepath='data/CDC/mortality_rates_total.csv'):
     """
     Load preprocessed mortality rates from CSV file.
-    
+
     Parameters
     ----------
     filepath : str, optional
         Path to the processed mortality rates file
-        (default: 'data/mortality_rates_total.csv')
-    
+        (default: 'data/CDC/mortality_rates_total.csv')
+
     Returns
     -------
     pd.Series
         Mortality rates (mx) indexed by age
-    
+
     Examples
     --------
     >>> # Load total (both sexes) mortality rates
     >>> mortality_rates = load_mortality_rates()
-    
+
     >>> # Load male-specific rates
-    >>> male_rates = load_mortality_rates('data/mortality_rates_male.csv')
-    
+    >>> male_rates = load_mortality_rates('data/CDC/mortality_rates_male.csv')
+
     >>> # Load female-specific rates
-    >>> female_rates = load_mortality_rates('data/mortality_rates_female.csv')
+    >>> female_rates = load_mortality_rates('data/CDC/mortality_rates_female.csv')
     """
     mortality = pd.read_csv(filepath, index_col='Age')
     return mortality['mx']

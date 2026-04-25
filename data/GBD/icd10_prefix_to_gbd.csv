@@ -1,0 +1,2122 @@
+icd10_prefix,cause_id,cause_name,level
+A00,302,Diarrheal diseases,3
+A01,319,Typhoid fever,4
+A02,302,Diarrheal diseases,3
+A03,302,Diarrheal diseases,3
+A04,302,Diarrheal diseases,3
+A05,302,Diarrheal diseases,3
+A06,302,Diarrheal diseases,3
+A07,302,Diarrheal diseases,3
+A08,302,Diarrheal diseases,3
+A09,302,Diarrheal diseases,3
+A10,934,Drug-susceptible tuberculosis,4
+A11,934,Drug-susceptible tuberculosis,4
+A12,934,Drug-susceptible tuberculosis,4
+A13,934,Drug-susceptible tuberculosis,4
+A14,934,Drug-susceptible tuberculosis,4
+A15,934,Drug-susceptible tuberculosis,4
+A16,934,Drug-susceptible tuberculosis,4
+A17,934,Drug-susceptible tuberculosis,4
+A18,934,Drug-susceptible tuberculosis,4
+A19,934,Drug-susceptible tuberculosis,4
+A20,408,Other unspecified infectious diseases,3
+A21,408,Other unspecified infectious diseases,3
+A22,408,Other unspecified infectious diseases,3
+A23,408,Other unspecified infectious diseases,3
+A24,408,Other unspecified infectious diseases,3
+A25,408,Other unspecified infectious diseases,3
+A26,408,Other unspecified infectious diseases,3
+A27,408,Other unspecified infectious diseases,3
+A28,408,Other unspecified infectious diseases,3
+A29,408,Other unspecified infectious diseases,3
+A30,405,Leprosy,3
+A31,408,Other unspecified infectious diseases,3
+A32,408,Other unspecified infectious diseases,3
+A33,340,Tetanus,3
+A34,340,Tetanus,3
+A35,340,Tetanus,3
+A36,338,Diphtheria,3
+A37,339,Pertussis,3
+A38,408,Other unspecified infectious diseases,3
+A39,332,Meningitis,3
+A40,961,Other infectious diseases,2
+A41,961,Other infectious diseases,2
+A42,408,Other unspecified infectious diseases,3
+A43,408,Other unspecified infectious diseases,3
+A44,408,Other unspecified infectious diseases,3
+A45,408,Other unspecified infectious diseases,3
+A46,657,Pyoderma,4
+A47,408,Other unspecified infectious diseases,3
+A48,322,Lower respiratory infections,3
+A49,408,Other unspecified infectious diseases,3
+A50,394,Syphilis,4
+A51,394,Syphilis,4
+A52,394,Syphilis,4
+A53,394,Syphilis,4
+A54,396,Gonococcal infection,4
+A55,395,Chlamydial infection,4
+A56,395,Chlamydial infection,4
+A57,399,Other sexually transmitted infections,4
+A58,399,Other sexually transmitted infections,4
+A59,397,Trichomoniasis,4
+A60,398,Genital herpes,4
+A61,408,Other unspecified infectious diseases,3
+A62,408,Other unspecified infectious diseases,3
+A63,399,Other sexually transmitted infections,4
+A64,399,Other sexually transmitted infections,4
+A65,408,Other unspecified infectious diseases,3
+A66,657,Pyoderma,4
+A67,657,Pyoderma,4
+A68,365,Other neglected tropical diseases,3
+A69,365,Other neglected tropical diseases,3
+A70,322,Lower respiratory infections,3
+A71,356,Trachoma,3
+A72,408,Other unspecified infectious diseases,3
+A73,408,Other unspecified infectious diseases,3
+A74,356,Trachoma,3
+A75,365,Other neglected tropical diseases,3
+A76,408,Other unspecified infectious diseases,3
+A77,365,Other neglected tropical diseases,3
+A78,365,Other neglected tropical diseases,3
+A79,365,Other neglected tropical diseases,3
+A80,321,Other intestinal infectious diseases,3
+A81,408,Other unspecified infectious diseases,3
+A82,359,Rabies,3
+A83,337,Encephalitis,3
+A84,337,Encephalitis,3
+A85,337,Encephalitis,3
+A86,337,Encephalitis,3
+A87,332,Meningitis,3
+A88,408,Other unspecified infectious diseases,3
+A89,408,Other unspecified infectious diseases,3
+A90,357,Dengue,3
+A91,357,Dengue,3
+A92,365,Other neglected tropical diseases,3
+A93,365,Other neglected tropical diseases,3
+A94,365,Other neglected tropical diseases,3
+A95,358,Yellow fever,3
+A96,365,Other neglected tropical diseases,3
+A97,408,Other unspecified infectious diseases,3
+A98,365,Other neglected tropical diseases,3
+A99,365,Other neglected tropical diseases,3
+B00,408,Other unspecified infectious diseases,3
+B01,342,Varicella and herpes zoster,3
+B02,342,Varicella and herpes zoster,3
+B03,408,Other unspecified infectious diseases,3
+B04,408,Other unspecified infectious diseases,3
+B05,341,Measles,3
+B06,408,Other unspecified infectious diseases,3
+B07,660,Viral skin diseases,3
+B08,660,Viral skin diseases,3
+B09,660,Viral skin diseases,3
+B10,408,Other unspecified infectious diseases,3
+B11,408,Other unspecified infectious diseases,3
+B12,408,Other unspecified infectious diseases,3
+B13,408,Other unspecified infectious diseases,3
+B14,408,Other unspecified infectious diseases,3
+B15,401,Acute hepatitis A,4
+B16,402,Acute hepatitis B,4
+B17,402,Acute hepatitis B,4
+B18,402,Acute hepatitis B,4
+B19,402,Acute hepatitis B,4
+B20,300,HIV/AIDS resulting in other diseases,4
+B21,300,HIV/AIDS resulting in other diseases,4
+B22,300,HIV/AIDS resulting in other diseases,4
+B23,300,HIV/AIDS resulting in other diseases,4
+B24,300,HIV/AIDS resulting in other diseases,4
+B25,408,Other unspecified infectious diseases,3
+B26,408,Other unspecified infectious diseases,3
+B27,408,Other unspecified infectious diseases,3
+B28,408,Other unspecified infectious diseases,3
+B29,408,Other unspecified infectious diseases,3
+B30,679,Other sense organ diseases,3
+B31,408,Other unspecified infectious diseases,3
+B32,408,Other unspecified infectious diseases,3
+B33,942,Myocarditis,4
+B34,408,Other unspecified infectious diseases,3
+B35,659,Fungal skin diseases,3
+B36,659,Fungal skin diseases,3
+B37,612,Other gynecological diseases,4
+B38,408,Other unspecified infectious diseases,3
+B39,408,Other unspecified infectious diseases,3
+B40,408,Other unspecified infectious diseases,3
+B41,408,Other unspecified infectious diseases,3
+B42,408,Other unspecified infectious diseases,3
+B43,408,Other unspecified infectious diseases,3
+B44,408,Other unspecified infectious diseases,3
+B45,408,Other unspecified infectious diseases,3
+B46,408,Other unspecified infectious diseases,3
+B47,408,Other unspecified infectious diseases,3
+B48,408,Other unspecified infectious diseases,3
+B49,408,Other unspecified infectious diseases,3
+B50,345,Malaria,3
+B51,345,Malaria,3
+B52,345,Malaria,3
+B53,345,Malaria,3
+B54,345,Malaria,3
+B55,348,Visceral leishmaniasis,4
+B56,350,African trypanosomiasis,3
+B57,346,Chagas disease,3
+B58,408,Other unspecified infectious diseases,3
+B59,408,Other unspecified infectious diseases,3
+B60,365,Other neglected tropical diseases,3
+B61,408,Other unspecified infectious diseases,3
+B62,408,Other unspecified infectious diseases,3
+B63,399,Other sexually transmitted infections,4
+B64,365,Other neglected tropical diseases,3
+B65,351,Schistosomiasis,3
+B66,364,Food-borne trematodiases,3
+B67,353,Cystic echinococcosis,3
+B68,365,Other neglected tropical diseases,3
+B69,352,Cysticercosis,3
+B70,365,Other neglected tropical diseases,3
+B71,365,Other neglected tropical diseases,3
+B72,364,Food-borne trematodiases,3
+B73,355,Onchocerciasis,3
+B74,354,Lymphatic filariasis,3
+B75,365,Other neglected tropical diseases,3
+B76,363,Hookworm disease,4
+B77,361,Ascariasis,4
+B78,365,Other neglected tropical diseases,3
+B79,362,Trichuriasis,4
+B80,365,Other neglected tropical diseases,3
+B81,365,Other neglected tropical diseases,3
+B82,365,Other neglected tropical diseases,3
+B83,365,Other neglected tropical diseases,3
+B84,408,Other unspecified infectious diseases,3
+B85,668,Other skin and subcutaneous diseases,3
+B86,658,Scabies,3
+B87,668,Other skin and subcutaneous diseases,3
+B88,668,Other skin and subcutaneous diseases,3
+B89,365,Other neglected tropical diseases,3
+B90,934,Drug-susceptible tuberculosis,4
+B91,321,Other intestinal infectious diseases,3
+B92,405,Leprosy,3
+B93,408,Other unspecified infectious diseases,3
+B94,337,Encephalitis,3
+B95,383,Neonatal sepsis and other neonatal infections,4
+B96,322,Lower respiratory infections,3
+B97,300,HIV/AIDS resulting in other diseases,4
+B98,408,Other unspecified infectious diseases,3
+B99,408,Other unspecified infectious diseases,3
+C00,444,Lip and oral cavity cancer,3
+C01,444,Lip and oral cavity cancer,3
+C02,444,Lip and oral cavity cancer,3
+C03,444,Lip and oral cavity cancer,3
+C04,444,Lip and oral cavity cancer,3
+C05,444,Lip and oral cavity cancer,3
+C06,444,Lip and oral cavity cancer,3
+C07,444,Lip and oral cavity cancer,3
+C08,444,Lip and oral cavity cancer,3
+C09,450,Other pharynx cancer,3
+C10,450,Other pharynx cancer,3
+C11,447,Nasopharynx cancer,3
+C12,450,Other pharynx cancer,3
+C13,450,Other pharynx cancer,3
+C14,410,Neoplasms,2
+C15,411,Esophageal cancer,3
+C16,414,Stomach cancer,3
+C17,489,Other malignant neoplasms,3
+C18,441,Colon and rectum cancer,3
+C19,441,Colon and rectum cancer,3
+C20,441,Colon and rectum cancer,3
+C21,441,Colon and rectum cancer,3
+C22,417,Liver cancer,3
+C23,453,Gallbladder and biliary tract cancer,3
+C24,453,Gallbladder and biliary tract cancer,3
+C25,456,Pancreatic cancer,3
+C26,410,Neoplasms,2
+C27,410,Neoplasms,2
+C28,410,Neoplasms,2
+C29,410,Neoplasms,2
+C30,489,Other malignant neoplasms,3
+C31,489,Other malignant neoplasms,3
+C32,423,Larynx cancer,3
+C33,426,"Tracheal, bronchus, and lung cancer",3
+C34,426,"Tracheal, bronchus, and lung cancer",3
+C35,410,Neoplasms,2
+C36,410,Neoplasms,2
+C37,489,Other malignant neoplasms,3
+C38,489,Other malignant neoplasms,3
+C39,410,Neoplasms,2
+C40,1012,Malignant neoplasm of bone and articular cartilage,3
+C41,489,Other malignant neoplasms,3
+C42,410,Neoplasms,2
+C43,459,Malignant skin melanoma,3
+C44,849,Non-melanoma skin cancer (squamous-cell carcinoma),4
+C45,483,Mesothelioma,3
+C46,300,HIV/AIDS resulting in other diseases,4
+C47,1013,Neuroblastoma and other peripheral nervous cell tumors,3
+C48,489,Other malignant neoplasms,3
+C49,1011,Soft tissue and other extraosseous sarcomas,3
+C50,429,Breast cancer,3
+C51,489,Other malignant neoplasms,3
+C52,489,Other malignant neoplasms,3
+C53,432,Cervical cancer,3
+C54,435,Uterine cancer,3
+C55,410,Neoplasms,2
+C56,465,Ovarian cancer,3
+C57,489,Other malignant neoplasms,3
+C58,489,Other malignant neoplasms,3
+C59,410,Neoplasms,2
+C60,489,Other malignant neoplasms,3
+C61,438,Prostate cancer,3
+C62,468,Testicular cancer,3
+C63,489,Other malignant neoplasms,3
+C64,471,Kidney cancer,3
+C65,471,Kidney cancer,3
+C66,489,Other malignant neoplasms,3
+C67,474,Bladder cancer,3
+C68,489,Other malignant neoplasms,3
+C69,1009,Retinoblastoma,4
+C70,477,Brain and central nervous system cancer,3
+C71,477,Brain and central nervous system cancer,3
+C72,477,Brain and central nervous system cancer,3
+C73,480,Thyroid cancer,3
+C74,489,Other malignant neoplasms,3
+C75,965,Benign and in situ intestinal neoplasms,4
+C76,410,Neoplasms,2
+C77,410,Neoplasms,2
+C78,410,Neoplasms,2
+C79,410,Neoplasms,2
+C81,484,Hodgkin lymphoma,3
+C82,1007,Other non-Hodgkin lymphoma,4
+C83,1006,Burkitt lymphoma,4
+C84,1007,Other non-Hodgkin lymphoma,4
+C85,1007,Other non-Hodgkin lymphoma,4
+C86,1007,Other non-Hodgkin lymphoma,4
+C88,486,Multiple myeloma,3
+C89,486,Multiple myeloma,3
+C90,486,Multiple myeloma,3
+C91,845,Acute lymphoid leukemia,4
+C92,847,Acute myeloid leukemia,4
+C93,847,Acute myeloid leukemia,4
+C94,847,Acute myeloid leukemia,4
+C95,487,Leukemia,3
+C96,1007,Other non-Hodgkin lymphoma,4
+D00,967,Other benign and in situ neoplasms,4
+D01,965,Benign and in situ intestinal neoplasms,4
+D02,967,Other benign and in situ neoplasms,4
+D03,967,Other benign and in situ neoplasms,4
+D04,967,Other benign and in situ neoplasms,4
+D05,967,Other benign and in situ neoplasms,4
+D06,966,Benign and in situ cervical and uterine neoplasms,4
+D07,966,Benign and in situ cervical and uterine neoplasms,4
+D08,967,Other benign and in situ neoplasms,4
+D09,967,Other benign and in situ neoplasms,4
+D10,967,Other benign and in situ neoplasms,4
+D11,967,Other benign and in situ neoplasms,4
+D12,965,Benign and in situ intestinal neoplasms,4
+D13,965,Benign and in situ intestinal neoplasms,4
+D14,967,Other benign and in situ neoplasms,4
+D15,967,Other benign and in situ neoplasms,4
+D16,967,Other benign and in situ neoplasms,4
+D17,967,Other benign and in situ neoplasms,4
+D18,967,Other benign and in situ neoplasms,4
+D19,967,Other benign and in situ neoplasms,4
+D20,967,Other benign and in situ neoplasms,4
+D21,967,Other benign and in situ neoplasms,4
+D22,967,Other benign and in situ neoplasms,4
+D23,967,Other benign and in situ neoplasms,4
+D24,967,Other benign and in situ neoplasms,4
+D25,604,Uterine fibroids,4
+D26,604,Uterine fibroids,4
+D27,967,Other benign and in situ neoplasms,4
+D28,967,Other benign and in situ neoplasms,4
+D29,967,Other benign and in situ neoplasms,4
+D30,967,Other benign and in situ neoplasms,4
+D31,967,Other benign and in situ neoplasms,4
+D32,967,Other benign and in situ neoplasms,4
+D33,967,Other benign and in situ neoplasms,4
+D34,967,Other benign and in situ neoplasms,4
+D35,967,Other benign and in situ neoplasms,4
+D36,967,Other benign and in situ neoplasms,4
+D37,965,Benign and in situ intestinal neoplasms,4
+D38,967,Other benign and in situ neoplasms,4
+D39,966,Benign and in situ cervical and uterine neoplasms,4
+D45,964,"Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms",4
+D46,964,"Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms",4
+D47,964,"Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms",4
+D48,967,Other benign and in situ neoplasms,4
+D49,967,Other benign and in situ neoplasms,4
+D50,390,Dietary iron deficiency,3
+D51,391,Other nutritional deficiencies,3
+D52,391,Other nutritional deficiencies,3
+D53,391,Other nutritional deficiencies,3
+D54,410,Neoplasms,2
+D55,616,G6PD deficiency,4
+D56,614,Thalassemias,4
+D57,614,Thalassemias,4
+D58,618,Other hemoglobinopathies and hemolytic anemias,4
+D59,618,Other hemoglobinopathies and hemolytic anemias,4
+D60,618,Other hemoglobinopathies and hemolytic anemias,4
+D61,618,Other hemoglobinopathies and hemolytic anemias,4
+D63,589,Chronic kidney disease,3
+D64,618,Other hemoglobinopathies and hemolytic anemias,4
+D65,640,Other non-communicable diseases,2
+D66,619,"Endocrine, metabolic, blood, and immune disorders",3
+D67,619,"Endocrine, metabolic, blood, and immune disorders",3
+D68,619,"Endocrine, metabolic, blood, and immune disorders",3
+D69,619,"Endocrine, metabolic, blood, and immune disorders",3
+D70,408,Other unspecified infectious diseases,3
+D71,619,"Endocrine, metabolic, blood, and immune disorders",3
+D72,619,"Endocrine, metabolic, blood, and immune disorders",3
+D73,619,"Endocrine, metabolic, blood, and immune disorders",3
+D74,619,"Endocrine, metabolic, blood, and immune disorders",3
+D75,619,"Endocrine, metabolic, blood, and immune disorders",3
+D76,619,"Endocrine, metabolic, blood, and immune disorders",3
+D77,619,"Endocrine, metabolic, blood, and immune disorders",3
+D78,708,Adverse effects of medical treatment,3
+D79,619,"Endocrine, metabolic, blood, and immune disorders",3
+D80,619,"Endocrine, metabolic, blood, and immune disorders",3
+D81,619,"Endocrine, metabolic, blood, and immune disorders",3
+D82,619,"Endocrine, metabolic, blood, and immune disorders",3
+D83,619,"Endocrine, metabolic, blood, and immune disorders",3
+D84,619,"Endocrine, metabolic, blood, and immune disorders",3
+D85,619,"Endocrine, metabolic, blood, and immune disorders",3
+D86,942,Myocarditis,4
+D87,619,"Endocrine, metabolic, blood, and immune disorders",3
+D88,619,"Endocrine, metabolic, blood, and immune disorders",3
+D89,408,Other unspecified infectious diseases,3
+D90,619,"Endocrine, metabolic, blood, and immune disorders",3
+D91,619,"Endocrine, metabolic, blood, and immune disorders",3
+D92,619,"Endocrine, metabolic, blood, and immune disorders",3
+D93,619,"Endocrine, metabolic, blood, and immune disorders",3
+D94,619,"Endocrine, metabolic, blood, and immune disorders",3
+D95,619,"Endocrine, metabolic, blood, and immune disorders",3
+D96,619,"Endocrine, metabolic, blood, and immune disorders",3
+D97,619,"Endocrine, metabolic, blood, and immune disorders",3
+D98,619,"Endocrine, metabolic, blood, and immune disorders",3
+D99,619,"Endocrine, metabolic, blood, and immune disorders",3
+E00,388,Iodine deficiency,3
+E01,388,Iodine deficiency,3
+E02,388,Iodine deficiency,3
+E03,619,"Endocrine, metabolic, blood, and immune disorders",3
+E04,619,"Endocrine, metabolic, blood, and immune disorders",3
+E05,619,"Endocrine, metabolic, blood, and immune disorders",3
+E06,619,"Endocrine, metabolic, blood, and immune disorders",3
+E07,619,"Endocrine, metabolic, blood, and immune disorders",3
+E08,587,Diabetes mellitus,3
+E09,708,Adverse effects of medical treatment,3
+E10,975,Diabetes mellitus type 1,4
+E11,587,Diabetes mellitus,3
+E12,587,Diabetes mellitus,3
+E13,587,Diabetes mellitus,3
+E14,587,Diabetes mellitus,3
+E15,619,"Endocrine, metabolic, blood, and immune disorders",3
+E16,619,"Endocrine, metabolic, blood, and immune disorders",3
+E17,619,"Endocrine, metabolic, blood, and immune disorders",3
+E18,619,"Endocrine, metabolic, blood, and immune disorders",3
+E19,619,"Endocrine, metabolic, blood, and immune disorders",3
+E20,619,"Endocrine, metabolic, blood, and immune disorders",3
+E21,619,"Endocrine, metabolic, blood, and immune disorders",3
+E22,619,"Endocrine, metabolic, blood, and immune disorders",3
+E23,619,"Endocrine, metabolic, blood, and immune disorders",3
+E24,560,Alcohol use disorders,3
+E25,619,"Endocrine, metabolic, blood, and immune disorders",3
+E26,619,"Endocrine, metabolic, blood, and immune disorders",3
+E27,619,"Endocrine, metabolic, blood, and immune disorders",3
+E28,605,Polycystic ovarian syndrome,4
+E29,619,"Endocrine, metabolic, blood, and immune disorders",3
+E30,619,"Endocrine, metabolic, blood, and immune disorders",3
+E31,619,"Endocrine, metabolic, blood, and immune disorders",3
+E32,619,"Endocrine, metabolic, blood, and immune disorders",3
+E33,619,"Endocrine, metabolic, blood, and immune disorders",3
+E34,965,Benign and in situ intestinal neoplasms,4
+E35,619,"Endocrine, metabolic, blood, and immune disorders",3
+E36,708,Adverse effects of medical treatment,3
+E37,619,"Endocrine, metabolic, blood, and immune disorders",3
+E38,619,"Endocrine, metabolic, blood, and immune disorders",3
+E39,619,"Endocrine, metabolic, blood, and immune disorders",3
+E40,387,Protein-energy malnutrition,3
+E41,387,Protein-energy malnutrition,3
+E42,387,Protein-energy malnutrition,3
+E43,387,Protein-energy malnutrition,3
+E44,387,Protein-energy malnutrition,3
+E45,387,Protein-energy malnutrition,3
+E46,387,Protein-energy malnutrition,3
+E50,389,Vitamin A deficiency,3
+E51,391,Other nutritional deficiencies,3
+E52,391,Other nutritional deficiencies,3
+E53,391,Other nutritional deficiencies,3
+E54,391,Other nutritional deficiencies,3
+E55,391,Other nutritional deficiencies,3
+E56,391,Other nutritional deficiencies,3
+E57,391,Other nutritional deficiencies,3
+E58,391,Other nutritional deficiencies,3
+E59,391,Other nutritional deficiencies,3
+E60,391,Other nutritional deficiencies,3
+E61,391,Other nutritional deficiencies,3
+E62,619,"Endocrine, metabolic, blood, and immune disorders",3
+E63,391,Other nutritional deficiencies,3
+E64,387,Protein-energy malnutrition,3
+E65,619,"Endocrine, metabolic, blood, and immune disorders",3
+E66,619,"Endocrine, metabolic, blood, and immune disorders",3
+E67,619,"Endocrine, metabolic, blood, and immune disorders",3
+E68,619,"Endocrine, metabolic, blood, and immune disorders",3
+E69,619,"Endocrine, metabolic, blood, and immune disorders",3
+E70,619,"Endocrine, metabolic, blood, and immune disorders",3
+E71,619,"Endocrine, metabolic, blood, and immune disorders",3
+E72,619,"Endocrine, metabolic, blood, and immune disorders",3
+E73,619,"Endocrine, metabolic, blood, and immune disorders",3
+E74,619,"Endocrine, metabolic, blood, and immune disorders",3
+E75,619,"Endocrine, metabolic, blood, and immune disorders",3
+E76,619,"Endocrine, metabolic, blood, and immune disorders",3
+E77,619,"Endocrine, metabolic, blood, and immune disorders",3
+E78,619,"Endocrine, metabolic, blood, and immune disorders",3
+E79,619,"Endocrine, metabolic, blood, and immune disorders",3
+E80,619,"Endocrine, metabolic, blood, and immune disorders",3
+E81,619,"Endocrine, metabolic, blood, and immune disorders",3
+E82,619,"Endocrine, metabolic, blood, and immune disorders",3
+E83,619,"Endocrine, metabolic, blood, and immune disorders",3
+E84,619,"Endocrine, metabolic, blood, and immune disorders",3
+E85,619,"Endocrine, metabolic, blood, and immune disorders",3
+E86,701,Poisoning by carbon monoxide,4
+E87,708,Adverse effects of medical treatment,3
+E88,619,"Endocrine, metabolic, blood, and immune disorders",3
+E89,708,Adverse effects of medical treatment,3
+F00,543,Alzheimer's disease and other dementias,3
+F01,543,Alzheimer's disease and other dementias,3
+F02,300,HIV/AIDS resulting in other diseases,4
+F03,543,Alzheimer's disease and other dementias,3
+F04,585,Other mental disorders,3
+F05,585,Other mental disorders,3
+F06,543,Alzheimer's disease and other dementias,3
+F07,337,Encephalitis,3
+F08,585,Other mental disorders,3
+F09,585,Other mental disorders,3
+F10,560,Alcohol use disorders,3
+F11,562,Opioid use disorders,4
+F12,565,Cannabis use disorders,4
+F13,566,Other drug use disorders,4
+F14,563,Cocaine use disorders,4
+F15,564,Amphetamine use disorders,4
+F16,566,Other drug use disorders,4
+F17,566,Other drug use disorders,4
+F18,566,Other drug use disorders,4
+F19,566,Other drug use disorders,4
+F20,559,Schizophrenia,3
+F21,585,Other mental disorders,3
+F22,585,Other mental disorders,3
+F23,585,Other mental disorders,3
+F24,585,Other mental disorders,3
+F25,559,Schizophrenia,3
+F26,585,Other mental disorders,3
+F27,585,Other mental disorders,3
+F28,585,Other mental disorders,3
+F29,585,Other mental disorders,3
+F30,570,Bipolar disorder,3
+F31,570,Bipolar disorder,3
+F32,568,Major depressive disorder,4
+F33,568,Major depressive disorder,4
+F34,569,Dysthymia,4
+F35,585,Other mental disorders,3
+F36,585,Other mental disorders,3
+F37,585,Other mental disorders,3
+F38,585,Other mental disorders,3
+F39,585,Other mental disorders,3
+F40,571,Anxiety disorders,3
+F41,571,Anxiety disorders,3
+F42,571,Anxiety disorders,3
+F43,571,Anxiety disorders,3
+F44,571,Anxiety disorders,3
+F45,585,Other mental disorders,3
+F46,585,Other mental disorders,3
+F47,585,Other mental disorders,3
+F48,585,Other mental disorders,3
+F49,585,Other mental disorders,3
+F50,573,Anorexia nervosa,4
+F51,585,Other mental disorders,3
+F52,585,Other mental disorders,3
+F53,379,Other direct maternal disorders,4
+F54,379,Other direct maternal disorders,4
+F55,585,Other mental disorders,3
+F56,585,Other mental disorders,3
+F57,585,Other mental disorders,3
+F58,585,Other mental disorders,3
+F59,585,Other mental disorders,3
+F60,585,Other mental disorders,3
+F61,585,Other mental disorders,3
+F62,585,Other mental disorders,3
+F63,585,Other mental disorders,3
+F64,585,Other mental disorders,3
+F65,585,Other mental disorders,3
+F66,585,Other mental disorders,3
+F67,585,Other mental disorders,3
+F68,585,Other mental disorders,3
+F69,585,Other mental disorders,3
+F70,582,Idiopathic developmental intellectual disability,3
+F71,582,Idiopathic developmental intellectual disability,3
+F72,582,Idiopathic developmental intellectual disability,3
+F73,582,Idiopathic developmental intellectual disability,3
+F74,582,Idiopathic developmental intellectual disability,3
+F75,582,Idiopathic developmental intellectual disability,3
+F76,582,Idiopathic developmental intellectual disability,3
+F77,582,Idiopathic developmental intellectual disability,3
+F78,582,Idiopathic developmental intellectual disability,3
+F79,582,Idiopathic developmental intellectual disability,3
+F80,585,Other mental disorders,3
+F81,585,Other mental disorders,3
+F82,585,Other mental disorders,3
+F83,585,Other mental disorders,3
+F84,575,Autism spectrum disorders,3
+F85,585,Other mental disorders,3
+F86,585,Other mental disorders,3
+F87,585,Other mental disorders,3
+F88,585,Other mental disorders,3
+F89,585,Other mental disorders,3
+F90,578,Attention-deficit/hyperactivity disorder,3
+F91,579,Conduct disorder,3
+F92,579,Conduct disorder,3
+F93,571,Anxiety disorders,3
+F94,585,Other mental disorders,3
+F95,585,Other mental disorders,3
+F96,585,Other mental disorders,3
+F97,585,Other mental disorders,3
+F98,585,Other mental disorders,3
+F99,585,Other mental disorders,3
+G00,332,Meningitis,3
+G01,332,Meningitis,3
+G02,332,Meningitis,3
+G03,332,Meningitis,3
+G04,337,Encephalitis,3
+G05,337,Encephalitis,3
+G06,332,Meningitis,3
+G07,332,Meningitis,3
+G08,332,Meningitis,3
+G09,332,Meningitis,3
+G10,557,Other neurological disorders,3
+G11,557,Other neurological disorders,3
+G12,557,Other neurological disorders,3
+G13,557,Other neurological disorders,3
+G14,408,Other unspecified infectious diseases,3
+G15,542,Neurological disorders,2
+G16,542,Neurological disorders,2
+G17,542,Neurological disorders,2
+G18,542,Neurological disorders,2
+G19,542,Neurological disorders,2
+G20,544,Parkinson's disease,3
+G21,557,Other neurological disorders,3
+G22,557,Other neurological disorders,3
+G23,557,Other neurological disorders,3
+G24,557,Other neurological disorders,3
+G25,557,Other neurological disorders,3
+G26,557,Other neurological disorders,3
+G27,542,Neurological disorders,2
+G28,542,Neurological disorders,2
+G29,542,Neurological disorders,2
+G30,543,Alzheimer's disease and other dementias,3
+G31,543,Alzheimer's disease and other dementias,3
+G32,543,Alzheimer's disease and other dementias,3
+G33,542,Neurological disorders,2
+G34,542,Neurological disorders,2
+G35,546,Multiple sclerosis,3
+G36,557,Other neurological disorders,3
+G37,557,Other neurological disorders,3
+G38,542,Neurological disorders,2
+G39,542,Neurological disorders,2
+G40,545,Idiopathic epilepsy,3
+G41,545,Idiopathic epilepsy,3
+G42,542,Neurological disorders,2
+G43,547,Migraine,4
+G44,548,Tension-type headache,4
+G45,495,Ischemic stroke,4
+G46,495,Ischemic stroke,4
+G47,585,Other mental disorders,3
+G48,542,Neurological disorders,2
+G49,542,Neurological disorders,2
+G50,557,Other neurological disorders,3
+G51,557,Other neurological disorders,3
+G52,557,Other neurological disorders,3
+G53,557,Other neurological disorders,3
+G54,557,Other neurological disorders,3
+G55,557,Other neurological disorders,3
+G56,557,Other neurological disorders,3
+G57,557,Other neurological disorders,3
+G58,557,Other neurological disorders,3
+G59,557,Other neurological disorders,3
+G60,557,Other neurological disorders,3
+G61,557,Other neurological disorders,3
+G62,557,Other neurological disorders,3
+G63,557,Other neurological disorders,3
+G64,557,Other neurological disorders,3
+G65,557,Other neurological disorders,3
+G66,542,Neurological disorders,2
+G67,542,Neurological disorders,2
+G68,542,Neurological disorders,2
+G69,542,Neurological disorders,2
+G70,557,Other neurological disorders,3
+G71,652,Other congenital birth defects,4
+G72,557,Other neurological disorders,3
+G73,557,Other neurological disorders,3
+G74,542,Neurological disorders,2
+G75,542,Neurological disorders,2
+G76,542,Neurological disorders,2
+G77,542,Neurological disorders,2
+G78,542,Neurological disorders,2
+G79,542,Neurological disorders,2
+G80,557,Other neurological disorders,3
+G81,557,Other neurological disorders,3
+G82,557,Other neurological disorders,3
+G83,557,Other neurological disorders,3
+G84,542,Neurological disorders,2
+G85,542,Neurological disorders,2
+G86,542,Neurological disorders,2
+G87,542,Neurological disorders,2
+G88,542,Neurological disorders,2
+G89,557,Other neurological disorders,3
+G90,557,Other neurological disorders,3
+G91,557,Other neurological disorders,3
+G92,557,Other neurological disorders,3
+G93,557,Other neurological disorders,3
+G94,557,Other neurological disorders,3
+G95,557,Other neurological disorders,3
+G96,557,Other neurological disorders,3
+G97,708,Adverse effects of medical treatment,3
+G98,557,Other neurological disorders,3
+G99,557,Other neurological disorders,3
+H00,679,Other sense organ diseases,3
+H01,679,Other sense organ diseases,3
+H02,714,Foreign body in eyes,4
+H03,679,Other sense organ diseases,3
+H04,679,Other sense organ diseases,3
+H05,679,Other sense organ diseases,3
+H06,679,Other sense organ diseases,3
+H07,669,Sense organ diseases,2
+H08,669,Sense organ diseases,2
+H09,669,Sense organ diseases,2
+H10,679,Other sense organ diseases,3
+H11,679,Other sense organ diseases,3
+H12,669,Sense organ diseases,2
+H13,679,Other sense organ diseases,3
+H14,669,Sense organ diseases,2
+H15,679,Other sense organ diseases,3
+H16,679,Other sense organ diseases,3
+H17,679,Other sense organ diseases,3
+H18,679,Other sense organ diseases,3
+H19,679,Other sense organ diseases,3
+H20,679,Other sense organ diseases,3
+H21,679,Other sense organ diseases,3
+H22,679,Other sense organ diseases,3
+H23,669,Sense organ diseases,2
+H24,669,Sense organ diseases,2
+H25,671,Cataract,4
+H26,671,Cataract,4
+H27,675,Other vision loss,4
+H28,671,Cataract,4
+H29,669,Sense organ diseases,2
+H30,679,Other sense organ diseases,3
+H31,675,Other vision loss,4
+H32,675,Other vision loss,4
+H33,675,Other vision loss,4
+H34,675,Other vision loss,4
+H35,672,Age-related macular degeneration,4
+H36,675,Other vision loss,4
+H37,669,Sense organ diseases,2
+H38,669,Sense organ diseases,2
+H39,669,Sense organ diseases,2
+H40,670,Glaucoma,4
+H41,669,Sense organ diseases,2
+H42,670,Glaucoma,4
+H43,679,Other sense organ diseases,3
+H44,714,Foreign body in eyes,4
+H45,679,Other sense organ diseases,3
+H46,675,Other vision loss,4
+H47,675,Other vision loss,4
+H48,675,Other vision loss,4
+H49,675,Other vision loss,4
+H50,675,Other vision loss,4
+H51,675,Other vision loss,4
+H52,999,Refraction disorders,4
+H53,675,Other vision loss,4
+H54,675,Other vision loss,4
+H55,679,Other sense organ diseases,3
+H56,669,Sense organ diseases,2
+H57,679,Other sense organ diseases,3
+H58,679,Other sense organ diseases,3
+H59,708,Adverse effects of medical treatment,3
+H60,679,Other sense organ diseases,3
+H61,679,Other sense organ diseases,3
+H62,679,Other sense organ diseases,3
+H65,329,Otitis media,3
+H66,329,Otitis media,3
+H67,329,Otitis media,3
+H68,329,Otitis media,3
+H69,329,Otitis media,3
+H70,329,Otitis media,3
+H71,674,Age-related and other hearing loss,3
+H72,674,Age-related and other hearing loss,3
+H73,674,Age-related and other hearing loss,3
+H74,674,Age-related and other hearing loss,3
+H75,674,Age-related and other hearing loss,3
+H76,669,Sense organ diseases,2
+H77,669,Sense organ diseases,2
+H78,669,Sense organ diseases,2
+H79,669,Sense organ diseases,2
+H80,674,Age-related and other hearing loss,3
+H81,679,Other sense organ diseases,3
+H82,679,Other sense organ diseases,3
+H83,674,Age-related and other hearing loss,3
+H84,669,Sense organ diseases,2
+H85,669,Sense organ diseases,2
+H86,669,Sense organ diseases,2
+H87,669,Sense organ diseases,2
+H88,669,Sense organ diseases,2
+H89,669,Sense organ diseases,2
+H90,674,Age-related and other hearing loss,3
+H91,674,Age-related and other hearing loss,3
+H92,679,Other sense organ diseases,3
+H93,679,Other sense organ diseases,3
+H94,674,Age-related and other hearing loss,3
+H95,708,Adverse effects of medical treatment,3
+H96,669,Sense organ diseases,2
+H97,669,Sense organ diseases,2
+H98,669,Sense organ diseases,2
+H99,669,Sense organ diseases,2
+I00,408,Other unspecified infectious diseases,3
+I01,492,Rheumatic heart disease,3
+I02,408,Other unspecified infectious diseases,3
+I03,491,Cardiovascular diseases,2
+I04,491,Cardiovascular diseases,2
+I05,492,Rheumatic heart disease,3
+I06,492,Rheumatic heart disease,3
+I07,492,Rheumatic heart disease,3
+I08,492,Rheumatic heart disease,3
+I09,492,Rheumatic heart disease,3
+I10,491,Cardiovascular diseases,2
+I11,498,Hypertensive heart disease,3
+I12,591,Chronic kidney disease due to hypertension,4
+I13,591,Chronic kidney disease due to hypertension,4
+I14,491,Cardiovascular diseases,2
+I15,491,Cardiovascular diseases,2
+I16,491,Cardiovascular diseases,2
+I17,491,Cardiovascular diseases,2
+I18,491,Cardiovascular diseases,2
+I19,491,Cardiovascular diseases,2
+I20,493,Ischemic heart disease,3
+I21,493,Ischemic heart disease,3
+I22,493,Ischemic heart disease,3
+I23,493,Ischemic heart disease,3
+I24,493,Ischemic heart disease,3
+I25,493,Ischemic heart disease,3
+I26,491,Cardiovascular diseases,2
+I27,639,Other musculoskeletal disorders,3
+I28,491,Cardiovascular diseases,2
+I29,491,Cardiovascular diseases,2
+I30,507,Other cardiovascular and circulatory diseases,3
+I31,507,Other cardiovascular and circulatory diseases,3
+I32,507,Other cardiovascular and circulatory diseases,3
+I33,503,Endocarditis,3
+I34,504,Non-rheumatic valvular heart disease,3
+I35,504,Non-rheumatic valvular heart disease,3
+I36,504,Non-rheumatic valvular heart disease,3
+I37,504,Non-rheumatic valvular heart disease,3
+I38,503,Endocarditis,3
+I39,503,Endocarditis,3
+I40,942,Myocarditis,4
+I41,942,Myocarditis,4
+I42,938,Alcoholic cardiomyopathy,4
+I43,499,Cardiomyopathy and myocarditis,3
+I44,491,Cardiovascular diseases,2
+I45,491,Cardiovascular diseases,2
+I46,491,Cardiovascular diseases,2
+I47,491,Cardiovascular diseases,2
+I48,500,Atrial fibrillation and flutter,3
+I49,491,Cardiovascular diseases,2
+I50,491,Cardiovascular diseases,2
+I51,942,Myocarditis,4
+I52,507,Other cardiovascular and circulatory diseases,3
+I53,491,Cardiovascular diseases,2
+I54,491,Cardiovascular diseases,2
+I55,491,Cardiovascular diseases,2
+I56,491,Cardiovascular diseases,2
+I57,491,Cardiovascular diseases,2
+I58,491,Cardiovascular diseases,2
+I59,491,Cardiovascular diseases,2
+I60,497,Subarachnoid hemorrhage,4
+I61,496,Intracerebral hemorrhage,4
+I62,496,Intracerebral hemorrhage,4
+I63,495,Ischemic stroke,4
+I64,494,Stroke,3
+I65,495,Ischemic stroke,4
+I66,495,Ischemic stroke,4
+I67,495,Ischemic stroke,4
+I68,494,Stroke,3
+I69,495,Ischemic stroke,4
+I70,502,Lower extremity peripheral arterial disease,3
+I71,491,Cardiovascular diseases,2
+I72,507,Other cardiovascular and circulatory diseases,3
+I73,502,Lower extremity peripheral arterial disease,3
+I74,491,Cardiovascular diseases,2
+I75,491,Cardiovascular diseases,2
+I76,491,Cardiovascular diseases,2
+I77,507,Other cardiovascular and circulatory diseases,3
+I78,507,Other cardiovascular and circulatory diseases,3
+I79,507,Other cardiovascular and circulatory diseases,3
+I80,507,Other cardiovascular and circulatory diseases,3
+I81,507,Other cardiovascular and circulatory diseases,3
+I82,507,Other cardiovascular and circulatory diseases,3
+I83,507,Other cardiovascular and circulatory diseases,3
+I84,541,Other digestive diseases,3
+I85,521,Cirrhosis and other chronic liver diseases,3
+I86,507,Other cardiovascular and circulatory diseases,3
+I87,507,Other cardiovascular and circulatory diseases,3
+I88,507,Other cardiovascular and circulatory diseases,3
+I89,657,Pyoderma,4
+I90,491,Cardiovascular diseases,2
+I91,491,Cardiovascular diseases,2
+I92,491,Cardiovascular diseases,2
+I93,491,Cardiovascular diseases,2
+I94,491,Cardiovascular diseases,2
+I95,507,Other cardiovascular and circulatory diseases,3
+I96,408,Other unspecified infectious diseases,3
+I97,708,Adverse effects of medical treatment,3
+I98,394,Syphilis,4
+I99,507,Other cardiovascular and circulatory diseases,3
+J00,328,Upper respiratory infections,3
+J01,328,Upper respiratory infections,3
+J02,328,Upper respiratory infections,3
+J03,328,Upper respiratory infections,3
+J04,328,Upper respiratory infections,3
+J05,328,Upper respiratory infections,3
+J06,328,Upper respiratory infections,3
+J07,508,Chronic respiratory diseases,2
+J08,508,Chronic respiratory diseases,2
+J09,322,Lower respiratory infections,3
+J10,322,Lower respiratory infections,3
+J11,322,Lower respiratory infections,3
+J12,322,Lower respiratory infections,3
+J13,322,Lower respiratory infections,3
+J14,322,Lower respiratory infections,3
+J15,322,Lower respiratory infections,3
+J16,322,Lower respiratory infections,3
+J17,322,Lower respiratory infections,3
+J18,322,Lower respiratory infections,3
+J19,322,Lower respiratory infections,3
+J20,322,Lower respiratory infections,3
+J21,322,Lower respiratory infections,3
+J22,322,Lower respiratory infections,3
+J23,508,Chronic respiratory diseases,2
+J24,508,Chronic respiratory diseases,2
+J25,508,Chronic respiratory diseases,2
+J26,508,Chronic respiratory diseases,2
+J27,508,Chronic respiratory diseases,2
+J28,508,Chronic respiratory diseases,2
+J29,508,Chronic respiratory diseases,2
+J30,520,Other chronic respiratory diseases,3
+J31,520,Other chronic respiratory diseases,3
+J32,520,Other chronic respiratory diseases,3
+J33,520,Other chronic respiratory diseases,3
+J34,520,Other chronic respiratory diseases,3
+J35,520,Other chronic respiratory diseases,3
+J36,328,Upper respiratory infections,3
+J37,520,Other chronic respiratory diseases,3
+J38,520,Other chronic respiratory diseases,3
+J39,520,Other chronic respiratory diseases,3
+J40,508,Chronic respiratory diseases,2
+J41,509,Chronic obstructive pulmonary disease,3
+J42,509,Chronic obstructive pulmonary disease,3
+J43,509,Chronic obstructive pulmonary disease,3
+J44,509,Chronic obstructive pulmonary disease,3
+J45,515,Asthma,3
+J46,515,Asthma,3
+J47,520,Other chronic respiratory diseases,3
+J48,508,Chronic respiratory diseases,2
+J49,508,Chronic respiratory diseases,2
+J50,508,Chronic respiratory diseases,2
+J51,508,Chronic respiratory diseases,2
+J52,508,Chronic respiratory diseases,2
+J53,508,Chronic respiratory diseases,2
+J54,508,Chronic respiratory diseases,2
+J55,508,Chronic respiratory diseases,2
+J56,508,Chronic respiratory diseases,2
+J57,508,Chronic respiratory diseases,2
+J58,508,Chronic respiratory diseases,2
+J59,508,Chronic respiratory diseases,2
+J60,513,Coal workers pneumoconiosis,4
+J61,512,Asbestosis,4
+J62,511,Silicosis,4
+J63,514,Other pneumoconiosis,4
+J64,514,Other pneumoconiosis,4
+J65,514,Other pneumoconiosis,4
+J66,520,Other chronic respiratory diseases,3
+J67,520,Other chronic respiratory diseases,3
+J68,520,Other chronic respiratory diseases,3
+J70,701,Poisoning by carbon monoxide,4
+J71,508,Chronic respiratory diseases,2
+J72,508,Chronic respiratory diseases,2
+J73,508,Chronic respiratory diseases,2
+J74,508,Chronic respiratory diseases,2
+J75,508,Chronic respiratory diseases,2
+J76,508,Chronic respiratory diseases,2
+J77,508,Chronic respiratory diseases,2
+J78,508,Chronic respiratory diseases,2
+J79,508,Chronic respiratory diseases,2
+J80,508,Chronic respiratory diseases,2
+J81,508,Chronic respiratory diseases,2
+J82,520,Other chronic respiratory diseases,3
+J83,508,Chronic respiratory diseases,2
+J84,516,Interstitial lung disease and pulmonary sarcoidosis,3
+J85,322,Lower respiratory infections,3
+J86,408,Other unspecified infectious diseases,3
+J87,508,Chronic respiratory diseases,2
+J88,508,Chronic respiratory diseases,2
+J89,508,Chronic respiratory diseases,2
+J90,520,Other chronic respiratory diseases,3
+J91,322,Lower respiratory infections,3
+J92,512,Asbestosis,4
+J93,520,Other chronic respiratory diseases,3
+J94,520,Other chronic respiratory diseases,3
+J95,708,Adverse effects of medical treatment,3
+J96,520,Other chronic respiratory diseases,3
+J97,508,Chronic respiratory diseases,2
+J98,520,Other chronic respiratory diseases,3
+J99,520,Other chronic respiratory diseases,3
+K00,685,Other oral disorders,4
+K01,685,Other oral disorders,4
+K02,682,Caries of permanent teeth,4
+K03,685,Other oral disorders,4
+K04,685,Other oral disorders,4
+K05,683,Periodontal diseases,4
+K06,683,Periodontal diseases,4
+K07,685,Other oral disorders,4
+K08,684,Edentulism,4
+K09,685,Other oral disorders,4
+K10,685,Other oral disorders,4
+K11,685,Other oral disorders,4
+K12,685,Other oral disorders,4
+K13,685,Other oral disorders,4
+K14,685,Other oral disorders,4
+K15,526,Digestive diseases,2
+K16,526,Digestive diseases,2
+K17,526,Digestive diseases,2
+K18,526,Digestive diseases,2
+K19,526,Digestive diseases,2
+K20,541,Other digestive diseases,3
+K21,536,Gastroesophageal reflux disease,4
+K22,536,Gastroesophageal reflux disease,4
+K23,541,Other digestive diseases,3
+K24,526,Digestive diseases,2
+K25,527,Peptic ulcer disease,4
+K26,527,Peptic ulcer disease,4
+K27,527,Peptic ulcer disease,4
+K28,527,Peptic ulcer disease,4
+K29,528,Gastritis and duodenitis,4
+K30,992,Upper digestive system diseases,3
+K31,541,Other digestive diseases,3
+K32,526,Digestive diseases,2
+K33,526,Digestive diseases,2
+K34,526,Digestive diseases,2
+K35,529,Appendicitis,3
+K36,529,Appendicitis,3
+K37,529,Appendicitis,3
+K38,541,Other digestive diseases,3
+K39,526,Digestive diseases,2
+K40,531,"Inguinal, femoral, and abdominal hernia",3
+K41,531,"Inguinal, femoral, and abdominal hernia",3
+K42,531,"Inguinal, femoral, and abdominal hernia",3
+K43,708,Adverse effects of medical treatment,3
+K44,531,"Inguinal, femoral, and abdominal hernia",3
+K45,531,"Inguinal, femoral, and abdominal hernia",3
+K46,531,"Inguinal, femoral, and abdominal hernia",3
+K47,526,Digestive diseases,2
+K48,526,Digestive diseases,2
+K49,526,Digestive diseases,2
+K50,532,Inflammatory bowel disease,3
+K51,532,Inflammatory bowel disease,3
+K52,302,Diarrheal diseases,3
+K53,526,Digestive diseases,2
+K54,526,Digestive diseases,2
+K55,533,Vascular intestinal disorders,3
+K56,530,Paralytic ileus and intestinal obstruction,3
+K57,541,Other digestive diseases,3
+K58,541,Other digestive diseases,3
+K59,541,Other digestive diseases,3
+K60,541,Other digestive diseases,3
+K61,541,Other digestive diseases,3
+K62,965,Benign and in situ intestinal neoplasms,4
+K63,965,Benign and in situ intestinal neoplasms,4
+K64,541,Other digestive diseases,3
+K65,541,Other digestive diseases,3
+K66,541,Other digestive diseases,3
+K67,394,Syphilis,4
+K68,541,Other digestive diseases,3
+K69,526,Digestive diseases,2
+K70,521,Cirrhosis and other chronic liver diseases,3
+K71,521,Cirrhosis and other chronic liver diseases,3
+K72,521,Cirrhosis and other chronic liver diseases,3
+K73,521,Cirrhosis and other chronic liver diseases,3
+K74,521,Cirrhosis and other chronic liver diseases,3
+K75,408,Other unspecified infectious diseases,3
+K76,408,Other unspecified infectious diseases,3
+K77,521,Cirrhosis and other chronic liver diseases,3
+K78,526,Digestive diseases,2
+K79,526,Digestive diseases,2
+K80,534,Gallbladder and biliary diseases,3
+K81,534,Gallbladder and biliary diseases,3
+K82,534,Gallbladder and biliary diseases,3
+K83,534,Gallbladder and biliary diseases,3
+K84,526,Digestive diseases,2
+K85,535,Pancreatitis,3
+K86,535,Pancreatitis,3
+K87,534,Gallbladder and biliary diseases,3
+K88,526,Digestive diseases,2
+K89,526,Digestive diseases,2
+K90,541,Other digestive diseases,3
+K91,708,Adverse effects of medical treatment,3
+K92,541,Other digestive diseases,3
+K93,934,Drug-susceptible tuberculosis,4
+K94,708,Adverse effects of medical treatment,3
+K95,708,Adverse effects of medical treatment,3
+K96,526,Digestive diseases,2
+K97,526,Digestive diseases,2
+K98,526,Digestive diseases,2
+K99,526,Digestive diseases,2
+L00,657,Pyoderma,4
+L01,657,Pyoderma,4
+L02,657,Pyoderma,4
+L03,656,Cellulitis,4
+L04,657,Pyoderma,4
+L05,657,Pyoderma,4
+L06,653,Skin and subcutaneous diseases,2
+L07,653,Skin and subcutaneous diseases,2
+L08,657,Pyoderma,4
+L09,653,Skin and subcutaneous diseases,2
+L10,668,Other skin and subcutaneous diseases,3
+L11,668,Other skin and subcutaneous diseases,3
+L12,668,Other skin and subcutaneous diseases,3
+L13,668,Other skin and subcutaneous diseases,3
+L14,668,Other skin and subcutaneous diseases,3
+L15,653,Skin and subcutaneous diseases,2
+L16,653,Skin and subcutaneous diseases,2
+L17,653,Skin and subcutaneous diseases,2
+L18,653,Skin and subcutaneous diseases,2
+L19,653,Skin and subcutaneous diseases,2
+L20,977,Atopic dermatitis,4
+L21,979,Seborrhoeic dermatitis,4
+L22,978,Contact dermatitis,4
+L23,978,Contact dermatitis,4
+L24,978,Contact dermatitis,4
+L25,978,Contact dermatitis,4
+L26,654,Dermatitis,3
+L27,654,Dermatitis,3
+L28,668,Other skin and subcutaneous diseases,3
+L29,663,Pruritus,3
+L30,657,Pyoderma,4
+L31,653,Skin and subcutaneous diseases,2
+L32,653,Skin and subcutaneous diseases,2
+L33,653,Skin and subcutaneous diseases,2
+L34,653,Skin and subcutaneous diseases,2
+L35,653,Skin and subcutaneous diseases,2
+L36,653,Skin and subcutaneous diseases,2
+L37,653,Skin and subcutaneous diseases,2
+L38,653,Skin and subcutaneous diseases,2
+L39,653,Skin and subcutaneous diseases,2
+L40,655,Psoriasis,3
+L41,655,Psoriasis,3
+L42,668,Other skin and subcutaneous diseases,3
+L43,668,Other skin and subcutaneous diseases,3
+L44,668,Other skin and subcutaneous diseases,3
+L45,668,Other skin and subcutaneous diseases,3
+L46,653,Skin and subcutaneous diseases,2
+L47,653,Skin and subcutaneous diseases,2
+L48,653,Skin and subcutaneous diseases,2
+L49,668,Other skin and subcutaneous diseases,3
+L50,664,Urticaria,3
+L51,668,Other skin and subcutaneous diseases,3
+L52,668,Other skin and subcutaneous diseases,3
+L53,668,Other skin and subcutaneous diseases,3
+L54,668,Other skin and subcutaneous diseases,3
+L55,842,Environmental heat and cold exposure,3
+L56,668,Other skin and subcutaneous diseases,3
+L57,668,Other skin and subcutaneous diseases,3
+L58,842,Environmental heat and cold exposure,3
+L59,668,Other skin and subcutaneous diseases,3
+L60,668,Other skin and subcutaneous diseases,3
+L61,653,Skin and subcutaneous diseases,2
+L62,668,Other skin and subcutaneous diseases,3
+L63,662,Alopecia areata,3
+L64,668,Other skin and subcutaneous diseases,3
+L65,668,Other skin and subcutaneous diseases,3
+L66,668,Other skin and subcutaneous diseases,3
+L67,668,Other skin and subcutaneous diseases,3
+L68,668,Other skin and subcutaneous diseases,3
+L69,653,Skin and subcutaneous diseases,2
+L70,661,Acne vulgaris,3
+L71,668,Other skin and subcutaneous diseases,3
+L72,668,Other skin and subcutaneous diseases,3
+L73,668,Other skin and subcutaneous diseases,3
+L74,668,Other skin and subcutaneous diseases,3
+L75,668,Other skin and subcutaneous diseases,3
+L76,708,Adverse effects of medical treatment,3
+L77,653,Skin and subcutaneous diseases,2
+L78,653,Skin and subcutaneous diseases,2
+L79,653,Skin and subcutaneous diseases,2
+L80,668,Other skin and subcutaneous diseases,3
+L81,668,Other skin and subcutaneous diseases,3
+L82,668,Other skin and subcutaneous diseases,3
+L83,668,Other skin and subcutaneous diseases,3
+L84,668,Other skin and subcutaneous diseases,3
+L85,668,Other skin and subcutaneous diseases,3
+L86,668,Other skin and subcutaneous diseases,3
+L87,668,Other skin and subcutaneous diseases,3
+L88,657,Pyoderma,4
+L89,665,Decubitus ulcer,3
+L90,668,Other skin and subcutaneous diseases,3
+L91,668,Other skin and subcutaneous diseases,3
+L92,668,Other skin and subcutaneous diseases,3
+L93,639,Other musculoskeletal disorders,3
+L94,668,Other skin and subcutaneous diseases,3
+L95,668,Other skin and subcutaneous diseases,3
+L96,653,Skin and subcutaneous diseases,2
+L97,657,Pyoderma,4
+L98,657,Pyoderma,4
+L99,668,Other skin and subcutaneous diseases,3
+M00,639,Other musculoskeletal disorders,3
+M01,639,Other musculoskeletal disorders,3
+M02,639,Other musculoskeletal disorders,3
+M03,639,Other musculoskeletal disorders,3
+M04,626,Musculoskeletal disorders,2
+M05,627,Rheumatoid arthritis,3
+M06,639,Other musculoskeletal disorders,3
+M07,639,Other musculoskeletal disorders,3
+M08,627,Rheumatoid arthritis,3
+M09,627,Rheumatoid arthritis,3
+M10,632,Gout,3
+M11,639,Other musculoskeletal disorders,3
+M12,639,Other musculoskeletal disorders,3
+M13,639,Other musculoskeletal disorders,3
+M14,639,Other musculoskeletal disorders,3
+M15,639,Other musculoskeletal disorders,3
+M16,1014,Osteoarthritis hip,4
+M17,1015,Osteoarthritis knee,4
+M18,1016,Osteoarthritis hand,4
+M19,639,Other musculoskeletal disorders,3
+M20,639,Other musculoskeletal disorders,3
+M21,639,Other musculoskeletal disorders,3
+M22,639,Other musculoskeletal disorders,3
+M23,639,Other musculoskeletal disorders,3
+M24,639,Other musculoskeletal disorders,3
+M25,639,Other musculoskeletal disorders,3
+M26,685,Other oral disorders,4
+M27,685,Other oral disorders,4
+M28,626,Musculoskeletal disorders,2
+M29,626,Musculoskeletal disorders,2
+M30,639,Other musculoskeletal disorders,3
+M31,639,Other musculoskeletal disorders,3
+M32,639,Other musculoskeletal disorders,3
+M33,557,Other neurological disorders,3
+M34,639,Other musculoskeletal disorders,3
+M35,639,Other musculoskeletal disorders,3
+M36,639,Other musculoskeletal disorders,3
+M37,626,Musculoskeletal disorders,2
+M38,626,Musculoskeletal disorders,2
+M39,626,Musculoskeletal disorders,2
+M40,639,Other musculoskeletal disorders,3
+M41,639,Other musculoskeletal disorders,3
+M42,639,Other musculoskeletal disorders,3
+M43,639,Other musculoskeletal disorders,3
+M44,626,Musculoskeletal disorders,2
+M45,639,Other musculoskeletal disorders,3
+M46,639,Other musculoskeletal disorders,3
+M47,630,Low back pain,3
+M48,630,Low back pain,3
+M49,934,Drug-susceptible tuberculosis,4
+M50,631,Neck pain,3
+M51,630,Low back pain,3
+M52,626,Musculoskeletal disorders,2
+M53,630,Low back pain,3
+M54,630,Low back pain,3
+M55,626,Musculoskeletal disorders,2
+M56,626,Musculoskeletal disorders,2
+M57,626,Musculoskeletal disorders,2
+M58,626,Musculoskeletal disorders,2
+M59,626,Musculoskeletal disorders,2
+M60,715,Foreign body in other body part,4
+M61,639,Other musculoskeletal disorders,3
+M62,639,Other musculoskeletal disorders,3
+M63,639,Other musculoskeletal disorders,3
+M64,626,Musculoskeletal disorders,2
+M65,639,Other musculoskeletal disorders,3
+M66,639,Other musculoskeletal disorders,3
+M67,639,Other musculoskeletal disorders,3
+M68,639,Other musculoskeletal disorders,3
+M69,626,Musculoskeletal disorders,2
+M70,639,Other musculoskeletal disorders,3
+M71,639,Other musculoskeletal disorders,3
+M72,656,Cellulitis,4
+M73,394,Syphilis,4
+M74,626,Musculoskeletal disorders,2
+M75,639,Other musculoskeletal disorders,3
+M76,639,Other musculoskeletal disorders,3
+M77,639,Other musculoskeletal disorders,3
+M78,626,Musculoskeletal disorders,2
+M79,557,Other neurological disorders,3
+M80,639,Other musculoskeletal disorders,3
+M81,639,Other musculoskeletal disorders,3
+M82,639,Other musculoskeletal disorders,3
+M83,639,Other musculoskeletal disorders,3
+M84,639,Other musculoskeletal disorders,3
+M85,639,Other musculoskeletal disorders,3
+M86,639,Other musculoskeletal disorders,3
+M87,639,Other musculoskeletal disorders,3
+M88,639,Other musculoskeletal disorders,3
+M89,408,Other unspecified infectious diseases,3
+M90,639,Other musculoskeletal disorders,3
+M91,639,Other musculoskeletal disorders,3
+M92,639,Other musculoskeletal disorders,3
+M93,639,Other musculoskeletal disorders,3
+M94,639,Other musculoskeletal disorders,3
+M95,639,Other musculoskeletal disorders,3
+M96,708,Adverse effects of medical treatment,3
+M97,626,Musculoskeletal disorders,2
+M98,626,Musculoskeletal disorders,2
+M99,630,Low back pain,3
+N00,588,Acute glomerulonephritis,3
+N01,588,Acute glomerulonephritis,3
+N02,593,Chronic kidney disease due to other and unspecified causes,4
+N03,592,Chronic kidney disease due to glomerulonephritis,4
+N04,592,Chronic kidney disease due to glomerulonephritis,4
+N05,592,Chronic kidney disease due to glomerulonephritis,4
+N06,592,Chronic kidney disease due to glomerulonephritis,4
+N07,593,Chronic kidney disease due to other and unspecified causes,4
+N08,592,Chronic kidney disease due to glomerulonephritis,4
+N09,626,Musculoskeletal disorders,2
+N10,595,Urinary tract infections and interstitial nephritis,4
+N11,595,Urinary tract infections and interstitial nephritis,4
+N12,595,Urinary tract infections and interstitial nephritis,4
+N13,595,Urinary tract infections and interstitial nephritis,4
+N14,708,Adverse effects of medical treatment,3
+N15,595,Urinary tract infections and interstitial nephritis,4
+N16,595,Urinary tract infections and interstitial nephritis,4
+N17,589,Chronic kidney disease,3
+N18,589,Chronic kidney disease,3
+N19,589,Chronic kidney disease,3
+N20,596,Urolithiasis,4
+N21,596,Urolithiasis,4
+N22,596,Urolithiasis,4
+N23,596,Urolithiasis,4
+N24,594,Urinary diseases and male infertility,3
+N25,602,Other urinary diseases,4
+N26,602,Other urinary diseases,4
+N27,602,Other urinary diseases,4
+N28,602,Other urinary diseases,4
+N29,602,Other urinary diseases,4
+N30,595,Urinary tract infections and interstitial nephritis,4
+N31,602,Other urinary diseases,4
+N32,602,Other urinary diseases,4
+N33,602,Other urinary diseases,4
+N34,595,Urinary tract infections and interstitial nephritis,4
+N35,602,Other urinary diseases,4
+N36,602,Other urinary diseases,4
+N37,602,Other urinary diseases,4
+N38,594,Urinary diseases and male infertility,3
+N39,595,Urinary tract infections and interstitial nephritis,4
+N40,597,Benign prostatic hyperplasia,4
+N41,602,Other urinary diseases,4
+N42,602,Other urinary diseases,4
+N43,602,Other urinary diseases,4
+N44,602,Other urinary diseases,4
+N45,602,Other urinary diseases,4
+N46,598,Male infertility,4
+N47,602,Other urinary diseases,4
+N48,602,Other urinary diseases,4
+N49,602,Other urinary diseases,4
+N50,602,Other urinary diseases,4
+N51,602,Other urinary diseases,4
+N52,602,Other urinary diseases,4
+N53,602,Other urinary diseases,4
+N54,594,Urinary diseases and male infertility,3
+N55,594,Urinary diseases and male infertility,3
+N56,594,Urinary diseases and male infertility,3
+N57,594,Urinary diseases and male infertility,3
+N58,594,Urinary diseases and male infertility,3
+N59,594,Urinary diseases and male infertility,3
+N60,967,Other benign and in situ neoplasms,4
+N61,612,Other gynecological diseases,4
+N62,612,Other gynecological diseases,4
+N63,612,Other gynecological diseases,4
+N64,612,Other gynecological diseases,4
+N65,708,Adverse effects of medical treatment,3
+N66,594,Urinary diseases and male infertility,3
+N67,594,Urinary diseases and male infertility,3
+N68,594,Urinary diseases and male infertility,3
+N69,594,Urinary diseases and male infertility,3
+N70,399,Other sexually transmitted infections,4
+N71,399,Other sexually transmitted infections,4
+N72,612,Other gynecological diseases,4
+N73,399,Other sexually transmitted infections,4
+N74,395,Chlamydial infection,4
+N75,612,Other gynecological diseases,4
+N76,612,Other gynecological diseases,4
+N77,612,Other gynecological diseases,4
+N78,594,Urinary diseases and male infertility,3
+N79,594,Urinary diseases and male infertility,3
+N80,607,Endometriosis,4
+N81,608,Genital prolapse,4
+N82,370,Maternal obstructed labor and uterine rupture,4
+N83,612,Other gynecological diseases,4
+N84,612,Other gynecological diseases,4
+N85,609,Premenstrual syndrome,4
+N86,612,Other gynecological diseases,4
+N87,966,Benign and in situ cervical and uterine neoplasms,4
+N88,612,Other gynecological diseases,4
+N89,612,Other gynecological diseases,4
+N90,612,Other gynecological diseases,4
+N91,612,Other gynecological diseases,4
+N92,609,Premenstrual syndrome,4
+N93,609,Premenstrual syndrome,4
+N94,609,Premenstrual syndrome,4
+N95,609,Premenstrual syndrome,4
+N96,995,Maternal abortion and miscarriage,4
+N97,606,Female infertility,4
+N98,606,Female infertility,4
+N99,708,Adverse effects of medical treatment,3
+O00,374,Ectopic pregnancy,4
+O01,995,Maternal abortion and miscarriage,4
+O02,995,Maternal abortion and miscarriage,4
+O03,995,Maternal abortion and miscarriage,4
+O04,995,Maternal abortion and miscarriage,4
+O05,995,Maternal abortion and miscarriage,4
+O06,995,Maternal abortion and miscarriage,4
+O07,995,Maternal abortion and miscarriage,4
+O08,995,Maternal abortion and miscarriage,4
+O09,379,Other direct maternal disorders,4
+O10,369,Maternal hypertensive disorders,4
+O11,369,Maternal hypertensive disorders,4
+O12,369,Maternal hypertensive disorders,4
+O13,369,Maternal hypertensive disorders,4
+O14,369,Maternal hypertensive disorders,4
+O15,369,Maternal hypertensive disorders,4
+O16,369,Maternal hypertensive disorders,4
+O17,366,Maternal disorders,3
+O18,379,Other direct maternal disorders,4
+O19,366,Maternal disorders,3
+O20,367,Maternal hemorrhage,4
+O21,379,Other direct maternal disorders,4
+O22,379,Other direct maternal disorders,4
+O23,368,Maternal sepsis and other maternal infections,4
+O24,379,Other direct maternal disorders,4
+O25,379,Other direct maternal disorders,4
+O26,379,Other direct maternal disorders,4
+O27,366,Maternal disorders,3
+O28,379,Other direct maternal disorders,4
+O29,379,Other direct maternal disorders,4
+O30,379,Other direct maternal disorders,4
+O31,379,Other direct maternal disorders,4
+O32,379,Other direct maternal disorders,4
+O33,379,Other direct maternal disorders,4
+O34,379,Other direct maternal disorders,4
+O35,379,Other direct maternal disorders,4
+O36,379,Other direct maternal disorders,4
+O37,366,Maternal disorders,3
+O38,379,Other direct maternal disorders,4
+O39,366,Maternal disorders,3
+O40,379,Other direct maternal disorders,4
+O41,368,Maternal sepsis and other maternal infections,4
+O42,379,Other direct maternal disorders,4
+O43,367,Maternal hemorrhage,4
+O44,367,Maternal hemorrhage,4
+O45,367,Maternal hemorrhage,4
+O46,367,Maternal hemorrhage,4
+O47,379,Other direct maternal disorders,4
+O48,379,Other direct maternal disorders,4
+O49,366,Maternal disorders,3
+O50,366,Maternal disorders,3
+O51,366,Maternal disorders,3
+O52,366,Maternal disorders,3
+O53,366,Maternal disorders,3
+O54,366,Maternal disorders,3
+O55,366,Maternal disorders,3
+O56,366,Maternal disorders,3
+O57,366,Maternal disorders,3
+O58,366,Maternal disorders,3
+O59,366,Maternal disorders,3
+O60,379,Other direct maternal disorders,4
+O61,379,Other direct maternal disorders,4
+O62,367,Maternal hemorrhage,4
+O63,379,Other direct maternal disorders,4
+O64,370,Maternal obstructed labor and uterine rupture,4
+O65,370,Maternal obstructed labor and uterine rupture,4
+O66,370,Maternal obstructed labor and uterine rupture,4
+O67,367,Maternal hemorrhage,4
+O68,379,Other direct maternal disorders,4
+O69,379,Other direct maternal disorders,4
+O70,370,Maternal obstructed labor and uterine rupture,4
+O71,370,Maternal obstructed labor and uterine rupture,4
+O72,367,Maternal hemorrhage,4
+O73,379,Other direct maternal disorders,4
+O74,379,Other direct maternal disorders,4
+O75,379,Other direct maternal disorders,4
+O76,379,Other direct maternal disorders,4
+O77,379,Other direct maternal disorders,4
+O78,366,Maternal disorders,3
+O79,366,Maternal disorders,3
+O80,379,Other direct maternal disorders,4
+O81,379,Other direct maternal disorders,4
+O82,379,Other direct maternal disorders,4
+O83,370,Maternal obstructed labor and uterine rupture,4
+O84,370,Maternal obstructed labor and uterine rupture,4
+O85,368,Maternal sepsis and other maternal infections,4
+O86,368,Maternal sepsis and other maternal infections,4
+O87,379,Other direct maternal disorders,4
+O88,379,Other direct maternal disorders,4
+O89,379,Other direct maternal disorders,4
+O90,379,Other direct maternal disorders,4
+O91,368,Maternal sepsis and other maternal infections,4
+O92,379,Other direct maternal disorders,4
+O93,366,Maternal disorders,3
+O94,379,Other direct maternal disorders,4
+O95,379,Other direct maternal disorders,4
+O96,379,Other direct maternal disorders,4
+O97,379,Other direct maternal disorders,4
+O98,298,HIV/AIDS,3
+P00,385,Other neonatal disorders,4
+P01,385,Other neonatal disorders,4
+P02,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P03,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P04,385,Other neonatal disorders,4
+P05,385,Other neonatal disorders,4
+P06,380,Neonatal disorders,3
+P07,381,Neonatal preterm birth,4
+P08,385,Other neonatal disorders,4
+P09,385,Other neonatal disorders,4
+P10,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P11,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P12,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P13,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P14,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P15,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P16,380,Neonatal disorders,3
+P17,380,Neonatal disorders,3
+P18,380,Neonatal disorders,3
+P19,385,Other neonatal disorders,4
+P20,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P21,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P22,381,Neonatal preterm birth,4
+P23,322,Lower respiratory infections,3
+P24,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P25,381,Neonatal preterm birth,4
+P26,381,Neonatal preterm birth,4
+P27,381,Neonatal preterm birth,4
+P28,381,Neonatal preterm birth,4
+P29,385,Other neonatal disorders,4
+P30,380,Neonatal disorders,3
+P31,380,Neonatal disorders,3
+P32,380,Neonatal disorders,3
+P33,380,Neonatal disorders,3
+P34,380,Neonatal disorders,3
+P35,400,Acute hepatitis,3
+P36,383,Neonatal sepsis and other neonatal infections,4
+P37,934,Drug-susceptible tuberculosis,4
+P38,383,Neonatal sepsis and other neonatal infections,4
+P39,383,Neonatal sepsis and other neonatal infections,4
+P40,380,Neonatal disorders,3
+P41,380,Neonatal disorders,3
+P42,380,Neonatal disorders,3
+P43,380,Neonatal disorders,3
+P44,380,Neonatal disorders,3
+P45,380,Neonatal disorders,3
+P46,380,Neonatal disorders,3
+P47,380,Neonatal disorders,3
+P48,380,Neonatal disorders,3
+P49,380,Neonatal disorders,3
+P50,385,Other neonatal disorders,4
+P51,385,Other neonatal disorders,4
+P52,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P53,385,Other neonatal disorders,4
+P54,385,Other neonatal disorders,4
+P55,384,Hemolytic disease and other neonatal jaundice,4
+P56,384,Hemolytic disease and other neonatal jaundice,4
+P57,384,Hemolytic disease and other neonatal jaundice,4
+P58,384,Hemolytic disease and other neonatal jaundice,4
+P59,384,Hemolytic disease and other neonatal jaundice,4
+P60,385,Other neonatal disorders,4
+P61,381,Neonatal preterm birth,4
+P62,380,Neonatal disorders,3
+P63,380,Neonatal disorders,3
+P64,380,Neonatal disorders,3
+P65,380,Neonatal disorders,3
+P66,380,Neonatal disorders,3
+P67,380,Neonatal disorders,3
+P68,380,Neonatal disorders,3
+P69,380,Neonatal disorders,3
+P70,385,Other neonatal disorders,4
+P71,385,Other neonatal disorders,4
+P72,385,Other neonatal disorders,4
+P73,380,Neonatal disorders,3
+P74,385,Other neonatal disorders,4
+P75,385,Other neonatal disorders,4
+P76,385,Other neonatal disorders,4
+P77,381,Neonatal preterm birth,4
+P78,385,Other neonatal disorders,4
+P79,380,Neonatal disorders,3
+P80,385,Other neonatal disorders,4
+P81,385,Other neonatal disorders,4
+P82,380,Neonatal disorders,3
+P83,385,Other neonatal disorders,4
+P84,385,Other neonatal disorders,4
+P85,380,Neonatal disorders,3
+P86,380,Neonatal disorders,3
+P87,380,Neonatal disorders,3
+P88,380,Neonatal disorders,3
+P89,380,Neonatal disorders,3
+P90,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P91,382,Neonatal encephalopathy due to birth asphyxia and trauma,4
+P92,385,Other neonatal disorders,4
+P93,708,Adverse effects of medical treatment,3
+P94,385,Other neonatal disorders,4
+P95,380,Neonatal disorders,3
+P96,385,Other neonatal disorders,4
+P97,380,Neonatal disorders,3
+P98,380,Neonatal disorders,3
+P99,385,Other neonatal disorders,4
+Q00,642,Neural tube defects,4
+Q01,642,Neural tube defects,4
+Q02,652,Other congenital birth defects,4
+Q03,652,Other congenital birth defects,4
+Q04,652,Other congenital birth defects,4
+Q05,642,Neural tube defects,4
+Q06,652,Other congenital birth defects,4
+Q07,642,Neural tube defects,4
+Q08,641,Congenital birth defects,3
+Q09,641,Congenital birth defects,3
+Q10,652,Other congenital birth defects,4
+Q11,652,Other congenital birth defects,4
+Q12,652,Other congenital birth defects,4
+Q13,652,Other congenital birth defects,4
+Q14,652,Other congenital birth defects,4
+Q15,652,Other congenital birth defects,4
+Q16,674,Age-related and other hearing loss,3
+Q17,652,Other congenital birth defects,4
+Q18,652,Other congenital birth defects,4
+Q19,641,Congenital birth defects,3
+Q20,643,Congenital heart anomalies,4
+Q21,643,Congenital heart anomalies,4
+Q22,643,Congenital heart anomalies,4
+Q23,643,Congenital heart anomalies,4
+Q24,643,Congenital heart anomalies,4
+Q25,643,Congenital heart anomalies,4
+Q26,643,Congenital heart anomalies,4
+Q27,643,Congenital heart anomalies,4
+Q28,643,Congenital heart anomalies,4
+Q29,641,Congenital birth defects,3
+Q30,652,Other congenital birth defects,4
+Q31,652,Other congenital birth defects,4
+Q32,652,Other congenital birth defects,4
+Q33,652,Other congenital birth defects,4
+Q34,652,Other congenital birth defects,4
+Q35,644,Orofacial clefts,4
+Q36,644,Orofacial clefts,4
+Q37,644,Orofacial clefts,4
+Q38,651,Digestive congenital anomalies,4
+Q39,651,Digestive congenital anomalies,4
+Q40,651,Digestive congenital anomalies,4
+Q41,651,Digestive congenital anomalies,4
+Q42,651,Digestive congenital anomalies,4
+Q43,651,Digestive congenital anomalies,4
+Q44,651,Digestive congenital anomalies,4
+Q45,651,Digestive congenital anomalies,4
+Q46,641,Congenital birth defects,3
+Q47,641,Congenital birth defects,3
+Q48,641,Congenital birth defects,3
+Q49,641,Congenital birth defects,3
+Q50,650,Urogenital congenital anomalies,4
+Q51,650,Urogenital congenital anomalies,4
+Q52,650,Urogenital congenital anomalies,4
+Q53,652,Other congenital birth defects,4
+Q54,650,Urogenital congenital anomalies,4
+Q55,650,Urogenital congenital anomalies,4
+Q56,650,Urogenital congenital anomalies,4
+Q57,650,Urogenital congenital anomalies,4
+Q60,593,Chronic kidney disease due to other and unspecified causes,4
+Q61,593,Chronic kidney disease due to other and unspecified causes,4
+Q62,593,Chronic kidney disease due to other and unspecified causes,4
+Q63,593,Chronic kidney disease due to other and unspecified causes,4
+Q64,593,Chronic kidney disease due to other and unspecified causes,4
+Q65,649,Congenital musculoskeletal and limb anomalies,4
+Q66,649,Congenital musculoskeletal and limb anomalies,4
+Q67,652,Other congenital birth defects,4
+Q68,649,Congenital musculoskeletal and limb anomalies,4
+Q69,649,Congenital musculoskeletal and limb anomalies,4
+Q70,649,Congenital musculoskeletal and limb anomalies,4
+Q71,649,Congenital musculoskeletal and limb anomalies,4
+Q72,649,Congenital musculoskeletal and limb anomalies,4
+Q73,649,Congenital musculoskeletal and limb anomalies,4
+Q74,648,Other chromosomal abnormalities,4
+Q75,648,Other chromosomal abnormalities,4
+Q76,649,Congenital musculoskeletal and limb anomalies,4
+Q77,649,Congenital musculoskeletal and limb anomalies,4
+Q78,649,Congenital musculoskeletal and limb anomalies,4
+Q79,648,Other chromosomal abnormalities,4
+Q80,652,Other congenital birth defects,4
+Q81,652,Other congenital birth defects,4
+Q82,652,Other congenital birth defects,4
+Q83,652,Other congenital birth defects,4
+Q84,652,Other congenital birth defects,4
+Q85,652,Other congenital birth defects,4
+Q86,652,Other congenital birth defects,4
+Q87,648,Other chromosomal abnormalities,4
+Q88,641,Congenital birth defects,3
+Q89,652,Other congenital birth defects,4
+Q90,645,Down syndrome,4
+Q91,648,Other chromosomal abnormalities,4
+Q92,648,Other chromosomal abnormalities,4
+Q93,648,Other chromosomal abnormalities,4
+Q94,641,Congenital birth defects,3
+Q95,648,Other chromosomal abnormalities,4
+Q96,646,Turner syndrome,4
+Q97,648,Other chromosomal abnormalities,4
+Q98,647,Klinefelter syndrome,4
+Q99,648,Other chromosomal abnormalities,4
+R00,491,Cardiovascular diseases,2
+R01,491,Cardiovascular diseases,2
+R02,408,Other unspecified infectious diseases,3
+R05,508,Chronic respiratory diseases,2
+R06,508,Chronic respiratory diseases,2
+R07,491,Cardiovascular diseases,2
+R08,508,Chronic respiratory diseases,2
+R09,508,Chronic respiratory diseases,2
+R11,526,Digestive diseases,2
+R12,536,Gastroesophageal reflux disease,4
+R13,526,Digestive diseases,2
+R14,526,Digestive diseases,2
+R15,526,Digestive diseases,2
+R16,521,Cirrhosis and other chronic liver diseases,3
+R17,521,Cirrhosis and other chronic liver diseases,3
+R18,521,Cirrhosis and other chronic liver diseases,3
+R19,526,Digestive diseases,2
+R20,653,Skin and subcutaneous diseases,2
+R21,653,Skin and subcutaneous diseases,2
+R22,653,Skin and subcutaneous diseases,2
+R23,653,Skin and subcutaneous diseases,2
+R24,653,Skin and subcutaneous diseases,2
+R25,557,Other neurological disorders,3
+R26,557,Other neurological disorders,3
+R27,557,Other neurological disorders,3
+R28,557,Other neurological disorders,3
+R29,557,Other neurological disorders,3
+R30,612,Other gynecological diseases,4
+R31,612,Other gynecological diseases,4
+R32,612,Other gynecological diseases,4
+R33,612,Other gynecological diseases,4
+R34,612,Other gynecological diseases,4
+R35,612,Other gynecological diseases,4
+R36,612,Other gynecological diseases,4
+R37,612,Other gynecological diseases,4
+R38,612,Other gynecological diseases,4
+R39,612,Other gynecological diseases,4
+R40,585,Other mental disorders,3
+R41,557,Other neurological disorders,3
+R42,557,Other neurological disorders,3
+R43,679,Other sense organ diseases,3
+R44,679,Other sense organ diseases,3
+R45,585,Other mental disorders,3
+R46,585,Other mental disorders,3
+R50,708,Adverse effects of medical treatment,3
+R73,587,Diabetes mellitus,3
+R78,562,Opioid use disorders,4
+R84,508,Chronic respiratory diseases,2
+R85,526,Digestive diseases,2
+R86,602,Other urinary diseases,4
+R87,612,Other gynecological diseases,4
+R90,542,Neurological disorders,2
+R91,508,Chronic respiratory diseases,2
+T74,941,Sexual violence,4
+T75,941,Sexual violence,4
+T76,941,Sexual violence,4
+U00,945,Conflict and terrorism,3
+U01,945,Conflict and terrorism,3
+U02,945,Conflict and terrorism,3
+U03,945,Conflict and terrorism,3
+U04,322,Lower respiratory infections,3
+U06,935,Zika virus,3
+U82,408,Other unspecified infectious diseases,3
+U83,408,Other unspecified infectious diseases,3
+U84,946,Multidrug-resistant tuberculosis without extensive drug resistance,4
+U85,408,Other unspecified infectious diseases,3
+U86,408,Other unspecified infectious diseases,3
+U87,408,Other unspecified infectious diseases,3
+U88,408,Other unspecified infectious diseases,3
+U89,408,Other unspecified infectious diseases,3
+V00,695,Other transport injuries,3
+V01,690,Pedestrian road injuries,4
+V02,690,Pedestrian road injuries,4
+V03,690,Pedestrian road injuries,4
+V04,690,Pedestrian road injuries,4
+V05,695,Other transport injuries,3
+V06,690,Pedestrian road injuries,4
+V07,690,Pedestrian road injuries,4
+V08,690,Pedestrian road injuries,4
+V09,690,Pedestrian road injuries,4
+V10,691,Cyclist road injuries,4
+V11,691,Cyclist road injuries,4
+V12,691,Cyclist road injuries,4
+V13,691,Cyclist road injuries,4
+V14,691,Cyclist road injuries,4
+V15,691,Cyclist road injuries,4
+V16,691,Cyclist road injuries,4
+V17,691,Cyclist road injuries,4
+V18,691,Cyclist road injuries,4
+V19,691,Cyclist road injuries,4
+V20,692,Motorcyclist road injuries,4
+V21,692,Motorcyclist road injuries,4
+V22,692,Motorcyclist road injuries,4
+V23,692,Motorcyclist road injuries,4
+V24,692,Motorcyclist road injuries,4
+V25,692,Motorcyclist road injuries,4
+V26,692,Motorcyclist road injuries,4
+V27,692,Motorcyclist road injuries,4
+V28,692,Motorcyclist road injuries,4
+V29,692,Motorcyclist road injuries,4
+V30,693,Motor vehicle road injuries,4
+V31,693,Motor vehicle road injuries,4
+V32,693,Motor vehicle road injuries,4
+V33,693,Motor vehicle road injuries,4
+V34,693,Motor vehicle road injuries,4
+V35,693,Motor vehicle road injuries,4
+V36,693,Motor vehicle road injuries,4
+V37,693,Motor vehicle road injuries,4
+V38,693,Motor vehicle road injuries,4
+V39,693,Motor vehicle road injuries,4
+V40,693,Motor vehicle road injuries,4
+V41,693,Motor vehicle road injuries,4
+V42,693,Motor vehicle road injuries,4
+V43,693,Motor vehicle road injuries,4
+V44,693,Motor vehicle road injuries,4
+V45,693,Motor vehicle road injuries,4
+V46,693,Motor vehicle road injuries,4
+V47,693,Motor vehicle road injuries,4
+V48,693,Motor vehicle road injuries,4
+V49,693,Motor vehicle road injuries,4
+V50,693,Motor vehicle road injuries,4
+V51,693,Motor vehicle road injuries,4
+V52,693,Motor vehicle road injuries,4
+V53,693,Motor vehicle road injuries,4
+V54,693,Motor vehicle road injuries,4
+V55,693,Motor vehicle road injuries,4
+V56,693,Motor vehicle road injuries,4
+V57,693,Motor vehicle road injuries,4
+V58,693,Motor vehicle road injuries,4
+V59,693,Motor vehicle road injuries,4
+V60,693,Motor vehicle road injuries,4
+V61,693,Motor vehicle road injuries,4
+V62,693,Motor vehicle road injuries,4
+V63,693,Motor vehicle road injuries,4
+V64,693,Motor vehicle road injuries,4
+V65,693,Motor vehicle road injuries,4
+V66,693,Motor vehicle road injuries,4
+V67,693,Motor vehicle road injuries,4
+V68,693,Motor vehicle road injuries,4
+V69,693,Motor vehicle road injuries,4
+V70,693,Motor vehicle road injuries,4
+V71,693,Motor vehicle road injuries,4
+V72,693,Motor vehicle road injuries,4
+V73,693,Motor vehicle road injuries,4
+V74,693,Motor vehicle road injuries,4
+V75,693,Motor vehicle road injuries,4
+V76,693,Motor vehicle road injuries,4
+V77,693,Motor vehicle road injuries,4
+V78,693,Motor vehicle road injuries,4
+V79,693,Motor vehicle road injuries,4
+V80,694,Other road injuries,4
+V81,695,Other transport injuries,3
+V82,694,Other road injuries,4
+V83,695,Other transport injuries,3
+V84,695,Other transport injuries,3
+V85,695,Other transport injuries,3
+V86,695,Other transport injuries,3
+V87,693,Motor vehicle road injuries,4
+V88,695,Other transport injuries,3
+V89,688,Transport injuries,2
+V90,695,Other transport injuries,3
+V91,695,Other transport injuries,3
+V92,695,Other transport injuries,3
+V93,695,Other transport injuries,3
+V94,695,Other transport injuries,3
+V95,695,Other transport injuries,3
+V96,695,Other transport injuries,3
+V97,695,Other transport injuries,3
+V98,695,Other transport injuries,3
+V99,688,Transport injuries,2
+W00,697,Falls,3
+W01,697,Falls,3
+W02,697,Falls,3
+W03,697,Falls,3
+W04,697,Falls,3
+W05,697,Falls,3
+W06,697,Falls,3
+W07,697,Falls,3
+W08,697,Falls,3
+W09,697,Falls,3
+W10,697,Falls,3
+W11,697,Falls,3
+W12,697,Falls,3
+W13,697,Falls,3
+W14,697,Falls,3
+W15,697,Falls,3
+W16,697,Falls,3
+W17,697,Falls,3
+W18,697,Falls,3
+W19,697,Falls,3
+W20,707,Other exposure to mechanical forces,4
+W21,707,Other exposure to mechanical forces,4
+W22,707,Other exposure to mechanical forces,4
+W23,707,Other exposure to mechanical forces,4
+W24,707,Other exposure to mechanical forces,4
+W25,707,Other exposure to mechanical forces,4
+W26,707,Other exposure to mechanical forces,4
+W27,707,Other exposure to mechanical forces,4
+W28,707,Other exposure to mechanical forces,4
+W29,707,Other exposure to mechanical forces,4
+W30,707,Other exposure to mechanical forces,4
+W31,707,Other exposure to mechanical forces,4
+W32,705,Unintentional firearm injuries,4
+W33,705,Unintentional firearm injuries,4
+W34,705,Unintentional firearm injuries,4
+W35,707,Other exposure to mechanical forces,4
+W36,707,Other exposure to mechanical forces,4
+W37,707,Other exposure to mechanical forces,4
+W38,707,Other exposure to mechanical forces,4
+W39,696,Unintentional injuries,2
+W40,707,Other exposure to mechanical forces,4
+W41,707,Other exposure to mechanical forces,4
+W42,707,Other exposure to mechanical forces,4
+W43,707,Other exposure to mechanical forces,4
+W44,715,Foreign body in other body part,4
+W45,707,Other exposure to mechanical forces,4
+W46,707,Other exposure to mechanical forces,4
+W49,707,Other exposure to mechanical forces,4
+W50,707,Other exposure to mechanical forces,4
+W51,707,Other exposure to mechanical forces,4
+W52,707,Other exposure to mechanical forces,4
+W53,711,Non-venomous animal contact,4
+W54,711,Non-venomous animal contact,4
+W55,711,Non-venomous animal contact,4
+W56,711,Non-venomous animal contact,4
+W57,711,Non-venomous animal contact,4
+W58,711,Non-venomous animal contact,4
+W59,711,Non-venomous animal contact,4
+W60,711,Non-venomous animal contact,4
+W61,711,Non-venomous animal contact,4
+W62,711,Non-venomous animal contact,4
+W63,711,Non-venomous animal contact,4
+W64,711,Non-venomous animal contact,4
+W65,698,Drowning,3
+W66,698,Drowning,3
+W67,698,Drowning,3
+W68,698,Drowning,3
+W69,698,Drowning,3
+W70,698,Drowning,3
+W71,698,Drowning,3
+W72,698,Drowning,3
+W73,698,Drowning,3
+W74,698,Drowning,3
+W75,713,Pulmonary aspiration and foreign body in airway,4
+W76,713,Pulmonary aspiration and foreign body in airway,4
+W78,713,Pulmonary aspiration and foreign body in airway,4
+W79,713,Pulmonary aspiration and foreign body in airway,4
+W80,713,Pulmonary aspiration and foreign body in airway,4
+W83,713,Pulmonary aspiration and foreign body in airway,4
+W84,713,Pulmonary aspiration and foreign body in airway,4
+W88,842,Environmental heat and cold exposure,3
+W89,842,Environmental heat and cold exposure,3
+W90,842,Environmental heat and cold exposure,3
+W91,842,Environmental heat and cold exposure,3
+W92,842,Environmental heat and cold exposure,3
+W93,842,Environmental heat and cold exposure,3
+W94,842,Environmental heat and cold exposure,3
+W95,842,Environmental heat and cold exposure,3
+W96,842,Environmental heat and cold exposure,3
+W97,842,Environmental heat and cold exposure,3
+W98,842,Environmental heat and cold exposure,3
+W99,842,Environmental heat and cold exposure,3
+X00,699,"Fire, heat, and hot substances",3
+X01,699,"Fire, heat, and hot substances",3
+X02,699,"Fire, heat, and hot substances",3
+X03,699,"Fire, heat, and hot substances",3
+X04,699,"Fire, heat, and hot substances",3
+X05,699,"Fire, heat, and hot substances",3
+X06,699,"Fire, heat, and hot substances",3
+X07,699,"Fire, heat, and hot substances",3
+X08,699,"Fire, heat, and hot substances",3
+X09,699,"Fire, heat, and hot substances",3
+X10,699,"Fire, heat, and hot substances",3
+X11,699,"Fire, heat, and hot substances",3
+X12,699,"Fire, heat, and hot substances",3
+X13,699,"Fire, heat, and hot substances",3
+X14,699,"Fire, heat, and hot substances",3
+X15,699,"Fire, heat, and hot substances",3
+X16,699,"Fire, heat, and hot substances",3
+X17,699,"Fire, heat, and hot substances",3
+X18,699,"Fire, heat, and hot substances",3
+X19,699,"Fire, heat, and hot substances",3
+X20,711,Non-venomous animal contact,4
+X21,711,Non-venomous animal contact,4
+X22,711,Non-venomous animal contact,4
+X23,711,Non-venomous animal contact,4
+X24,711,Non-venomous animal contact,4
+X25,711,Non-venomous animal contact,4
+X26,711,Non-venomous animal contact,4
+X27,711,Non-venomous animal contact,4
+X28,711,Non-venomous animal contact,4
+X29,711,Non-venomous animal contact,4
+X30,842,Environmental heat and cold exposure,3
+X31,842,Environmental heat and cold exposure,3
+X32,842,Environmental heat and cold exposure,3
+X33,729,Exposure to forces of nature,3
+X34,729,Exposure to forces of nature,3
+X35,729,Exposure to forces of nature,3
+X36,729,Exposure to forces of nature,3
+X37,729,Exposure to forces of nature,3
+X38,729,Exposure to forces of nature,3
+X39,842,Environmental heat and cold exposure,3
+X46,703,Poisoning by other means,4
+X47,701,Poisoning by carbon monoxide,4
+X48,703,Poisoning by other means,4
+X60,723,Self-harm by other specified means,4
+X61,723,Self-harm by other specified means,4
+X62,723,Self-harm by other specified means,4
+X63,723,Self-harm by other specified means,4
+X64,723,Self-harm by other specified means,4
+X65,560,Alcohol use disorders,3
+X66,723,Self-harm by other specified means,4
+X67,723,Self-harm by other specified means,4
+X68,723,Self-harm by other specified means,4
+X69,723,Self-harm by other specified means,4
+X70,723,Self-harm by other specified means,4
+X71,723,Self-harm by other specified means,4
+X72,721,Self-harm by firearm,4
+X73,721,Self-harm by firearm,4
+X74,721,Self-harm by firearm,4
+X75,723,Self-harm by other specified means,4
+X76,723,Self-harm by other specified means,4
+X77,723,Self-harm by other specified means,4
+X78,723,Self-harm by other specified means,4
+X79,723,Self-harm by other specified means,4
+X80,723,Self-harm by other specified means,4
+X81,723,Self-harm by other specified means,4
+X82,723,Self-harm by other specified means,4
+X83,723,Self-harm by other specified means,4
+X84,723,Self-harm by other specified means,4
+X85,727,Physical violence by other means,4
+X86,727,Physical violence by other means,4
+X87,727,Physical violence by other means,4
+X88,727,Physical violence by other means,4
+X89,727,Physical violence by other means,4
+X90,727,Physical violence by other means,4
+X91,727,Physical violence by other means,4
+X92,727,Physical violence by other means,4
+X93,725,Physical violence by firearm,4
+X94,725,Physical violence by firearm,4
+X95,725,Physical violence by firearm,4
+X96,727,Physical violence by other means,4
+X97,727,Physical violence by other means,4
+X98,727,Physical violence by other means,4
+X99,726,Physical violence by sharp object,4
+Y00,727,Physical violence by other means,4
+Y01,727,Physical violence by other means,4
+Y02,727,Physical violence by other means,4
+Y03,727,Physical violence by other means,4
+Y04,727,Physical violence by other means,4
+Y05,941,Sexual violence,4
+Y06,727,Physical violence by other means,4
+Y07,727,Physical violence by other means,4
+Y08,727,Physical violence by other means,4
+Y10,703,Poisoning by other means,4
+Y11,703,Poisoning by other means,4
+Y12,703,Poisoning by other means,4
+Y13,703,Poisoning by other means,4
+Y14,703,Poisoning by other means,4
+Y15,560,Alcohol use disorders,3
+Y16,703,Poisoning by other means,4
+Y17,703,Poisoning by other means,4
+Y18,703,Poisoning by other means,4
+Y19,703,Poisoning by other means,4
+Y35,854,Police conflict and executions,3
+Y36,945,Conflict and terrorism,3
+Y37,945,Conflict and terrorism,3
+Y38,945,Conflict and terrorism,3
+Y40,708,Adverse effects of medical treatment,3
+Y41,708,Adverse effects of medical treatment,3
+Y42,708,Adverse effects of medical treatment,3
+Y43,708,Adverse effects of medical treatment,3
+Y44,708,Adverse effects of medical treatment,3
+Y45,708,Adverse effects of medical treatment,3
+Y46,708,Adverse effects of medical treatment,3
+Y47,708,Adverse effects of medical treatment,3
+Y48,708,Adverse effects of medical treatment,3
+Y49,708,Adverse effects of medical treatment,3
+Y50,708,Adverse effects of medical treatment,3
+Y51,708,Adverse effects of medical treatment,3
+Y52,708,Adverse effects of medical treatment,3
+Y53,708,Adverse effects of medical treatment,3
+Y54,708,Adverse effects of medical treatment,3
+Y55,708,Adverse effects of medical treatment,3
+Y56,708,Adverse effects of medical treatment,3
+Y57,708,Adverse effects of medical treatment,3
+Y58,708,Adverse effects of medical treatment,3
+Y59,708,Adverse effects of medical treatment,3
+Y60,708,Adverse effects of medical treatment,3
+Y61,708,Adverse effects of medical treatment,3
+Y62,708,Adverse effects of medical treatment,3
+Y63,708,Adverse effects of medical treatment,3
+Y64,708,Adverse effects of medical treatment,3
+Y65,708,Adverse effects of medical treatment,3
+Y66,708,Adverse effects of medical treatment,3
+Y67,708,Adverse effects of medical treatment,3
+Y68,708,Adverse effects of medical treatment,3
+Y69,708,Adverse effects of medical treatment,3
+Y70,708,Adverse effects of medical treatment,3
+Y71,708,Adverse effects of medical treatment,3
+Y72,708,Adverse effects of medical treatment,3
+Y73,708,Adverse effects of medical treatment,3
+Y74,708,Adverse effects of medical treatment,3
+Y75,708,Adverse effects of medical treatment,3
+Y76,708,Adverse effects of medical treatment,3
+Y77,708,Adverse effects of medical treatment,3
+Y78,708,Adverse effects of medical treatment,3
+Y79,708,Adverse effects of medical treatment,3
+Y80,708,Adverse effects of medical treatment,3
+Y81,708,Adverse effects of medical treatment,3
+Y82,708,Adverse effects of medical treatment,3
+Y83,708,Adverse effects of medical treatment,3
+Y84,708,Adverse effects of medical treatment,3
+Y87,723,Self-harm by other specified means,4
+Y88,708,Adverse effects of medical treatment,3
+Y89,854,Police conflict and executions,3
+Z03,366,Maternal disorders,3
+Z11,298,HIV/AIDS,3
+Z20,298,HIV/AIDS,3
+Z21,298,HIV/AIDS,3
+Z35,366,Maternal disorders,3
+Z36,366,Maternal disorders,3
+Z37,366,Maternal disorders,3
+Z38,366,Maternal disorders,3
+Z39,366,Maternal disorders,3
+Z42,708,Adverse effects of medical treatment,3
+Z43,708,Adverse effects of medical treatment,3
+Z44,708,Adverse effects of medical treatment,3
+Z45,708,Adverse effects of medical treatment,3
+Z46,708,Adverse effects of medical treatment,3
+Z47,708,Adverse effects of medical treatment,3
+Z48,708,Adverse effects of medical treatment,3
+Z49,708,Adverse effects of medical treatment,3
+Z50,708,Adverse effects of medical treatment,3
+Z51,708,Adverse effects of medical treatment,3
+Z52,521,Cirrhosis and other chronic liver diseases,3
+Z64,366,Maternal disorders,3
+Z83,298,HIV/AIDS,3
+Z87,366,Maternal disorders,3
+Z88,708,Adverse effects of medical treatment,3
+Z89,708,Adverse effects of medical treatment,3
+Z90,708,Adverse effects of medical treatment,3
+Z91,708,Adverse effects of medical treatment,3
+Z92,708,Adverse effects of medical treatment,3
+Z93,708,Adverse effects of medical treatment,3
+Z94,521,Cirrhosis and other chronic liver diseases,3
+Z95,708,Adverse effects of medical treatment,3
+Z96,708,Adverse effects of medical treatment,3
+Z97,708,Adverse effects of medical treatment,3
+Z98,708,Adverse effects of medical treatment,3
+Z99,708,Adverse effects of medical treatment,3

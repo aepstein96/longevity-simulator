@@ -4,5 +4,21 @@ raw_data/
 # Notebooks
 notebooks/
 
+# Exploratory / research scripts (kept local, not committed)
+research/
+
+# Virtual environments
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
 # Other
 src/__pycache__/
+
+# OS / editor metadata
+.DS_Store
+**/.DS_Store
+.claude/
