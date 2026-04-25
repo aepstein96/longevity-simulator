@@ -8,7 +8,6 @@ import pandas as pd
 import numpy as np
 
 from src.scenarios import LongevityScenario
-import src.survival as survival
 import src.causes as causes
 
 app = dash.Dash(
@@ -19,39 +18,26 @@ app = dash.Dash(
 server = app.server
 
 # --- Data Loading (for initial setup) ---
+# Bucket labels and display order are defined in data/CDC/cause_categories.csv;
+# the actual buckets present at runtime come from the columns of cause_fractions_total.csv.
+CAUSE_LABELS = causes.bucket_labels()
+CAUSE_ORDER = causes.bucket_order()
+
 try:
     initial_causes = pd.read_csv('data/CDC/cause_fractions_total.csv', nrows=1).columns.tolist()
     available_causes = [c for c in initial_causes if c not in ['age_years', 'Unknown']]
 except Exception:
-    available_causes = ['Cancer', 'Cardiovascular', 'Respiratory', 'External', 'Neurological']
+    available_causes = [c for c in CAUSE_ORDER if c != 'COVID-19']
 
-CAUSE_LABELS = {
-    'Cancer': 'Cancer',
-    'Cardiovascular': 'Heart disease & stroke',
-    'Respiratory': 'Lung disease',
-    'Endocrine': 'Diabetes & metabolic',
-    'Digestive': 'Digestive disease',
-    'Genitourinary': 'Kidney & urinary',
-    'Neurological': "Alzheimer's & nervous system",
-    'Mental': 'Mental & behavioral',
-    'Infectious': 'Infections',
-    'External': 'Accidents & injuries',
-    'Other': 'Other causes',
-    'COVID-19': 'COVID-19',
-}
-
-# Preferred display order for the disease buttons
-CAUSE_ORDER = [
-    'Cardiovascular', 'Cancer', 'Neurological', 'Respiratory',
-    'Endocrine', 'Digestive', 'Genitourinary', 'Infectious',
-    'Mental', 'External', 'Other', 'COVID-19',
-]
 ordered_causes = [c for c in CAUSE_ORDER if c in available_causes] + \
                  [c for c in available_causes if c not in CAUSE_ORDER]
 
 COLOR_BASELINE = "#6c757d"
 COLOR_INTERVENTION = "#1f77b4"
 COLOR_GAIN = "#2ca02c"
+COLOR_LOSS = "#dc3545"  # red — shown when the scenario lives shorter than today
+
+MEDIAN_CAP_AGE = 1000  # if the extrapolated median exceeds this, show ">1000"
 
 # Gompertz formula colors: µ (mortality), A (waves), B (seawall)
 COLOR_MU = "#6f42c1"   # purple
@@ -86,9 +72,26 @@ def _conditional_survival(surv, anchor_age):
     return cond[cond.index >= anchor_age]
 
 
-def _median_from_survival(surv):
+def _median_from_survival(surv, mort=None, cap=MEDIAN_CAP_AGE):
+    """Find the age where survival drops below 0.5.
+
+    If `surv` doesn't cross 50% within its range, extrapolate using the final
+    mortality rate held constant: S(t) = S_last · (1−mx_last)^(t − age_last),
+    solve for S(t) = 0.5. Returns float('inf') if the result exceeds `cap`.
+    """
     below = surv[surv < 0.5]
-    return float(below.index.min()) if len(below) else float('nan')
+    if len(below):
+        return float(below.index.min())
+    if mort is None or len(surv) == 0:
+        return float('nan')
+    last_age = float(surv.index[-1])
+    last_S = float(surv.iloc[-1])
+    last_mx = float(mort.iloc[-1])
+    if last_S <= 0 or not (0 < last_mx < 1):
+        return float('nan')
+    extra = np.log(0.5 / last_S) / np.log(1 - last_mx)
+    median = last_age + extra
+    return float('inf') if median > cap else median
 
 
 def _possessive(name):
@@ -106,6 +109,110 @@ def info_badge(tip_id, text):
                style={"color": "#adb5bd", "cursor": "help"}),
         dbc.Tooltip(text, target=tip_id, placement="right"),
     ])
+
+
+def _card_title(rest, poss):
+    """Title with optional possessive name prefix (KPI cards and chart titles)."""
+    return f"{poss} {rest}" if poss else rest.capitalize()
+
+
+def _comparison_body(today_text, scenario_text, delta_text=None,
+                     scenario_color=COLOR_INTERVENTION, show_scenario=True):
+    rows = [
+        html.Div([
+            html.Span("Today", className="text-muted small"),
+            html.Span(today_text, className="float-end"),
+        ], className="mb-1"),
+    ]
+    if show_scenario:
+        rows.append(html.Div([
+            html.Span("With your changes", className="small",
+                      style={"color": scenario_color}),
+            html.Span(scenario_text, className="float-end fw-bold",
+                      style={"color": scenario_color}),
+        ]))
+        if delta_text:
+            rows.append(html.Div(delta_text, className="small text-muted mt-1"))
+    return rows
+
+
+def _chance_at_age(target_age, base_full, int_full, user_age):
+    """Probability (in %) of reaching target_age, conditional on user_age if given.
+
+    Returns (None, None) if user is already past the milestone.
+    """
+    if user_age is not None and user_age >= target_age:
+        return None, None
+
+    def _conditional_pct(surv):
+        target = _survival_at(surv, target_age)
+        if user_age is not None and user_age > 0:
+            anchor = _survival_at(surv, user_age)
+            if anchor > 0:
+                return min(max(target / anchor * 100, 0), 100)
+        return min(max(target * 100, 0), 100)
+
+    return _conditional_pct(base_full), _conditional_pct(int_full)
+
+
+def _reach_body(base_pct, int_pct, show_scenario=True,
+                scenario_color=COLOR_INTERVENTION):
+    if base_pct is None:
+        return [html.Div("Already past this age", className="small text-muted")]
+    delta = None
+    if show_scenario and base_pct > 0.05:
+        ratio = int_pct / base_pct
+        if ratio >= 1.05:
+            delta = f"{ratio:.1f}× more likely"
+        elif ratio <= 0.95:
+            delta = f"{ratio:.2f}× as likely"
+    scen_txt = f"{int_pct:.1f}%" if int_pct is not None else "—"
+    return _comparison_body(f"{base_pct:.1f}%", scen_txt, delta,
+                            scenario_color=scenario_color,
+                            show_scenario=show_scenario)
+
+
+def _hover_surv(ages, surv_pct, mort_series):
+    mx_at_age = mort_series.reindex(ages).to_numpy()
+    out = []
+    for age, pct, mx in zip(ages, surv_pct, mx_at_age):
+        if np.isfinite(mx):
+            mort_txt = f"{mx * 1000:.1f} in 1,000 die this year"
+        else:
+            mort_txt = ""
+        out.append(
+            f"<b>Age {int(age)}</b><br>"
+            f"{pct:.1f}% still alive<br>"
+            f"<span style='color:#6c757d'>{mort_txt}</span>"
+        )
+    return out
+
+
+def _fmt_gompertz(x):
+    if x is None or not np.isfinite(x):
+        return html.Span("—")
+    if 0.001 <= abs(x) < 1000:
+        return html.Span(f"{x:.4f}")
+    exp = int(np.floor(np.log10(abs(x))))
+    mantissa = x / 10 ** exp
+    return html.Span([f"{mantissa:.2f} × 10", html.Sup(str(exp))])
+
+
+def _gompertz_rows(base_val, int_val, show_intervention=True,
+                   intervention_color=COLOR_INTERVENTION):
+    rows = [
+        html.Div([
+            html.Span("Baseline: ", className="text-muted"),
+            _fmt_gompertz(base_val),
+        ]),
+    ]
+    if show_intervention:
+        rows.append(html.Div([
+            html.Span("Adjusted: ", style={"color": intervention_color}),
+            html.Span(_fmt_gompertz(int_val),
+                      style={"color": intervention_color, "fontWeight": 600}),
+        ]))
+    return rows
 
 
 # --- Sidebar ---
@@ -213,6 +320,16 @@ sidebar = html.Div(
             id="advanced-collapse",
             is_open=False,
         ),
+
+        html.Div(
+            html.Img(
+                src=app.get_asset_url('lockup-stacked.svg'),
+                alt='Second Century Foundation',
+                style={"width": "100%", "display": "block",
+                       "opacity": 0.9},
+            ),
+            className="mt-auto pt-4",
+        ),
     ],
     style={
         "position": "fixed",
@@ -222,6 +339,8 @@ sidebar = html.Div(
         "background-color": "#f8f9fa",
         "overflow-y": "auto",
         "border-right": "1px solid #e9ecef",
+        "display": "flex",
+        "flexDirection": "column",
     },
 )
 
@@ -253,7 +372,7 @@ content = html.Div(
         dbc.Row(
             [
                 dbc.Col(dcc.Graph(id='survival-graph', config={"displayModeBar": False}), lg=7),
-                dbc.Col(dcc.Graph(id='mortality-graph', config={"displayModeBar": False}), lg=5),
+                dbc.Col(dcc.Graph(id='healthspan-graph', config={"displayModeBar": False}), lg=5),
             ],
             className="g-3",
         ),
@@ -262,9 +381,10 @@ content = html.Div(
             dbc.CardBody([
                 html.H6("How to read this", className="card-title"),
                 html.P(
-                    "The left chart shows the percentage still alive at each age. "
-                    "The dashed line is today; the blue line is the scenario. "
-                    "Hover any age to see exact survival and yearly death risk.",
+                    "The left chart shows the percentage still alive at each age — "
+                    "your lifespan curve. The grey line is today; the blue line is the scenario. "
+                    "The right chart shows the average number of chronic conditions a person "
+                    "of that age has — your healthspan curve. Lower is healthier.",
                     className="small text-muted mb-0",
                 ),
             ]),
@@ -335,7 +455,10 @@ content = html.Div(
                                           style={"color": COLOR_A, "fontWeight": 700,
                                                  "fontSize": "1.05rem",
                                                  "fontFamily": "Georgia, serif"}),
-                                html.Span(" — Gompertz constant.", className="fw-semibold"),
+                                html.Span(" — initial mortality rate.", className="fw-semibold"),
+                                html.Span(
+                                    " The yearly risk of dying at age 0 implied by the fit.",
+                                    className="text-muted"),
                             ]),
                             html.Div(id="gompertz-a-values", className="ms-4 mt-1"),
                         ], className="mb-3"),
@@ -346,13 +469,27 @@ content = html.Div(
                                           style={"color": COLOR_B, "fontWeight": 700,
                                                  "fontSize": "1.05rem",
                                                  "fontFamily": "Georgia, serif"}),
-                                html.Span(" — Gompertz constant.", className="fw-semibold"),
+                                html.Span(" — rate of exponential mortality growth.",
+                                          className="fw-semibold"),
+                                html.Span(
+                                    " How fast yearly death risk multiplies as you age. "
+                                    "B alone determines your maximum possible lifespan: "
+                                    "smaller B ⇒ slower exponential climb ⇒ higher ceiling.",
+                                    className="text-muted"),
                             ]),
                             html.Div(id="gompertz-b-values", className="ms-4 mt-1"),
                         ], className="mb-2"),
                     ], className="small"),
 
-                    html.Div("Fitted from ages 25–100.", className="small text-muted fst-italic mt-2"),
+                    html.Div([
+                        "Fitted from ages 25–100. ",
+                        html.A(
+                            "Read more here",
+                            href="https://en.wikipedia.org/wiki/Gompertz%E2%80%93Makeham_law_of_mortality",
+                            target="_blank", rel="noopener noreferrer",
+                        ),
+                        ".",
+                    ], className="small text-muted fst-italic mt-2"),
                 ]),
                 id="math-collapse",
                 is_open=False,
@@ -377,11 +514,20 @@ content = html.Div(
                         html.Li([
                             "Cause-of-death breakdown: ",
                             html.A(
-                                "CDC Multiple Cause of Death database (2022)",
+                                "CDC Multiple Cause of Death database (2024)",
                                 href="https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm",
                                 target="_blank", rel="noopener noreferrer",
                             ),
                             " — ICD-10 codes on death certificates, aggregated into major categories (Cancer, Heart disease & stroke, Accidents, etc.).",
+                        ]),
+                        html.Li([
+                            "Chronic-condition prevalence (for the healthspan curve): ",
+                            html.A(
+                                "IHME Global Burden of Disease (2023)",
+                                href="https://vizhub.healthdata.org/gbd-results/",
+                                target="_blank", rel="noopener noreferrer",
+                            ),
+                            " — age- and sex-specific prevalence rates for cardiovascular, cancer, neurological, chronic respiratory, and diabetes/kidney disease.",
                         ]),
                     ], className="small mb-2"),
                 ], className="mb-2"),
@@ -412,12 +558,28 @@ content = html.Div(
                     ], className="small mb-2"),
                 ], className="mb-2"),
 
-                html.Div(
-                    "Caveats: curves extrapolate past age 100 by holding the final mortality rate constant. "
-                    "Real-world cures are never 100% effective, and removing one cause doesn't change risk from other causes in this model. "
-                    "Treat results as thought experiments, not forecasts.",
-                    className="small text-muted fst-italic",
-                ),
+                html.Div([
+                    html.Strong("Simplifying assumptions"),
+                    html.Ul([
+                        html.Li([
+                            html.Em("Perfect cures: "),
+                            "'curing' a disease removes it completely from the model — an upper bound. "
+                            "Real-world treatments are never 100% effective.",
+                        ]),
+                        html.Li([
+                            html.Em("No competing risks: "),
+                            "removing one cause of death doesn't redistribute risk to other causes. "
+                            "In reality, people who don't die of cancer eventually die of something else.",
+                        ]),
+                        html.Li([
+                            html.Em("Constant mortality past age 100: "),
+                            "we hold the age-100 mortality rate flat through age 120 because the data thins out — "
+                            "this affects the long tail of the survival curve.",
+                        ]),
+                    ], className="small mb-2"),
+                    html.Div("Treat results as thought experiments, not forecasts.",
+                             className="small text-muted fst-italic"),
+                ], className="mb-2"),
             ]),
             className="mt-3 mb-4",
         ),
@@ -468,7 +630,7 @@ def label_aging_rate(value, user_age):
     if value == 0:
         return f"Frozen aging (0%){start_suffix}"
     if value < 100:
-        return f"Slow aging ({value}%){start_suffix}"
+        return f"Slowed aging ({value}%){start_suffix}"
     return f"Accelerated aging ({value}%){start_suffix}"
 
 
@@ -511,7 +673,7 @@ def reflect_button_state(selected, ids):
 @app.callback(
     [
         Output('survival-graph', 'figure'),
-        Output('mortality-graph', 'figure'),
+        Output('healthspan-graph', 'figure'),
         Output('card-lifespan-title', 'children'),
         Output('card-lifespan-body', 'children'),
         Output('card-gain-title', 'children'),
@@ -557,56 +719,73 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
     int_surv_full = data['intervention_survival']
     base_mort = data['baseline_mortality']
     int_mort = data['intervention_mortality']
+    base_condition_count = data['baseline_condition_count']
+    int_condition_count = data['intervention_condition_count']
 
     # Conditional survival (anchored at user's age) — what the user actually experiences
     base_surv = _conditional_survival(base_surv_full, user_age)
     int_surv = _conditional_survival(int_surv_full, user_age)
 
+    # Whether the scenario differs from the baseline at all.
+    intervention_active = bool(removed_causes) or aging_rate != 1.0
+
     # --- Lifespan numbers ---
-    base_median = _median_from_survival(base_surv)
-    int_median = _median_from_survival(int_surv)
-    years_gained = int_median - base_median if np.isfinite(base_median) and np.isfinite(int_median) else float('nan')
+    base_median = _median_from_survival(base_surv, base_mort)
+    int_median = _median_from_survival(int_surv, int_mort)
+
+    int_median_capped = int_median == float('inf')
+    int_median_eff = float(MEDIAN_CAP_AGE) if int_median_capped else int_median
+    if np.isfinite(base_median) and np.isfinite(int_median_eff):
+        years_gained = int_median_eff - base_median
+    else:
+        years_gained = float('nan')
+
+    # Color the intervention red if the scenario lives meaningfully shorter than today.
+    intervention_color = (
+        COLOR_LOSS if (np.isfinite(years_gained) and years_gained < -0.05)
+        else COLOR_INTERVENTION
+    )
 
     poss = _possessive(name)
-    label_prefix = f"{poss} " if poss else ""
-    subject_pronoun = f"{name.strip()}'s" if poss else "Your"  # unused today but left for future
 
-    # --- KPI card bodies (Today vs. With your changes comparison) ---
-    def comparison_body(today_text, scenario_text, delta_text=None, scenario_color=COLOR_INTERVENTION):
-        rows = [
-            html.Div([
-                html.Span("Today", className="text-muted small"),
-                html.Span(today_text, className="float-end"),
-            ], className="mb-1"),
-            html.Div([
-                html.Span("With your changes", className="small", style={"color": scenario_color}),
-                html.Span(scenario_text, className="float-end fw-bold",
-                          style={"color": scenario_color}),
-            ]),
-        ]
-        if delta_text:
-            rows.append(html.Div(delta_text, className="small text-muted mt-1"))
-        return rows
-
-    # Lifespan card
-    lifespan_title = f"{label_prefix}expected lifespan".capitalize() if not poss else f"{poss} expected lifespan"
+    # --- KPI cards ---
     today_life = f"{base_median:.1f} yrs" if np.isfinite(base_median) else "—"
-    scen_life = f"{int_median:.1f} yrs" if np.isfinite(int_median) else "—"
+    if int_median_capped:
+        scen_life = f">{MEDIAN_CAP_AGE} yrs"
+    elif np.isfinite(int_median):
+        scen_life = f"{int_median:.1f} yrs"
+    else:
+        scen_life = "—"
     life_delta = None
     if np.isfinite(years_gained) and abs(years_gained) > 0.05:
-        sign = "+" if years_gained > 0 else ""
-        life_delta = f"{sign}{years_gained:.1f} years vs. today"
-    lifespan_body = comparison_body(today_life, scen_life, life_delta)
+        prefix = ">+" if int_median_capped and years_gained > 0 else ("+" if years_gained > 0 else "")
+        life_delta = f"{prefix}{years_gained:.1f} years vs. today"
+    lifespan_title = _card_title("expected lifespan", poss)
+    lifespan_body = _comparison_body(today_life, scen_life, life_delta,
+                                     scenario_color=intervention_color,
+                                     show_scenario=intervention_active)
 
     # Years gained card (single-number spotlight)
-    gain_title = f"{label_prefix}years gained".capitalize() if not poss else f"{poss} years gained"
-    if np.isfinite(years_gained):
-        sign = "+" if years_gained >= 0 else ""
-        gain_big = html.H3(f"{sign}{years_gained:.1f} yrs",
+    gain_title = _card_title("years gained", poss)
+    if not intervention_active:
+        gain_body = [html.H3("—", className="mb-0"),
+                     html.Div("No changes yet", className="small text-muted mt-1")]
+    elif np.isfinite(years_gained):
+        prefix = ">+" if int_median_capped and years_gained > 0 else (
+            "+" if years_gained >= 0 else "")
+        if years_gained > 0:
+            big_color = COLOR_GAIN
+        elif years_gained < 0:
+            big_color = COLOR_LOSS
+        else:
+            big_color = COLOR_BASELINE
+        gain_big = html.H3(f"{prefix}{years_gained:.1f} yrs",
                            className="mb-0 fw-bold",
-                           style={"color": COLOR_GAIN if years_gained > 0 else COLOR_BASELINE})
+                           style={"color": big_color})
         if np.isfinite(base_median) and base_median > 0 and years_gained > 0:
-            sub = f"{years_gained / base_median * 100:.0f}% longer than today"
+            pct_more = years_gained / base_median * 100
+            longer_prefix = ">" if int_median_capped else ""
+            sub = f"{longer_prefix}{pct_more:.0f}% longer than today"
         elif years_gained < 0:
             sub = "Shorter than today"
         else:
@@ -615,45 +794,14 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
     else:
         gain_body = [html.H3("—", className="mb-0"), html.Div("", className="small text-muted")]
 
-    # Chance at 80
-    def chance_card(age_target, base_full, int_full, user_age):
-        # Probability of reaching age_target, given alive now (or at birth if age blank)
-        if user_age is not None and user_age >= age_target:
-            return None, None  # already past this milestone
-        base_pct = _survival_at(base_full, age_target) * 100
-        int_pct = _survival_at(int_full, age_target) * 100
-        if user_age is not None and user_age > 0:
-            anchor_b = _survival_at(base_full, user_age)
-            anchor_i = _survival_at(int_full, user_age)
-            if anchor_b > 0:
-                base_pct = (_survival_at(base_full, age_target) / anchor_b) * 100
-            if anchor_i > 0:
-                int_pct = (_survival_at(int_full, age_target) / anchor_i) * 100
-        base_pct = min(max(base_pct, 0), 100)
-        int_pct = min(max(int_pct, 0), 100)
-        return base_pct, int_pct
-
-    base_80, int_80 = chance_card(80, base_surv_full, int_surv_full, user_age)
-    base_100, int_100 = chance_card(100, base_surv_full, int_surv_full, user_age)
-
-    def reach_body(base_pct, int_pct):
-        if base_pct is None:
-            return [html.Div("Already past this age", className="small text-muted")]
-        today_txt = f"{base_pct:.1f}%"
-        scen_txt = f"{int_pct:.1f}%"
-        delta = None
-        if base_pct > 0.05:
-            ratio = int_pct / base_pct
-            if ratio >= 1.05:
-                delta = f"{ratio:.1f}× more likely"
-            elif ratio <= 0.95:
-                delta = f"{ratio:.2f}× as likely"
-        return comparison_body(today_txt, scen_txt, delta)
-
-    title_80 = f"{label_prefix}chance of reaching 80".capitalize() if not poss else f"{poss} chance of reaching 80"
-    title_100 = f"{label_prefix}chance of reaching 100".capitalize() if not poss else f"{poss} chance of reaching 100"
-    body_80 = reach_body(base_80, int_80)
-    body_100 = reach_body(base_100, int_100)
+    base_80, int_80 = _chance_at_age(80, base_surv_full, int_surv_full, user_age)
+    base_100, int_100 = _chance_at_age(100, base_surv_full, int_surv_full, user_age)
+    title_80 = _card_title("chance of reaching 80", poss)
+    title_100 = _card_title("chance of reaching 100", poss)
+    body_80 = _reach_body(base_80, int_80, show_scenario=intervention_active,
+                          scenario_color=intervention_color)
+    body_100 = _reach_body(base_100, int_100, show_scenario=intervention_active,
+                           scenario_color=intervention_color)
 
     # --- Gompertz fits ---
     remove_accidents_fit = 'remove_accidents' in (gompertz_opts or [])
@@ -663,56 +811,14 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
     int_fit_res = scenario.fit_curve(target='intervention', remove_accidents=remove_accidents_fit,
                                      use_makeham=use_makeham, fit_region=[25, 100])
 
-    def _fmt_gompertz(x):
-        if x is None or not np.isfinite(x):
-            return html.Span("—")
-        if 0.001 <= abs(x) < 1000:
-            return html.Span(f"{x:.4f}")
-        exp = int(np.floor(np.log10(abs(x))))
-        mantissa = x / 10 ** exp
-        return html.Span([f"{mantissa:.2f} × 10", html.Sup(str(exp))])
-
-    def _gompertz_rows(base_val, int_val):
-        return [
-            html.Div([
-                html.Span("Baseline: ", className="text-muted"),
-                _fmt_gompertz(base_val),
-            ]),
-            html.Div([
-                html.Span("Adjusted: ",
-                          style={"color": COLOR_INTERVENTION}),
-                html.Span(_fmt_gompertz(int_val),
-                          style={"color": COLOR_INTERVENTION, "fontWeight": 600}),
-            ]),
-        ]
-
-    a_base = float(base_fit_res['params'][0])
-    b_base = float(base_fit_res['params'][1])
-    a_int = float(int_fit_res['params'][0])
-    b_int = float(int_fit_res['params'][1])
-    gompertz_a_values = _gompertz_rows(a_base, a_int)
-    gompertz_b_values = _gompertz_rows(b_base, b_int)
-
-    # Accident-adjusted mortality series for plotting when the fit removes accidents
-    plot_base_mort = base_mort
-    plot_int_mort = int_mort
-    mort_subtitle = ""
-    if remove_accidents_fit and 'External' in scenario.cause_fractions.columns:
-        mort_subtitle = " (accidents removed)"
-        plot_base_mort = causes.remove_cause_from_lifetable(
-            scenario.baseline_mortality.copy(), scenario.cause_fractions, 'External')
-        plot_base_mort = scenario._pad_series(plot_base_mort, pad_to)
-        temp_removed = list(removed_causes)
-        if 'External' not in temp_removed:
-            temp_removed.append('External')
-        temp_scen = LongevityScenario(sex=sex, aging_rate=aging_rate,
-                                      slow_aging_age=slow_start, removed_causes=temp_removed)
-        plot_int_mort = temp_scen.get_data(pad_to=pad_to)['intervention_mortality']
-
-    # If user entered an age, clip mortality plot to that age onwards for focus
-    if user_age is not None and user_age > 0:
-        plot_base_mort = plot_base_mort[plot_base_mort.index >= user_age]
-        plot_int_mort = plot_int_mort[plot_int_mort.index >= user_age]
+    a_base, b_base = float(base_fit_res['params'][0]), float(base_fit_res['params'][1])
+    a_int, b_int = float(int_fit_res['params'][0]), float(int_fit_res['params'][1])
+    gompertz_a_values = _gompertz_rows(a_base, a_int,
+                                       show_intervention=intervention_active,
+                                       intervention_color=intervention_color)
+    gompertz_b_values = _gompertz_rows(b_base, b_int,
+                                       show_intervention=intervention_active,
+                                       intervention_color=intervention_color)
 
     # --- Survival figure ---
     ages_b = np.asarray(base_surv.index)
@@ -720,33 +826,33 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
     ages_i = np.asarray(int_surv.index)
     vals_i = np.asarray(int_surv.values) * 100
 
-    def _hover_surv(ages, surv_pct, mort_series):
-        out = []
-        for age, pct in zip(ages, surv_pct):
-            mx = float(mort_series.loc[age]) if age in mort_series.index else np.nan
-            per_1000 = mx * 1000 if np.isfinite(mx) else np.nan
-            mort_txt = (f"{per_1000:.1f} in 1,000 die this year"
-                        if np.isfinite(per_1000) else "")
-            out.append(
-                f"<b>Age {int(age)}</b><br>"
-                f"{pct:.1f}% still alive<br>"
-                f"<span style='color:#6c757d'>{mort_txt}</span>"
-            )
-        return out
+    # Shade between the two curves: green when scenario is above baseline
+    # everywhere, red when it's below. (Handles edge cases like slow-aging
+    # where the median is past pad_to and `years_gained > 0` would miss it.)
+    diff = vals_i - vals_b
+    fill_above = bool(intervention_active and len(diff) and diff.min() >= -1e-9 and diff.max() > 1e-9)
+    fill_below = bool(intervention_active and len(diff) and diff.max() <= 1e-9 and diff.min() < -1e-9)
+
+    if fill_above:
+        fill_kwargs = {'fill': 'tonexty', 'fillcolor': 'rgba(44, 160, 44, 0.10)'}
+    elif fill_below:
+        fill_kwargs = {'fill': 'tonexty', 'fillcolor': 'rgba(220, 53, 69, 0.10)'}
+    else:
+        fill_kwargs = {}
 
     fig_surv = go.Figure()
     fig_surv.add_trace(go.Scatter(
         x=ages_b, y=vals_b, mode='lines', name='Today',
-        line=dict(color=COLOR_BASELINE, width=2, dash='dash'),
+        line=dict(color=COLOR_BASELINE, width=2),
         text=_hover_surv(ages_b, vals_b, base_mort), hoverinfo='text',
     ))
-    fig_surv.add_trace(go.Scatter(
-        x=ages_i, y=vals_i, mode='lines', name='With your changes',
-        line=dict(color=COLOR_INTERVENTION, width=3),
-        text=_hover_surv(ages_i, vals_i, int_mort), hoverinfo='text',
-        fill='tonexty' if (np.isfinite(years_gained) and years_gained > 0) else None,
-        fillcolor='rgba(44, 160, 44, 0.10)' if (np.isfinite(years_gained) and years_gained > 0) else None,
-    ))
+    if intervention_active:
+        fig_surv.add_trace(go.Scatter(
+            x=ages_i, y=vals_i, mode='lines', name='With your changes',
+            line=dict(color=intervention_color, width=3),
+            text=_hover_surv(ages_i, vals_i, int_mort), hoverinfo='text',
+            **fill_kwargs,
+        ))
 
     shapes = [dict(type='line', xref='paper', x0=0, x1=1, yref='y', y0=50, y1=50,
                    line=dict(color='#adb5bd', width=1, dash='dot'))]
@@ -760,38 +866,40 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
                                 text=f"Today: {base_median:.0f}",
                                 showarrow=False, font=dict(color=COLOR_BASELINE, size=10),
                                 bgcolor='rgba(248,249,250,0.85)'))
-    if np.isfinite(int_median):
+    # Only draw the scenario median marker if it falls within the displayed range.
+    if intervention_active and np.isfinite(int_median) and int_median <= ages_b.max():
         shapes.append(dict(type='line', xref='x', x0=int_median, x1=int_median,
                            yref='y', y0=0, y1=50,
-                           line=dict(color=COLOR_INTERVENTION, width=1, dash='dot')))
+                           line=dict(color=intervention_color, width=1, dash='dot')))
         annotations.append(dict(x=int_median, y=6, xref='x', yref='y',
                                 text=f"Scenario: {int_median:.0f}",
-                                showarrow=False, font=dict(color=COLOR_INTERVENTION, size=10),
+                                showarrow=False, font=dict(color=intervention_color, size=10),
                                 bgcolor='rgba(248,249,250,0.85)'))
 
     # Milestone markers (skip ones already past for the user)
-    milestone_x, milestone_y, milestone_text = [], [], []
-    for m_age in MILESTONE_AGES:
-        if user_age is not None and m_age <= user_age:
-            continue
-        if m_age <= int_surv.index.max():
-            int_pct = _survival_at(int_surv, m_age) * 100
-            base_pct = _survival_at(base_surv, m_age) * 100
-            milestone_x.append(m_age)
-            milestone_y.append(int_pct)
-            milestone_text.append(
-                f"<b>Age {m_age}</b><br>"
-                f"Scenario: {int_pct:.0f}% alive<br>"
-                f"Today: {base_pct:.0f}% alive"
-            )
-    if milestone_x:
-        fig_surv.add_trace(go.Scatter(
-            x=milestone_x, y=milestone_y, mode='markers', name='Milestones',
-            marker=dict(size=9, color=COLOR_INTERVENTION, line=dict(color='white', width=2)),
-            text=milestone_text, hoverinfo='text', showlegend=False,
-        ))
+    if intervention_active:
+        milestone_x, milestone_y, milestone_text = [], [], []
+        for m_age in MILESTONE_AGES:
+            if user_age is not None and m_age <= user_age:
+                continue
+            if m_age <= int_surv.index.max():
+                int_pct = _survival_at(int_surv, m_age) * 100
+                base_pct = _survival_at(base_surv, m_age) * 100
+                milestone_x.append(m_age)
+                milestone_y.append(int_pct)
+                milestone_text.append(
+                    f"<b>Age {m_age}</b><br>"
+                    f"Scenario: {int_pct:.0f}% alive<br>"
+                    f"Today: {base_pct:.0f}% alive"
+                )
+        if milestone_x:
+            fig_surv.add_trace(go.Scatter(
+                x=milestone_x, y=milestone_y, mode='markers', name='Milestones',
+                marker=dict(size=9, color=intervention_color, line=dict(color='white', width=2)),
+                text=milestone_text, hoverinfo='text', showlegend=False,
+            ))
 
-    surv_title = f"{poss} chance of still being alive" if poss else "Chance of still being alive"
+    surv_title = _card_title("chance of still being alive", poss)
     fig_surv.update_layout(
         title=dict(text=surv_title, font=dict(size=17)),
         xaxis=dict(title="Age (years)", showgrid=True, gridcolor='#eef0f2', zeroline=False),
@@ -803,65 +911,45 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
         margin=dict(l=60, r=30, t=60, b=90), plot_bgcolor='white',
     )
 
-    # --- Mortality figure ---
-    def _hover_mort(ages, vals):
-        out = []
-        for age, mx in zip(ages, vals):
-            if not np.isfinite(mx) or mx <= 0:
-                out.append(f"<b>Age {int(age)}</b>")
-                continue
-            per_1000 = mx * 1000
-            out.append(
-                f"<b>Age {int(age)}</b><br>"
-                f"{per_1000:.2f} in 1,000 die this year<br>"
-                f"({mx*100:.3f}% annual risk)"
-            )
-        return out
+    # --- Healthspan figure: expected number of chronic conditions ---
+    ages_h_b = np.asarray(base_condition_count.index)
+    vals_h_b = np.asarray(base_condition_count.values)
+    ages_h_i = np.asarray(int_condition_count.index)
+    vals_h_i = np.asarray(int_condition_count.values)
+    if user_age is not None and user_age > 0:
+        mask_b = ages_h_b >= user_age
+        ages_h_b, vals_h_b = ages_h_b[mask_b], vals_h_b[mask_b]
+        mask_i = ages_h_i >= user_age
+        ages_h_i, vals_h_i = ages_h_i[mask_i], vals_h_i[mask_i]
 
-    fig_mort = go.Figure()
-    fig_mort.add_trace(go.Scatter(
-        x=plot_base_mort.index, y=plot_base_mort.values,
-        mode='lines', name='Today',
-        line=dict(color=COLOR_BASELINE, width=2, dash='dash'),
-        text=_hover_mort(plot_base_mort.index, plot_base_mort.values),
-        hoverinfo='text',
+    fig_health = go.Figure()
+    fig_health.add_trace(go.Scatter(
+        x=ages_h_b, y=vals_h_b, mode='lines', name='Today',
+        line=dict(color=COLOR_BASELINE, width=2),
+        hovertemplate="Age %{x}<br>%{y:.2f} chronic conditions (expected)<extra></extra>",
     ))
-    fig_mort.add_trace(go.Scatter(
-        x=plot_int_mort.index, y=plot_int_mort.values,
-        mode='lines', name='With your changes',
-        line=dict(color=COLOR_INTERVENTION, width=3),
-        text=_hover_mort(plot_int_mort.index, plot_int_mort.values),
-        hoverinfo='text',
-    ))
-    if len(base_fit_res['x']) > 0:
-        fig_mort.add_trace(go.Scatter(
-            x=base_fit_res['x'], y=base_fit_res['y_pred'],
-            mode='lines', name='Baseline fit',
-            line=dict(color=COLOR_BASELINE, width=1, dash='dot'),
-            hoverinfo='skip',
-        ))
-    if len(int_fit_res['x']) > 0:
-        fig_mort.add_trace(go.Scatter(
-            x=int_fit_res['x'], y=int_fit_res['y_pred'],
-            mode='lines', name='Scenario fit',
-            line=dict(color=COLOR_INTERVENTION, width=1, dash='dot'),
-            hoverinfo='skip',
+    if intervention_active:
+        fig_health.add_trace(go.Scatter(
+            x=ages_h_i, y=vals_h_i, mode='lines', name='With your changes',
+            line=dict(color=intervention_color, width=3),
+            hovertemplate="Age %{x}<br>%{y:.2f} chronic conditions (expected)<extra></extra>",
         ))
 
-    fig_mort.update_layout(
-        title=dict(
-            text=f"Yearly death risk<span style='font-size:12px;color:#6c757d'>{mort_subtitle}</span>",
-            font=dict(size=17)),
-        xaxis=dict(title="Age (years)", showgrid=True, gridcolor='#eef0f2', zeroline=False),
-        yaxis=dict(title="Annual risk of dying (log scale)", type='log',
-                   showgrid=True, gridcolor='#eef0f2', zeroline=False),
+    health_title = _card_title("expected number of chronic conditions", poss)
+    x_lo = float(user_age) if (user_age is not None and user_age > 0) else 0.0
+    fig_health.update_layout(
+        title=dict(text=health_title, font=dict(size=17)),
+        xaxis=dict(title="Age (years)", showgrid=True, gridcolor='#eef0f2',
+                   zeroline=False, range=[x_lo, 95]),
+        yaxis=dict(title="Expected # of chronic conditions",
+                   showgrid=True, gridcolor='#eef0f2', zeroline=False, rangemode='tozero'),
         template="plotly_white", hovermode="x unified",
         legend=dict(orientation='h', yanchor='top', y=-0.18, xanchor='center', x=0.5),
         margin=dict(l=60, r=30, t=60, b=90), plot_bgcolor='white',
     )
 
     return (
-        fig_surv, fig_mort,
+        fig_surv, fig_health,
         lifespan_title, lifespan_body,
         gain_title, gain_body,
         title_80, body_80,

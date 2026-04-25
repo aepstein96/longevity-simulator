@@ -5,55 +5,14 @@ This reduces the large raw MMCD file (~hundreds of MB) to a small CSV (~few KB)
 containing only the fraction of deaths from each cause category at each age.
 """
 
+import os
+import sys
+
 import numpy as np
 import pandas as pd
 
-
-def categorize_cause(icd_list):
-    """Categorize ICD-10 codes into major cause categories."""
-    if icd_list is None:
-        return 'Unknown'
-    
-    try:
-        if pd.isna(icd_list):
-            return 'Unknown'
-    except (TypeError, ValueError):
-        pass
-    
-    if not isinstance(icd_list, list) or len(icd_list) == 0:
-        return 'Unknown'
-    
-    code = icd_list[0]
-    
-    if not code or code == 'None' or pd.isna(code):
-        return 'Unknown'
-    
-    first_letter = str(code)[0].upper()
-    
-    if first_letter == 'C' or (first_letter == 'D' and len(code) > 1 and code[1] in '01234'):
-        return 'Cancer'
-    elif first_letter == 'I':
-        return 'Cardiovascular'
-    elif first_letter == 'J':
-        return 'Respiratory'
-    elif first_letter == 'E':
-        return 'Endocrine'
-    elif first_letter == 'U' and str(code).startswith('U07'):
-        return 'COVID-19'
-    elif first_letter == 'K':
-        return 'Digestive'
-    elif first_letter == 'N':
-        return 'Genitourinary'
-    elif first_letter == 'G':
-        return 'Neurological'
-    elif first_letter == 'F':
-        return 'Mental'
-    elif first_letter in ['A', 'B']:
-        return 'Infectious'
-    elif first_letter in ['V', 'W', 'X', 'Y']:
-        return 'External'
-    else:
-        return 'Other'
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.causes import categorize_cause  # noqa: E402  bucket assignment lives in src.causes
 
 
 def process_mmcd(input_path, output_path, exclude_covid=True, group_old_ages=True, sex=None):
@@ -133,7 +92,7 @@ def process_mmcd(input_path, output_path, exclude_covid=True, group_old_ages=Tru
 
 
 if __name__ == '__main__':
-    input_file = '../raw_data/MMCD_2022.parquet'
+    input_file = '../raw_data/MMCD_2024.parquet'
     
     # Process total (both sexes)
     print("="*60)

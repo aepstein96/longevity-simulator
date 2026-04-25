@@ -1,0 +1,36 @@
+bucket,bucket_label,display_order,icd10_start,icd10_end,gbd_cause_id,gbd_outline,gbd_cause_name,gbd_level,notes
+Cardiovascular,Heart disease & stroke,1,I00,I11,491,B.2,Cardiovascular diseases,2,Rheumatic / hypertensive heart / IHD
+Cardiovascular,Heart disease & stroke,1,I14,I99,491,B.2,Cardiovascular diseases,2,Stroke / arrhythmias / heart failure / aneurysm / other
+Cancer,Cancer,2,C00,C97,410,B.1,Neoplasms,2,Malignant neoplasms
+Cancer,Cancer,2,D00,D49,410,B.1,Neoplasms,2,In situ + benign + uncertain neoplasms (legacy CDC behavior)
+Neurological,Alzheimer's & nervous system,3,F00,F09,542,B.5,Neurological disorders,2,Organic mental disorders incl. dementia (GBD treats as B.5.1 Alzheimer's & dementias)
+Neurological,Alzheimer's & nervous system,3,G00,G99,542,B.5,Neurological disorders,2,Nervous system diseases (Alzheimer's G30 / Parkinson's G20 / MS G35 / epilepsy / etc.)
+Chronic respiratory,Chronic lung disease,4,J30,J84,508,B.3,Chronic respiratory diseases,2,COPD / asthma / occupational / ILD
+Chronic respiratory,Chronic lung disease,4,J90,J99,508,B.3,Chronic respiratory diseases,2,Pleural / respiratory failure / other
+Diabetes & kidney disease,Diabetes & kidney disease,5,E10,E14,974,B.8,Diabetes and kidney diseases,2,Diabetes mellitus (GBD B.8.1)
+Diabetes & kidney disease,Diabetes & kidney disease,5,I12,I13,974,B.8,Diabetes and kidney diseases,2,Hypertensive renal disease (GBD assigns to B.8.2)
+Diabetes & kidney disease,Diabetes & kidney disease,5,N00,N08,974,B.8,Diabetes and kidney diseases,2,Glomerular diseases (GBD B.8.2 CKD)
+Diabetes & kidney disease,Diabetes & kidney disease,5,N17,N19,974,B.8,Diabetes and kidney diseases,2,Acute kidney failure / chronic kidney disease / unspecified renal failure
+Other,Other causes,13,D50,D89,619,B.12.5,"Endocrine, metabolic, blood, and immune disorders",3,Anemias / coagulation / immune disorders
+Other,Other causes,13,E00,E07,619,B.12.5,"Endocrine, metabolic, blood, and immune disorders",3,Thyroid disorders
+Other,Other causes,13,E15,E35,619,B.12.5,"Endocrine, metabolic, blood, and immune disorders",3,Other endocrine glands (excludes diabetes E10-E14)
+Other,Other causes,13,E65,E89,619,B.12.5,"Endocrine, metabolic, blood, and immune disorders",3,Obesity / hyperalimentation / metabolic disorders
+Digestive,Digestive disease,7,K00,K99,526,B.4,Digestive diseases,2,Diseases of the digestive system
+Other,Other causes,13,N09,N16,640,B.12,Other non-communicable diseases,2,Other non-CKD nephritis / tubulo-interstitial (granular GBD: mostly B.12.2)
+Other,Other causes,13,N20,N99,640,B.12,Other non-communicable diseases,2,Urolithiasis / male and female genital (granular GBD: B.12.2 + B.12.3)
+Infectious,Infections & early-life,9,A00,B99,295,A,"Communicable, maternal, neonatal, and nutritional diseases",1,Infectious & parasitic diseases (GBD A.1-A.5)
+Infectious,Infections & early-life,9,E40,E64,295,A,"Communicable, maternal, neonatal, and nutritional diseases",1,Nutritional deficiencies (GBD A.7)
+Infectious,Infections & early-life,9,J00,J22,295,A,"Communicable, maternal, neonatal, and nutritional diseases",1,Acute respiratory infections incl. pneumonia & influenza (GBD A.2.2 + A.2.3)
+Infectious,Infections & early-life,9,J85,J86,295,A,"Communicable, maternal, neonatal, and nutritional diseases",1,Lung abscess / suppurative respiratory (GBD A.2.2)
+Infectious,Infections & early-life,9,O00,O99,295,A,"Communicable, maternal, neonatal, and nutritional diseases",1,Maternal causes (GBD A.6)
+Infectious,Infections & early-life,9,P00,P96,295,A,"Communicable, maternal, neonatal, and nutritional diseases",1,Perinatal / neonatal causes (GBD A.6)
+Mental illness,Mental illness,13,F10,F99,558,B.6,Mental disorders,2,Substance use F10-F19 (GBD B.7) + schizophrenia / mood / anxiety / etc.
+External,Accidents & injuries,11,V00,Y99,687,C,Injuries,1,External causes — transport / unintentional / self-harm / violence
+COVID-19,COVID-19,12,U07,U07,1048,A.2.5,COVID-19,3,Excluded by default in preprocessing
+Other,Other causes,13,H00,H99,640,B.12,Other non-communicable diseases,2,Eye/ear (granular GBD: B.10 Sense organ)
+Other,Other causes,13,L00,L99,640,B.12,Other non-communicable diseases,2,Skin (granular GBD: B.9)
+Other,Other causes,13,M00,M99,640,B.12,Other non-communicable diseases,2,Musculoskeletal (granular GBD: B.11)
+Other,Other causes,13,Q00,Q99,640,B.12,Other non-communicable diseases,2,Congenital malformations (granular GBD: B.12.1)
+Other,Other causes,13,R00,R99,640,B.12,Other non-communicable diseases,2,Symptoms / signs / ill-defined (R95 SIDS = granular GBD B.12.7)
+Other,Other causes,13,S00,T99,640,B.12,Other non-communicable diseases,2,Injury sequelae and complications
+Other,Other causes,13,Z00,Z99,640,B.12,Other non-communicable diseases,2,Factors influencing health status / contact with services

@@ -44,10 +44,10 @@ def stop_aging(true_mortality_rate, final_age, pad_to_age=0):
     
     if pad_to_age > current_max_age:
         final_death_rate = out.loc[current_max_age]
-        out_pad_index = np.arange(current_max_age + 1, pad_to_age)
+        out_pad_index = np.arange(current_max_age + 1, pad_to_age + 1)
         out_pad = pd.Series(final_death_rate, index=out_pad_index)
         out = pd.concat([out, out_pad])
-    
+
     return out
 
 

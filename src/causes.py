@@ -1,84 +1,108 @@
-"""Functions for analyzing causes of death and modeling disease interventions."""
+"""Functions for analyzing causes of death and modeling disease interventions.
+
+The bucket → ICD-10 → GBD mapping is data-driven: see
+``data/CDC/cause_categories.csv``. Edit that file to change which ICD-10
+codes flow into which app bucket; the lookup logic below just consumes it.
+"""
+
+import functools
+import os
 
 import numpy as np
 import pandas as pd
 
 
-def categorize_cause(icd_list):
+_CATEGORIES_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    'data', 'CDC', 'cause_categories.csv',
+)
+
+
+@functools.lru_cache(maxsize=1)
+def _load_categories():
+    """Read the bucket → ICD-10 → GBD mapping CSV."""
+    return pd.read_csv(_CATEGORIES_PATH)
+
+
+@functools.lru_cache(maxsize=1)
+def _icd10_prefix_lookup():
+    """Build a {3-char ICD-10 prefix → bucket} dict from the mapping CSV.
+
+    Each row of the CSV defines an inclusive 3-character ICD-10 range
+    (e.g. E10-E14). We expand each range into individual prefixes so the
+    runtime lookup is a single dict access.
     """
-    Categorize ICD-10 codes into major cause categories.
-    
-    Uses the first code in the list (underlying cause of death).
-    
-    Parameters
-    ----------
-    icd_list : list or None
-        List of ICD-10 codes, e.g., ['C349', 'F179']
-    
-    Returns
-    -------
-    str
-        Major cause category
-    
-    Categories
-    ----------
-    - Cancer: Malignant neoplasms (C00-C97, D00-D48)
-    - Cardiovascular: Diseases of the circulatory system (I00-I99)
-    - Respiratory: Diseases of the respiratory system (J00-J99)
-    - Endocrine: Endocrine, nutritional and metabolic diseases (E00-E89)
-    - COVID-19: COVID-19 (U07)
-    - Digestive: Diseases of the digestive system (K00-K93)
-    - Genitourinary: Diseases of the genitourinary system (N00-N99)
-    - Neurological: Diseases of the nervous system (G00-G99)
-    - Mental: Mental and behavioral disorders (F00-F99)
-    - Infectious: Certain infectious and parasitic diseases (A00-B99)
-    - External: External causes of morbidity and mortality (V01-Y98)
-    - Other: All other causes
-    - Unknown: Missing or invalid data
+    df = _load_categories()
+    lookup = {}
+    for _, row in df.iterrows():
+        start, end = str(row['icd10_start']).upper(), str(row['icd10_end']).upper()
+        bucket = row['bucket']
+        if len(start) != 3 or len(end) != 3:
+            raise ValueError(f"ICD-10 range bounds must be 3 chars: {start}-{end}")
+        for letter_ord in range(ord(start[0]), ord(end[0]) + 1):
+            letter = chr(letter_ord)
+            num_lo = int(start[1:3]) if letter == start[0] else 0
+            num_hi = int(end[1:3]) if letter == end[0] else 99
+            for n in range(num_lo, num_hi + 1):
+                prefix = f'{letter}{n:02d}'
+                if prefix in lookup and lookup[prefix] != bucket:
+                    raise ValueError(
+                        f"ICD-10 prefix {prefix} mapped to both "
+                        f"{lookup[prefix]!r} and {bucket!r}")
+                lookup[prefix] = bucket
+    return lookup
+
+
+def categorize_cause(icd_list):
+    """Map an ICD-10 code list to its app bucket.
+
+    Uses the first code in the list (underlying cause of death). The
+    bucket comes from ``data/CDC/cause_categories.csv``; codes that don't
+    match any range fall through to ``'Other'``. Empty / missing input
+    returns ``'Unknown'``.
     """
     if icd_list is None:
         return 'Unknown'
-    
     try:
         if pd.isna(icd_list):
             return 'Unknown'
     except (TypeError, ValueError):
         pass
-    
     if not isinstance(icd_list, list) or len(icd_list) == 0:
         return 'Unknown'
-    
     code = icd_list[0]
-    
     if not code or code == 'None' or pd.isna(code):
         return 'Unknown'
-    
-    first_letter = str(code)[0].upper()
-    
-    if first_letter == 'C' or (first_letter == 'D' and len(code) > 1 and code[1] in '01234'):
-        return 'Cancer'
-    elif first_letter == 'I':
-        return 'Cardiovascular'
-    elif first_letter == 'J':
-        return 'Respiratory'
-    elif first_letter == 'E':
-        return 'Endocrine'
-    elif first_letter == 'U' and str(code).startswith('U07'):
-        return 'COVID-19'
-    elif first_letter == 'K':
-        return 'Digestive'
-    elif first_letter == 'N':
-        return 'Genitourinary'
-    elif first_letter == 'G':
-        return 'Neurological'
-    elif first_letter == 'F':
-        return 'Mental'
-    elif first_letter in ['A', 'B']:
-        return 'Infectious'
-    elif first_letter in ['V', 'W', 'X', 'Y']:
-        return 'External'
-    else:
-        return 'Other'
+    prefix = str(code).upper()[:3]
+    return _icd10_prefix_lookup().get(prefix, 'Other')
+
+
+def bucket_labels():
+    """Return ``{bucket → display label}`` from the mapping CSV."""
+    df = _load_categories()
+    return df.drop_duplicates('bucket').set_index('bucket')['bucket_label'].to_dict()
+
+
+def bucket_order():
+    """Return buckets in display order (per ``display_order`` column)."""
+    df = _load_categories()
+    return (df.drop_duplicates('bucket')
+              .sort_values('display_order')['bucket'].tolist())
+
+
+def bucket_gbd_info(bucket):
+    """Return ``{cause_id, outline, name, level}`` for a bucket's primary GBD match."""
+    df = _load_categories()
+    rows = df[df['bucket'] == bucket]
+    if len(rows) == 0:
+        return None
+    r = rows.iloc[0]
+    return {
+        'cause_id': int(r['gbd_cause_id']),
+        'outline': r['gbd_outline'],
+        'name': r['gbd_cause_name'],
+        'level': int(r['gbd_level']),
+    }
 
 
 def load_cause_fractions(filepath='data/CDC/cause_fractions_total.csv'):
