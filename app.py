@@ -44,7 +44,6 @@ COLOR_MU = "#6f42c1"   # purple
 COLOR_A = "#d62728"    # red — waves / insults
 COLOR_B = "#2a9d8f"    # teal — seawall / resistance
 
-MILESTONE_AGES = [65, 80, 90, 100]
 DEFAULT_SLOW_START = 25
 
 
@@ -951,29 +950,6 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent,
                                 text=f"Scenario: {int_median:.0f}",
                                 showarrow=False, font=dict(color=intervention_color, size=10),
                                 bgcolor='rgba(248,249,250,0.85)'))
-
-    # Milestone markers (skip ones already past for the user)
-    if intervention_active:
-        milestone_x, milestone_y, milestone_text = [], [], []
-        for m_age in MILESTONE_AGES:
-            if user_age is not None and m_age <= user_age:
-                continue
-            if m_age <= int_surv.index.max():
-                int_pct = _survival_at(int_surv, m_age) * 100
-                base_pct = _survival_at(base_surv, m_age) * 100
-                milestone_x.append(m_age)
-                milestone_y.append(int_pct)
-                milestone_text.append(
-                    f"<b>Age {m_age}</b><br>"
-                    f"Scenario: {int_pct:.0f}% alive<br>"
-                    f"Today: {base_pct:.0f}% alive"
-                )
-        if milestone_x:
-            fig_surv.add_trace(go.Scatter(
-                x=milestone_x, y=milestone_y, mode='markers', name='Milestones',
-                marker=dict(size=9, color=intervention_color, line=dict(color='white', width=2)),
-                text=milestone_text, hoverinfo='text', showlegend=False,
-            ))
 
     surv_title = _card_title("chance of still being alive", poss)
     fig_surv.update_layout(
