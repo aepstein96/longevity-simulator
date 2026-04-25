@@ -320,16 +320,6 @@ sidebar = html.Div(
             id="advanced-collapse",
             is_open=False,
         ),
-
-        html.Div(
-            html.Img(
-                src=app.get_asset_url('lockup-stacked.svg'),
-                alt='Second Century Foundation',
-                style={"width": "100%", "display": "block",
-                       "opacity": 0.9},
-            ),
-            className="mt-auto pt-4",
-        ),
     ],
     style={
         "position": "fixed",
