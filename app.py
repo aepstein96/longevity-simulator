@@ -1,7 +1,7 @@
 import json
 
 import dash
-from dash import dcc, html, Input, Output, State, ALL, callback_context
+from dash import dcc, html, Input, Output, State, ALL, callback_context, no_update
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 import pandas as pd
@@ -215,6 +215,48 @@ def _gompertz_rows(base_val, int_val, show_intervention=True,
     return rows
 
 
+def _resolve_slow_start(slow_start_input, user_age):
+    """Pick the start age for the aging intervention.
+
+    The dedicated input wins when set. Otherwise fall back to user_age,
+    then to DEFAULT_SLOW_START. Always >= user_age.
+    """
+    floor = int(user_age) if user_age is not None else DEFAULT_SLOW_START
+    if slow_start_input is None:
+        return floor
+    return max(int(slow_start_input), floor)
+
+
+def _format_export_csv(df, params):
+    """Build a CSV string with parameter header rows, a blank row, then the table."""
+    def _csv_quote(v):
+        s = '' if v is None else str(v)
+        if any(ch in s for ch in (',', '"', '\n')):
+            return '"' + s.replace('"', '""') + '"'
+        return s
+    lines = [f'{_csv_quote(k)},{_csv_quote(v)}' for k, v in params]
+    lines.append('')  # spacer between params and table
+    lines.append(','.join(_csv_quote(c) for c in df.columns))
+    for row in df.itertuples(index=False):
+        lines.append(','.join(
+            (f'{v:.4f}' if isinstance(v, float) else _csv_quote(v))
+            for v in row
+        ))
+    return '\n'.join(lines) + '\n'
+
+
+def _export_params(user_age, sex, removed_causes, aging_rate_percent, slow_start):
+    labels = causes.bucket_labels()
+    diseases = '; '.join(labels.get(c, c) for c in (removed_causes or []))
+    return [
+        ('Starting age', user_age if user_age is not None else ''),
+        ('Sex', sex if sex else 'All'),
+        ('Diseases cured', diseases),
+        ('Aging rate', aging_rate_percent if aging_rate_percent is not None else 100),
+        ('Slow/speed aging starting at', slow_start),
+    ]
+
+
 # --- Sidebar ---
 
 sidebar = html.Div(
@@ -285,7 +327,7 @@ sidebar = html.Div(
             info_badge(
                 "tip-rate",
                 "100% = normal aging. 50% = age half as fast. 0% = aging frozen. "
-                "The intervention starts at your age.",
+                "The intervention starts at the age set below (defaults to your current age).",
             ),
         ]),
         html.Div(id='aging-rate-label', className="small text-muted mt-1"),
@@ -295,6 +337,18 @@ sidebar = html.Div(
             marks={0: '0%', 50: '50%', 100: '100%', 150: '150%'},
             tooltip={"placement": "bottom", "always_visible": False},
         ),
+
+        html.Div([
+            html.Div([
+                html.Label("Start at age", className="small text-muted mb-0"),
+                dbc.Input(id='slow-aging-start-input', type='number',
+                          value=40, min=40, max=100, step=1, size='sm',
+                          style={'width': '5rem'}),
+            ], className="d-flex justify-content-between align-items-center"),
+            html.Div("Defaults to your current age. Pick a higher number to delay the intervention.",
+                     className="small text-muted mt-1"),
+        ], className="mt-3"),
+        dcc.Store(id='slow-start-overridden', data=False),
 
         html.Hr(),
         dbc.Button(
@@ -367,6 +421,17 @@ content = html.Div(
             className="g-3",
         ),
 
+        html.Div([
+            dbc.Button([html.I(className='bi bi-download me-1'), "Lifespan CSV"],
+                       id='btn-download-lifespan', color='secondary',
+                       outline=True, size='sm', className='me-2'),
+            dbc.Button([html.I(className='bi bi-download me-1'), "Healthspan CSV"],
+                       id='btn-download-healthspan', color='secondary',
+                       outline=True, size='sm'),
+            dcc.Download(id='download-lifespan'),
+            dcc.Download(id='download-healthspan'),
+        ], className='text-end mt-3'),
+
         dbc.Card(
             dbc.CardBody([
                 html.H6("How to read this", className="card-title"),
@@ -376,6 +441,10 @@ content = html.Div(
                     "The right chart shows the average number of chronic conditions a person "
                     "of that age has — your healthspan curve. Lower is healthier.",
                     className="small text-muted mb-0",
+                ),
+                html.P(
+                    "Don't like the plot format? Download your scenario data as CSVs and ask Claude to make you custom charts.",
+                    className="small text-muted mt-2",
                 ),
             ]),
             className="mt-4",
@@ -610,13 +679,13 @@ def toggle_math(n):
 @app.callback(
     Output('aging-rate-label', 'children'),
     Input('aging-rate-slider', 'value'),
-    Input('user-age', 'value'),
+    Input('slow-aging-start-input', 'value'),
 )
-def label_aging_rate(value, user_age):
-    start_age = user_age if user_age is not None else DEFAULT_SLOW_START
-    start_suffix = f" starting at {int(start_age)}"
+def label_aging_rate(value, slow_start):
     if value is None or value == 100:
-        return f"Normal aging (100%){start_suffix}"
+        return "Normal aging (100%)"
+    start_age = int(slow_start) if slow_start is not None else DEFAULT_SLOW_START
+    start_suffix = f" starting at age {start_age}"
     if value == 0:
         return f"Frozen aging (0%){start_suffix}"
     if value < 100:
@@ -681,11 +750,13 @@ def reflect_button_state(selected, ids):
         Input('sex-dropdown', 'value'),
         Input('selected-causes', 'data'),
         Input('aging-rate-slider', 'value'),
+        Input('slow-aging-start-input', 'value'),
         Input('gompertz-options', 'value'),
         Input('pad-to-input', 'value'),
     ],
 )
-def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, gompertz_opts, pad_to):
+def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent,
+                     slow_start_input, gompertz_opts, pad_to):
     if pad_to is None:
         pad_to = 120
     if removed_causes is None:
@@ -695,7 +766,7 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
     if sex in (None, ''):
         sex = 'All'
     aging_rate = aging_rate_percent / 100.0
-    slow_start = user_age if user_age is not None else DEFAULT_SLOW_START
+    slow_start = _resolve_slow_start(slow_start_input, user_age)
 
     # --- Run simulation ---
     scenario = LongevityScenario(
@@ -902,15 +973,65 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
     )
 
     # --- Healthspan figure: expected number of chronic conditions ---
-    ages_h_b = np.asarray(base_condition_count.index)
-    vals_h_b = np.asarray(base_condition_count.values)
-    ages_h_i = np.asarray(int_condition_count.index)
-    vals_h_i = np.asarray(int_condition_count.values)
-    if user_age is not None and user_age > 0:
-        mask_b = ages_h_b >= user_age
-        ages_h_b, vals_h_b = ages_h_b[mask_b], vals_h_b[mask_b]
-        mask_i = ages_h_i >= user_age
-        ages_h_i, vals_h_i = ages_h_i[mask_i], vals_h_i[mask_i]
+    src_ages_b = np.asarray(base_condition_count.index)
+    src_vals_b = np.asarray(base_condition_count.values)
+    src_ages_i = np.asarray(int_condition_count.index)
+    src_vals_i = np.asarray(int_condition_count.values)
+
+    x_lo = float(user_age) if (user_age is not None and user_age > 0) else 0.0
+    x_hi = 95.0
+
+    # Accelerated aging remaps the curve onto biological ages past the
+    # last GBD anchor, which causes apply_aging_remap to clamp to a flat
+    # tail. Replace that artifact with a slope-based linear extrapolation
+    # drawn as a dashed red line. Slope is the average over the 5 yrs of
+    # real data immediately before the cutoff.
+    # The smoother (preprocessing/smooth_gbd.py) places the "95+ years"
+    # bucket midpoint at age 97 and flat-fills 98–100 with that value, so
+    # 97 is the highest bio-age with a non-saturated value.
+    GBD_DATA_MAX_AGE = 97
+    extrap_x, extrap_y, cutoff_int = None, None, None
+    if intervention_active and aging_rate > 1.0:
+        cutoff_age = slow_start + (GBD_DATA_MAX_AGE - slow_start) / aging_rate
+        c = int(np.floor(cutoff_age))
+        if c < x_hi and c in src_ages_i:
+            end_pos = int(np.where(src_ages_i == c)[0][0])
+            start_pos = max(0, end_pos - 5)
+            dx = src_ages_i[end_pos] - src_ages_i[start_pos]
+            if dx > 0:
+                slope = (src_vals_i[end_pos] - src_vals_i[start_pos]) / dx
+                cutoff_int = c
+                extrap_x = np.arange(c, int(x_hi) + 1)
+                extrap_y = src_vals_i[end_pos] + slope * (extrap_x - c)
+
+    def _trim(ages, vals):
+        m = (ages >= x_lo) & (ages <= x_hi)
+        return ages[m], vals[m]
+    ages_h_b, vals_h_b = _trim(src_ages_b, src_vals_b)
+    ages_h_i, vals_h_i = _trim(src_ages_i, src_vals_i)
+
+    if cutoff_int is not None:
+        keep = ages_h_i <= cutoff_int
+        solid_x_i, solid_y_i = ages_h_i[keep], vals_h_i[keep]
+    else:
+        solid_x_i, solid_y_i = ages_h_i, vals_h_i
+
+    # Combined solid + extrapolated values, used for the fill polygon so
+    # the shading covers the dashed region too.
+    full_x_i, full_y_i = solid_x_i, solid_y_i
+    if extrap_x is not None and len(extrap_x) > 1:
+        full_x_i = np.concatenate([solid_x_i, extrap_x[1:]])
+        full_y_i = np.concatenate([solid_y_i, extrap_y[1:]])
+
+    # Fill between the two curves. Lower chronic-condition count is the
+    # healthier outcome, so polarity is flipped vs. the survival chart.
+    fill_color_h = None
+    if intervention_active and len(full_x_i) and len(ages_h_b):
+        diff_h = full_y_i - np.interp(full_x_i, ages_h_b, vals_h_b)
+        if diff_h.max() <= 1e-9 and diff_h.min() < -1e-9:
+            fill_color_h = 'rgba(44, 160, 44, 0.12)'   # int below base → green
+        elif diff_h.min() >= -1e-9 and diff_h.max() > 1e-9:
+            fill_color_h = 'rgba(220, 53, 69, 0.12)'   # int above base → red
 
     fig_health = go.Figure()
     fig_health.add_trace(go.Scatter(
@@ -919,18 +1040,31 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
         hovertemplate="Age %{x}<br>%{y:.2f} chronic conditions (expected)<extra></extra>",
     ))
     if intervention_active:
+        if fill_color_h is not None:
+            fig_health.add_trace(go.Scatter(
+                x=full_x_i, y=full_y_i, mode='lines',
+                line=dict(color='rgba(0,0,0,0)', width=0),
+                fill='tonexty', fillcolor=fill_color_h,
+                hoverinfo='skip', showlegend=False,
+            ))
         fig_health.add_trace(go.Scatter(
-            x=ages_h_i, y=vals_h_i, mode='lines', name='With your changes',
+            x=solid_x_i, y=solid_y_i, mode='lines', name='With your changes',
             line=dict(color=intervention_color, width=3),
             hovertemplate="Age %{x}<br>%{y:.2f} chronic conditions (expected)<extra></extra>",
         ))
+        if extrap_x is not None and len(extrap_x) > 1:
+            fig_health.add_trace(go.Scatter(
+                x=extrap_x, y=extrap_y, mode='lines',
+                line=dict(color=COLOR_LOSS, width=2, dash='dash'),
+                name='Extrapolated', showlegend=False,
+                hovertemplate="Age %{x}<br>~%{y:.2f} (extrapolated)<extra></extra>",
+            ))
 
     health_title = _card_title("expected number of chronic conditions", poss)
-    x_lo = float(user_age) if (user_age is not None and user_age > 0) else 0.0
     fig_health.update_layout(
         title=dict(text=health_title, font=dict(size=17)),
         xaxis=dict(title="Age (years)", showgrid=True, gridcolor='#eef0f2',
-                   zeroline=False, range=[x_lo, 95]),
+                   zeroline=False, range=[x_lo, x_hi]),
         yaxis=dict(title="Expected # of chronic conditions",
                    showgrid=True, gridcolor='#eef0f2', zeroline=False, rangemode='tozero'),
         template="plotly_white", hovermode="x unified",
@@ -946,6 +1080,105 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent, go
         title_100, body_100,
         gompertz_a_values, gompertz_b_values,
     )
+
+
+@app.callback(
+    Output('slow-aging-start-input', 'value'),
+    Output('slow-aging-start-input', 'min'),
+    Input('user-age', 'value'),
+    State('slow-aging-start-input', 'value'),
+    State('slow-start-overridden', 'data'),
+)
+def sync_slow_start_to_user_age(user_age, current, overridden):
+    floor = int(user_age) if user_age is not None else 0
+    # Auto-track user age unless the user has manually set a different
+    # value that's still a valid (>= floor) override.
+    if not overridden or current is None or int(current) < floor:
+        return floor, floor
+    return no_update, floor
+
+
+@app.callback(
+    Output('slow-start-overridden', 'data'),
+    Input('slow-aging-start-input', 'value'),
+    State('user-age', 'value'),
+    prevent_initial_call=True,
+)
+def mark_slow_start_overridden(slow_start, user_age):
+    if slow_start is None or user_age is None:
+        return False
+    return int(slow_start) != int(user_age)
+
+
+def _build_curve_export(target, user_age, sex, removed_causes,
+                        aging_rate_percent, slow_start_input, pad_to):
+    pad_to = pad_to or 120
+    aging_rate_percent = aging_rate_percent if aging_rate_percent is not None else 100
+    aging_rate = aging_rate_percent / 100.0
+    slow_start = _resolve_slow_start(slow_start_input, user_age)
+    sex_value = sex if sex not in (None, '') else 'All'
+    removed = list(removed_causes or [])
+
+    sc = LongevityScenario(sex=sex_value, aging_rate=aging_rate,
+                           slow_aging_age=slow_start, removed_causes=removed)
+    data = sc.get_data(pad_to=pad_to)
+
+    if target == 'lifespan':
+        base = data['baseline_survival']
+        intv = data['intervention_survival']
+        df = pd.DataFrame({
+            'Age': base.index.astype(int),
+            'Baseline % Chance Alive': (base.values * 100),
+            'Scenario % Chance Alive': (intv.values * 100),
+        })
+        filename = 'lifespan_curves.csv'
+    else:
+        base = data['baseline_condition_count']
+        intv = data['intervention_condition_count']
+        df = pd.DataFrame({
+            'Age': base.index.astype(int),
+            'Baseline Expected # Chronic Diseases': base.values,
+            'Scenario Expected # Chronic Diseases': intv.values,
+        })
+        filename = 'healthspan_curves.csv'
+
+    params = _export_params(user_age, sex_value, removed,
+                            aging_rate_percent, slow_start)
+    return dict(content=_format_export_csv(df, params), filename=filename)
+
+
+@app.callback(
+    Output('download-lifespan', 'data'),
+    Input('btn-download-lifespan', 'n_clicks'),
+    State('user-age', 'value'),
+    State('sex-dropdown', 'value'),
+    State('selected-causes', 'data'),
+    State('aging-rate-slider', 'value'),
+    State('slow-aging-start-input', 'value'),
+    State('pad-to-input', 'value'),
+    prevent_initial_call=True,
+)
+def export_lifespan_csv(n_clicks, user_age, sex, removed_causes,
+                        aging_rate_percent, slow_start_input, pad_to):
+    return _build_curve_export('lifespan', user_age, sex, removed_causes,
+                               aging_rate_percent, slow_start_input, pad_to)
+
+
+@app.callback(
+    Output('download-healthspan', 'data'),
+    Input('btn-download-healthspan', 'n_clicks'),
+    State('user-age', 'value'),
+    State('sex-dropdown', 'value'),
+    State('selected-causes', 'data'),
+    State('aging-rate-slider', 'value'),
+    State('slow-aging-start-input', 'value'),
+    State('pad-to-input', 'value'),
+    prevent_initial_call=True,
+)
+def export_healthspan_csv(n_clicks, user_age, sex, removed_causes,
+                          aging_rate_percent, slow_start_input, pad_to):
+    return _build_curve_export('healthspan', user_age, sex, removed_causes,
+                               aging_rate_percent, slow_start_input, pad_to)
 
 
 if __name__ == '__main__':
