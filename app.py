@@ -221,7 +221,7 @@ sidebar = html.Div(
     [
         html.H2("Longevity Simulator", className="h4"),
         html.P(
-            "See how curing diseases or slowing aging could change expected lifespan.",
+            "See how curing diseases or slowing aging could change expected lifespan for a U.S. resident.",
             className="text-muted small",
         ),
         html.Hr(),
