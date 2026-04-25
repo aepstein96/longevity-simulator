@@ -611,6 +611,16 @@ content = html.Div(
                             "When you enter an age, curves are conditioned on being alive right now: S(age ∣ your age) = S(age) / S(your age).",
                         ]),
                         html.Li([
+                            html.Em("Modeling of chronic conditions: "),
+                            "Each chronic condition has an expected value (prevalence) at each age. We take the weighted average of these to get the expected number of conditions at each age. Curing diseases reduces this by removing the disease from the model.",
+                        ]),
+                        html.Li([
+                            html.Em("Filtering of chronic conditions: "),
+                            "A few chronic conditions in our dataset (mental health, headache) which are generally nonfatal and affect many young people, severely disort the healthspan data, so they were removed. "
+                            "These can be debilitating and are very important but aren't the focus of our study. We think people generally know about their mental health. "
+                            "The question we want to help you answer is how long you'll be able to do the things you love without being held back by age-related physical ailments.",
+                        ]),
+                        html.Li([
                             html.Em("Gompertz fit (advanced): "),
                             "mₓ ≈ a · exp(b · age), fit in log-space on ages 25–100. Useful for comparing the exponential rate of aging between scenarios.",
                         ]),
@@ -622,21 +632,26 @@ content = html.Div(
                     html.Ul([
                         html.Li([
                             html.Em("Perfect cures: "),
-                            "'curing' a disease removes it completely from the model — an upper bound. "
+                            "'Curing' a disease removes it completely from the model."
                             "Real-world treatments are never 100% effective.",
                         ]),
                         html.Li([
-                            html.Em("No competing risks: "),
-                            "removing one cause of death doesn't redistribute risk to other causes. "
-                            "In reality, people who don't die of cancer eventually die of something else.",
+                            html.Em("Independence of diseases: "),
+                            "We assume diseases are independent: the risk of dying from heart disease doesn't depend on whether you have cancer. In reality, diseases interact in complex ways. "
+                            "Note that this doesn't actually matter for the baseline scenario due to linearity of expectation. But it does mean if you cure cancer, we can't model how that affects cardiovascular disease. "
+                            "A future dataset containing individual health trajectories could enable modeling of these interactions.",
                         ]),
                         html.Li([
                             html.Em("Constant mortality past age 100: "),
-                            "we hold the age-100 mortality rate flat through age 120 because the data thins out — "
-                            "this affects the long tail of the survival curve.",
+                            "Since we don't have good mortality data past age 100, we assume a constant baseline mortality rate after 100. In practice, mortality rate after 100 is so high that this assumption has minimal effect on lifespan.",
                         ]),
+                        html.Li([
+                            html.Em("Uniform slowing of aging: "),
+                            "We assume that aging is one underlying process, and slowing it will uniformly slow the accumulation of all age-related mortality risks. Practical aging interventions will likely slow some aspects of aging more than others.",
+                        ]),
+                        
                     ], className="small mb-2"),
-                    html.Div("Treat results as thought experiments, not forecasts.",
+                    html.Div("Treat results as thought experiments, not perfect forecasts.",
                              className="small text-muted fst-italic"),
                 ], className="mb-2"),
             ]),

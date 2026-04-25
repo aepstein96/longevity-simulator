@@ -8,7 +8,6 @@ codes flow into which app bucket; the lookup logic below just consumes it.
 import functools
 import os
 
-import numpy as np
 import pandas as pd
 
 
@@ -137,59 +136,6 @@ def load_cause_fractions(filepath='data/CDC/cause_fractions_total.csv'):
     """
     cause_fractions = pd.read_csv(filepath, index_col='age_years')
     return cause_fractions
-
-
-def load_cause_fractions_from_raw(mmcd_filepath, exclude_covid=True, group_old_ages=True):
-    """
-    Load and calculate cause-of-death fractions from raw CDC MMCD data.
-    
-    DEPRECATED: Use load_cause_fractions() instead for processed data.
-    
-    This function is kept for backward compatibility but requires the large
-    raw MMCD file. The preferred approach is to use preprocessed data.
-    
-    Parameters
-    ----------
-    mmcd_filepath : str
-        Path to MMCD parquet file
-    exclude_covid : bool, optional
-        Whether to exclude COVID-19 deaths (default: True)
-    group_old_ages : bool, optional
-        Whether to group ages 105+ together (default: True)
-    
-    Returns
-    -------
-    pd.DataFrame
-        Wide format DataFrame with causes as columns and age as index.
-        Each cell contains the fraction of deaths from that cause at that age.
-    """
-    df = pd.read_parquet(mmcd_filepath, engine='fastparquet')
-    df['cause_category'] = df['record_axis_conditions'].apply(categorize_cause)
-    
-    age_years_float = df['age_lower_bound'] / 1000 / 60 / 60 / 24 / 365.25
-    df['age_years'] = np.floor(age_years_float).astype('Int64')
-    
-    df = df.dropna(subset=['age_years'])
-    df = df[df['age_years'] != 998]
-    
-    df_grouped = df.copy()
-    
-    if exclude_covid:
-        df_grouped = df_grouped[df_grouped['cause_category'] != 'COVID-19']
-    
-    if group_old_ages:
-        df_grouped.loc[df_grouped['age_years'] >= 105, 'age_years'] = 105
-    
-    cause_by_age = df_grouped.groupby(['age_years', 'cause_category']).size()
-    total_by_age = df_grouped.groupby('age_years').size()
-    
-    cause_fractions_wide = cause_by_age.unstack(fill_value=0).div(total_by_age, axis=0)
-    
-    # Sort columns by overall importance
-    column_order = cause_fractions_wide.mean().sort_values(ascending=False).index
-    cause_fractions_wide = cause_fractions_wide[column_order]
-    
-    return cause_fractions_wide
 
 
 def remove_cause_from_lifetable(life_table_series, cause_fractions_df, cause_code):

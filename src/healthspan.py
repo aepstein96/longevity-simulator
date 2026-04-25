@@ -1,19 +1,18 @@
-"""Healthspan curve: P(no chronic conditions at age a).
+"""Healthspan curve: expected number of chronic conditions at age a.
 
 Uses GBD prevalence data (one rate per cause × sex × age, in cases per
-100,000) and assumes independence across conditions:
+100,000). For each chronic-condition bucket we treat presence as a
+Bernoulli with p = age-specific prevalence; by linearity of expectation,
 
-    P(healthy at age a) = ∏_k (1 − prevalence_k(a) / 100,000)
+    E[# conditions at age a] = Σ_k prevalence_k(a)
+
+regardless of how the conditions co-occur.
 
 The bucket → GBD primary cause_id mapping comes from
 ``data/CDC/cause_categories.csv`` (the same CSV that drives bucket labels
 and ICD-10 routing). For each app bucket included in the calculation, we
 use the bucket's primary GBD cause_id to look up its prevalence series in
 ``data/GBD/prevalence_smoothed_single_year.csv``.
-
-Independence is a simplification — in reality conditions co-occur (e.g.
-diabetes ⊂ CKD ⊂ CV) — so this curve is **pessimistic** about how fast
-"healthy" drops with age.
 """
 
 import functools
@@ -89,8 +88,7 @@ def compute_expected_condition_count(sex='All',
     """Expected number of chronic conditions at each age.
 
     By linearity of expectation, E[count] = sum of per-condition prevalences,
-    so this metric is unaffected by the independence assumption that biases
-    the P(no chronic) curve. Returns a Series indexed by age.
+    regardless of how the conditions co-occur. Returns a Series indexed by age.
     """
     series_per_bucket = {b: get_bucket_prevalence(b, sex=sex) for b in buckets}
     all_ages = sorted(set().union(*[s.index for s in series_per_bucket.values()]))
@@ -134,41 +132,3 @@ def apply_aging_remap(series, aging_rate, start_age):
                        start_age + (ages - start_age) * aging_rate)
     rescaled = np.interp(bio_age, ages, vals)
     return pd.Series(rescaled, index=series.index, name=series.name)
-
-
-def compute_healthspan(sex='All', buckets=DEFAULT_HEALTHSPAN_BUCKETS,
-                        pad_to=120):
-    """Compute P(no chronic condition) by single-year age.
-
-    Parameters
-    ----------
-    sex : 'All', 'Male', 'Female'
-        'All' uses GBD's Both-sex aggregate.
-    buckets : iterable of str
-        App buckets to include. Each must have a primary GBD cause_id
-        with prevalence data available.
-    pad_to : int
-        Hold the final value flat past the prevalence data's max age.
-    """
-    series_per_bucket = {b: get_bucket_prevalence(b, sex=sex) for b in buckets}
-
-    # Align all series on the union of ages
-    all_ages = sorted(set().union(*[s.index for s in series_per_bucket.values()]))
-    df = pd.DataFrame(
-        {b: s.reindex(all_ages).ffill().fillna(0)
-         for b, s in series_per_bucket.items()},
-        index=all_ages,
-    )
-
-    # P(healthy) = product over buckets of (1 - prevalence_k)
-    not_have = (1.0 - df).clip(lower=0.0)
-    healthspan = not_have.prod(axis=1)
-    healthspan.name = 'P(no chronic condition)'
-
-    max_age = int(healthspan.index.max())
-    if pad_to > max_age:
-        ext = pd.Series(healthspan.iloc[-1],
-                        index=range(max_age + 1, pad_to + 1))
-        healthspan = pd.concat([healthspan, ext])
-    healthspan.index = healthspan.index.astype(int)
-    return healthspan.sort_index()
