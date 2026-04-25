@@ -241,13 +241,13 @@ sidebar = html.Div(
         dcc.Dropdown(
             id='sex-dropdown',
             options=[
-                {'label': 'Prefer not to say', 'value': 'All'},
-                {'label': 'Man', 'value': 'Male'},
-                {'label': 'Woman', 'value': 'Female'},
+                {'label': 'Other/Not specified', 'value': 'All'},
+                {'label': 'Male', 'value': 'Male'},
+                {'label': 'Female', 'value': 'Female'},
             ],
             value=None,
             clearable=True,
-            placeholder='Gender (optional)',
+            placeholder='Sex (optional)',
             className="mb-1",
         ),
 
