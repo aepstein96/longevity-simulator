@@ -1082,6 +1082,7 @@ def update_dashboard(name, user_age, sex, removed_causes, aging_rate_percent,
 )
 def sync_slow_start_to_user_age(user_age, current, overridden):
     floor = int(user_age) if user_age is not None else 0
+    floor = max(floor, 25)
     # Auto-track user age unless the user has manually set a different
     # value that's still a valid (>= floor) override.
     if not overridden or current is None or int(current) < floor:
