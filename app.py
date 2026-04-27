@@ -14,6 +14,9 @@ app = dash.Dash(
     __name__,
     external_stylesheets=[dbc.themes.FLATLY, dbc.icons.BOOTSTRAP],
     title="Longevity Simulator",
+    meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1, shrink-to-fit=no"},
+    ],
 )
 server = app.server
 
@@ -374,17 +377,7 @@ sidebar = html.Div(
             is_open=False,
         ),
     ],
-    style={
-        "position": "fixed",
-        "top": 0, "left": 0, "bottom": 0,
-        "width": "22rem",
-        "padding": "1.25rem 1.25rem",
-        "background-color": "#f8f9fa",
-        "overflow-y": "auto",
-        "border-right": "1px solid #e9ecef",
-        "display": "flex",
-        "flexDirection": "column",
-    },
+    className="app-sidebar",
 )
 
 
@@ -414,8 +407,12 @@ content = html.Div(
 
         dbc.Row(
             [
-                dbc.Col(dcc.Graph(id='survival-graph', config={"displayModeBar": False}), lg=7),
-                dbc.Col(dcc.Graph(id='healthspan-graph', config={"displayModeBar": False}), lg=5),
+                dbc.Col(dcc.Graph(id='survival-graph',
+                                  config={"displayModeBar": False, "responsive": True},
+                                  style={"width": "100%", "height": "450px"}), lg=7),
+                dbc.Col(dcc.Graph(id='healthspan-graph',
+                                  config={"displayModeBar": False, "responsive": True},
+                                  style={"width": "100%", "height": "450px"}), lg=5),
             ],
             className="g-3",
         ),
@@ -657,11 +654,7 @@ content = html.Div(
             className="mt-3 mb-4",
         ),
     ],
-    style={
-        "margin-left": "23rem",
-        "margin-right": "1.5rem",
-        "padding": "1.5rem 1rem",
-    },
+    className="app-content",
 )
 
 app.layout = html.Div([sidebar, content])

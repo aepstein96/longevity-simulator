@@ -1,0 +1,54 @@
+/* Desktop layout (>=992px): fixed sidebar on the left, content offset to the right. */
+.app-sidebar {
+    background-color: #f8f9fa;
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    padding: 1.5rem 1rem;
+}
+
+@media (min-width: 992px) {
+    .app-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 22rem;
+        overflow-y: auto;
+        border-right: 1px solid #e9ecef;
+    }
+
+    .app-content {
+        margin-left: 23rem;
+        margin-right: 1.5rem;
+    }
+}
+
+/* Mobile / tablet (<992px): sidebar stacks above content. */
+@media (max-width: 991.98px) {
+    .app-sidebar {
+        width: 100%;
+        border-bottom: 1px solid #e9ecef;
+        padding: 1rem 1rem 1.25rem;
+    }
+
+    .app-content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem 0.75rem 1.5rem;
+    }
+
+    /* Plotly graphs need a sane min-height when the container narrows. */
+    .app-content .js-plotly-plot,
+    .app-content .plot-container {
+        width: 100% !important;
+    }
+
+    /* The cause-button row should still wrap nicely on narrow screens. */
+    .app-sidebar .btn-sm {
+        font-size: 0.8rem;
+    }
+}
