@@ -12,14 +12,14 @@ cd longevity-simulator
 pip install -r requirements.txt
 ```
 
-## Running the Demo Notebook
+## Running the Dash app
 
-1. Start Jupyter:
+Start the dashboard locally:
 ```bash
-jupyter notebook notebooks/demo.ipynb
+python app.py
 ```
 
-2. Run all cells to generate survival curves and analysis
+Then open `http://localhost:8080` in a browser.
 
 ## Using the Library
 
@@ -29,7 +29,7 @@ jupyter notebook notebooks/demo.ipynb
 from src import load_mortality_rates, stop_aging, calculate_survival_curve, calculate_median_lifespan
 
 # Load preprocessed mortality data
-mortality_rates = load_mortality_rates('data/mortality_rates_total.csv')
+mortality_rates = load_mortality_rates('data/CDC/mortality_rates_total.csv')
 
 # Model stopping aging at 25
 adjusted_rates = stop_aging(mortality_rates, final_age=25, pad_to_age=200)
@@ -47,7 +47,7 @@ print(f"Median lifespan: {median} years")
 from src import load_cause_fractions, remove_cause_from_lifetable
 
 # Load cause of death data
-cause_fractions = load_cause_fractions('data/MMCD_2022.parquet')
+cause_fractions = load_cause_fractions('data/CDC/cause_fractions_total.csv')
 
 # Model curing cancer
 mortality_no_cancer = remove_cause_from_lifetable(
@@ -91,12 +91,13 @@ adjusted_rates = slow_aging(
 ## Data Files
 
 ### Processed Data (in `data/`, committed to git)
-- `mortality_rates_total.csv` - US mortality rates (2010-2019, both sexes)
-- `mortality_rates_male.csv` - Male mortality rates
-- `mortality_rates_female.csv` - Female mortality rates
-- `cause_fractions_total.csv` - Fraction of deaths by cause and age (both sexes)
-- `cause_fractions_male.csv` - Male cause fractions
-- `cause_fractions_female.csv` - Female cause fractions
+- `data/CDC/mortality_rates_total.csv` - US mortality rates (2010-2019, both sexes)
+- `data/CDC/mortality_rates_male.csv` - Male mortality rates
+- `data/CDC/mortality_rates_female.csv` - Female mortality rates
+- `data/CDC/cause_fractions_total.csv` - Fraction of deaths by cause and age (both sexes)
+- `data/CDC/cause_fractions_male.csv` - Male cause fractions
+- `data/CDC/cause_fractions_female.csv` - Female cause fractions
+- `data/GBD/` - GBD prevalence and cause-hierarchy data used for healthspan
 
 ### Raw Data (in `raw_data/`, NOT committed to git)
 - `MMCD_2022.parquet` - Multiple cause of death data (~300 MB)
@@ -114,8 +115,8 @@ Results are saved to `results/` directory:
 
 ## Next Steps
 
-- Modify scenarios in the notebook
+- Modify scenarios in the Dash UI
 - Add new intervention models
 - Create custom visualizations
-- Prepare for Plotly Dash dashboard conversion
+- Add additional data sources and validation
 

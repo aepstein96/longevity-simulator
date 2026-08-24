@@ -92,28 +92,40 @@ def slow_aging(true_mortality_rate, slow_factor, start_age=0, pad_to_age=0):
     out.index = out.index.astype(int)
     out = out.sort_index()
 
-    min_age = out.index.min()
-    max_age = out.index.max()
+    if out.empty:
+        return out
 
-    # Map each age to its effective biological age
-    new_index = out.index
-    mapped_ages = np.zeros(len(new_index), dtype=int)
-    
-    for i, age in enumerate(new_index):
-        if age < start_age:
-            mapped_ages[i] = age
-        else:
-            mapped_ages[i] = int(start_age + (age - start_age) * slow_factor)
-    
-    # Clip to valid range
+    source_ages = out.index.to_numpy(dtype=float)
+    source_rates = out.to_numpy(dtype=float)
+    min_age = source_ages[0]
+    max_age = source_ages[-1]
+
+    # Map each chronological age to its effective biological age. Keep the
+    # mapping fractional and interpolate between adjacent source ages; casting
+    # to int here creates artificial step changes in the mortality curve.
+    chronological_ages = source_ages
+    mapped_ages = np.where(
+        chronological_ages < start_age,
+        chronological_ages,
+        start_age + (chronological_ages - start_age) * slow_factor,
+    )
     mapped_ages = np.clip(mapped_ages, min_age, max_age)
-    slowed_rates = pd.Series([out.loc[age] for age in mapped_ages], index=new_index)
+    slowed_values = np.interp(mapped_ages, source_ages, source_rates)
+    slowed_rates = pd.Series(
+        slowed_values,
+        index=out.index,
+        name=out.name,
+    )
 
     # Pad if requested
     if pad_to_age > max_age:
         final_death_rate = slowed_rates.iloc[-1]
-        pad_index = np.arange(max_age + 1, pad_to_age + 1)
-        pad_vals = pd.Series(final_death_rate, index=pad_index)
+        pad_index = np.arange(int(max_age) + 1, pad_to_age + 1)
+        pad_vals = pd.Series(
+            final_death_rate,
+            index=pd.Index(pad_index, name=out.index.name),
+            name=out.name,
+        )
         slowed_rates = pd.concat([slowed_rates, pad_vals])
 
     return slowed_rates

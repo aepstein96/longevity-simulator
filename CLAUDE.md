@@ -19,17 +19,21 @@ gunicorn -b 0.0.0.0:8080 app:server
 
 # Regenerate processed CSVs in data/ from raw_data/ (only needed when raw data changes)
 cd preprocessing && python process_life_table.py && python process_mmcd.py
+
+# Run the test suite
+python -m pytest -q
 ```
 
 Deployment: a `Dockerfile` builds the app; `fly.toml` deploys it to Fly.io (`fly deploy`), and `Procfile` supports Heroku-style hosts. All three target the same `app:server` gunicorn entrypoint on port 8080.
 
-There is no test suite, lint config, or CI in this repo.
+The test suite lives in `tests/` and runs in GitHub Actions on pushes to `main`
+and on pull requests. There is no lint configuration in this repo.
 
 ## Architecture
 
 The code is split into a **stateless functional library** under `src/` and a **scenario orchestrator** (`src/scenarios.py`) that the Dash app uses. Understanding the data flow matters more than any individual module:
 
-1. **Load** — `mortality.load_mortality_rates()` returns a `pd.Series` of annual mortality rates `mx` indexed by integer age, from `data/mortality_rates_{total,male,female}.csv`. `causes.load_cause_fractions()` returns a `pd.DataFrame` indexed by age with one column per ICD-10-derived category (`Cancer`, `Cardiovascular`, `External`, …) holding the fraction of deaths at that age attributable to the cause.
+1. **Load** — `mortality.load_mortality_rates()` returns a `pd.Series` of annual mortality rates `mx` indexed by integer age, from `data/CDC/mortality_rates_{total,male,female}.csv`. `causes.load_cause_fractions()` returns a `pd.DataFrame` indexed by age with one column per ICD-10-derived category (`Cancer`, `Cardiovascular`, `External`, …) holding the fraction of deaths at that age attributable to the cause.
 2. **Remove causes** — `causes.remove_cause_from_lifetable(mx, fractions, 'Cancer')` multiplies each age's mortality by `(1 - fraction_from_cause)`. Ages beyond the fractions table reuse the last available age's fraction. Apply once per cause to stack cures.
 3. **Apply aging intervention** — `interventions.stop_aging(mx, final_age)` flatlines mortality past `final_age`. `interventions.slow_aging(mx, slow_factor, start_age)` remaps each post-`start_age` year onto a fractional biological age (e.g. `slow_factor=0.5` means you age half as fast). Both accept `pad_to_age` to extend the series with the last value — needed because survival curves otherwise terminate at age 100.
 4. **Survive** — `survival.calculate_survival_curve(mx)` is just `cumprod(1 - mx)`. `calculate_median_lifespan()` returns the first age where survival drops below 0.5.
