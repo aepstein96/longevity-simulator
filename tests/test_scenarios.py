@@ -86,10 +86,18 @@ def test_cause_removal_then_slow_aging_are_composed(patch_scenario_data):
     data = scenario.get_data(pad_to=6)
 
     # Cause removal happens first: [0.08, 0.16, 0.24, 0.32, 0.40].
-    # Slow aging then maps chronological ages 3–6 to biological ages 2, 2, 3, 3.
+    # Slow aging then maps chronological ages 3–6 to biological ages
+    # 2.5 and 3 within the source range; ages beyond the source range use
+    # the remapped terminal value during padding.
     expected = pd.Series(
-        [0.08, 0.16, 0.24, 0.24, 0.32, 0.32, 0.32],
+        [0.08, 0.16, 0.24, 0.28, 0.32, 0.32, 0.32],
         index=pd.Index(range(7), name="Age"),
-    ).rename(None)
-    pd.testing.assert_series_equal(data["intervention_mortality"], expected)
+        name="mx",
+    )
+    pd.testing.assert_series_equal(
+        data["intervention_mortality"],
+        expected,
+        check_exact=False,
+        atol=1e-12,
+    )
     assert data["intervention_survival"].iloc[-1] > 0

@@ -29,13 +29,25 @@ Uses real-world data from:
 pip install -r requirements.txt
 ```
 
+## Tests
+
+Run the test suite locally with:
+
+```bash
+python -m pytest -q
+```
+
+The suite covers aging interventions, survival calculations, cause-of-death
+removal, and composition through `LongevityScenario`. Pull requests and pushes
+to `main` run the same suite automatically in GitHub Actions.
+
 ## Quick Start
 
 ```python
 from src import load_mortality_rates, stop_aging, calculate_survival_curve, calculate_median_lifespan
 
 # Load preprocessed US mortality data
-mortality_rates = load_mortality_rates('data/mortality_rates_total.csv')
+mortality_rates = load_mortality_rates('data/CDC/mortality_rates_total.csv')
 
 # Model stopping aging at 25
 adjusted_rates = stop_aging(mortality_rates, final_age=25, pad_to_age=200)
@@ -58,12 +70,9 @@ longevity-simulator/
 │   ├── causes.py             # Cause of death analysis
 │   └── survival.py           # Survival curve calculations
 ├── data/                     # Processed data (committed to git)
-│   ├── mortality_rates_total.csv      # ~1 KB
-│   ├── mortality_rates_male.csv
-│   ├── mortality_rates_female.csv
-│   ├── cause_fractions_total.csv      # ~23 KB
-│   ├── cause_fractions_male.csv
-│   └── cause_fractions_female.csv
+│   ├── CDC/                  # Mortality rates and cause fractions
+│   └── GBD/                  # Prevalence and cause hierarchy data
+├── tests/                    # Unit and scenario-composition tests
 ├── raw_data/                 # Raw data files (not in git, ~300 MB)
 │   ├── MMCD_2022.parquet
 │   └── life_table_*.txt
@@ -108,7 +117,6 @@ See `preprocessing/README.md` for details.
 
 ## Future Development
 
-- Interactive dashboard using Plotly Dash
 - Additional intervention models (combination therapies, age-specific treatments)
 - Comparative analysis across countries and time periods
 - Economic impact modeling
