@@ -1,123 +1,54 @@
 # Longevity Simulator
 
-A Python toolkit for modeling mortality rates and simulating the effects of longevity interventions.
+A browser-based tool showing how curing diseases or slowing aging could change lifespan and healthspan for a U.S. resident. It's a static site with no backend: everything runs in the browser.
 
-## Overview
+Data sources:
+- CDC/NCHS United States Life Tables (2010–2019): mortality rates by age
+- CDC Multiple Cause of Death database (2024): cause-of-death fractions by age
+- IHME Global Burden of Disease (2023): chronic-condition prevalence by age
 
-This project provides tools to explore "what-if" scenarios for human longevity by modeling:
-- **Disease interventions**: What if we cured cancer? Or cardiovascular disease?
-- **Aging interventions**: What if we could stop or slow biological aging?
-- **Survival analysis**: Calculate survival curves and median lifespans under different scenarios
+## Run locally
 
-Uses real-world data from:
-- CDC/NCHS United States Life Tables (2010-2019)
-- CDC Multiple Cause of Death (MMCD) database (2022)
+```bash
+cd web && python3 -m http.server 5180
+# open http://127.0.0.1:5180
+```
 
-## Features
+Any static file server works. Opening `index.html` directly from disk won't, because the page `fetch`es `data.json`.
 
-- **Load and analyze mortality data** from CDC life tables
-- **Model aging interventions**:
-  - Stop aging at a specific age
-  - Slow the rate of biological aging
-- **Model disease cures** by removing specific causes of death
-- **Calculate survival curves** and median lifespans
-- **Categorize causes of death** using ICD-10 codes
+## Deploy
 
-## Installation
+Deploy `web/` as a static site (on Vercel, set the project's Root Directory to `web`, with no framework and no build command).
+
+## Project structure
+
+```
+web/                  # The app (deployed as-is)
+  index.html          # Layout and copy
+  app.js              # UI wiring, charts (Plotly.js), CSV export
+  model.js            # The simulation: cause removal, aging slowdown, survival, healthspan, Gompertz fit
+  model.check.mjs     # Regression check for model.js: node web/model.check.mjs
+  data.json           # Bundled runtime data, generated from data/
+data/                 # Processed CSVs (committed)
+preprocessing/        # Python scripts: raw_data/ -> data/ -> web/data.json
+raw_data/             # Large raw source files (gitignored)
+```
+
+## Updating the data
 
 ```bash
 pip install -r requirements.txt
+cd preprocessing && python process_life_table.py && python process_mmcd.py && cd ..
+python preprocessing/export_web_data.py    # rebuilds web/data.json
+node web/model.check.mjs                   # reference values may need updating if the data changed
 ```
 
-## Quick Start
-
-```python
-from src import load_mortality_rates, stop_aging, calculate_survival_curve, calculate_median_lifespan
-
-# Load preprocessed US mortality data
-mortality_rates = load_mortality_rates('data/mortality_rates_total.csv')
-
-# Model stopping aging at 25
-adjusted_rates = stop_aging(mortality_rates, final_age=25, pad_to_age=200)
-
-# Calculate survival curve
-survival = calculate_survival_curve(adjusted_rates)
-
-# Get median lifespan
-median = calculate_median_lifespan(survival)
-print(f"Median lifespan if aging stopped at 25: {median} years")
-```
-
-## Project Structure
-
-```
-longevity-simulator/
-├── src/                      # Python modules
-│   ├── mortality.py          # Load mortality data
-│   ├── interventions.py      # Aging interventions
-│   ├── causes.py             # Cause of death analysis
-│   └── survival.py           # Survival curve calculations
-├── data/                     # Processed data (committed to git)
-│   ├── mortality_rates_total.csv      # ~1 KB
-│   ├── mortality_rates_male.csv
-│   ├── mortality_rates_female.csv
-│   ├── cause_fractions_total.csv      # ~23 KB
-│   ├── cause_fractions_male.csv
-│   └── cause_fractions_female.csv
-├── raw_data/                 # Raw data files (not in git, ~300 MB)
-│   ├── MMCD_2022.parquet
-│   └── life_table_*.txt
-├── preprocessing/            # Scripts to process raw data
-│   ├── process_mmcd.py
-│   ├── process_life_table.py
-│   └── README.md
-├── notebooks/                # Jupyter notebooks
-│   └── demo.ipynb
-├── results/                  # Output plots and figures
-├── requirements.txt          # Python dependencies
-└── README.md                 # This file
-```
-
-## Data Sources
-
-- **Life Tables**: [CDC/NCHS United States Life Tables](https://www.cdc.gov/nchs/products/life_tables.htm)
-- **Mortality Data**: [CDC Multiple Cause of Death Database](https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm)
-
-### Data Preprocessing
-
-The project uses **preprocessed data** stored in `data/` (small CSV files, ~25 KB total). This allows the repository to be easily shared on GitHub without large files.
-
-To regenerate the processed data from raw sources:
-
-1. Place raw data files in `raw_data/`
-2. Run preprocessing scripts:
-   ```bash
-   cd preprocessing
-   python process_life_table.py
-   python process_mmcd.py
-   ```
-
-See `preprocessing/README.md` for details.
-
-## Use Cases
-
-1. **Research**: Model the impact of medical breakthroughs on population lifespan
-2. **Education**: Visualize how aging and disease affect mortality
-3. **Policy**: Estimate the demographic impact of public health interventions
-4. **Curiosity**: Explore "what-if" scenarios for human longevity
-
-## Future Development
-
-- Interactive dashboard using Plotly Dash
-- Additional intervention models (combination therapies, age-specific treatments)
-- Comparative analysis across countries and time periods
-- Economic impact modeling
+See `preprocessing/README.md` for details on the raw data.
 
 ## License
 
-MIT License - see LICENSE file for details
+MIT License, see LICENSE.
 
 ## Author
 
 Alexander Epstein, Cao Lab, Rockefeller University
-
