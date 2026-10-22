@@ -52,3 +52,22 @@
         font-size: 0.8rem;
     }
 }
+
+/* --- Static-site additions (replace Dash/dbc components) --- */
+.graph { width: 100%; height: 450px; }
+.info { color: #adb5bd; cursor: help; margin-left: 0.25rem; }
+.range-marks { display: flex; justify-content: space-between; margin-top: -0.25rem; }
+details > summary { cursor: pointer; }
+details.math > summary { list-style: none; }
+details.math > summary::before { content: '›'; display: inline-block; width: 1rem; transition: transform .15s; }
+details.math[open] > summary::before { transform: rotate(90deg); }
+.formula {
+  font-size: 1.75rem; font-family: Georgia, 'Times New Roman', serif; text-align: center;
+  padding: 0.75rem; margin: 0.25rem 0 1rem; background-color: #f8f9fa; border-radius: 0.5rem; color: #343a40;
+  white-space: pre;
+}
+.mu, .ga, .gb { font-weight: 700; }
+.sym { font-size: 1.05rem; font-family: Georgia, serif; }
+.mu { color: #6f42c1; }
+.ga { color: #d62728; }
+.gb { color: #2a9d8f; }

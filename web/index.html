@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Longevity Simulator</title>
+  <link rel="preload" href="data.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-basic-dist-min@2.35.2/plotly-basic.min.js" defer></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="app-sidebar">
+  <h2 class="h4">Longevity Simulator</h2>
+  <p class="text-muted small">See how curing diseases or slowing aging could change expected lifespan for a U.S. resident.</p>
+  <hr>
+
+  <h6 class="mt-2">About you</h6>
+  <div class="small text-muted mb-2">All fields optional.</div>
+  <input id="user-name" class="form-control mb-2" type="text" placeholder="Name" maxlength="40">
+  <div class="input-group mb-2">
+    <span class="input-group-text">Age</span>
+    <input id="user-age" class="form-control" type="number" min="0" max="100" step="1" value="40">
+  </div>
+  <select id="sex" class="form-select mb-1">
+    <option value="">Sex (optional)</option>
+    <option value="All">Other/Not specified</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <hr>
+  <div class="mt-2">
+    <h6 class="d-inline">Cure these diseases</h6>
+    <span class="info" title="Click a disease to remove all deaths from that cause — an upper-bound estimate of what a perfect cure would do. Click again to undo.">ⓘ</span>
+  </div>
+  <div id="cause-buttons" class="d-flex flex-wrap mt-2"></div>
+
+  <hr>
+  <div>
+    <h6 class="d-inline">Slow down your aging</h6>
+    <span class="info" title="100% = normal aging. 50% = age half as fast. 0% = aging frozen. The intervention starts at the age set below (defaults to your current age).">ⓘ</span>
+  </div>
+  <div id="aging-rate-label" class="small text-muted mt-1"></div>
+  <input id="aging-rate" class="form-range mt-2" type="range" min="0" max="150" step="5" value="100">
+  <div class="range-marks small text-muted"><span>0%</span><span>50%</span><span>100%</span><span>150%</span></div>
+
+  <div class="mt-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <label for="slow-start" class="small text-muted mb-0">Start at age</label>
+      <input id="slow-start" class="form-control form-control-sm" style="width:5rem" type="number" min="40" max="100" step="1" value="40">
+    </div>
+    <div class="small text-muted mt-1">Defaults to your current age. Pick a higher number to delay the intervention.</div>
+  </div>
+
+  <hr>
+  <details>
+    <summary class="small link-primary">Advanced settings</summary>
+    <div class="form-check small mt-2">
+      <input id="remove-accidents" class="form-check-input" type="checkbox" checked>
+      <label for="remove-accidents" class="form-check-label">Remove accidents before fit</label>
+    </div>
+    <label for="pad-to" class="mt-2 small">Show ages up to</label>
+    <input id="pad-to" class="form-control form-control-sm" type="number" value="120" min="80" max="200" step="10">
+  </details>
+</div>
+
+<div class="app-content">
+  <div class="row mb-4 g-3 mt-1">
+    <div class="col-md-3"><div class="card h-100 shadow-sm"><div class="card-header"><div id="card-lifespan-title" class="small text-uppercase text-muted"></div></div><div class="card-body" id="card-lifespan-body"></div></div></div>
+    <div class="col-md-3"><div class="card h-100 shadow-sm"><div class="card-header"><div id="card-gain-title" class="small text-uppercase text-muted"></div></div><div class="card-body" id="card-gain-body"></div></div></div>
+    <div class="col-md-3"><div class="card h-100 shadow-sm"><div class="card-header"><div id="card-80-title" class="small text-uppercase text-muted"></div></div><div class="card-body" id="card-80-body"></div></div></div>
+    <div class="col-md-3"><div class="card h-100 shadow-sm"><div class="card-header"><div id="card-100-title" class="small text-uppercase text-muted"></div></div><div class="card-body" id="card-100-body"></div></div></div>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-lg-7"><div id="survival-graph" class="graph"></div></div>
+    <div class="col-lg-5"><div id="healthspan-graph" class="graph"></div></div>
+  </div>
+
+  <div class="text-end mt-3">
+    <button id="btn-download-lifespan" class="btn btn-outline-secondary btn-sm me-2">↓ Lifespan CSV</button>
+    <button id="btn-download-healthspan" class="btn btn-outline-secondary btn-sm">↓ Healthspan CSV</button>
+  </div>
+
+  <div class="card mt-4"><div class="card-body">
+    <h6 class="card-title">How to read this</h6>
+    <p class="small text-muted mb-0">The left chart shows the percentage still alive at each age — your lifespan curve. The grey line is today; the blue line is the scenario. The right chart shows the average number of chronic conditions a person of that age has — your healthspan curve. Lower is healthier.</p>
+    <p class="small text-muted mt-2">Don't like the plot format? Download your scenario data as CSVs and ask Claude to make you custom charts.</p>
+  </div></div>
+
+  <details class="card mt-3 math">
+    <summary class="card-header fw-semibold">Mathematical analysis</summary>
+    <div class="card-body">
+      <p class="small text-muted mb-2">Above age ~25, human mortality closely follows Gompertz' law — the yearly risk of dying rises exponentially with age:</p>
+      <div class="formula"><span class="mu">µ(t)</span>  =  <span class="ga">A</span> · e<sup><span class="gb">B</span> · t</sup></div>
+      <div class="small">
+        <div class="mb-3"><span class="mu sym">µ(t)</span><span class="fw-semibold"> — mortality rate. </span>The yearly probability of dying at age <em>t</em>.</div>
+        <div class="mb-3">
+          <div><span class="ga sym">A</span><span class="fw-semibold"> — initial mortality rate.</span><span class="text-muted"> The yearly risk of dying at age 0 implied by the fit.</span></div>
+          <div id="gompertz-a-values" class="ms-4 mt-1"></div>
+        </div>
+        <div class="mb-2">
+          <div><span class="gb sym">B</span><span class="fw-semibold"> — rate of exponential mortality growth.</span><span class="text-muted"> How fast yearly death risk multiplies as you age. B alone determines your maximum possible lifespan: smaller B ⇒ slower exponential climb ⇒ higher ceiling.</span></div>
+          <div id="gompertz-b-values" class="ms-4 mt-1"></div>
+        </div>
+      </div>
+      <div class="small text-muted fst-italic mt-2">Fitted from ages 25–100. <a href="https://en.wikipedia.org/wiki/Gompertz%E2%80%93Makeham_law_of_mortality" target="_blank" rel="noopener noreferrer">Read more here</a>.</div>
+    </div>
+  </details>
+
+  <div class="card mt-3 mb-4"><div class="card-body">
+    <h6 class="card-title">Sources &amp; methods</h6>
+    <div class="mb-2">
+      <strong>Data sources</strong>
+      <ul class="small mb-2">
+        <li>U.S. mortality rates: <a href="https://www.cdc.gov/nchs/products/life_tables.htm" target="_blank" rel="noopener noreferrer">CDC/NCHS United States Life Tables (2010–2019)</a> — provides the annual probability of dying (mₓ) at each age.</li>
+        <li>Cause-of-death breakdown: <a href="https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm" target="_blank" rel="noopener noreferrer">CDC Multiple Cause of Death database (2024)</a> — ICD-10 codes on death certificates, aggregated into major categories (Cancer, Heart disease &amp; stroke, Accidents, etc.).</li>
+        <li>Chronic-condition prevalence (for the healthspan curve): <a href="https://vizhub.healthdata.org/gbd-results/" target="_blank" rel="noopener noreferrer">IHME Global Burden of Disease (2023)</a> — age- and sex-specific prevalence rates for cardiovascular, cancer, neurological, chronic respiratory, and diabetes/kidney disease.</li>
+      </ul>
+    </div>
+    <div class="mb-2">
+      <strong>Methods</strong>
+      <ul class="small mb-2">
+        <li><em>Survival curve: </em>S(age) = ∏ (1 − mₓ) over all prior ages. The y-axis shows the fraction of a starting cohort still alive.</li>
+        <li><em>Curing a disease: </em>We multiply each age's mortality rate by (1 − fraction of deaths from that cause at that age). This is an upper-bound estimate — a truly perfect cure, with no competing causes taking over.</li>
+        <li><em>Slowing aging: </em>After the chosen start age, each year of chronological time advances biological age by the chosen fraction (e.g. 50% = age half as fast). 0% freezes mortality at the start-age rate.</li>
+        <li><em>Personal age: </em>When you enter an age, curves are conditioned on being alive right now: S(age ∣ your age) = S(age) / S(your age).</li>
+        <li><em>Modeling of chronic conditions: </em>Each chronic condition has an expected value (prevalence) at each age. We take the weighted average of these to get the expected number of conditions at each age. Curing diseases reduces this by removing the disease from the model.</li>
+        <li><em>Filtering of chronic conditions: </em>A few chronic conditions in our dataset (mental health, headache) which are generally nonfatal and affect many young people, severely distort the healthspan data, so they were removed. These can be debilitating and are very important but aren't the focus of our study. We think people generally know about their mental health. The question we want to help you answer is how long you'll be able to do the things you love without being held back by age-related physical ailments.</li>
+        <li><em>Gompertz fit (advanced): </em>mₓ ≈ a · exp(b · age), fit in log-space on ages 25–100. Useful for comparing the exponential rate of aging between scenarios.</li>
+      </ul>
+    </div>
+    <div class="mb-2">
+      <strong>Simplifying assumptions</strong>
+      <ul class="small mb-2">
+        <li><em>Perfect cures: </em>'Curing' a disease removes it completely from the model. Real-world treatments are never 100% effective.</li>
+        <li><em>Independence of diseases: </em>We assume diseases are independent: the risk of dying from heart disease doesn't depend on whether you have cancer. In reality, diseases interact in complex ways. Note that this doesn't actually matter for the baseline scenario due to linearity of expectation. But it does mean if you cure cancer, we can't model how that affects cardiovascular disease. A future dataset containing individual health trajectories could enable modeling of these interactions.</li>
+        <li><em>Constant mortality past age 100: </em>Since we don't have good mortality data past age 100, we assume a constant baseline mortality rate after 100. In practice, mortality rate after 100 is so high that this assumption has minimal effect on lifespan.</li>
+        <li><em>Uniform slowing of aging: </em>We assume that aging is one underlying process, and slowing it will uniformly slow the accumulation of all age-related mortality risks. Practical aging interventions will likely slow some aspects of aging more than others.</li>
+      </ul>
+      <div class="small text-muted fst-italic">Treat results as thought experiments, not perfect forecasts.</div>
+    </div>
+  </div></div>
+</div>
+</body>
+</html>

@@ -4,57 +4,49 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Longevity Simulator — a Python library (in `src/`) plus a Dash web UI (`app.py`) for modeling the effect of disease cures and aging-slowdown interventions on survival curves and median lifespan. Data comes from CDC/NCHS life tables and the CDC Multiple Cause of Death (MMCD) database.
+Longevity Simulator — a static, client-side web app (in `web/`) for modeling the effect of disease cures and aging-slowdown interventions on survival curves, median lifespan, and a healthspan curve (expected number of chronic conditions). Data comes from CDC/NCHS life tables, the CDC Multiple Cause of Death (MMCD) database, and IHME GBD prevalence. There is no backend.
 
 ## Commands
 
 ```bash
-# Install
+# Serve the app locally (any static server; the page fetches data.json so file:// won't work)
+cd web && python3 -m http.server 5180
+
+# Regression check for the simulation math (compares against reference values from the old Python library)
+node web/model.check.mjs
+
+# Regenerate data: raw_data/ -> data/ (only when raw data changes), then data/ -> web/data.json
 pip install -r requirements.txt
-
-# Run the Dash app locally (listens on 0.0.0.0:8080)
-python app.py
-# ...or via gunicorn like production does:
-gunicorn -b 0.0.0.0:8080 app:server
-
-# Regenerate processed CSVs in data/ from raw_data/ (only needed when raw data changes)
-cd preprocessing && python process_life_table.py && python process_mmcd.py
+cd preprocessing && python process_life_table.py && python process_mmcd.py && cd ..
+python preprocessing/export_web_data.py
 ```
 
-Deployment: a `Dockerfile` builds the app; `fly.toml` deploys it to Fly.io (`fly deploy`), and `Procfile` supports Heroku-style hosts. All three target the same `app:server` gunicorn entrypoint on port 8080.
+Deployment: `web/` is deployed as a static site on Vercel (project Root Directory = `web`, no build step). The Second Century Foundation website (separate repo) embeds it in an iframe via `SIMULATOR_EMBED_URL` in `src/pages/programs/LongevitySimulator.jsx`.
 
-There is no test suite, lint config, or CI in this repo.
+There is no lint config or CI.
 
 ## Architecture
 
-The code is split into a **stateless functional library** under `src/` and a **scenario orchestrator** (`src/scenarios.py`) that the Dash app uses. Understanding the data flow matters more than any individual module:
-
-1. **Load** — `mortality.load_mortality_rates()` returns a `pd.Series` of annual mortality rates `mx` indexed by integer age, from `data/mortality_rates_{total,male,female}.csv`. `causes.load_cause_fractions()` returns a `pd.DataFrame` indexed by age with one column per ICD-10-derived category (`Cancer`, `Cardiovascular`, `External`, …) holding the fraction of deaths at that age attributable to the cause.
-2. **Remove causes** — `causes.remove_cause_from_lifetable(mx, fractions, 'Cancer')` multiplies each age's mortality by `(1 - fraction_from_cause)`. Ages beyond the fractions table reuse the last available age's fraction. Apply once per cause to stack cures.
-3. **Apply aging intervention** — `interventions.stop_aging(mx, final_age)` flatlines mortality past `final_age`. `interventions.slow_aging(mx, slow_factor, start_age)` remaps each post-`start_age` year onto a fractional biological age (e.g. `slow_factor=0.5` means you age half as fast). Both accept `pad_to_age` to extend the series with the last value — needed because survival curves otherwise terminate at age 100.
-4. **Survive** — `survival.calculate_survival_curve(mx)` is just `cumprod(1 - mx)`. `calculate_median_lifespan()` returns the first age where survival drops below 0.5.
-5. **Fit (optional)** — `fitting.fit_gompertz()` fits `M(t) = a·exp(b·t)` (or with a Makeham constant) on a user-specified age window, always in log-space via `scipy.optimize.curve_fit`.
-
-**`LongevityScenario` in `src/scenarios.py` is the single integration point** between the UI and the library. It owns a `(sex, aging_rate, slow_aging_age, removed_causes)` tuple, loads the right CSVs in `_load_data()`, and exposes two methods:
-- `get_data(pad_to)` → dict with `baseline_mortality`, `baseline_survival`, `intervention_mortality`, `intervention_survival` (Series indexed by age, padded to `pad_to`).
-- `fit_curve(target, remove_accidents, use_makeham, fit_region)` → Gompertz fit for either the baseline or the intervention curve.
-
-The important convention: `aging_rate` in the scenario is a multiplier where `1.0` is normal, `0.0` triggers the `stop_aging` branch, and any other value feeds into `slow_aging` as `slow_factor`. The Dash UI exposes this as a **percent** (`aging_rate_percent / 100`).
-
-**`app.py` is a single-file Dash app** with one big `update_dashboard` callback fanning out to seven outputs (two Plotly figures and five KPI/equation strings). When "Remove accidents for fit" is checked it also has to rebuild the intervention mortality series with `External` added to `removed_causes` for the scatter plot — that's why the callback instantiates a `LongevityScenario` twice in some branches. Keep this symmetry in mind when editing the callback: the fit and the plotted mortality series must show the same cause-removal state.
+- `web/model.js` — pure functions, no DOM. All series are plain arrays indexed by age starting at 0. `runScenario(data, opts)` is the single entry point and returns baseline/intervention mortality, survival, condition counts, and Gompertz fits.
+  - **Remove causes**: multiply each age's mortality by `(1 - fraction_from_cause)`; ages past the fractions table reuse the last age's fraction. Applied once per cause.
+  - **Aging**: `agingRate` is a multiplier — `1` normal, `0` freezes mortality at `slowStart` (`stopAging`), anything else remaps each post-`slowStart` year to biological age `trunc(start + (age - start) * rate)` (`slowAging`). Series are padded to `padTo` with the last value (data ends at 109).
+  - **Survival**: `cumprod(1 - mx)`. **Healthspan**: sum of per-bucket GBD prevalences (linearity of expectation); cured buckets drop out; the aging remap uses linear interpolation.
+  - **Gompertz fit**: ordinary least squares on `log(mx)` over ages 25–99, with accidents (`External`) removed by default. Makeham term was intentionally dropped.
+- `web/app.js` — reads inputs, calls `runScenario`, renders KPI cards, two Plotly charts (`plotly.js-basic-dist-min` from CDN), and CSV downloads. The UI exposes aging rate as a percent (`/ 100`). The slow-aging start age auto-tracks the user's age (floor 25) unless manually overridden.
+- `web/data.json` — generated by `preprocessing/export_web_data.py`; don't hand-edit.
 
 ## Data layout
 
-- `data/` — small preprocessed CSVs (~25 KB total), **committed** to git. Loaded at runtime.
-- `raw_data/` — large source files (~300 MB, MMCD parquet + raw life tables), **gitignored**. Only needed to regenerate `data/`.
-- `preprocessing/` — one-off scripts that read `raw_data/` and write `data/`. Not imported by the app.
+- `data/` — small preprocessed CSVs, **committed**. Source of truth for `web/data.json`.
+- `raw_data/` — large source files (~300 MB), **gitignored**. Only needed to regenerate `data/`.
+- `preprocessing/` — Python scripts that read `raw_data/` and write `data/`, plus `export_web_data.py` (writes `web/data.json`). `preprocessing/causes.py` holds the ICD-10 → bucket mapping logic, driven by `data/CDC/cause_categories.csv`.
 - `notebooks/` is gitignored; don't assume notebooks exist.
 
-Sex handling: the UI sends `'All' | 'Male' | 'Female'`, `LongevityScenario.sex_map` translates to the file suffix `total | male | female`.
+Sex handling: the UI uses `'All' | 'Male' | 'Female'`; the CSVs use suffixes `total | male | female` and GBD uses `Both | Male | Female`. `data.json` is keyed by the UI values.
 
 ## Conventions
 
-- All ages are integer years; mortality/survival/cause-fraction series use age as the index.
-- Cause categories are the 13 strings produced by `causes.categorize_cause()` from ICD-10 prefixes — any new cause-removal feature must go through that categorization (not raw ICD codes).
-- `pad_to_age=0` in the intervention helpers means "don't pad"; the scenario uses this when fitting (no padding) and `pad_to=120` when plotting.
+- All ages are integer years.
+- Cause categories are the bucket strings produced by `categorize_cause()` in `preprocessing/causes.py` from ICD-10 prefixes — any new cause-removal feature must go through that categorization (not raw ICD codes).
 - COVID-19 deaths are excluded from cause fractions by default in the preprocessing step.
+- If you change `model.js` math, run `node web/model.check.mjs`. If you change the data, regenerate `data.json` and update the reference values in that check.
