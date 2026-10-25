@@ -71,3 +71,6 @@ details.math[open] > summary::before { transform: rotate(90deg); }
 .mu { color: #6f42c1; }
 .ga { color: #d62728; }
 .gb { color: #2a9d8f; }
+
+.fade-msg { opacity: 0; transition: opacity 0.6s; min-height: 1.2em; }
+.fade-msg.show { opacity: 1; transition: none; }

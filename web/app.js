@@ -266,7 +266,7 @@ function renderAgingLabel() {
   $('aging-rate-label').textContent =
     v === 100 ? 'Normal aging (100%)'
     : v === 0 ? `Frozen aging (0%)${sfx}`
-    : v < 100 ? `Slowed aging (${v}%)${sfx}`
+    : v < 100 ? `Slow aging by ${100 - v}%${sfx}`
     : `Accelerated aging (${v}%)${sfx}`;
 }
 
@@ -275,7 +275,6 @@ function syncSlowStart() {
   const userAge = num($('user-age'));
   const floor = Math.max(userAge != null ? Math.trunc(userAge) : 0, 25);
   const el = $('slow-start');
-  el.min = floor;
   const cur = num(el);
   if (!slowStartOverridden || cur == null || cur < floor) el.value = floor;
 }
@@ -340,6 +339,22 @@ $('user-age').addEventListener('input', () => { syncSlowStart(); renderAgingLabe
 $('slow-start').addEventListener('input', () => {
   const s = num($('slow-start')), a = num($('user-age'));
   slowStartOverridden = s != null && a != null && Math.trunc(s) !== Math.trunc(a);
+  renderAgingLabel(); render();
+});
+// No `min` attr on purpose: stepping below the floor fires change so we can reset and explain.
+// Checked on change (not input) so typing "50" isn't reset at the "5".
+let msgTimer;
+$('slow-start').addEventListener('change', () => {
+  const el = $('slow-start'), cur = num(el);
+  const floor = Math.max(Math.trunc(num($('user-age')) ?? 0), DEFAULT_SLOW_START);
+  if (cur == null || cur >= floor) return;
+  el.value = floor;
+  slowStartOverridden = false;
+  const msg = $('slow-start-msg');
+  msg.textContent = `Can't start before your current age. Pick a number ≥ ${floor}.`;
+  msg.classList.add('show');
+  clearTimeout(msgTimer);
+  msgTimer = setTimeout(() => msg.classList.remove('show'), 2500);
   renderAgingLabel(); render();
 });
 $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); });
