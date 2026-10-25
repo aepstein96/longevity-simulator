@@ -1,4 +1,4 @@
-// Port of src/ (scenarios, causes, interventions, survival, healthspan, fitting).
+// Port of src/ (scenarios, causes, interventions, survival, healthspan).
 // All series are plain arrays indexed by age, starting at age 0.
 
 export const MEDIAN_CAP_AGE = 1000;
@@ -62,22 +62,8 @@ function conditionCount(prev, buckets, padTo) {
   return pad(sum, padTo);
 }
 
-// Fit log(mx) = log(a) + b*age by least squares on ages [start, end).
-// ponytail: plain Gompertz only (Makeham dropped); b clamped > 0 like the old curve_fit bounds.
-export function fitGompertz(mx, start = 25, end = 100) {
-  let n = 0, sx = 0, sy = 0, sxx = 0, sxy = 0;
-  for (let t = start; t < Math.min(end, mx.length); t++) {
-    if (!(mx[t] > 0)) continue;
-    const y = Math.log(mx[t]);
-    n++; sx += t; sy += y; sxx += t * t; sxy += t * y;
-  }
-  if (n < 3) return { a: NaN, b: NaN };
-  const b = Math.max((n * sxy - sx * sy) / (n * sxx - sx * sx), 1e-12);
-  return { a: Math.exp((sy - b * sx) / n), b };
-}
-
-// Equivalent of LongevityScenario(...).get_data(pad_to) + fit_curve() for both targets.
-export function runScenario(data, { sex = 'All', agingRate = 1, slowStart = 25, removed = [], padTo = 120, removeAccidentsForFit = true }) {
+// Equivalent of LongevityScenario(...).get_data(pad_to) for both targets.
+export function runScenario(data, { sex = 'All', agingRate = 1, slowStart = 25, removed = [], padTo = 120 }) {
   const baseMx = data.mortality[sex];
   const fractions = data.fractions[sex];
   const strip = (mx, causes) => causes.reduce((m, c) => (fractions[c] ? removeCause(m, fractions[c]) : m), mx);
@@ -93,10 +79,6 @@ export function runScenario(data, { sex = 'All', agingRate = 1, slowStart = 25, 
     kept.length ? conditionCount(prev, kept, padTo) : baselineConditions.map(() => 0),
     agingRate, slowStart);
 
-  const acc = removeAccidentsForFit ? ['External'] : [];
-  const baseFit = fitGompertz(strip(baseMx, acc));
-  const intFit = fitGompertz(applyAging(strip(baseMx, [...new Set([...removed, ...acc])]), agingRate, slowStart, 0));
-
   return {
     baselineMortality,
     interventionMortality,
@@ -104,8 +86,6 @@ export function runScenario(data, { sex = 'All', agingRate = 1, slowStart = 25, 
     interventionSurvival: survivalCurve(interventionMortality),
     baselineConditions,
     interventionConditions,
-    baseFit,
-    intFit,
   };
 }
 

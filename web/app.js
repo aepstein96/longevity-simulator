@@ -31,7 +31,6 @@ function readInputs() {
     agingPct: Number($('aging-rate').value),
     slowInput,
     slowStart: slowInput == null ? floor : Math.max(Math.trunc(slowInput), floor),
-    removeAccidents: $('remove-accidents').checked,
     padTo: num($('pad-to')) ?? 120,
   };
 }
@@ -39,7 +38,7 @@ function readInputs() {
 function scenarioFor(inp) {
   return runScenario(data, {
     sex: inp.sex, agingRate: inp.agingPct / 100, slowStart: inp.slowStart,
-    removed: selected, padTo: inp.padTo, removeAccidentsForFit: inp.removeAccidents,
+    removed: selected, padTo: inp.padTo,
   });
 }
 
@@ -70,19 +69,6 @@ function reachBody(basePct, intPct, showScenario, color) {
     else if (ratio <= 0.95) delta = `${ratio.toFixed(2)}× as likely`;
   }
   return comparisonBody(`${basePct.toFixed(1)}%`, intPct != null ? `${intPct.toFixed(1)}%` : '—', delta, color, showScenario);
-}
-
-function fmtGompertz(x) {
-  if (!fin(x)) return '—';
-  if (Math.abs(x) >= 0.001 && Math.abs(x) < 1000) return x.toFixed(4);
-  const exp = Math.floor(Math.log10(Math.abs(x)));
-  return `${(x / 10 ** exp).toFixed(2)} × 10<sup>${exp}</sup>`;
-}
-
-function gompertzRows(base, int, show, color) {
-  let html = `<div><span class="text-muted">Baseline: </span>${fmtGompertz(base)}</div>`;
-  if (show) html += `<div><span style="color:${color}">Adjusted: </span><span style="color:${color};font-weight:600">${fmtGompertz(int)}</span></div>`;
-  return html;
 }
 
 function hoverSurv(ages, pcts, mort) {
@@ -158,10 +144,6 @@ function render() {
     ? `My median lifespan could go up by ${capped ? 'over ' : ''}${gained.toFixed(1)} years in this scenario. Try the Longevity Simulator:`
     : 'How long could you live if we cured diseases or slowed aging? Try the Longevity Simulator:';
   writeUrl(inp);
-
-  // --- Gompertz ---
-  $('gompertz-a-values').innerHTML = gompertzRows(r.baseFit.a, r.intFit.a, active, intColor);
-  $('gompertz-b-values').innerHTML = gompertzRows(r.baseFit.b, r.intFit.b, active, intColor);
 
   // --- Survival figure ---
   const valsB = baseSurv.vals.map((v) => v * 100);
@@ -320,7 +302,6 @@ function writeUrl(inp) {
   if (selected.length) q.set('cure', selected.join(','));
   if (inp.agingPct !== 100) q.set('rate', inp.agingPct);
   if (slowStartOverridden) q.set('start', inp.slowStart);
-  if (!inp.removeAccidents) q.set('acc', '1');
   if (inp.padTo !== 120) q.set('to', inp.padTo);
   const qs = q.toString().replace(/%2C/g, ',');
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
@@ -332,7 +313,6 @@ function readUrl() {
   set('user-age', 'age'); set('sex', 'sex'); set('aging-rate', 'rate'); set('pad-to', 'to');
   const keys = new Set(data.causes.map((c) => c.key));
   for (const k of (q.get('cure') ?? '').split(',')) if (keys.has(k)) selected.push(k);
-  if (q.get('acc') === '1') $('remove-accidents').checked = false;
   if (q.has('start')) { slowStartOverridden = true; syncSlowStart(); $('slow-start').value = q.get('start'); }
 }
 
@@ -406,7 +386,7 @@ $('slow-start').addEventListener('input', () => {
   renderAgingLabel(); render();
 });
 $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); });
-for (const id of ['user-name', 'sex', 'remove-accidents', 'pad-to']) $(id).addEventListener('input', render);
+for (const id of ['user-name', 'sex', 'pad-to']) $(id).addEventListener('input', render);
 $('btn-download-lifespan').onclick = () => download('lifespan');
 $('btn-download-healthspan').onclick = () => download('healthspan');
 $('btn-share').onclick = share;

@@ -55,10 +55,6 @@
   <hr>
   <details>
     <summary class="small link-primary">Advanced settings</summary>
-    <div class="form-check small mt-2">
-      <input id="remove-accidents" class="form-check-input" type="checkbox" checked>
-      <label for="remove-accidents" class="form-check-label">Remove accidents before fit</label>
-    </div>
     <label for="pad-to" class="mt-2 small">Show ages up to</label>
     <input id="pad-to" class="form-control form-control-sm" type="number" value="120" min="80" max="200" step="10">
   </details>
@@ -97,26 +93,6 @@
     <p class="small text-muted mt-2">Don't like the plot format? Download your scenario data as CSVs and ask Claude to make you custom charts.</p>
   </div></div>
 
-  <details class="card mt-3 math">
-    <summary class="card-header fw-semibold">Mathematical analysis</summary>
-    <div class="card-body">
-      <p class="small text-muted mb-2">Above age ~25, human mortality closely follows Gompertz' law — the yearly risk of dying rises exponentially with age:</p>
-      <div class="formula"><span class="mu">µ(t)</span>  =  <span class="ga">A</span> · e<sup><span class="gb">B</span> · t</sup></div>
-      <div class="small">
-        <div class="mb-3"><span class="mu sym">µ(t)</span><span class="fw-semibold"> — mortality rate. </span>The yearly probability of dying at age <em>t</em>.</div>
-        <div class="mb-3">
-          <div><span class="ga sym">A</span><span class="fw-semibold"> — initial mortality rate.</span><span class="text-muted"> The yearly risk of dying at age 0 implied by the fit.</span></div>
-          <div id="gompertz-a-values" class="ms-4 mt-1"></div>
-        </div>
-        <div class="mb-2">
-          <div><span class="gb sym">B</span><span class="fw-semibold"> — rate of exponential mortality growth.</span><span class="text-muted"> How fast yearly death risk multiplies as you age. B alone determines your maximum possible lifespan: smaller B ⇒ slower exponential climb ⇒ higher ceiling.</span></div>
-          <div id="gompertz-b-values" class="ms-4 mt-1"></div>
-        </div>
-      </div>
-      <div class="small text-muted fst-italic mt-2">Fitted from ages 25–100. <a href="https://en.wikipedia.org/wiki/Gompertz%E2%80%93Makeham_law_of_mortality" target="_blank" rel="noopener noreferrer">Read more here</a>.</div>
-    </div>
-  </details>
-
   <div class="card mt-3 mb-4"><div class="card-body">
     <h6 class="card-title">Sources &amp; methods</h6>
     <div class="mb-2">
@@ -136,7 +112,6 @@
         <li><em>Personal age: </em>When you enter an age, curves are conditioned on being alive right now: S(age ∣ your age) = S(age) / S(your age).</li>
         <li><em>Modeling of chronic conditions: </em>Each chronic condition has an expected value (prevalence) at each age. We take the weighted average of these to get the expected number of conditions at each age. Curing diseases reduces this by removing the disease from the model.</li>
         <li><em>Filtering of chronic conditions: </em>A few chronic conditions in our dataset (mental health, headache) which are generally nonfatal and affect many young people, severely distort the healthspan data, so they were removed. These can be debilitating and are very important but aren't the focus of our study. We think people generally know about their mental health. The question we want to help you answer is how long you'll be able to do the things you love without being held back by age-related physical ailments.</li>
-        <li><em>Gompertz fit (advanced): </em>mₓ ≈ a · exp(b · age), fit in log-space on ages 25–100. Useful for comparing the exponential rate of aging between scenarios.</li>
       </ul>
     </div>
     <div class="mb-2">
