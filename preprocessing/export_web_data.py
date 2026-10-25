@@ -15,8 +15,8 @@ GBD_SEX = {'All': 'Both', 'Male': 'Male', 'Female': 'Female'}
 # Location dropdown: (key, GBD location_name, label). The first entry is the default and uses the
 # top-level CDC series; the rest come from data/GBD/regions/ (preprocessing/process_gbd_regions.py).
 LOCATIONS = [
-    ('US-CDC', None, 'United States (CDC)'),
-    ('US-GBD', 'United States of America', 'United States (GBD)'),
+    ('US-CDC', None, 'United States (CDC data)'),
+    ('US-GBD', 'United States of America', 'United States (GBD data)'),
     ('Global', 'Global', 'Global'),
     ('WB-High', 'World Bank High Income', 'High-income countries'),
     ('WB-UpperMid', 'World Bank Upper Middle Income', 'Upper-middle-income countries'),
