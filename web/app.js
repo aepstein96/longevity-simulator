@@ -28,6 +28,7 @@ function readInputs() {
     name: $('user-name').value,
     userAge,
     sex: $('sex').value || 'All',
+    location: $('location').value,
     agingPct: Number($('aging-rate').value),
     slowInput,
     slowStart: slowInput == null ? floor : Math.max(Math.trunc(slowInput), floor),
@@ -37,7 +38,8 @@ function readInputs() {
 }
 
 function scenarioFor(inp) {
-  return runScenario(data, {
+  // Non-default locations override the top-level (US CDC) series.
+  return runScenario({ ...data, ...data.regions[inp.location] }, {
     sex: inp.sex, agingRate: inp.agingPct / 100, slowStart: inp.slowStart,
     removed: selected, padTo: inp.padTo, removeAccidentsForFit: inp.removeAccidents,
   });
@@ -280,6 +282,10 @@ function syncSlowStart() {
   if (!slowStartOverridden || cur == null || cur < floor) el.value = floor;
 }
 
+function buildLocationOptions() {
+  for (const { key, label } of data.locations) $('location').add(new Option(label, key));
+}
+
 function buildCauseButtons() {
   const wrap = $('cause-buttons');
   for (const { key, label } of data.causes) {
@@ -313,6 +319,7 @@ function download(target) {
   const labels = Object.fromEntries(data.causes.map((c) => [c.key, c.label]));
   const params = [
     ['Starting age', inp.userAge ?? ''],
+    ['Location', data.locations.find((l) => l.key === inp.location).label],
     ['Sex', inp.sex],
     ['Diseases cured', selected.map((c) => labels[c] ?? c).join('; ')],
     ['Aging rate', inp.agingPct],
@@ -335,6 +342,7 @@ function download(target) {
 
 // --- Wire up ---
 
+buildLocationOptions();
 buildCauseButtons();
 $('user-age').addEventListener('input', () => { syncSlowStart(); renderAgingLabel(); render(); });
 $('slow-start').addEventListener('input', () => {
@@ -343,7 +351,7 @@ $('slow-start').addEventListener('input', () => {
   renderAgingLabel(); render();
 });
 $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); });
-for (const id of ['user-name', 'sex', 'remove-accidents', 'pad-to']) $(id).addEventListener('input', render);
+for (const id of ['user-name', 'sex', 'location', 'remove-accidents', 'pad-to']) $(id).addEventListener('input', render);
 $('btn-download-lifespan').onclick = () => download('lifespan');
 $('btn-download-healthspan').onclick = () => download('healthspan');
 

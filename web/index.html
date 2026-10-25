@@ -13,7 +13,7 @@
 <body>
 <div class="app-sidebar">
   <h2 class="h4">Longevity Simulator</h2>
-  <p class="text-muted small">See how curing diseases or slowing aging could change expected lifespan for a U.S. resident.</p>
+  <p class="text-muted small">See how curing diseases or slowing aging could change expected lifespan.</p>
   <hr>
 
   <h6 class="mt-2">About you</h6>
@@ -29,6 +29,8 @@
     <option value="Male">Male</option>
     <option value="Female">Female</option>
   </select>
+  <label for="location" class="small text-muted mt-2 mb-1">Where you live</label>
+  <select id="location" class="form-select mb-1"></select>
 
   <hr>
   <div class="mt-2">
@@ -117,6 +119,7 @@
       <ul class="small mb-2">
         <li>U.S. mortality rates: <a href="https://www.cdc.gov/nchs/products/life_tables.htm" target="_blank" rel="noopener noreferrer">CDC/NCHS United States Life Tables (2010–2019)</a> — provides the annual probability of dying (mₓ) at each age.</li>
         <li>Cause-of-death breakdown: <a href="https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm" target="_blank" rel="noopener noreferrer">CDC Multiple Cause of Death database (2024)</a> — ICD-10 codes on death certificates, aggregated into major categories (Cancer, Heart disease &amp; stroke, Accidents, etc.).</li>
+        <li>Other countries and regions: <a href="https://vizhub.healthdata.org/gbd-results/" target="_blank" rel="noopener noreferrer">IHME Global Burden of Disease (2023)</a> death rates, causes of death and prevalence for each region, income group, and the U.S. ("United States (GBD)", for like-for-like comparison with the regions). GBD reassigns vague death-certificate codes and models some causes, so its U.S. cause breakdown differs from the CDC's (e.g. drug overdoses count as substance use rather than accidents). Single-year mortality is interpolated from 5-year age groups, and ages past 95 follow a Kannisto curve.</li>
         <li>Chronic-condition prevalence (for the healthspan curve): <a href="https://vizhub.healthdata.org/gbd-results/" target="_blank" rel="noopener noreferrer">IHME Global Burden of Disease (2023)</a> — age- and sex-specific prevalence rates for cardiovascular, cancer, neurological, chronic respiratory, and diabetes/kidney disease.</li>
       </ul>
     </div>
