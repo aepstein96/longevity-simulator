@@ -77,9 +77,18 @@
     <div class="col-lg-5"><div id="healthspan-graph" class="graph"></div></div>
   </div>
 
-  <div class="text-end mt-3">
+  <div class="d-flex flex-wrap justify-content-between gap-2 mt-3">
+    <div>
+      <button id="btn-share" class="btn btn-primary btn-sm me-2">↗ Share</button>
+      <button data-share="x" class="btn btn-outline-secondary btn-sm">X</button>
+      <button data-share="linkedin" class="btn btn-outline-secondary btn-sm">LinkedIn</button>
+      <button data-share="facebook" class="btn btn-outline-secondary btn-sm">Facebook</button>
+      <button data-share="reddit" class="btn btn-outline-secondary btn-sm">Reddit</button>
+    </div>
+    <div>
     <button id="btn-download-lifespan" class="btn btn-outline-secondary btn-sm me-2">↓ Lifespan CSV</button>
     <button id="btn-download-healthspan" class="btn btn-outline-secondary btn-sm">↓ Healthspan CSV</button>
+    </div>
   </div>
 
   <div class="card mt-4"><div class="card-body">

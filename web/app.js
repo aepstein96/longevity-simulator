@@ -154,6 +154,11 @@ function render() {
     $(`card-${target}-body`).innerHTML = reachBody(b, i, active, intColor);
   }
 
+  shareText = active && fin(gained) && gained > 0.05
+    ? `My median lifespan could go up by ${capped ? 'over ' : ''}${gained.toFixed(1)} years in this scenario. Try the Longevity Simulator:`
+    : 'How long could you live if we cured diseases or slowed aging? Try the Longevity Simulator:';
+  writeUrl(inp);
+
   // --- Gompertz ---
   $('gompertz-a-values').innerHTML = gompertzRows(r.baseFit.a, r.intFit.a, active, intColor);
   $('gompertz-b-values').innerHTML = gompertzRows(r.baseFit.b, r.intFit.b, active, intColor);
@@ -289,19 +294,72 @@ function buildCauseButtons() {
   for (const { key, label } of data.causes) {
     const b = document.createElement('button');
     b.type = 'button';
-    b.className = 'btn btn-sm btn-outline-primary me-2 mb-2 rounded-pill';
     b.textContent = label;
-    b.setAttribute('aria-pressed', 'false');
+    const paint = (on) => {
+      b.className = `btn btn-sm ${on ? 'btn-success' : 'btn-outline-primary'} me-2 mb-2 rounded-pill`;
+      b.setAttribute('aria-pressed', String(on));
+    };
+    paint(selected.includes(key));
     b.onclick = () => {
       const i = selected.indexOf(key);
       if (i >= 0) selected.splice(i, 1); else selected.push(key);
-      const on = i < 0;
-      b.className = `btn btn-sm ${on ? 'btn-success' : 'btn-outline-primary'} me-2 mb-2 rounded-pill`;
-      b.setAttribute('aria-pressed', String(on));
+      paint(i < 0);
       render();
     };
     wrap.appendChild(b);
   }
+}
+
+// --- Shareable URL ---
+// Name is deliberately left out of the URL so it isn't shared by accident.
+
+function writeUrl(inp) {
+  const q = new URLSearchParams();
+  if (inp.userAge != null) q.set('age', inp.userAge);
+  if ($('sex').value) q.set('sex', $('sex').value);
+  if (selected.length) q.set('cure', selected.join(','));
+  if (inp.agingPct !== 100) q.set('rate', inp.agingPct);
+  if (slowStartOverridden) q.set('start', inp.slowStart);
+  if (!inp.removeAccidents) q.set('acc', '1');
+  if (inp.padTo !== 120) q.set('to', inp.padTo);
+  const qs = q.toString().replace(/%2C/g, ',');
+  history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+}
+
+function readUrl() {
+  const q = new URLSearchParams(location.search);
+  const set = (id, k) => { if (q.has(k)) $(id).value = q.get(k); };
+  set('user-age', 'age'); set('sex', 'sex'); set('aging-rate', 'rate'); set('pad-to', 'to');
+  const keys = new Set(data.causes.map((c) => c.key));
+  for (const k of (q.get('cure') ?? '').split(',')) if (keys.has(k)) selected.push(k);
+  if (q.get('acc') === '1') $('remove-accidents').checked = false;
+  if (q.has('start')) { slowStartOverridden = true; syncSlowStart(); $('slow-start').value = q.get('start'); }
+}
+
+let shareText = '';
+
+async function share() {
+  const url = location.href;
+  if (navigator.share) {
+    try { await navigator.share({ title: 'Longevity Simulator', text: shareText, url }); return; }
+    catch (e) { if (e.name === 'AbortError') return; }
+  }
+  await navigator.clipboard.writeText(url);
+  const b = $('btn-share');
+  b.textContent = '✓ Link copied';
+  setTimeout(() => { b.textContent = '↗ Share'; }, 2000);
+}
+
+const SOCIAL = {
+  x: (u, t) => `https://x.com/intent/post?url=${u}&text=${t}`,
+  linkedin: (u) => `https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
+  facebook: (u) => `https://www.facebook.com/sharer/sharer.php?u=${u}`,
+  reddit: (u, t) => `https://www.reddit.com/submit?url=${u}&title=${t}`,
+};
+
+function openSocial(site) {
+  const u = encodeURIComponent(location.href), t = encodeURIComponent(shareText);
+  window.open(SOCIAL[site](u, t), '_blank', 'noopener,width=600,height=600');
 }
 
 // --- CSV export ---
@@ -339,6 +397,7 @@ function download(target) {
 
 // --- Wire up ---
 
+readUrl();
 buildCauseButtons();
 $('user-age').addEventListener('input', () => { syncSlowStart(); renderAgingLabel(); render(); });
 $('slow-start').addEventListener('input', () => {
@@ -350,6 +409,8 @@ $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); 
 for (const id of ['user-name', 'sex', 'remove-accidents', 'pad-to']) $(id).addEventListener('input', render);
 $('btn-download-lifespan').onclick = () => download('lifespan');
 $('btn-download-healthspan').onclick = () => download('healthspan');
+$('btn-share').onclick = share;
+for (const b of document.querySelectorAll('[data-share]')) b.onclick = () => openSocial(b.dataset.share);
 
 syncSlowStart();
 renderAgingLabel();
