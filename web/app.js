@@ -138,11 +138,10 @@ function render() {
     const [b, i] = chanceAtAge(target, r.baselineSurvival, r.interventionSurvival, userAge);
     $(`card-${target}-title`).innerHTML = cardTitle(`chance of reaching ${target}`, poss);
     $(`card-${target}-body`).innerHTML = reachBody(b, i, active, intColor);
+    if (target === 100) results.reach100 = [b, i];
   }
 
-  shareText = active && fin(gained) && gained > 0.05
-    ? `My median lifespan could go up by ${capped ? 'over ' : ''}${gained.toFixed(1)} years in this scenario. Try the Longevity Simulator:`
-    : 'How long could you live if we cured diseases or slowed aging? Try the Longevity Simulator:';
+  Object.assign(results, { inp, active, baseMedian, intMedian, capped, gained, todayLife, scenLife });
   writeUrl(inp);
 
   // --- Survival figure ---
@@ -316,18 +315,113 @@ function readUrl() {
   if (q.has('start')) { slowStartOverridden = true; syncSlowStart(); $('slow-start').value = q.get('start'); }
 }
 
-let shareText = '';
+// --- Share: results image + post text ---
 
-async function share() {
-  const url = location.href;
-  if (navigator.share) {
-    try { await navigator.share({ title: 'Longevity Simulator', text: shareText, url }); return; }
-    catch (e) { if (e.name === 'AbortError') return; }
+const results = {};
+const CARD = 1080;
+
+function postText(name) {
+  const { active, gained, capped, todayLife, scenLife } = results;
+  return active && fin(gained) && Math.abs(gained) > 0.05
+    ? `${name}'s longevity results: median lifespan ${todayLife} → ${scenLife} (${gained > 0 ? (capped ? '>+' : '+') : ''}${gained.toFixed(1)} years). What would yours be?`
+    : `${name}'s expected lifespan: ${todayLife}. What's yours?`;
+}
+
+// Greedy word wrap for canvas text; returns the y after the last line.
+function wrapText(ctx, text, x, y, maxW, lineH) {
+  let line = '';
+  for (const word of text.split(' ')) {
+    const test = line ? `${line} ${word}` : word;
+    if (ctx.measureText(test).width > maxW && line) { ctx.fillText(line, x, y); line = word; y += lineH; }
+    else line = test;
   }
-  await navigator.clipboard.writeText(url);
-  const b = $('btn-share');
-  b.textContent = '✓ Link copied';
-  setTimeout(() => { b.textContent = '↗ Share'; }, 2000);
+  ctx.fillText(line, x, y);
+  return y + lineH;
+}
+
+async function makeCard(name) {
+  const { inp, active, gained, capped, todayLife, scenLife, reach100 } = results;
+  const c = document.createElement('canvas');
+  c.width = c.height = CARD;
+  const ctx = c.getContext('2d');
+  const font = (w, px) => `${w} ${px}px "Open Sans", Helvetica, Arial, sans-serif`;
+  const pad = 70;
+  ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, CARD, CARD);
+  ctx.fillStyle = COLOR_INTERVENTION; ctx.fillRect(0, 0, CARD, 170);
+
+  ctx.fillStyle = '#fff'; ctx.font = font(700, 56);
+  ctx.fillText(`${name}'s longevity results`, pad, 92);
+  const who = [inp.userAge != null && `Age ${Math.trunc(inp.userAge)}`, $('sex').value && inp.sex !== 'All' && inp.sex].filter(Boolean);
+  ctx.font = font(400, 30);
+  ctx.fillText(who.length ? who.join(' · ') : 'Longevity Simulator', pad, 140);
+
+  let y = 250;
+  ctx.fillStyle = COLOR_BASELINE; ctx.font = font(400, 34);
+  ctx.fillText(active ? 'Median lifespan' : 'Expected lifespan', pad, y);
+  y += 110;
+  ctx.font = font(700, 100);
+  if (active) {
+    const parts = [[todayLife, COLOR_BASELINE], ['  →  ', '#adb5bd'], [scenLife, COLOR_INTERVENTION]];
+    const w = ctx.measureText(parts.map((p) => p[0]).join('')).width;
+    if (w > CARD - 2 * pad) ctx.font = font(700, Math.floor(100 * (CARD - 2 * pad) / w));
+    let x = pad;
+    for (const [t, col] of parts) { ctx.fillStyle = col; ctx.fillText(t, x, y); x += ctx.measureText(t).width; }
+    if (fin(gained) && Math.abs(gained) > 0.05) {
+      y += 80;
+      ctx.fillStyle = gained > 0 ? COLOR_GAIN : COLOR_LOSS; ctx.font = font(700, 60);
+      ctx.fillText(`${gained > 0 ? (capped ? '>+' : '+') : ''}${gained.toFixed(1)} years`, pad, y);
+    }
+  } else {
+    ctx.fillStyle = COLOR_BASELINE; ctx.fillText(todayLife, pad, y);
+  }
+
+  y += 75;
+  ctx.fillStyle = '#343a40'; ctx.font = font(400, 32);
+  const labels = Object.fromEntries(data.causes.map((cz) => [cz.key, cz.label]));
+  if (selected.length) y = wrapText(ctx, `Cured: ${selected.map((k) => labels[k]).join(', ')}`, pad, y, CARD - 2 * pad, 44);
+  if (inp.agingPct !== 100) y = wrapText(ctx, $('aging-rate-label').textContent, pad, y, CARD - 2 * pad, 44);
+  const [b100, i100] = reach100 ?? [];
+  if (b100 != null) {
+    const pct = (v) => `${v < 1 ? v.toFixed(1) : v.toFixed(0)}%`;
+    y = wrapText(ctx, `Chance of reaching 100: ${pct(b100)}${active && i100 != null ? ` → ${pct(i100)}` : ''}`, pad, y, CARD - 2 * pad, 44);
+  }
+
+  // Survival chart fills the remaining space above the footer.
+  const chartTop = y - 10, chartH = CARD - 90 - chartTop;
+  if (chartH > 200) {
+    const gd = $('survival-graph');
+    const layout = {
+      ...gd.layout, title: null, margin: { l: 60, r: 20, t: 10, b: 50 },
+      legend: { x: 0.99, xanchor: 'right', y: 0.99, yanchor: 'top', bgcolor: 'rgba(255,255,255,0.8)' },
+    };
+    const src = await Plotly.toImage({ data: gd.data, layout }, { format: 'png', width: CARD - 2 * pad + 40, height: chartH });
+    const img = new Image();
+    await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = src; });
+    ctx.drawImage(img, pad - 20, chartTop);
+  }
+
+  ctx.fillStyle = '#e9ecef'; ctx.fillRect(0, CARD - 80, CARD, 80);
+  ctx.fillStyle = COLOR_BASELINE; ctx.font = font(400, 28);
+  ctx.fillText(`Try it yourself: ${location.host}`, pad, CARD - 30);
+  return new Promise((res) => c.toBlob(res, 'image/png'));
+}
+
+function requireName() {
+  const el = $('share-name'), name = el.value.trim();
+  if (!name) { el.classList.add('is-invalid'); el.focus(); }
+  return name;
+}
+
+function shareStatus(msg) {
+  $('share-status').textContent = msg;
+}
+
+function downloadBlob(blob, filename) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 
 const SOCIAL = {
@@ -337,9 +431,31 @@ const SOCIAL = {
   reddit: (u, t) => `https://www.reddit.com/submit?url=${u}&title=${t}`,
 };
 
-function openSocial(site) {
-  const u = encodeURIComponent(location.href), t = encodeURIComponent(shareText);
-  window.open(SOCIAL[site](u, t), '_blank', 'noopener,width=600,height=600');
+async function share(kind) {
+  const url = location.href;
+  if (kind === 'link') {
+    await navigator.clipboard.writeText(url);
+    return shareStatus('Link copied.');
+  }
+  const name = requireName();
+  if (!name) return shareStatus('Enter your name to put it on the image.');
+  // Open the popup synchronously so it isn't blocked once we await the image.
+  const popup = SOCIAL[kind] ? window.open('', '_blank', 'width=600,height=600') : null;
+  shareStatus('Making your image…');
+  const text = postText(name);
+  const file = new File([await makeCard(name)], 'longevity-results.png', { type: 'image/png' });
+  if (kind === 'image' && navigator.canShare?.({ files: [file] })) {
+    try { await navigator.share({ files: [file], text: `${text} ${url}` }); return shareStatus(''); }
+    catch (e) { if (e.name === 'AbortError') return shareStatus(''); }
+  }
+  downloadBlob(file, file.name);
+  if (popup) {
+    popup.opener = null;
+    popup.location = SOCIAL[kind](encodeURIComponent(url), encodeURIComponent(text));
+    return shareStatus('Image downloaded. Attach it to your post.');
+  }
+  await navigator.clipboard.writeText(`${text} ${url}`).catch(() => {});
+  shareStatus('Image downloaded and post text copied.');
 }
 
 // --- CSV export ---
@@ -389,8 +505,17 @@ $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); 
 for (const id of ['user-name', 'sex', 'pad-to']) $(id).addEventListener('input', render);
 $('btn-download-lifespan').onclick = () => download('lifespan');
 $('btn-download-healthspan').onclick = () => download('healthspan');
-$('btn-share').onclick = share;
-for (const b of document.querySelectorAll('[data-share]')) b.onclick = () => openSocial(b.dataset.share);
+$('btn-share').onclick = () => {
+  const open = $('share-menu').classList.toggle('show');
+  if (open) { $('share-name').value = $('user-name').value; shareStatus(''); }
+};
+document.addEventListener('click', (e) => { if (!$('share-dd').contains(e.target)) $('share-menu').classList.remove('show'); });
+$('share-name').addEventListener('input', () => {
+  $('share-name').classList.remove('is-invalid');
+  $('user-name').value = $('share-name').value;
+  render();
+});
+for (const b of document.querySelectorAll('[data-share]')) b.onclick = () => share(b.dataset.share);
 
 syncSlowStart();
 renderAgingLabel();

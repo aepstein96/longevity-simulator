@@ -58,3 +58,6 @@
 .info { color: #adb5bd; cursor: help; margin-left: 0.25rem; }
 .range-marks { display: flex; justify-content: space-between; margin-top: -0.25rem; }
 details > summary { cursor: pointer; }
+
+.btn-share { background-color: #1f77b4; border-color: #1f77b4; color: #fff; font-weight: 600; }
+.btn-share:hover, .btn-share:focus { background-color: #1a6599; border-color: #1a6599; color: #fff; }

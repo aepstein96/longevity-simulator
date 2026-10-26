@@ -75,11 +75,20 @@
 
   <div class="d-flex flex-wrap justify-content-between gap-2 mt-3">
     <div>
-      <button id="btn-share" class="btn btn-primary btn-sm me-2">↗ Share</button>
-      <button data-share="x" class="btn btn-outline-secondary btn-sm">X</button>
-      <button data-share="linkedin" class="btn btn-outline-secondary btn-sm">LinkedIn</button>
-      <button data-share="facebook" class="btn btn-outline-secondary btn-sm">Facebook</button>
-      <button data-share="reddit" class="btn btn-outline-secondary btn-sm">Reddit</button>
+      <div id="share-dd" class="dropdown d-inline-block">
+        <button id="btn-share" class="btn btn-share dropdown-toggle" type="button">Share your results</button>
+        <div id="share-menu" class="dropdown-menu p-2 shadow" style="min-width:17rem">
+          <input id="share-name" class="form-control form-control-sm mb-2" type="text" maxlength="40" placeholder="Your name (shown on the image)">
+          <button data-share="image" class="dropdown-item" type="button">📷 Share results image</button>
+          <button data-share="link" class="dropdown-item" type="button">🔗 Copy link</button>
+          <div class="dropdown-divider"></div>
+          <button data-share="x" class="dropdown-item" type="button">X</button>
+          <button data-share="facebook" class="dropdown-item" type="button">Facebook</button>
+          <button data-share="linkedin" class="dropdown-item" type="button">LinkedIn</button>
+          <button data-share="reddit" class="dropdown-item" type="button">Reddit</button>
+          <div id="share-status" class="small text-muted px-2 pt-1"></div>
+        </div>
+      </div>
     </div>
     <div>
     <button id="btn-download-lifespan" class="btn btn-outline-secondary btn-sm me-2">↓ Lifespan CSV</button>
