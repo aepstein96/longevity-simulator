@@ -32,7 +32,6 @@ function readInputs() {
     agingPct: Number($('aging-rate').value),
     slowInput,
     slowStart: slowInput == null ? floor : Math.max(Math.trunc(slowInput), floor),
-    removeAccidents: $('remove-accidents').checked,
     padTo: num($('pad-to')) ?? 120,
   };
 }
@@ -41,7 +40,7 @@ function scenarioFor(inp) {
   // Non-default locations override the top-level (US CDC) series.
   return runScenario({ ...data, ...data.regions[inp.location] }, {
     sex: inp.sex, agingRate: inp.agingPct / 100, slowStart: inp.slowStart,
-    removed: selected, padTo: inp.padTo, removeAccidentsForFit: inp.removeAccidents,
+    removed: selected, padTo: inp.padTo,
   });
 }
 
@@ -72,19 +71,6 @@ function reachBody(basePct, intPct, showScenario, color) {
     else if (ratio <= 0.95) delta = `${ratio.toFixed(2)}× as likely`;
   }
   return comparisonBody(`${basePct.toFixed(1)}%`, intPct != null ? `${intPct.toFixed(1)}%` : '—', delta, color, showScenario);
-}
-
-function fmtGompertz(x) {
-  if (!fin(x)) return '—';
-  if (Math.abs(x) >= 0.001 && Math.abs(x) < 1000) return x.toFixed(4);
-  const exp = Math.floor(Math.log10(Math.abs(x)));
-  return `${(x / 10 ** exp).toFixed(2)} × 10<sup>${exp}</sup>`;
-}
-
-function gompertzRows(base, int, show, color) {
-  let html = `<div><span class="text-muted">Baseline: </span>${fmtGompertz(base)}</div>`;
-  if (show) html += `<div><span style="color:${color}">Adjusted: </span><span style="color:${color};font-weight:600">${fmtGompertz(int)}</span></div>`;
-  return html;
 }
 
 function hoverSurv(ages, pcts, mort) {
@@ -154,11 +140,11 @@ function render() {
     const [b, i] = chanceAtAge(target, r.baselineSurvival, r.interventionSurvival, userAge);
     $(`card-${target}-title`).innerHTML = cardTitle(`chance of reaching ${target}`, poss);
     $(`card-${target}-body`).innerHTML = reachBody(b, i, active, intColor);
+    if (target === 100) results.reach100 = [b, i];
   }
 
-  // --- Gompertz ---
-  $('gompertz-a-values').innerHTML = gompertzRows(r.baseFit.a, r.intFit.a, active, intColor);
-  $('gompertz-b-values').innerHTML = gompertzRows(r.baseFit.b, r.intFit.b, active, intColor);
+  Object.assign(results, { inp, active, baseMedian, intMedian, capped, gained, todayLife, scenLife });
+  writeUrl(inp);
 
   // --- Survival figure ---
   const valsB = baseSurv.vals.map((v) => v * 100);
@@ -265,10 +251,13 @@ function renderAgingLabel() {
   const v = Number($('aging-rate').value);
   const s = num($('slow-start')) ?? DEFAULT_SLOW_START;
   const sfx = ` starting at age ${Math.trunc(s)}`;
+  const age = num($('user-age'));
+  const isCurrent = age != null && Math.trunc(s) === Math.trunc(age);
+  $('slow-start-label').textContent = `Start at age ${Math.trunc(s)}${isCurrent ? ' (current age)' : ''}`;
   $('aging-rate-label').textContent =
     v === 100 ? 'Normal aging (100%)'
     : v === 0 ? `Frozen aging (0%)${sfx}`
-    : v < 100 ? `Slowed aging (${v}%)${sfx}`
+    : v < 100 ? `Slow aging by ${100 - v}%${sfx}`
     : `Accelerated aging (${v}%)${sfx}`;
 }
 
@@ -278,6 +267,7 @@ function syncSlowStart() {
   const floor = Math.max(userAge != null ? Math.trunc(userAge) : 0, 25);
   const el = $('slow-start');
   el.min = floor;
+  $('slow-start-min').textContent = floor;
   const cur = num(el);
   if (!slowStartOverridden || cur == null || cur < floor) el.value = floor;
 }
@@ -291,19 +281,191 @@ function buildCauseButtons() {
   for (const { key, label } of data.causes) {
     const b = document.createElement('button');
     b.type = 'button';
-    b.className = 'btn btn-sm btn-outline-primary me-2 mb-2 rounded-pill';
     b.textContent = label;
-    b.setAttribute('aria-pressed', 'false');
+    const paint = (on) => {
+      b.className = `btn btn-sm ${on ? 'btn-success' : 'btn-outline-primary'} me-2 mb-2 rounded-pill`;
+      b.setAttribute('aria-pressed', String(on));
+    };
+    paint(selected.includes(key));
     b.onclick = () => {
       const i = selected.indexOf(key);
       if (i >= 0) selected.splice(i, 1); else selected.push(key);
-      const on = i < 0;
-      b.className = `btn btn-sm ${on ? 'btn-success' : 'btn-outline-primary'} me-2 mb-2 rounded-pill`;
-      b.setAttribute('aria-pressed', String(on));
+      paint(i < 0);
       render();
     };
     wrap.appendChild(b);
   }
+}
+
+// --- Shareable URL ---
+// Name is deliberately left out of the URL so it isn't shared by accident.
+
+function writeUrl(inp) {
+  const q = new URLSearchParams();
+  if (inp.userAge != null) q.set('age', inp.userAge);
+  if ($('sex').value) q.set('sex', $('sex').value);
+  if (inp.location !== data.locations[0].key) q.set('loc', inp.location);
+  if (selected.length) q.set('cure', selected.join(','));
+  if (inp.agingPct !== 100) q.set('rate', inp.agingPct);
+  if (slowStartOverridden) q.set('start', inp.slowStart);
+  if (inp.padTo !== 120) q.set('to', inp.padTo);
+  const qs = q.toString().replace(/%2C/g, ',');
+  history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+}
+
+function readUrl() {
+  const q = new URLSearchParams(location.search);
+  const set = (id, k) => { if (q.has(k)) $(id).value = q.get(k); };
+  set('user-age', 'age'); set('sex', 'sex'); set('aging-rate', 'rate'); set('pad-to', 'to');
+  if (data.locations.some((l) => l.key === q.get('loc'))) $('location').value = q.get('loc');
+  const keys = new Set(data.causes.map((c) => c.key));
+  for (const k of (q.get('cure') ?? '').split(',')) if (keys.has(k)) selected.push(k);
+  if (q.has('start')) { slowStartOverridden = true; syncSlowStart(); $('slow-start').value = q.get('start'); }
+}
+
+// --- Share: results image + post text ---
+
+const results = {};
+const CARD = 1080;
+// Shared links point at the public page; it forwards its query string to this iframe.
+const PUBLIC_URL = 'https://www.secondcentury.org/tools/longevity-simulator';
+
+function postText(name) {
+  const { active, gained, capped, todayLife, scenLife } = results;
+  return active && fin(gained) && Math.abs(gained) > 0.05
+    ? `${name}'s longevity results: median lifespan ${todayLife} → ${scenLife} (${gained > 0 ? (capped ? '>+' : '+') : ''}${gained.toFixed(1)} years). What would yours be?`
+    : `${name}'s expected lifespan: ${todayLife}. What's yours?`;
+}
+
+// Greedy word wrap for canvas text; returns the y after the last line.
+function wrapText(ctx, text, x, y, maxW, lineH) {
+  let line = '';
+  for (const word of text.split(' ')) {
+    const test = line ? `${line} ${word}` : word;
+    if (ctx.measureText(test).width > maxW && line) { ctx.fillText(line, x, y); line = word; y += lineH; }
+    else line = test;
+  }
+  ctx.fillText(line, x, y);
+  return y + lineH;
+}
+
+async function makeCard(name) {
+  const { inp, active, gained, capped, todayLife, scenLife, reach100 } = results;
+  const c = document.createElement('canvas');
+  c.width = c.height = CARD;
+  const ctx = c.getContext('2d');
+  const font = (w, px) => `${w} ${px}px "Open Sans", Helvetica, Arial, sans-serif`;
+  const pad = 70;
+  ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, CARD, CARD);
+  ctx.fillStyle = COLOR_INTERVENTION; ctx.fillRect(0, 0, CARD, 170);
+
+  ctx.fillStyle = '#fff'; ctx.font = font(700, 56);
+  ctx.fillText(`${name}'s longevity results`, pad, 92);
+  const who = [inp.userAge != null && `Age ${Math.trunc(inp.userAge)}`, $('sex').value && inp.sex !== 'All' && inp.sex].filter(Boolean);
+  ctx.font = font(400, 30);
+  ctx.fillText(who.length ? who.join(' · ') : 'Longevity Simulator', pad, 140);
+
+  let y = 250;
+  ctx.fillStyle = COLOR_BASELINE; ctx.font = font(400, 34);
+  ctx.fillText(active ? 'Median lifespan' : 'Expected lifespan', pad, y);
+  y += 110;
+  ctx.font = font(700, 100);
+  if (active) {
+    const parts = [[todayLife, COLOR_BASELINE], ['  →  ', '#adb5bd'], [scenLife, COLOR_INTERVENTION]];
+    const w = ctx.measureText(parts.map((p) => p[0]).join('')).width;
+    if (w > CARD - 2 * pad) ctx.font = font(700, Math.floor(100 * (CARD - 2 * pad) / w));
+    let x = pad;
+    for (const [t, col] of parts) { ctx.fillStyle = col; ctx.fillText(t, x, y); x += ctx.measureText(t).width; }
+    if (fin(gained) && Math.abs(gained) > 0.05) {
+      y += 80;
+      ctx.fillStyle = gained > 0 ? COLOR_GAIN : COLOR_LOSS; ctx.font = font(700, 60);
+      ctx.fillText(`${gained > 0 ? (capped ? '>+' : '+') : ''}${gained.toFixed(1)} years`, pad, y);
+    }
+  } else {
+    ctx.fillStyle = COLOR_BASELINE; ctx.fillText(todayLife, pad, y);
+  }
+
+  y += 75;
+  ctx.fillStyle = '#343a40'; ctx.font = font(400, 32);
+  const labels = Object.fromEntries(data.causes.map((cz) => [cz.key, cz.label]));
+  if (selected.length) y = wrapText(ctx, `Cured: ${selected.map((k) => labels[k]).join(', ')}`, pad, y, CARD - 2 * pad, 44);
+  if (inp.agingPct !== 100) y = wrapText(ctx, $('aging-rate-label').textContent, pad, y, CARD - 2 * pad, 44);
+  const [b100, i100] = reach100 ?? [];
+  if (b100 != null) {
+    const pct = (v) => `${v < 1 ? v.toFixed(1) : v.toFixed(0)}%`;
+    y = wrapText(ctx, `Chance of reaching 100: ${pct(b100)}${active && i100 != null ? ` → ${pct(i100)}` : ''}`, pad, y, CARD - 2 * pad, 44);
+  }
+
+  // Survival chart fills the remaining space above the footer.
+  const chartTop = y - 10, chartH = CARD - 90 - chartTop;
+  if (chartH > 200) {
+    const gd = $('survival-graph');
+    const layout = {
+      ...gd.layout, title: null, margin: { l: 60, r: 20, t: 10, b: 50 },
+      legend: { x: 0.99, xanchor: 'right', y: 0.99, yanchor: 'top', bgcolor: 'rgba(255,255,255,0.8)' },
+    };
+    const src = await Plotly.toImage({ data: gd.data, layout }, { format: 'png', width: CARD - 2 * pad + 40, height: chartH });
+    const img = new Image();
+    await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = src; });
+    ctx.drawImage(img, pad - 20, chartTop);
+  }
+
+  ctx.fillStyle = '#e9ecef'; ctx.fillRect(0, CARD - 80, CARD, 80);
+  ctx.fillStyle = COLOR_BASELINE; ctx.font = font(400, 28);
+  ctx.fillText(`Try it yourself: ${PUBLIC_URL.replace(/^https:\/\/(www\.)?/, '')}`, pad, CARD - 30);
+  return new Promise((res) => c.toBlob(res, 'image/png'));
+}
+
+function requireName() {
+  const el = $('share-name'), name = el.value.trim();
+  if (!name) { el.classList.add('is-invalid'); el.focus(); }
+  return name;
+}
+
+function shareStatus(msg) {
+  $('share-status').textContent = msg;
+}
+
+function downloadBlob(blob, filename) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+const SOCIAL = {
+  x: (u, t) => `https://x.com/intent/post?url=${u}&text=${t}`,
+  linkedin: (u) => `https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
+  facebook: (u) => `https://www.facebook.com/sharer/sharer.php?u=${u}`,
+  reddit: (u, t) => `https://www.reddit.com/submit?url=${u}&title=${t}`,
+};
+
+async function share(kind) {
+  const url = PUBLIC_URL + location.search;
+  if (kind === 'link') {
+    await navigator.clipboard.writeText(url);
+    return shareStatus('Link copied.');
+  }
+  const name = requireName();
+  if (!name) return shareStatus('Enter your name to put it on the image.');
+  // Open the popup synchronously so it isn't blocked once we await the image.
+  const popup = SOCIAL[kind] ? window.open('', '_blank', 'width=600,height=600') : null;
+  shareStatus('Making your image…');
+  const text = postText(name);
+  const file = new File([await makeCard(name)], 'longevity-results.png', { type: 'image/png' });
+  if (kind === 'image' && navigator.canShare?.({ files: [file] })) {
+    try { await navigator.share({ files: [file], text: `${text} ${url}` }); return shareStatus(''); }
+    catch (e) { if (e.name === 'AbortError') return shareStatus(''); }
+  }
+  downloadBlob(file, file.name);
+  if (popup) {
+    popup.opener = null;
+    popup.location = SOCIAL[kind](encodeURIComponent(url), encodeURIComponent(text));
+    return shareStatus('Image downloaded. Attach it to your post.');
+  }
+  await navigator.clipboard.writeText(`${text} ${url}`).catch(() => {});
+  shareStatus('Image downloaded and post text copied.');
 }
 
 // --- CSV export ---
@@ -343,6 +505,7 @@ function download(target) {
 // --- Wire up ---
 
 buildLocationOptions();
+readUrl();
 buildCauseButtons();
 $('user-age').addEventListener('input', () => { syncSlowStart(); renderAgingLabel(); render(); });
 $('slow-start').addEventListener('input', () => {
@@ -351,9 +514,20 @@ $('slow-start').addEventListener('input', () => {
   renderAgingLabel(); render();
 });
 $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); });
-for (const id of ['user-name', 'sex', 'location', 'remove-accidents', 'pad-to']) $(id).addEventListener('input', render);
+for (const id of ['user-name', 'sex', 'location', 'pad-to']) $(id).addEventListener('input', render);
 $('btn-download-lifespan').onclick = () => download('lifespan');
 $('btn-download-healthspan').onclick = () => download('healthspan');
+$('btn-share').onclick = () => {
+  const open = $('share-menu').classList.toggle('show');
+  if (open) { $('share-name').value = $('user-name').value; shareStatus(''); }
+};
+document.addEventListener('click', (e) => { if (!$('share-dd').contains(e.target)) $('share-menu').classList.remove('show'); });
+$('share-name').addEventListener('input', () => {
+  $('share-name').classList.remove('is-invalid');
+  $('user-name').value = $('share-name').value;
+  render();
+});
+for (const b of document.querySelectorAll('[data-share]')) b.onclick = () => share(b.dataset.share);
 
 syncSlowStart();
 renderAgingLabel();
