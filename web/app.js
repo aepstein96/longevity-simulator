@@ -319,6 +319,8 @@ function readUrl() {
 
 const results = {};
 const CARD = 1080;
+// Shared links point at the public page; it forwards its query string to this iframe.
+const PUBLIC_URL = 'https://www.secondcentury.org/tools/longevity-simulator';
 
 function postText(name) {
   const { active, gained, capped, todayLife, scenLife } = results;
@@ -402,7 +404,7 @@ async function makeCard(name) {
 
   ctx.fillStyle = '#e9ecef'; ctx.fillRect(0, CARD - 80, CARD, 80);
   ctx.fillStyle = COLOR_BASELINE; ctx.font = font(400, 28);
-  ctx.fillText(`Try it yourself: ${location.host}`, pad, CARD - 30);
+  ctx.fillText(`Try it yourself: ${PUBLIC_URL.replace(/^https:\/\/(www\.)?/, '')}`, pad, CARD - 30);
   return new Promise((res) => c.toBlob(res, 'image/png'));
 }
 
@@ -432,7 +434,7 @@ const SOCIAL = {
 };
 
 async function share(kind) {
-  const url = location.href;
+  const url = PUBLIC_URL + location.search;
   if (kind === 'link') {
     await navigator.clipboard.writeText(url);
     return shareStatus('Link copied.');
