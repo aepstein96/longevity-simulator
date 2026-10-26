@@ -28,6 +28,7 @@ function readInputs() {
     name: $('user-name').value,
     userAge,
     sex: $('sex').value || 'All',
+    location: $('location').value,
     agingPct: Number($('aging-rate').value),
     slowInput,
     slowStart: slowInput == null ? floor : Math.max(Math.trunc(slowInput), floor),
@@ -36,7 +37,8 @@ function readInputs() {
 }
 
 function scenarioFor(inp) {
-  return runScenario(data, {
+  // Non-default locations override the top-level (US CDC) series.
+  return runScenario({ ...data, ...data.regions[inp.location] }, {
     sex: inp.sex, agingRate: inp.agingPct / 100, slowStart: inp.slowStart,
     removed: selected, padTo: inp.padTo,
   });
@@ -270,6 +272,10 @@ function syncSlowStart() {
   if (!slowStartOverridden || cur == null || cur < floor) el.value = floor;
 }
 
+function buildLocationOptions() {
+  for (const { key, label } of data.locations) $('location').add(new Option(label, key));
+}
+
 function buildCauseButtons() {
   const wrap = $('cause-buttons');
   for (const { key, label } of data.causes) {
@@ -298,6 +304,7 @@ function writeUrl(inp) {
   const q = new URLSearchParams();
   if (inp.userAge != null) q.set('age', inp.userAge);
   if ($('sex').value) q.set('sex', $('sex').value);
+  if (inp.location !== data.locations[0].key) q.set('loc', inp.location);
   if (selected.length) q.set('cure', selected.join(','));
   if (inp.agingPct !== 100) q.set('rate', inp.agingPct);
   if (slowStartOverridden) q.set('start', inp.slowStart);
@@ -310,6 +317,7 @@ function readUrl() {
   const q = new URLSearchParams(location.search);
   const set = (id, k) => { if (q.has(k)) $(id).value = q.get(k); };
   set('user-age', 'age'); set('sex', 'sex'); set('aging-rate', 'rate'); set('pad-to', 'to');
+  if (data.locations.some((l) => l.key === q.get('loc'))) $('location').value = q.get('loc');
   const keys = new Set(data.causes.map((c) => c.key));
   for (const k of (q.get('cure') ?? '').split(',')) if (keys.has(k)) selected.push(k);
   if (q.has('start')) { slowStartOverridden = true; syncSlowStart(); $('slow-start').value = q.get('start'); }
@@ -473,6 +481,7 @@ function download(target) {
   const labels = Object.fromEntries(data.causes.map((c) => [c.key, c.label]));
   const params = [
     ['Starting age', inp.userAge ?? ''],
+    ['Location', data.locations.find((l) => l.key === inp.location).label],
     ['Sex', inp.sex],
     ['Diseases cured', selected.map((c) => labels[c] ?? c).join('; ')],
     ['Aging rate', inp.agingPct],
@@ -495,6 +504,7 @@ function download(target) {
 
 // --- Wire up ---
 
+buildLocationOptions();
 readUrl();
 buildCauseButtons();
 $('user-age').addEventListener('input', () => { syncSlowStart(); renderAgingLabel(); render(); });
@@ -504,7 +514,7 @@ $('slow-start').addEventListener('input', () => {
   renderAgingLabel(); render();
 });
 $('aging-rate').addEventListener('input', () => { renderAgingLabel(); render(); });
-for (const id of ['user-name', 'sex', 'pad-to']) $(id).addEventListener('input', render);
+for (const id of ['user-name', 'sex', 'location', 'pad-to']) $(id).addEventListener('input', render);
 $('btn-download-lifespan').onclick = () => download('lifespan');
 $('btn-download-healthspan').onclick = () => download('healthspan');
 $('btn-share').onclick = () => {

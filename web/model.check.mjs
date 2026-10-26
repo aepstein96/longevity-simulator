@@ -23,3 +23,19 @@ for (const [opts, median, s90, c70] of cases) {
   close(r.interventionConditions[70], c70);
 }
 console.log(`ok: ${cases.length} scenarios match Python`);
+
+// Regional (GBD) data: fractions sum to 1 at every age, and each location's baseline median is plausible.
+const medianOf = (surv) => surv.findIndex((v) => v < 0.5);
+for (const { key, label } of data.locations) {
+  const d = { ...data, ...data.regions[key] };
+  for (const sex of ['All', 'Male', 'Female']) {
+    const fr = Object.values(d.fractions[sex]);
+    fr[0].forEach((_, age) => close(fr.reduce((s, f) => s + f[age], 0), 1, 1e-4));
+    const m = medianOf(runScenario(d, { sex }).baselineSurvival);
+    assert.ok(m >= 60 && m <= 90, `${label} ${sex}: median ${m}`);
+  }
+}
+const usGap = medianOf(runScenario({ ...data, ...data.regions['US-GBD'] }, {}).baselineSurvival)
+  - medianOf(runScenario(data, {}).baselineSurvival);
+assert.ok(Math.abs(usGap) <= 1, `US GBD vs CDC median gap ${usGap}`);
+console.log(`ok: ${data.locations.length} locations`);
